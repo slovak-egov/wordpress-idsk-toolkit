@@ -1,0 +1,61 @@
+.idsk-warning-text {
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.14286;
+    color: #0b0c0c;
+    margin-bottom: 20px;
+    background-color: #ffdf0f;
+    padding: 10px 0;
+}
+@media print {
+    .idsk-warning-text {
+        font-family: sans-serif;
+    }
+}
+@media (min-width: 40.0625em) {
+    .idsk-warning-text {
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.25;
+    }
+}
+@media print {
+    .idsk-warning-text {
+        font-size: 14pt;
+        line-height: 1.2;
+    }
+}
+@media print {
+    .idsk-warning-text {
+        color: #000000;
+    }
+}
+@media (min-width: 40.0625em) {
+    .idsk-warning-text {
+        margin-bottom: 30px;
+    }
+}
+.idsk-warning-text__text {
+    display: block;
+    font-weight: bold;
+}
+.idsk-warning-text__text a:focus,
+.idsk-warning-text__text a:active,
+.idsk-warning-text__text a.\:focus,
+.idsk-warning-text__text a.\:active {
+    outline: 3px solid transparent;
+    color: #0b0c0c;
+    background-color: #ffdf0f;
+    box-shadow: 0 -2px #ffdf0f, 0 4px #0b0c0c;
+    text-decoration: none;
+}
+.idsk-warning-text--info {
+    background-color: #dee0e2;
+}
+.idsk-warning-text--info .idsk-warning-text__icon {
+    display: none;
+}

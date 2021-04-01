@@ -1,0 +1,190 @@
+.idsk-crossroad-title {
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #0065b3;
+    text-decoration: underline;
+    cursor: pointer;
+}
+@media print {
+    .idsk-crossroad-title {
+        font-family: sans-serif;
+    }
+}
+@media (min-width: 40.0625em) {
+    .idsk-crossroad-title {
+        font-size: 19px;
+        font-size: 1.1875rem;
+        line-height: 1.31579;
+    }
+}
+@media print {
+    .idsk-crossroad-title {
+        font-size: 14pt;
+        line-height: 1.15;
+    }
+}
+.idsk-crossroad-title:hover,
+.idsk-crossroad-title.\:hover {
+    color: #003078;
+}
+.idsk-crossroad-title:focus,
+.idsk-crossroad-title.\:focus {
+    outline: 3px solid transparent;
+    color: #0b0c0c;
+    background-color: #ffdf0f;
+    box-shadow: 0 -2px #ffdf0f, 0 4px #0b0c0c;
+    text-decoration: none;
+}
+.idsk-crossroad-title:visited,
+.idsk-crossroad-title.\:visited {
+    color: #4c2c92;
+}
+
+.idsk-crossroad-subtitle {
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.14286;
+    padding-top: 10px;
+    padding-bottom: 15px;
+    margin: 0;
+    color: #626a6e;
+}
+@media print {
+    .idsk-crossroad-subtitle {
+        font-family: sans-serif;
+    }
+}
+@media (min-width: 40.0625em) {
+    .idsk-crossroad-subtitle {
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.25;
+    }
+}
+@media print {
+    .idsk-crossroad-subtitle {
+        font-size: 14pt;
+        line-height: 1.2;
+    }
+}
+@media (min-width: 40.0625em) {
+    .idsk-crossroad-subtitle {
+        padding-top: 10px;
+    }
+}
+@media (min-width: 40.0625em) {
+    .idsk-crossroad-subtitle {
+        padding-bottom: 20px;
+    }
+}
+
+.idsk-crossroad-line {
+    color: #bfc1c3;
+    border-color: #bfc1c3;
+    background-color: #bfc1c3;
+    height: 1px;
+    border: 0;
+    border-top: 1px;
+    margin-bottom: 10px;
+}
+
+.idsk-crossroad__uncollapse-div {
+    text-align: center;
+}
+.idsk-crossroad__colapse--button {
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    background: none;
+    border: none;
+    width: -webkit-fill-available;
+    text-align: center;
+    -webkit-text-decoration-line: underline;
+    text-decoration-line: underline;
+    color: #0065b3;
+    width: auto;
+    height: 100%;
+    cursor: pointer;
+    display: inline-block;
+}
+@media print {
+    .idsk-crossroad__colapse--button {
+        font-family: sans-serif;
+    }
+}
+@media (min-width: 40.0625em) {
+    .idsk-crossroad__colapse--button {
+        font-size: 19px;
+        font-size: 1.1875rem;
+        line-height: 1.31579;
+    }
+}
+@media print {
+    .idsk-crossroad__colapse--button {
+        font-size: 14pt;
+        line-height: 1.15;
+    }
+}
+.idsk-crossroad__colapse--button::before,
+.idsk-crossroad__colapse--button::after {
+    border-style: solid;
+    border-width: 0.1em 0.1em 0 0;
+    color: #0065b3;
+    content: "";
+    display: inline-block;
+    height: 0.45em;
+    right: 25px;
+    top: 15px;
+    -webkit-transform: rotate(135deg);
+    -ms-transform: rotate(135deg);
+    transform: rotate(135deg);
+    -webkit-transition: all 0.2s ease-out;
+    transition: all 0.2s ease-out;
+    vertical-align: top;
+    width: 0.45em;
+}
+@media (min-width: 40.0625em) {
+    .idsk-crossroad__colapse--button::before,
+    .idsk-crossroad__colapse--button::after {
+        right: 50px;
+        top: 20px;
+    }
+}
+.idsk-crossroad__colapse--button::after {
+    margin: 5px 0 0 20px;
+}
+.idsk-crossroad__colapse--button::before {
+    margin: 5px 22px 0 0;
+}
+.idsk-crossroad__colapse--button:focus,
+.idsk-crossroad__colapse--button:active,
+.idsk-crossroad__colapse--button.\:focus,
+.idsk-crossroad__colapse--button.\:active {
+    outline: 3px solid transparent;
+    color: #0b0c0c;
+    background-color: #ffdf0f;
+    box-shadow: 0 -2px #ffdf0f, 0 4px #0b0c0c;
+    text-decoration: none;
+    width: auto;
+    padding: 0 12px;
+}
+
+.idsk-crossroad__colapse--button-show:focus,
+.idsk-crossroad__colapse--button-show:active,
+.idsk-crossroad__colapse--button-show.\:focus,
+.idsk-crossroad__colapse--button-show.\:active {
+    padding: 0;
+}

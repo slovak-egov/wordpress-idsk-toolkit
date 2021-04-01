@@ -1,0 +1,17 @@
+.govuk-clearfix:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.govuk-grid-column-full {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 15px;
+}
+@media (min-width: 40.0625em) {
+    .govuk-grid-column-full {
+        width: 100%;
+        float: left;
+    }
+}

@@ -1,0 +1,17 @@
+/**
+ * Import custom blocks CSS
+ *
+ * @link https://slovenskoit.sk
+ *
+ * @package WordPress
+ * @subpackage ID-SK
+ * @since ID-SK 1.0
+ */
+
+@import "block-warning-text/editor.css";
+@import "block-crossroad/editor.css";
+@import "block-related-content/editor.css";
+@import "block-address/editor.css";
+@import "block-intro/editor.css";
+@import "book-details/editor.css";
+@import "book-details/style.css";

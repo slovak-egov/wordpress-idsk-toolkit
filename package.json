@@ -1,0 +1,43 @@
+{
+  "name": "idsk",
+  "author": "https://slovenskoit.sk",
+  "version": "1.0.0",
+  "license": "MIT",
+  "description": "",
+  "main": "blocks/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env webpack --watch",
+    "build": "cross-env NODE_ENV=production webpack -p"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/id-sk/idsk-wp-template.git"
+  },
+  "keywords": [
+    "idsk",
+    "toolkit",
+    "idsk-toolkit",
+    "gov"
+  ],
+  "bugs": {
+    "url": "https://gitlab.com/id-sk/idsk-wp-template/issues"
+  },
+  "homepage": "https://gitlab.com/id-sk/idsk-wp-template#readme",
+  "devDependencies": {
+    "@babel/core": "^7.13.14",
+    "@wordpress/babel-preset-default": "^4.20.0",
+    "autoprefixer": "^10.2.5",
+    "babel-loader": "^8.2.2",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.2.0",
+    "mini-css-extract-plugin": "^1.4.0",
+    "postcss-loader": "^4.1.0",
+    "webpack": "^4.44.2",
+    "webpack-cli": "^4.6.0",
+    "webpack-fix-style-only-entries": "^0.6.1"
+  },
+  "dependencies": {
+    "nanoid": "^3.1.22"
+  }
+}
