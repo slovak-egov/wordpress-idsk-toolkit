@@ -15,3 +15,4 @@ require plugin_dir_path(__DIR__) . '/blocks/block-crossroad/index.php';
 require plugin_dir_path(__DIR__) . '/blocks/block-intro/index.php';
 require plugin_dir_path(__DIR__) . '/blocks/book-details/index.php';
 require plugin_dir_path(__DIR__) . '/blocks/block-address/index.php';
+require plugin_dir_path(__DIR__) . '/blocks/block-timeline/index.php';
