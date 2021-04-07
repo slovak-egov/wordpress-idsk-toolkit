@@ -4,7 +4,7 @@
  *  Enqueue JavaScript and CSS
  *  for block editor only.
  */
-function enqueue_block_assets() {
+function idsktk_enqueue_block_assets() {
   // Enqueue the bundled block JS file
   wp_enqueue_script(
     'idsk/blocks-js',
@@ -28,4 +28,4 @@ function enqueue_block_assets() {
   );
 }
 
-add_action('enqueue_block_editor_assets', 'enqueue_block_assets');
+add_action('enqueue_block_editor_assets', 'idsktk_enqueue_block_assets');

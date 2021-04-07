@@ -9,7 +9,7 @@
  * @since ID-SK 1.0
  */
 
-function register_dynamic_warning_text_block() {
+function idsktk_register_dynamic_warning_text_block() {
     // Only load if Gutenberg is available.
     if (!function_exists('register_block_type')) {
         return;
@@ -17,15 +17,15 @@ function register_dynamic_warning_text_block() {
 
     // Hook server side rendering into render callback
     register_block_type('idsk/warning-text', array(
-        'render_callback' => 'render_dynamic_warning_text_block'
+        'render_callback' => 'idsktk_render_dynamic_warning_text_block'
     ));
 }
-add_action('init', 'register_dynamic_warning_text_block');
+add_action('init', 'idsktk_register_dynamic_warning_text_block');
 
-function render_dynamic_warning_text_block($attributes) {
+function idsktk_render_dynamic_warning_text_block($attributes) {
 
     // block attributes
-    $text = $attributes['text'];
+    $text = isset($attributes['text']) ? $attributes['text'] : '';
     $className = isset($attributes['className']) ? $attributes['className'] : '';
     // block settings
     $text_type = isset($attributes['textType']) && $attributes['textType'] ? $attributes['textType'] : FALSE;

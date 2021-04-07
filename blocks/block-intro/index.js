@@ -27,14 +27,14 @@ const classes = 'block-editor-rich-text__editable rich-text'; // default gutenbe
 
 registerBlockType('idsk/intro', {
     // built-in attributes
-    title: __('Úvodný blok', 'idsk'),
-    description: __('Zobrazuje úvodný blok pre webové sídla. K dispozícii sú viaceré varianty zobrazenia.', 'idsk'),
+    title: __('Úvodný blok', 'idsk-toolkit'),
+    description: __('Zobrazuje úvodný blok pre webové sídla. K dispozícii sú viaceré varianty zobrazenia.', 'idsk-toolkit'),
     icon: 'editor-table',
     category: 'idsk-components',
     keywords: [
-        __('úvod', 'idsk'),
-        __('blok', 'idsk'),
-        __('vyhľadávanie', 'idsk'),
+        __('úvod', 'idsk-toolkit'),
+        __('blok', 'idsk-toolkit'),
+        __('vyhľadávanie', 'idsk-toolkit'),
     ],
 
     // custom attributes
@@ -143,7 +143,7 @@ registerBlockType('idsk/intro', {
                                 class={classes + " govuk-heading-l h2-side"}
                                 key="editable"
                                 tagName="h2"
-                                placeholder={__('Bočný panel', 'idsk')}
+                                placeholder={__('Bočný panel', 'idsk-toolkit')}
                                 value={this.props.attributes.sideTitle}
                                 onChange={value => this.onChange('sideTitle', value)} 
                             />
@@ -153,7 +153,7 @@ registerBlockType('idsk/intro', {
                                     key="editable"
                                     tagName="ul"
                                     multiline="li"
-                                    placeholder={__('Odkazy bočného panela', 'idsk')}
+                                    placeholder={__('Odkazy bočného panela', 'idsk-toolkit')}
                                     value={this.props.attributes.sideContent}
                                     onChange={value => this.onChange('sideContent', value)} 
                                 />
@@ -168,7 +168,7 @@ registerBlockType('idsk/intro', {
                                 class={classes + " govuk-heading-l h2-side"}
                                 key="editable"
                                 tagName="h2"
-                                placeholder={__('Bočný panel', 'idsk')}
+                                placeholder={__('Bočný panel', 'idsk-toolkit')}
                                 value={this.props.attributes.sideTitle}
                                 onChange={value => this.onChange('sideTitle', value)} 
                             />
@@ -177,7 +177,7 @@ registerBlockType('idsk/intro', {
                                 key="editable"
                                 tagName="ul"
                                 multiline="li"
-                                placeholder={__('Odkazy bočného panela', 'idsk')}
+                                placeholder={__('Odkazy bočného panela', 'idsk-toolkit')}
                                 value={this.props.attributes.sideContent}
                                 onChange={value => this.onChange('sideContent', value)} 
                             />
@@ -196,7 +196,7 @@ registerBlockType('idsk/intro', {
 
             return <div className={className}>
                 <InspectorControls>
-                    <PanelBody title={__('Zobrazenie obsahu', 'idsk')}>
+                    <PanelBody title={__('Zobrazenie obsahu', 'idsk-toolkit')}>
                         <PanelRow>
                             <ToggleControl
                                 className="js-intro-search"
@@ -208,19 +208,19 @@ registerBlockType('idsk/intro', {
                         <PanelRow>
                             <RadioControl
                                 className="js-side-style"
-                                label={__('Štýl zobrazenia bočného panelu', 'idsk')}
+                                label={__('Štýl zobrazenia bočného panelu', 'idsk-toolkit')}
                                 selected={ sideStyle }
                                 options={ [
                                     { 
-                                        label: __('Základné zobrazenie', 'idsk'),
+                                        label: __('Základné zobrazenie', 'idsk-toolkit'),
                                         value: 'default' 
                                     },
                                     { 
-                                        label: __('Šedé zobrazenie', 'idsk'),
+                                        label: __('Šedé zobrazenie', 'idsk-toolkit'),
                                         value: 'app-pane-grey' 
                                     },
                                     { 
-                                        label: __('Modré zobrazenie', 'idsk'),
+                                        label: __('Modré zobrazenie', 'idsk-toolkit'),
                                         value: 'app-pane-blue' 
                                     },
                                 ] }
@@ -230,21 +230,21 @@ registerBlockType('idsk/intro', {
                     </PanelBody>
 
                     {!!withSearch &&
-                    <PanelBody title={__('Odkazy pre vyhľadávanie', 'idsk')}>
+                    <PanelBody title={__('Odkazy pre vyhľadávanie', 'idsk-toolkit')}>
                         <h3>Odkaz 1</h3>
                         <TextControl
                             class={classes + " js-search-link-1-text"}
                             key="editable"
-                            placeholder={__('Odkaz 1', 'idsk')}
-                            label={__('Názov odkazu 1', 'idsk')}
+                            placeholder={__('Odkaz 1', 'idsk-toolkit')}
+                            label={__('Názov odkazu 1', 'idsk-toolkit')}
                             value={urlText1}
                             onChange={value => this.onChange('urlText1', value)} 
                         />
                         <TextControl
                             class={classes + " js-search-link-1-href"}
                             key="editable"
-                            placeholder={__('https://www.google.com', 'idsk')}
-                            label={__('URL k odkazu 1', 'idsk')}
+                            placeholder={__('https://www.google.com', 'idsk-toolkit')}
+                            label={__('URL k odkazu 1', 'idsk-toolkit')}
                             value={url1}
                             onChange={value => this.onChange('url1', value)} 
                         />
@@ -253,16 +253,16 @@ registerBlockType('idsk/intro', {
                         <TextControl
                             class={classes + " js-search-link-2-text"}
                             key="editable"
-                            placeholder={__('Odkaz 2', 'idsk')}
-                            label={__('Názov odkazu 2', 'idsk')}
+                            placeholder={__('Odkaz 2', 'idsk-toolkit')}
+                            label={__('Názov odkazu 2', 'idsk-toolkit')}
                             value={urlText2}
                             onChange={value => this.onChange('urlText2', value)} 
                         />
                         <TextControl
                             class={classes + " js-search-link-2-href"}
                             key="editable"
-                            placeholder={__('https://www.google.com', 'idsk')}
-                            label={__('URL k odkazu 2', 'idsk')}
+                            placeholder={__('https://www.google.com', 'idsk-toolkit')}
+                            label={__('URL k odkazu 2', 'idsk-toolkit')}
                             value={url2}
                             onChange={value => this.onChange('url2', value)}  
                         />
@@ -271,16 +271,16 @@ registerBlockType('idsk/intro', {
                         <TextControl
                             class={classes + " js-search-link-3-text"}
                             key="editable"
-                            placeholder={__('Odkaz 3', 'idsk')}
-                            label={__('Názov odkazu 3', 'idsk')}
+                            placeholder={__('Odkaz 3', 'idsk-toolkit')}
+                            label={__('Názov odkazu 3', 'idsk-toolkit')}
                             value={urlText3}
                             onChange={value => this.onChange('urlText3', value)} 
                         />
                         <TextControl
                             class={classes + " js-search-link-3-href"}
                             key="editable"
-                            placeholder={__('https://www.google.com', 'idsk')}
-                            label={__('URL k odkazu 3', 'idsk')}
+                            placeholder={__('https://www.google.com', 'idsk-toolkit')}
+                            label={__('URL k odkazu 3', 'idsk-toolkit')}
                             value={url3}
                             onChange={value => this.onChange('url3', value)} 
                         />
@@ -289,16 +289,16 @@ registerBlockType('idsk/intro', {
                         <TextControl
                             class={classes + " js-search-link-4-text"}
                             key="editable"
-                            placeholder={__('Odkaz 4', 'idsk')}
-                            label={__('Názov odkazu 4', 'idsk')}
+                            placeholder={__('Odkaz 4', 'idsk-toolkit')}
+                            label={__('Názov odkazu 4', 'idsk-toolkit')}
                             value={urlText4}
                             onChange={value => this.onChange('urlText4', value)} 
                         />
                         <TextControl
                             class={classes + " js-search-link-4-href"}
                             key="editable"
-                            placeholder={__('https://www.google.com', 'idsk')}
-                            label={__('URL k odkazu 4', 'idsk')}
+                            placeholder={__('https://www.google.com', 'idsk-toolkit')}
+                            label={__('URL k odkazu 4', 'idsk-toolkit')}
                             value={url4}
                             onChange={value => this.onChange('url4', value)} 
                         />
@@ -307,16 +307,16 @@ registerBlockType('idsk/intro', {
                         <TextControl
                             class={classes + " js-search-link-5-text"}
                             key="editable"
-                            placeholder={__('Odkaz 5', 'idsk')}
-                            label={__('Názov odkazu 5', 'idsk')}
+                            placeholder={__('Odkaz 5', 'idsk-toolkit')}
+                            label={__('Názov odkazu 5', 'idsk-toolkit')}
                             value={urlText5}
                             onChange={value => this.onChange('urlText5', value)} 
                         />
                         <TextControl
                             class={classes + " js-search-link-5-href"}
                             key="editable"
-                            placeholder={__('https://www.google.com', 'idsk')}
-                            label={__('URL k odkazu 5', 'idsk')}
+                            placeholder={__('https://www.google.com', 'idsk-toolkit')}
+                            label={__('URL k odkazu 5', 'idsk-toolkit')}
                             value={url5}
                             onChange={value => this.onChange('url5', value)} 
                         />
@@ -332,7 +332,7 @@ registerBlockType('idsk/intro', {
                                     class={classes + " govuk-heading-l h2-main"}
                                     key="editable"
                                     tagName="h2"
-                                    placeholder={__('Hlavný nadpis', 'idsk')}
+                                    placeholder={__('Hlavný nadpis', 'idsk-toolkit')}
                                     value={title}
                                     onChange={value => this.onChange('title', value)} 
                                 />
@@ -340,7 +340,7 @@ registerBlockType('idsk/intro', {
                                     class={classes + " idsk-intro-block__subtitle govuk-caption-l"}
                                     key="editable"
                                     tagName="p"
-                                    placeholder={__('Vedľajší nadpis', 'idsk')}
+                                    placeholder={__('Vedľajší nadpis', 'idsk-toolkit')}
                                     value={subTitle}
                                     onChange={value => this.onChange('subTitle', value)} 
                                 />
@@ -362,7 +362,7 @@ registerBlockType('idsk/intro', {
                                                 <RichText
                                                     class={classes}
                                                     tagName="span"
-                                                    placeholder={__('Hľadáte toto?', 'idsk')}
+                                                    placeholder={__('Hľadáte toto?', 'idsk-toolkit')}
                                                     value={searchTitle}
                                                     onChange={value => this.onChange('searchTitle', value)} 
                                                 />

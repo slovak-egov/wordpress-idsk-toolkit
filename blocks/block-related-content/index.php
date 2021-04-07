@@ -9,7 +9,7 @@
  * @since ID-SK 1.0
  */
 
-function register_dynamic_related_content_block() {
+function idsktk_register_dynamic_related_content_block() {
   // Only load if Gutenberg is available.
   if (!function_exists('register_block_type')) {
       return;
@@ -17,15 +17,15 @@ function register_dynamic_related_content_block() {
 
   // Hook server side rendering into render callback
   register_block_type('idsk/related-content', array(
-      'render_callback' => 'render_dynamic_related_content_block'
+      'render_callback' => 'idsktk_render_dynamic_related_content_block'
   ));
 }
-add_action('init', 'register_dynamic_related_content_block');
+add_action('init', 'idsktk_register_dynamic_related_content_block');
     
-function render_dynamic_related_content_block($attributes) {
+function idsktk_render_dynamic_related_content_block($attributes) {
   // block attributes
-  $title = $attributes['title'];
-  $body = $attributes['body'];
+  $title = isset($attributes['title']) ? $attributes['title'] : '';
+  $body = isset($attributes['body']) ? $attributes['body'] : '';
   $className = isset($attributes['className']) ? $attributes['className'] : '';
   // block settings
   $related_content_grid_type = isset($attributes['gridType']) ? FALSE : TRUE;

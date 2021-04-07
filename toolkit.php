@@ -15,7 +15,7 @@
  * Requires PHP:      7.0
  * Author:            SlovenskoIT a.s.
  * Author URI:        https://slovenskoit.sk
- * Text Domain:       idsk.gov.sk
+ * Text Domain:       idsk-toolkit
  * License:           GPL v2 or later
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  */
@@ -31,31 +31,31 @@ function cc_mime_types($mimes) {
 add_filter('upload_mimes', 'cc_mime_types');
 
 // Register Custom Post Type
-function idsk_post_type() {
+function idsktk_post_type() {
     $labels = array(
-        'name'                  => _x( 'Aktuality inštitúcií', 'Post Type General Name', 'idsk' ),
-        'singular_name'         => _x( 'Aktuality inštitúcií', 'Post Type Singular Name', 'idsk' ),
-        'menu_name'             => __( 'Aktuality inštitúcií', 'idsk' ),
-        'name_admin_bar'        => __( 'Aktuality inštitúcií', 'idsk' ),
-        'all_items'             => __( 'Zobraziť všetky', 'idsk' ),
-        'add_new_item'          => __( 'Pridať nový', 'idsk' ),
-        'add_new'               => __( 'Pridať nový', 'idsk' ),
-        'new_item'              => __( 'Pridať nový', 'idsk' ),
-        'edit_item'             => __( 'Editovať', 'idsk' ),
-        'update_item'           => __( 'Aktualizovať', 'idsk' ),
-        'view_item'             => __( 'Zobraziť', 'idsk' ),
-        'view_items'            => __( 'Zobraziť', 'idsk' ),
-        'search_items'          => __( 'Hľadať', 'idsk' ),
-        'not_found'             => __( 'Nenájdený', 'idsk' ),
-        'not_found_in_trash'    => __( 'Nenájdený v koši', 'idsk' ),
-        'featured_image'        => __( 'Obrázok', 'idsk' ),
-        'set_featured_image'    => __( 'Vložiť obrázok', 'idsk' ),
-        'remove_featured_image' => __( 'Vymazať obrázok', 'idsk' ),
-        'use_featured_image'    => __( 'Použiť obrázok', 'idsk' ),
+        'name'                  => _x( 'Aktuality inštitúcií', 'Post Type General Name', 'idsk-toolkit' ),
+        'singular_name'         => _x( 'Aktuality inštitúcií', 'Post Type Singular Name', 'idsk-toolkit' ),
+        'menu_name'             => __( 'Aktuality inštitúcií', 'idsk-toolkit' ),
+        'name_admin_bar'        => __( 'Aktuality inštitúcií', 'idsk-toolkit' ),
+        'all_items'             => __( 'Zobraziť všetky', 'idsk-toolkit' ),
+        'add_new_item'          => __( 'Pridať nový', 'idsk-toolkit' ),
+        'add_new'               => __( 'Pridať nový', 'idsk-toolkit' ),
+        'new_item'              => __( 'Pridať nový', 'idsk-toolkit' ),
+        'edit_item'             => __( 'Editovať', 'idsk-toolkit' ),
+        'update_item'           => __( 'Aktualizovať', 'idsk-toolkit' ),
+        'view_item'             => __( 'Zobraziť', 'idsk-toolkit' ),
+        'view_items'            => __( 'Zobraziť', 'idsk-toolkit' ),
+        'search_items'          => __( 'Hľadať', 'idsk-toolkit' ),
+        'not_found'             => __( 'Nenájdený', 'idsk-toolkit' ),
+        'not_found_in_trash'    => __( 'Nenájdený v koši', 'idsk-toolkit' ),
+        'featured_image'        => __( 'Obrázok', 'idsk-toolkit' ),
+        'set_featured_image'    => __( 'Vložiť obrázok', 'idsk-toolkit' ),
+        'remove_featured_image' => __( 'Vymazať obrázok', 'idsk-toolkit' ),
+        'use_featured_image'    => __( 'Použiť obrázok', 'idsk-toolkit' ),
     );
     $args = array(
-        'label'                 => __( 'Aktuality inštitúcií', 'idsk' ),
-        'description'           => __( 'Aktuality inštitúcií', 'idsk' ),
+        'label'                 => __( 'Aktuality inštitúcií', 'idsk-toolkit' ),
+        'description'           => __( 'Aktuality inštitúcií', 'idsk-toolkit' ),
         'labels'                => $labels,
         'supports'              => array( 'title', 'editor', 'thumbnail', 'revisions', 'page-attributes', 'post-formats' ),
         'hierarchical'          => false,
@@ -76,25 +76,25 @@ function idsk_post_type() {
     register_post_type( 'aktuality_institucii', $args );
 
 }
-add_action( 'init', 'idsk_post_type', 0 );
+add_action( 'init', 'idsktk_post_type', 0 );
 
 // Register Custom Taxonomy
-function idsk_taxonomy() {
+function idsktk_taxonomy() {
     $labels = array(
-        'name'                       => _x( 'Kategórie aktualít', 'Taxonomy General Name', 'idsk' ),
-        'singular_name'              => _x( 'Kategórie', 'Taxonomy Singular Name', 'idsk' ),
-        'menu_name'                  => __( 'Kategórie aktualít', 'idsk' ),
-        'all_items'                  => __( 'Zobraziť všetky', 'idsk' ),
-        'new_item_name'              => __( 'Názov', 'idsk' ),
-        'add_new_item'               => __( 'Pridať nový', 'idsk' ),
-        'edit_item'                  => __( 'Upraviť', 'idsk' ),
-        'update_item'                => __( 'Aktualizovať', 'idsk' ),
-        'view_item'                  => __( 'Zobraziť', 'idsk' ),
-        'add_or_remove_items'        => __( 'Pridať alebo zmazať', 'idsk' ),
-        'search_items'               => __( 'Vyhľadať', 'idsk' ),
-        'not_found'                  => __( 'Nenájdený', 'idsk' ),
-        'no_terms'                   => __( 'Nenájdený', 'idsk' ),
-        'items_list'                 => __( 'Zoznam', 'idsk' ),
+        'name'                       => _x( 'Kategórie aktualít', 'Taxonomy General Name', 'idsk-toolkit' ),
+        'singular_name'              => _x( 'Kategórie', 'Taxonomy Singular Name', 'idsk-toolkit' ),
+        'menu_name'                  => __( 'Kategórie aktualít', 'idsk-toolkit' ),
+        'all_items'                  => __( 'Zobraziť všetky', 'idsk-toolkit' ),
+        'new_item_name'              => __( 'Názov', 'idsk-toolkit' ),
+        'add_new_item'               => __( 'Pridať nový', 'idsk-toolkit' ),
+        'edit_item'                  => __( 'Upraviť', 'idsk-toolkit' ),
+        'update_item'                => __( 'Aktualizovať', 'idsk-toolkit' ),
+        'view_item'                  => __( 'Zobraziť', 'idsk-toolkit' ),
+        'add_or_remove_items'        => __( 'Pridať alebo zmazať', 'idsk-toolkit' ),
+        'search_items'               => __( 'Vyhľadať', 'idsk-toolkit' ),
+        'not_found'                  => __( 'Nenájdený', 'idsk-toolkit' ),
+        'no_terms'                   => __( 'Nenájdený', 'idsk-toolkit' ),
+        'items_list'                 => __( 'Zoznam', 'idsk-toolkit' ),
     );
     $args = array(
         'labels'                     => $labels,
@@ -108,7 +108,7 @@ function idsk_taxonomy() {
     );
     register_taxonomy( 'kategorie_aktuality_institucii', array( 'aktuality_institucii' ), $args );
 }
-add_action( 'init', 'idsk_taxonomy', 0 );
+add_action( 'init', 'idsktk_taxonomy', 0 );
 
 // Registering blocks
 /**

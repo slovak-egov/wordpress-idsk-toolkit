@@ -27,14 +27,14 @@ const classes = 'block-editor-rich-text__editable rich-text'; // default gutenbe
 
 registerBlockType('idsk/address', {
     // built-in attributes
-    title: __('Adresa', 'idsk'),
-    description: __('Zobrazuje adresu s minimapou. K dispozícii sú dve možné zobrazenia.', 'idsk'),
+    title: __('Adresa', 'idsk-toolkit'),
+    description: __('Zobrazuje adresu s minimapou. K dispozícii sú dve možné zobrazenia.', 'idsk-toolkit'),
     icon: 'location-alt',
     category: 'idsk-components',
     keywords: [
-        __('adresa', 'idsk'),
-        __('mapa', 'idsk'),
-        __('podujatie', 'idsk'),
+        __('adresa', 'idsk-toolkit'),
+        __('mapa', 'idsk-toolkit'),
+        __('podujatie', 'idsk-toolkit'),
     ],
 
     // custom attributes
@@ -175,14 +175,14 @@ registerBlockType('idsk/address', {
                     <PanelBody title={__('Súradnice mapy')}>
                         <TextControl
                             className="js-address-map"
-                            label={__('Zadajte adresu miesta', 'idsk')}
+                            label={__('Zadajte adresu miesta', 'idsk-toolkit')}
                             value={mapCoords}
                             onChange={value => setAttributes({ mapCoords: value })}
                         />
                         {(!this.state.globalApi || this.state.globalApi == false) &&
                         <TextControl
                             className="js-address-map-api"
-                            label={__('Zadajte API kľúč pre Google Mapy', 'idsk')}
+                            label={__('Zadajte API kľúč pre Google Mapy', 'idsk-toolkit')}
                             value={mapApi}
                             onChange={value => setAttributes({ mapApi: value })}
                         /> 
@@ -199,14 +199,14 @@ registerBlockType('idsk/address', {
                                 class={classes + " govuk-heading-m"}
                                 key="editable"
                                 tagName="h2"
-                                placeholder={__('Hlavný nadpis', 'idsk')}
+                                placeholder={__('Hlavný nadpis', 'idsk-toolkit')}
                                 value={title}
                                 onChange={value => this.onChangeTitle(value)} />
                             <RichText
                                 class={classes + " govuk-heading-s"}
                                 key="editable"
                                 tagName="h3"
-                                placeholder={__('Vedľajší nadpis', 'idsk')}
+                                placeholder={__('Vedľajší nadpis', 'idsk-toolkit')}
                                 value={titleSmall}
                                 onChange={value => this.onChangeTitleSmall(value)} />
                             <RichText
@@ -214,7 +214,7 @@ registerBlockType('idsk/address', {
                                 key="editable"
                                 tagName="p"
                                 multiline={true}
-                                placeholder={__('Popis', 'idsk')}
+                                placeholder={__('Popis', 'idsk-toolkit')}
                                 value={body}
                                 onChange={value => this.onChangeBody(value)} />
                         </div>

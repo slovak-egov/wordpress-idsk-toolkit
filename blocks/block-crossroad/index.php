@@ -9,7 +9,7 @@
  * @since ID-SK 1.0
  */
 
-function register_dynamic_crossroad_block() {
+function idsktk_register_dynamic_crossroad_block() {
     // Only load if Gutenberg is available.
     if (!function_exists('register_block_type')) {
         return;
@@ -17,14 +17,14 @@ function register_dynamic_crossroad_block() {
 
     // Hook server side rendering into render callback
     register_block_type('idsk/crossroad', array(
-        'render_callback' => 'render_dynamic_crossroad_block'
+        'render_callback' => 'idsktk_render_dynamic_crossroad_block'
     ));
 }
-add_action('init', 'register_dynamic_crossroad_block');
+add_action('init', 'idsktk_register_dynamic_crossroad_block');
 
-function render_dynamic_crossroad_block($attributes) {
+function idsktk_render_dynamic_crossroad_block($attributes) {
     // block attributes
-    $items = $attributes['items'];
+    $items = isset($attributes['items']) ? $attributes['items'] : array();
     $className = isset($attributes['className']) ? $attributes['className'] : '';
     // block settings
     $number_of_cols = isset($attributes['numberOfCols']) && $attributes['numberOfCols'] ? 2 : 1;
@@ -68,7 +68,7 @@ function render_dynamic_crossroad_block($attributes) {
             <?php $classes = ($number_of_items < 6 && $number_of_cols) || ($number_of_items < 11 && !$number_of_cols) ? ' idsk-crossroad__uncollapse-hide--desktop' : ''; ?>
             <?php $classes = $classes . ($number_of_items < 6 ? ' idsk-crossroad__uncollapse-hide--mobile' : ''); ?>
         <div class="govuk-grid-column-full idsk-crossroad__collapse--shadow idsk-crossroad__uncollapse-div<?php echo $classes; ?>">
-            <button id="idsk-crossroad__uncollapse-button" class="idsk-crossroad__colapse--button" type="button"><?php echo __( 'Zobraziť viac', 'idsk' ); ?></button>
+            <button id="idsk-crossroad__uncollapse-button" class="idsk-crossroad__colapse--button" type="button"><?php echo __( 'Zobraziť viac', 'idsk-toolkit' ); ?></button>
         </div>
         <?php } ?>
     </div>
