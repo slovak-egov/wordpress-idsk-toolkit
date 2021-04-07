@@ -1,0 +1,34 @@
+.main-govuk-grid-row {
+    margin-right: -15px;
+    margin-left: -15px;
+    min-height: 50px;
+    border: 1px solid transparent;
+}
+.main-govuk-grid-row:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.main-govuk-grid-row:hover {
+    border-color: rgb(0, 0, 0);
+    border-color: rgba(0, 0, 0, .1);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+}
+.main-govuk-grid-row:focus-within {
+    border-color: rgb(0, 0, 0);
+    border-color: rgba(0, 0, 0, .3);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+}
+.main-govuk-grid-row:active {
+    border-color: rgb(0, 0, 0);
+    border-color: rgba(0, 0, 0, .5);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+}
+
+.main-govuk-grid-row .block-editor-block-list__block {
+    margin-top: 15px;
+    margin-bottom: 15px;
+}

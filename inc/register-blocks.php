@@ -50,6 +50,8 @@ function idsktk_allowed_block_types( $allowed_blocks ) {
         'idsk/crossroad',
         'idsk/address',
         'idsk/intro',
+        'idsk/row',
+        'idsk/column',
         'davidyeiser-detailer/book-details',
     );
 

@@ -14,3 +14,5 @@ import './block-crossroad';
 import './block-intro';
 import './book-details';
 import './block-address';
+import './grid-row';
+import './grid-column';

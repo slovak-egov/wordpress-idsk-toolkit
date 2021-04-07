@@ -15,3 +15,5 @@
 @import "block-intro/editor.css";
 @import "book-details/editor.css";
 @import "book-details/style.css";
+@import "grid-row/editor.css";
+@import "grid-column/editor.css";
