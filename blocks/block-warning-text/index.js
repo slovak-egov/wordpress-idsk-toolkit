@@ -22,14 +22,14 @@ const { __ } = wp.i18n;
 
 registerBlockType('idsk/warning-text', {
     // built-in attributes
-    title: __('Informačná lišta / Lišta s varovaním', 'idsk'),
-    description: __('Lištu použite vtedy, keď chcete niečo zdôrazniť alebo na niečo upozorniť. K dispozícii sú dva typy lišty.', 'idsk'),
+    title: __('Informačná lišta / Lišta s varovaním', 'idsk-toolkit'),
+    description: __('Lištu použite vtedy, keď chcete niečo zdôrazniť alebo na niečo upozorniť. K dispozícii sú dva typy lišty.', 'idsk-toolkit'),
     icon: 'warning',
     category: 'idsk-components',
     keywords: [
-        __('lišta', 'idsk'),
-        __('Informacna', 'idsk'),
-        __('varovanie', 'idsk'),
+        __('lišta', 'idsk-toolkit'),
+        __('Informacna', 'idsk-toolkit'),
+        __('varovanie', 'idsk-toolkit'),
     ],
 
     // custom attributes
@@ -71,7 +71,7 @@ registerBlockType('idsk/warning-text', {
                         <RichText
                             key="editable"
                             tagName="span"
-                            placeholder={__('npr. Nový obsah na stránke, nové znenie vyhlášky, novú stratégiu a podobne', 'idsk')}
+                            placeholder={__('npr. Nový obsah na stránke, nové znenie vyhlášky, novú stratégiu a podobne', 'idsk-toolkit')}
                             value={text}
                             onChange={newText => setAttributes({ text: newText })} />
                     </div>

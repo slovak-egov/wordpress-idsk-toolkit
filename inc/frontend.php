@@ -9,7 +9,7 @@
  * @param $content
  * @return string
  */
-function consent_necessary_shortcode($atts, $content)
+function idsktk_consent_necessary_shortcode($atts, $content)
 {
     $a = shortcode_atts(array(
         'name' => null,
@@ -27,7 +27,7 @@ function consent_necessary_shortcode($atts, $content)
             </div>
             <div class="govuk-inset-text">' . do_shortcode($content) . '</div>';
 }
-add_shortcode('consent_necessary', 'consent_necessary_shortcode');
+add_shortcode('consent_necessary', 'idsktk_consent_necessary_shortcode');
 
 /**
  * Cookies performance
@@ -36,7 +36,7 @@ add_shortcode('consent_necessary', 'consent_necessary_shortcode');
  * @param $content
  * @return string
  */
-function consent_performance_shortcode($atts, $content)
+function idsktk_consent_performance_shortcode($atts, $content)
 {
     $a = shortcode_atts(array(
         'name' => null,
@@ -54,7 +54,7 @@ function consent_performance_shortcode($atts, $content)
             </div>
             <div class="govuk-inset-text">' . do_shortcode($content) . '</div>';
 }
-add_shortcode('consent_performance', 'consent_performance_shortcode');
+add_shortcode('consent_performance', 'idsktk_consent_performance_shortcode');
 
 /**
  * Cookies marketing
@@ -63,7 +63,7 @@ add_shortcode('consent_performance', 'consent_performance_shortcode');
  * @param $content
  * @return string
  */
-function consent_marketing_shortcode($atts, $content)
+function idsktk_consent_marketing_shortcode($atts, $content)
 {
     $a = shortcode_atts(array(
         'name' => null,
@@ -80,7 +80,7 @@ function consent_marketing_shortcode($atts, $content)
             </div>
             <div class="govuk-inset-text">' . do_shortcode($content) . '</div>';
 }
-add_shortcode('consent_marketing', 'consent_marketing_shortcode');
+add_shortcode('consent_marketing', 'idsktk_consent_marketing_shortcode');
 
 /**
  * Cookies targeting
@@ -89,7 +89,7 @@ add_shortcode('consent_marketing', 'consent_marketing_shortcode');
  * @param $content
  * @return string
  */
-function consent_targeting_shortcode($atts, $content)
+function idsktk_consent_targeting_shortcode($atts, $content)
 {
     $a = shortcode_atts(array(
         'name' => null,
@@ -106,7 +106,7 @@ function consent_targeting_shortcode($atts, $content)
             </div>
             <div class="govuk-inset-text">' . do_shortcode($content) . '</div>';
 }
-add_shortcode('consent_targeting', 'consent_targeting_shortcode');
+add_shortcode('consent_targeting', 'idsktk_consent_targeting_shortcode');
 
 /**
  * Shortcode cookies submit
@@ -115,14 +115,14 @@ add_shortcode('consent_targeting', 'consent_targeting_shortcode');
  * @param $content
  * @return string
  */
-function consent_submit_shortcode($atts, $content)
+function idsktk_consent_submit_shortcode($atts, $content)
 {
     $a = shortcode_atts(array(
         'name' => null,
     ), $atts);
     return '<button type="button" class="govuk-button" id="consent_save">' . $a['name'] . '</button>';
 }
-add_shortcode('consent_submit', 'consent_submit_shortcode');
+add_shortcode('consent_submit', 'idsktk_consent_submit_shortcode');
 
     /**
      * Yoast SEO clenauot spans
@@ -130,7 +130,7 @@ add_shortcode('consent_submit', 'consent_submit_shortcode');
      * @param $link
      * @return string|string[]|null
      */
-    function id_sk_filter_breadcrumbs( $link_output, $link ) {
+    function idsktk_id_sk_filter_breadcrumbs( $link_output, $link ) {
 
         //$link_output = preg_replace("/<span\s(.+?)>(.+?)<\/span>/is", "<h1 $1>$2</h1>", $link_output);
         //$output = strip_tags( $link_output, '<a>' );
@@ -140,4 +140,4 @@ add_shortcode('consent_submit', 'consent_submit_shortcode');
 
         return $link_output;
     }
-    add_filter('wpseo_breadcrumb_single_link', 'id_sk_filter_breadcrumbs', 10, 2);
+    add_filter('wpseo_breadcrumb_single_link', 'idsktk_id_sk_filter_breadcrumbs', 10, 2);

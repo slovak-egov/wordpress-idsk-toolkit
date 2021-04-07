@@ -130,8 +130,8 @@ class IdskShortcodes
 
                     $times = [];
 
-                    $from = __('od', 'idsk');
-                    $to = __('do', 'idsk');
+                    $from = __('od', 'idsk-toolkit');
+                    $to = __('do', 'idsk-toolkit');
 
 
                     if (null !== $safeFrom && $safeFrom->format('Y-m-d H:i:s') > $nowString) {

@@ -31,14 +31,14 @@ const ALLOWED_BLOCKS = [
 
 registerBlockType('idsk/related-content', {
     // built-in attributes
-    title: __('Súvisiaci obsah', 'idsk'),
-    description: __('Súvisiaci obsah slúži na to, aby ste používateľovi zobrazili odkazy na podobné, súvisiace témy.', 'idsk'),
+    title: __('Súvisiaci obsah', 'idsk-toolkit'),
+    description: __('Súvisiaci obsah slúži na to, aby ste používateľovi zobrazili odkazy na podobné, súvisiace témy.', 'idsk-toolkit'),
     icon: 'admin-links',
     category: 'idsk-components',
     keywords: [
-        __('Súvisiaci', 'idsk'),
-        __('obsah', 'idsk'),
-        __('related', 'idsk'),
+        __('Súvisiaci', 'idsk-toolkit'),
+        __('obsah', 'idsk-toolkit'),
+        __('related', 'idsk-toolkit'),
     ],
 
     // custom attributes
@@ -98,7 +98,7 @@ registerBlockType('idsk/related-content', {
                         class="idsk-related-content__heading govuk-heading-s"
                         key="editable"
                         tagName="h4"
-                        placeholder={__('Súvisiace témy (⅔)', 'idsk')}
+                        placeholder={__('Súvisiace témy (⅔)', 'idsk-toolkit')}
                         value={title}
                         onChange={onChangeTitle} />
                     <RichText

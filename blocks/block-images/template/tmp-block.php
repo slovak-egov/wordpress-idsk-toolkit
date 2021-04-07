@@ -11,10 +11,10 @@ if (1==1) {
 
     <div class="govuk-grid-row">
         <div class="govuk-grid-column-one-half">
-            <img src="https://idsk-preview.herokuapp.com/public/assets/images/examples/3by2.jpg" alt="3:2">
+            <img src="#" alt="3:2">
         </div>
         <div class="govuk-grid-column-one-half">
-            <img src="https://idsk-preview.herokuapp.com/public/assets/images/examples/3by2.jpg" alt="">
+            <img src="#" alt="">
         </div>
     </div>
 

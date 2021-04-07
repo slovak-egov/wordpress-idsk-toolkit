@@ -15,7 +15,7 @@
  * @param $allowed_blocks
  * @return array
  */
-function allowed_block_types( $allowed_blocks ) {
+function idsktk_allowed_block_types( $allowed_blocks ) {
 
     return array(
         'core/html',
@@ -54,7 +54,7 @@ function allowed_block_types( $allowed_blocks ) {
     );
 
 }
-add_filter( 'allowed_block_types', 'allowed_block_types' );
+add_filter( 'allowed_block_types', 'idsktk_allowed_block_types' );
 
 /**
  * new category of blocks
@@ -63,49 +63,49 @@ add_filter( 'allowed_block_types', 'allowed_block_types' );
  * @param $post
  * @return array
  */
-function gov_page_block_category ( $categories, $post ) {
+function idsktk_gov_page_block_category ( $categories, $post ) {
     return array_reverse(array_merge(
         $categories,
         array (
             array (
                 'slug'  => 'idsk-components',
-                'title' => __( 'ID-SK Komponenty', 'idsk' ),
+                'title' => __( 'ID-SK Komponenty', 'idsk-toolkit' ),
             ),
         ),
         array (
             array (
                 'slug'  => 'gov-blocks-container',
-                'title' => __( 'GOV ID-SK kontajner', 'idsk' ),
+                'title' => __( 'GOV ID-SK kontajner', 'idsk-toolkit' ),
             ),
         ),
         array (
             array (
                 'slug'  => 'gov-blocks-grid',
-                'title' => __( 'GOV ID-SK rozloženie stránky', 'idsk' ),
+                'title' => __( 'GOV ID-SK rozloženie stránky', 'idsk-toolkit' ),
             ),
         ),
         array (
             array (
                 'slug'  => 'gov-blocks-tabs',
-                'title' => __( 'GOV ID-SK tab element', 'idsk' ),
+                'title' => __( 'GOV ID-SK tab element', 'idsk-toolkit' ),
             ),
         ),
         array(
             array(
                 'slug' => 'gov-blocks-accordion',
-                'title' => __( 'GOV ID-SK accordion', 'idsk' ),
+                'title' => __( 'GOV ID-SK accordion', 'idsk-toolkit' ),
             ),
         ),
         array (
             array (
                 'slug'  => 'gov-blocks',
-                'title' => __( 'GOV ID-SK bloky', 'idsk' ),
+                'title' => __( 'GOV ID-SK bloky', 'idsk-toolkit' ),
             ),
         )
     ));
 }
 
-add_filter( 'block_categories', 'gov_page_block_category', 10, 2 );
+add_filter( 'block_categories', 'idsktk_gov_page_block_category', 10, 2 );
 
 /**
  * Register ACF blocks
@@ -130,11 +130,11 @@ require plugin_dir_path(__DIR__) . '/blocks/block-news/block.php';
  * @param $toolbars
  * @return mixed
  */
-function my_toolbars( $toolbars )
+function idsktk_my_toolbars( $toolbars )
 {
     $toolbars['ID-GOV Toolbar' ] = array();
     $toolbars['ID-GOV Toolbar' ][1] = array( 'bold' , 'italic' , 'underline', 'link' );
 
     return $toolbars;
 }
-add_filter( 'acf/fields/wysiwyg/toolbars' , 'my_toolbars'  );
+add_filter( 'acf/fields/wysiwyg/toolbars' , 'idsktk_my_toolbars'  );

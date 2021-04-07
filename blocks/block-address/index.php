@@ -9,7 +9,7 @@
  * @since ID-SK 1.0
  */
 
-function register_dynamic_address_block() {
+function idsktk_register_dynamic_address_block() {
     // Only load if Gutenberg is available.
     if (!function_exists('register_block_type')) {
         return;
@@ -17,19 +17,19 @@ function register_dynamic_address_block() {
 
     // Hook server side rendering into render callback
     register_block_type('idsk/address', array(
-        'render_callback' => 'render_dynamic_address_block'
+        'render_callback' => 'idsktk_render_dynamic_address_block'
     ));
 }
-add_action('init', 'register_dynamic_address_block');
+add_action('init', 'idsktk_register_dynamic_address_block');
     
-function render_dynamic_address_block($attributes) {
+function idsktk_render_dynamic_address_block($attributes) {
     // block attributes
-    $title = $attributes['title'];
-    $titleSmall = $attributes['titleSmall'];
+    $title = isset($attributes['title']) ? $attributes['title'] : '';
+    $titleSmall = isset($attributes['titleSmall']) ? $attributes['titleSmall'] : '';
     $body = new DOMDocument();
     $body->loadHTML($attributes['body']);
-    $coords = $attributes['mapCoords'] != '' ? $attributes['mapCoords'] : '0,0';
-    $mapApi = $attributes['mapApi'] != '' ? $attributes['mapApi'] : get_theme_mod('idsk_main_settings_map_api');
+    $coords = isset($attributes['mapCoords']) ? $attributes['mapCoords'] : '0,0';
+    $mapApi = isset($attributes['mapApi']) ? $attributes['mapApi'] : get_theme_mod('idsk_main_settings_map_api');
     $className = isset($attributes['className']) ? $attributes['className'] : '';
     // block settings
     $address_grid_type = isset($attributes['gridType']) ? FALSE : TRUE;
