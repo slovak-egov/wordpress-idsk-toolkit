@@ -26,12 +26,12 @@ const { __ } = wp.i18n;
 
 registerBlockType('idsk/crossroad', {
     // built-in attributes
-    title: __('Rozcestník', 'idsk'),
-    description: __('Rázcestník má formu jednoduchej dlaždice, zloženej z nadpisu, popisku a oddeľovacej čiary. Jeho účelom je prehľadne a jednoducho zoskupiť resp. usporiadať pre používateľa odkazy na súvisiaci obsah, ktorý je rozmiestnený na rôznych, samostatných podstránkach.', 'idsk'),
+    title: __('Rozcestník', 'idsk-toolkit'),
+    description: __('Rázcestník má formu jednoduchej dlaždice, zloženej z nadpisu, popisku a oddeľovacej čiary. Jeho účelom je prehľadne a jednoducho zoskupiť resp. usporiadať pre používateľa odkazy na súvisiaci obsah, ktorý je rozmiestnený na rôznych, samostatných podstránkach.', 'idsk-toolkit'),
     icon: 'menu',
     category: 'idsk-components',
     keywords: [
-        __('Rozcestník', 'idsk'),
+        __('Rozcestník', 'idsk-toolkit'),
     ],
 
     // custom attributes
@@ -175,7 +175,7 @@ registerBlockType('idsk/crossroad', {
                             <input
                                 className="button-secondary button"
                                 type="submit"
-                                value={__('Vymazať odkaz', 'idsk')}
+                                value={__('Vymazať odkaz', 'idsk-toolkit')}
                                 onClick={(e) => this.removeItem(e, index)}
                             />
                         </p>
@@ -227,7 +227,7 @@ registerBlockType('idsk/crossroad', {
                             <ToggleControl
                                 className="js-crossroad-hide-tiles"
                                 checked={hideTiles}
-                                label={__('Rozbaliteľný blok', 'idsk')}
+                                label={__('Rozbaliteľný blok', 'idsk-toolkit')}
                                 onChange={checked => setAttributes({ hideTiles: checked })}
                             />
                         </PanelRow>
@@ -243,7 +243,7 @@ registerBlockType('idsk/crossroad', {
                         class="idsk-button"
                         data-module="idsk-button"
                         type="submit"
-                        value={__('Pridať odkaz', 'idsk')}
+                        value={__('Pridať odkaz', 'idsk-toolkit')}
                         onClick={(e) => this.addItem(e)}
                     />
                 </p>
