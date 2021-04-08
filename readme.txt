@@ -1,6 +1,6 @@
 === ID-SK Toolkit ===
-Contributors: (this should be a list of wordpress.org userid's)
-Tags: idsk, id-sk, toolkit, idsk-toolkit
+Contributors: slovenskoit
+Tags: idsk, id-sk, toolkit, idsk-toolkit, idsk toolkit, id-sk toolkit
 Requires at least: 5.4
 Tested up to: 5.7
 Stable tag: 1.0.0
@@ -16,9 +16,9 @@ Súbor nástrojov funkcionalít k ID-SK téme. Tento súbor odporúčame použí
 
 == Frequently Asked Questions ==
 
-= A question that someone might have =
+= When FAQ will be availiable? =
 
-An answer to that question.
+Soon.
 
 == Changelog ==
 
@@ -30,11 +30,8 @@ An answer to that question.
 = 1.0.0 =
 Vydanie pluginu pre použitie spoločne s ID-SK témou.
 
-== A brief Markdown Example ==
-
-Rozširujúca funkcionalita:
+== Rozširujúce funkcionality ==
 
 1. Gutenberg ID-SK komponenty
-2. Podpora SVG obrázkov
-3. Aktuality inštitúcií
-4. a tak...
+2. Podpora nahrávania SVG obrázkov
+3. Vlastné články - Aktuality inštitúcií
