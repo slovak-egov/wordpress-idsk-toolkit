@@ -27,7 +27,9 @@ function idsktk_render_dynamic_address_block($attributes) {
     $title = isset($attributes['title']) ? $attributes['title'] : '';
     $titleSmall = isset($attributes['titleSmall']) ? $attributes['titleSmall'] : '';
     $body = new DOMDocument();
-    $body->loadHTML($attributes['body']);
+    if (isset($attributes['body']) && $attributes['body'] != '') {
+        $body->loadHTML($attributes['body']);
+    }
     $coords = isset($attributes['mapCoords']) ? $attributes['mapCoords'] : '0,0';
     $mapApi = isset($attributes['mapApi']) ? $attributes['mapApi'] : get_theme_mod('idsk_main_settings_map_api');
     $className = isset($attributes['className']) ? $attributes['className'] : '';

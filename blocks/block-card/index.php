@@ -24,23 +24,23 @@ add_action('init', 'idsktk_register_dynamic_card_block');
     
 function idsktk_render_dynamic_card_block($attributes) {
     // block attributes
-    $cardType = $attributes['cardType'] == '' ? 'basic' : $attributes['cardType'];
+    $cardType = (!isset($attributes['cardType']) || $attributes['cardType'] == '') ? 'basic' : $attributes['cardType'];
 
-    $img = $attributes['img'];
-    $imgAlt = $attributes['imgAlt'];
-    $imgLink = $attributes['imgLink'];
+    $img = isset($attributes['img']) ? $attributes['img'] : '';
+    $imgAlt = isset($attributes['imgAlt']) ? $attributes['imgAlt'] : '';
+    $imgLink = isset($attributes['imgLink']) ? $attributes['imgLink'] : '';
 
-    $title = $attributes['title'];
-    $subTitle = $attributes['subTitle'];
-    $date = date_i18n( __( 'd.m.Y', $attributes['date'] ));
-    $dateLink = $attributes['dateLink'];
+    $title = isset($attributes['title']) ? $attributes['title'] : '';
+    $subTitle = isset($attributes['subTitle']) ? $attributes['subTitle'] : '';
+    $date = isset($attributes['date']) ? date_i18n( __( 'd.m.Y', $attributes['date'] )) : '';
+    $dateLink = isset($attributes['dateLink']) ? $attributes['dateLink'] : '';
 
-    $tag1 = $attributes['tag1'];
-    $tagText1 = $attributes['tagText1'];
-    $tag2 = $attributes['tag2'];
-    $tagText2 = $attributes['tagText2'];
+    $tag1 = isset($attributes['tag1']) ? $attributes['tag1'] : '';
+    $tagText1 = isset($attributes['tagText1']) ? $attributes['tagText1'] : '';
+    $tag2 = isset($attributes['tag2']) ? $attributes['tag2'] : '';
+    $tagText2 = isset($attributes['tagText2']) ? $attributes['tagText2'] : '';
 
-    $profileQuote = $attributes['profileQuote'];
+    $profileQuote = isset($attributes['profileQuote']) ? $attributes['profileQuote'] : '';
 
     // data modification
     $title_replaced_a = str_replace('<a', '<a class="idsk-card-title govuk-link" title="'.wp_kses($title, []).'"', $title);

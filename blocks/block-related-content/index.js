@@ -67,12 +67,8 @@ registerBlockType('idsk/related-content', {
         } = attributes;
 
         // custom functions
-        function onChangeTitle(newTitle) {
-            setAttributes({ title: newTitle });
-        }
-
-        function onChangeBody(newBody) {
-            setAttributes({ body: newBody });
+        function onChange(attribute, value) {
+            setAttributes({ [attribute]: value })
         }
 
         return <div className={className}>
@@ -95,20 +91,20 @@ registerBlockType('idsk/related-content', {
                 <div class="idsk-related-content" data-module="idsk-related-content">
                     <hr class="idsk-related-content__line" aria-hidden="true" />
                     <RichText
-                        class="idsk-related-content__heading govuk-heading-s"
+                        className="idsk-related-content__heading govuk-heading-s"
                         key="editable"
                         tagName="h4"
                         placeholder={__('Súvisiace témy (⅔)', 'idsk-toolkit')}
                         value={title}
-                        onChange={onChangeTitle} />
+                        onChange={value => onChange('title', value)} />
                     <RichText
-                        class="idsk-related-content__list govuk-list"
+                        className="idsk-related-content__list govuk-list"
                         key="editable"
                         tagName="ul"
                         multiline="li"
                         placeholder="Súvisiaca téma č. 1"
                         value={body}
-                        onChange={onChangeBody} />
+                        onChange={value => onChange('body', value)} />
                     <InnerBlocks allowedBlocks={ALLOWED_BLOCKS} />
                 </div>
             </div>

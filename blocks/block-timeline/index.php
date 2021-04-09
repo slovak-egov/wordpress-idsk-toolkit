@@ -24,12 +24,13 @@ add_action('init', 'idsktk_register_dynamic_timeline_block');
     
 function idsktk_render_dynamic_timeline_block($attributes) {
     // block content
-    $items = $attributes['items'];
+    $items = isset($attributes['items']) ? $attributes['items'] : array();
     $count = 0;
 
     ob_start(); // Turn on output buffering
 ?>
 
+    <div class="govuk-clearfix"></div>
     <div class="idsk-timeline " data-module="idsk-timeline" role="contentinfo">
         <div class="govuk-container-width">
             <div class="idsk-timeline__button__div">

@@ -14,7 +14,6 @@ const { registerBlockType } = wp.blocks; // the notation same as: import registe
 const { RichText } = wp.blockEditor;
 const { Component } = wp.element;
 const { __ } = wp.i18n;
-const classes = 'block-editor-rich-text__editable rich-text'; // default gutenberg <RichText> classes for displaying placeholders 
 
 registerBlockType('idsk/stepper', {
     // built-in attributes
@@ -48,7 +47,7 @@ registerBlockType('idsk/stepper', {
         },
     },
     
-    edit: class Intro extends Component {
+    edit: class Stepper extends Component {
         constructor() {
             super(...arguments)
 
@@ -58,8 +57,6 @@ registerBlockType('idsk/stepper', {
             };
 
             this.onChange = this.onChange.bind(this);
-            this.nextCharacter = this.nextCharacter.bind(this);
-            this.previousCharacter = this.previousCharacter.bind(this);
             this.addItem = this.addItem.bind(this);
             this.removeItem = this.removeItem.bind(this);
             this.editItem = this.editItem.bind(this);
@@ -72,14 +69,6 @@ registerBlockType('idsk/stepper', {
                 )
             )
         }
-        
-        nextCharacter(c) { 
-            return String.fromCharCode(c.charCodeAt(0) + 1); 
-        } 
-        
-        previousCharacter(c) { 
-            return String.fromCharCode(c.charCodeAt(0) - 1); 
-        } 
 
         // adds empty placeholder for item
         addItem(e, index=null) {
@@ -92,10 +81,10 @@ registerBlockType('idsk/stepper', {
             // set up empty item
             const emptyItem = {
                 id: nanoid(),
-                step: !!index ? index : ( length > 0 ? items[length-1].step+1 : 1 ),
+                step: index != null ? index : ( length > 0 ? items[length-1].step+1 : 1 ),
                 lastStep: true,
                 hasSub: false,
-                subStep: !!index ? 'a' : '',
+                subStep: index != null ? 'a' : '',
                 lastSubStep: false,
                 sectionTitle: '',
                 sectionHeading: '',
@@ -258,7 +247,7 @@ registerBlockType('idsk/stepper', {
 
             return <div className={className}>                
                 <RichText
-                    class={classes + " govuk-heading-l"}
+                    className="govuk-heading-l"
                     key="editable"
                     tagName="h2"
                     placeholder={__('Nadpis steppera', 'idsk-toolkit')}
@@ -266,7 +255,7 @@ registerBlockType('idsk/stepper', {
                     onChange={value => this.onChange('title', value)} 
                 />
                 <RichText
-                    class={classes + " idsk-stepper__caption govuk-caption-m"}
+                    className="idsk-stepper__caption govuk-caption-m"
                     key="editable"
                     tagName="p"
                     placeholder={__('Popis steppera', 'idsk-toolkit')}
@@ -278,7 +267,7 @@ registerBlockType('idsk/stepper', {
                     <div class="idsk-stepper__subtitle-container">
                         <div class="idsk-stepper__subtitle--heading govuk-grid-column-three-quarters">
                             <RichText
-                                class={classes + " govuk-heading-m idsk-stepper__section-subtitle"}
+                                className="govuk-heading-m idsk-stepper__section-subtitle"
                                 key="editable"
                                 tagName="h3"
                                 placeholder={__('Nadpis míľnika', 'idsk-toolkit')}

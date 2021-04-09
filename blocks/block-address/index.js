@@ -23,7 +23,6 @@ const {
 } = wp.components;
 const { Component } = wp.element
 const { __ } = wp.i18n;
-const classes = 'block-editor-rich-text__editable rich-text'; // default gutenberg <RichText> classes for displaying placeholders 
 
 registerBlockType('idsk/address', {
     // built-in attributes
@@ -81,9 +80,7 @@ registerBlockType('idsk/address', {
 
             this.gridCheck = this.gridCheck.bind(this);
             this.mapCoordsShow = this.mapCoordsShow.bind(this);
-            this.onChangeTitle = this.onChangeTitle.bind(this);
-            this.onChangeTitleSmall = this.onChangeTitleSmall.bind(this);
-            this.onChangeBody = this.onChangeBody.bind(this);
+            this.onChange = this.onChange.bind(this);
         }
 
         // Fetch additional theme settings
@@ -128,30 +125,13 @@ registerBlockType('idsk/address', {
         }
         
         // custom functions
-        onChangeTitle(newTitle) {
-            // save values in WordPress and update state (in callback)
+        onChange(attribute, value) {
             return (
                 this.props.setAttributes(
-                    { title: newTitle }
+                    { [attribute]: value }
                 )
             )
-        };
-
-        onChangeTitleSmall(newTitle) {
-            return (
-                this.props.setAttributes(
-                    { titleSmall: newTitle }
-                )
-            )
-        };
-
-        onChangeBody(newBody) {
-            return (
-                this.props.setAttributes(
-                    { body: newBody }
-                )
-            )
-        };
+        }
         
         render() {
             // Pull out the props we'll use
@@ -196,27 +176,27 @@ registerBlockType('idsk/address', {
                         <div class="idsk-address__description">
                             
                             <RichText
-                                class={classes + " govuk-heading-m"}
+                                className="govuk-heading-m"
                                 key="editable"
                                 tagName="h2"
                                 placeholder={__('Hlavný nadpis', 'idsk-toolkit')}
                                 value={title}
-                                onChange={value => this.onChangeTitle(value)} />
+                                onChange={value => this.onChange('title', value)} />
                             <RichText
-                                class={classes + " govuk-heading-s"}
+                                className="govuk-heading-s"
                                 key="editable"
                                 tagName="h3"
                                 placeholder={__('Vedľajší nadpis', 'idsk-toolkit')}
                                 value={titleSmall}
-                                onChange={value => this.onChangeTitleSmall(value)} />
+                                onChange={value => this.onChange('titleSmall', value)} />
                             <RichText
-                                class={classes + " govuk-body"}
+                                className="govuk-body"
                                 key="editable"
                                 tagName="p"
                                 multiline={true}
                                 placeholder={__('Popis', 'idsk-toolkit')}
                                 value={body}
-                                onChange={value => this.onChangeBody(value)} />
+                                onChange={value => this.onChange('body', value)} />
                         </div>
                         <iframe 
                             class="idsk-address__map"

@@ -42,18 +42,9 @@ registerBlockType('idsk/timeline', {
                 items: this.props.attributes.items || []
             };
 
-            this.onChange = this.onChange.bind(this);
             this.addItem = this.addItem.bind(this);
             this.removeItem = this.removeItem.bind(this);
             this.editItem = this.editItem.bind(this);
-        }
-
-        onChange(attribute, value) {
-            return (
-                this.props.setAttributes(
-                    { [attribute]: value }
-                )
-            )
         }
 
         // adds empty placeholder for item

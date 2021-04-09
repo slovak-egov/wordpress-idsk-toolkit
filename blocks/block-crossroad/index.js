@@ -16,7 +16,6 @@ const {
     InspectorControls
 } = wp.blockEditor;
 const {
-    Button,
     PanelBody,
     PanelRow,
     ToggleControl

@@ -24,10 +24,10 @@ add_action('init', 'idsktk_register_dynamic_stepper_block');
     
 function idsktk_render_dynamic_stepper_block($attributes) {
     // block attributes
-    $title = $attributes['title'];
-    $caption = $attributes['caption'];
-    $stepperSubtitle = $attributes['stepperSubtitle'];
-    $items = $attributes['items'];
+    $title = isset($attributes['title']) ? $attributes['title'] : '';
+    $caption = isset($attributes['caption']) ? $attributes['caption'] : '';
+    $stepperSubtitle = isset($attributes['stepperSubtitle']) ? $attributes['stepperSubtitle'] : '';
+    $items = isset($attributes['items']) ? $attributes['items'] : array();
     
     $number_of_items = count($items);
 

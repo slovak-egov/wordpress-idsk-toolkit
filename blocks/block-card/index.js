@@ -25,7 +25,6 @@ const {
 const { dateI18n } = wp.date;
 const { Component } = wp.element;
 const { __ } = wp.i18n;
-const classes = 'block-editor-rich-text__editable rich-text'; // default gutenberg <RichText> classes for displaying placeholders 
 
 registerBlockType('idsk/card', {
     // built-in attributes
@@ -100,7 +99,7 @@ registerBlockType('idsk/card', {
         },
     },
     
-    edit: class Intro extends Component {
+    edit: class Card extends Component {
         constructor() {
             super(...arguments)
 
@@ -186,7 +185,7 @@ registerBlockType('idsk/card', {
                     {(cardType != 'basic-variant') &&
                     <PanelBody title={__('Atribúty obrázka', 'idsk-toolkit')}>
                         <TextControl
-                            class={classes + " js-img-alt"}
+                            className="js-img-alt"
                             key="editable"
                             placeholder={__('Názov obrázka', 'idsk-toolkit')}
                             label={__('Alternatívny názov obrázka', 'idsk-toolkit')}
@@ -194,7 +193,7 @@ registerBlockType('idsk/card', {
                             onChange={value => this.onChange('imgAlt', value)} 
                         />
                         <TextControl
-                            class={classes + " js-img-link"}
+                            className="js-img-link"
                             key="editable"
                             placeholder={__('https://www.google.com', 'idsk-toolkit')}
                             label={__('Odkaz presmerovania po kliknutí na obrázok', 'idsk-toolkit')}
@@ -209,12 +208,12 @@ registerBlockType('idsk/card', {
                         
                         <h3>Dátum</h3>
                         <DatePicker
-                            class={classes + " js-date-picker"}
+                            className="js-date-picker"
                             currentDate={ date }
                             onChange={ (date) => this.onChange('date', date)} 
                         />
                         <TextControl
-                            class={classes + " js-date-link"}
+                            className="js-date-link"
                             key="editable"
                             placeholder={__('https://www.google.com', 'idsk-toolkit')}
                             label={__('Odkaz k dátumu', 'idsk-toolkit')}
@@ -224,7 +223,7 @@ registerBlockType('idsk/card', {
                         
                         <h3>Tag 1</h3>
                         <TextControl
-                            class={classes + " js-tag-1-text"}
+                            className="js-tag-1-text"
                             key="editable"
                             placeholder={__('Tag 1', 'idsk-toolkit')}
                             label={__('Názov tagu 1', 'idsk-toolkit')}
@@ -232,7 +231,7 @@ registerBlockType('idsk/card', {
                             onChange={value => this.onChange('tagText1', value)} 
                         />
                         <TextControl
-                            class={classes + " js-tag-1-href"}
+                            className="js-tag-1-href"
                             key="editable"
                             placeholder={__('https://www.google.com', 'idsk-toolkit')}
                             label={__('URL k tagu 1', 'idsk-toolkit')}
@@ -242,7 +241,7 @@ registerBlockType('idsk/card', {
                         
                         <h3>Tag 2</h3>
                         <TextControl
-                            class={classes + " js-tag-2-text"}
+                            className="js-tag-2-text"
                             key="editable"
                             placeholder={__('Tag 2', 'idsk-toolkit')}
                             label={__('Názov tagu 2', 'idsk-toolkit')}
@@ -250,7 +249,7 @@ registerBlockType('idsk/card', {
                             onChange={value => this.onChange('tagText2', value)} 
                         />
                         <TextControl
-                            class={classes + " js-tag-2-href"}
+                            className="js-tag-2-href"
                             key="editable"
                             placeholder={__('https://www.google.com', 'idsk-toolkit')}
                             label={__('URL k tagu 2', 'idsk-toolkit')}
@@ -307,7 +306,7 @@ registerBlockType('idsk/card', {
                         </div>
 
                         <RichText
-                            class={classes + " idsk-heading idsk-heading-" + cardType}
+                            className={"idsk-heading idsk-heading-" + cardType}
                             key="editable"
                             tagName="div"
                             placeholder={__('Hlavný nadpis', 'idsk-toolkit')}
@@ -317,7 +316,7 @@ registerBlockType('idsk/card', {
 
                         {(cardType != 'simple') &&
                         <RichText
-                            class={classes + " idsk-body idsk-body-" + cardType}
+                            className={"idsk-body idsk-body-" + cardType}
                             key="editable"
                             tagName="p"
                             placeholder={__('Popis', 'idsk-toolkit')}
@@ -337,7 +336,7 @@ registerBlockType('idsk/card', {
                                 </svg>
                             </div>
                             <RichText
-                                class={classes + " idsk-quote"}
+                                className="idsk-quote"
                                 key="editable"
                                 tagName="div"
                                 placeholder={__('Citácia', 'idsk-toolkit')}
