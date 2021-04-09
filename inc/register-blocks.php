@@ -51,6 +51,7 @@ function idsktk_allowed_block_types( $allowed_blocks ) {
         'idsk/address',
         'idsk/intro',
         'idsk/timeline',
+        'idsk/stepper',
         'davidyeiser-detailer/book-details',
     );
 
