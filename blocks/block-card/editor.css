@@ -1,0 +1,264 @@
+.idsk-card-basic, .idsk-card-basic-variant, .idsk-card-hero, .idsk-card-profile-horizontal, .idsk-card-secondary, .idsk-card-secondary-horizontal, .idsk-card-simple, .idsk-card-profile-vertical {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 15px;
+}
+
+@media (min-width: 40.0625em) {
+    .idsk-card-basic, .idsk-card-basic-variant, .idsk-card-hero, .idsk-card-profile-horizontal, .idsk-card-secondary, .idsk-card-secondary-horizontal {
+        width: 100%;
+    }
+    .idsk-card-secondary, .idsk-card-simple, .idsk-card-profile-vertical {
+        width: 33.3333%;
+    }
+}
+
+.idsk-card img,
+.idsk-card button.imgUpload {
+    padding-bottom: 10px;
+}
+
+.idsk-card-secondary-horizontal img,
+.idsk-card-secondary-horizontal button.imgUpload {
+    width: 33.3%;
+    float: left;
+}
+.idsk-card-hero img, .idsk-card-profile-horizontal img,
+.idsk-card-hero button.imgUpload, .idsk-card-profile-horizontal button.imgUpload {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 15px;
+    padding: 0;
+}
+
+@media (min-width: 40.0625em) {
+    .idsk-card-hero img,
+    .idsk-card-hero button.imgUpload {
+        width: 50%;
+        float: left;
+        padding: 0 15px 0 0;
+    }
+    .idsk-card-profile-horizontal img,
+    .idsk-card-profile-horizontal button.imgUpload {
+        width: 33.3333%;
+        float: left;
+    }
+}
+
+.idsk-card-content-secondary-horizontal {
+    width: 66.6%;
+    box-sizing: border-box;
+    padding-left: 10px;
+    float: left;
+}
+.idsk-card-content-hero {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 15px;
+    padding: 0;
+}
+.idsk-card-content-profile-horizontal {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 15px;
+}
+
+@media (min-width: 40.0625em) {
+    .idsk-card-content-secondary-horizontal {
+        padding-left: 15px;
+    }
+    .idsk-card-content-hero {
+        width: 50%;
+        float: left;
+        padding: 0 15px 0 0;
+    }
+    .idsk-card-content-profile-horizontal {
+        width: 66.6666%;
+        float: left;
+    }
+}
+
+.idsk-card-meta {
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.14286;
+    color: #626a6e;
+    display: inline;
+    text-decoration: none;
+}
+.idsk-card-meta .govuk-link {
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.14286;
+    color: #626a6e;
+}
+
+.idsk-card-meta-date:after {
+    content: "\00a0-\00a0";
+}
+.idsk-card-meta-tag:after {
+    content: "\00a0|\00a0";
+}
+
+.idsk-card-meta-container span:last-child:after, .idsk-card-meta-container span.\:last-child:after {
+    content: "";
+}
+
+@media (min-width: 40.0625em) {
+    .idsk-card-meta, .idsk-card-meta .govuk-link {
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.25;
+    }
+}
+
+.idsk-heading {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.idsk-heading-basic, .idsk-heading-hero, .idsk-heading-secondary-horizontal {
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.11111;
+}
+.idsk-heading-secondary {
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+}
+.idsk-heading-basic-variant, .idsk-heading-simple {
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+}
+.idsk-heading-profile-vertical, .idsk-heading-profile-horizontal {
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.11111;
+    text-decoration: underline;
+}
+
+@media (min-width: 40.0625em) {
+    .idsk-heading-basic, .idsk-heading-hero, .idsk-heading-secondary-horizontal, .idsk-heading-profile-vertical, .idsk-heading-profile-horizontal {
+        font-size: 24px;
+        font-size: 1.5rem;
+        line-height: 1.25;
+    }
+    .idsk-heading-secondary, .idsk-heading-basic-variant, .idsk-heading-simple {
+        font-size: 19px;
+        font-size: 1.1875rem;
+        line-height: 1.31579;
+    }
+}
+
+.idsk-card-title {
+    cursor: pointer;
+    margin: 0;
+    text-decoration: none;
+}
+
+a:link {
+    color: #0065b3;
+}
+
+.idsk-body {
+    margin-top: 0;
+}
+
+.idsk-body-basic, .idsk-body-basic-variant, .idsk-body-hero, .idsk-body-secondary-horizontal {
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+}
+.idsk-body-secondary {
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.14286;
+}
+.idsk-body-profile-vertical, .idsk-body-profile-horizontal {
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    padding-top: 10px;
+    padding-bottom: 15px;
+}
+
+@media (min-width: 40.0625em) {
+    .idsk-body-basic, .idsk-body-basic-variant, .idsk-body-hero, .idsk-body-secondary-horizontal {
+        font-size: 19px !important;
+        font-size: 1.1875rem !important;
+        line-height: 1.31579 !important;
+    }
+    .idsk-body-secondary {
+        font-size: 16px !important;
+        font-size: 1rem !important;
+        line-height: 1.25 !important;
+    }
+    .idsk-body-profile-vertical, .idsk-body-profile-horizontal {
+        font-size: 19px !important;
+        font-size: 1.1875rem !important;
+        line-height: 1.31579 !important;
+        padding-bottom: 20px;
+    }
+}
+
+.idsk-quote {
+    padding-right: 30px;
+    padding-left: 30px;
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    margin-top: 0;
+}
+@media (min-width: 40.0625em) {
+    .idsk-quote {
+        padding-right: 50px;
+        font-size: 19px;
+        font-size: 1.1875rem;
+        line-height: 1.31579;
+    }
+}
+.idsk-quote-right {
+    float: right;
+}

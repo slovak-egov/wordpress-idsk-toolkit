@@ -16,3 +16,4 @@ import './book-details';
 import './block-address';
 import './block-timeline';
 import './block-stepper';
+import './block-card';
