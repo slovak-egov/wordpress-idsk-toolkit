@@ -63,6 +63,8 @@ registerBlockType('idsk/crossroad', {
             this.addItem = this.addItem.bind(this);
             this.removeItem = this.removeItem.bind(this);
             this.editItem = this.editItem.bind(this);
+            this.showColsInputs = this.showColsInputs.bind(this);
+            this.showCols = this.showCols.bind(this);
         }
 
         // adds empty placeholder for item
@@ -140,39 +142,10 @@ registerBlockType('idsk/crossroad', {
             return button;
         };
 
-        render() {
-            // Pull out the props we'll use
-            const { attributes, className, setAttributes } = this.props
-
-            // Pull out specific attributes for clarity below
-            const { numberOfCols, hideTiles, items } = attributes
-
-            return (<div data-module="idsk-crossroad" className={className}>
-                <div class="govuk-clearfix"></div>
-                <InspectorControls>
-                    <PanelBody title={__('Nastavenie razcestníka')}>
-                        <PanelRow>
-                            <ToggleControl
-                                className="js-crossroad-two-cols"
-                                checked={numberOfCols}
-                                label={numberOfCols ? "Dva Stlpce" : "Jeden Stlpec"}
-                                onChange={checked => setAttributes({ numberOfCols: checked })}
-                            />
-                        </PanelRow>
-                        <PanelRow>
-                            <ToggleControl
-                                className="js-crossroad-hide-tiles"
-                                checked={hideTiles}
-                                label={__('Rozbaliteľný blok', 'idsk-toolkit')}
-                                onChange={checked => setAttributes({ hideTiles: checked })}
-                            />
-                        </PanelRow>
-                    </PanelBody>
-                </InspectorControls>
-                {/* <div class={numberOfCols ? "idsk-crossroad idsk-crossroad-1" : "idsk-crossroad idsk-crossroad-2"}> */}
-
-                {!!items && items.map((item, index) =>
-                    <div key={item.id || index} className="idsk-crossroad__item">
+        showColsInputs(items, startIndex, endIndex) {
+            const returnItems = items.map((item, index) => (
+                (index >= startIndex && index < endIndex) &&
+                    <div key={item.id || i-1} className="idsk-crossroad__item">
                         <RichText
                             className="idsk-crossroad-title"
                             value={item.title}
@@ -207,8 +180,64 @@ registerBlockType('idsk/crossroad', {
                             />
                         </p>
                     </div>
-                )}
-                {/* </div> */}
+            ))
+
+            return returnItems
+        }
+
+        showCols(items) {
+            // Show grid
+            if ( this.props.attributes.numberOfCols ) {
+                return <>
+                    <div class="idsk-crossroad idsk-crossroad-2">
+                        {this.showColsInputs(items, 0, Math.ceil(items.length/2))}
+                    </div>
+                    <div class="idsk-crossroad idsk-crossroad-2">
+                        {items.length > 1 && this.showColsInputs(items, Math.ceil(items.length/2), items.length)}
+                    </div>
+                </>
+            }
+            else {
+                return <div class="idsk-crossroad idsk-crossroad-1">
+                    {this.showColsInputs(items, 0, items.length)}
+                </div>
+            }
+        }
+
+        render() {
+            // Pull out the props we'll use
+            const { attributes, className, setAttributes } = this.props
+
+            // Pull out specific attributes for clarity below
+            const { numberOfCols, hideTiles, items } = attributes
+
+            return (<div data-module="idsk-crossroad" className={className}>
+                <div class="govuk-clearfix"></div>
+                <InspectorControls>
+                    <PanelBody title={__('Nastavenie razcestníka')}>
+                        <PanelRow>
+                            <ToggleControl
+                                className="js-crossroad-two-cols"
+                                checked={numberOfCols}
+                                label={numberOfCols ? "Dva Stlpce" : "Jeden Stlpec"}
+                                onChange={checked => setAttributes({ numberOfCols: checked })}
+                            />
+                        </PanelRow>
+                        <PanelRow>
+                            <ToggleControl
+                                className="js-crossroad-hide-tiles"
+                                checked={hideTiles}
+                                label={__('Rozbaliteľný blok', 'idsk-toolkit')}
+                                onChange={checked => setAttributes({ hideTiles: checked })}
+                            />
+                        </PanelRow>
+                    </PanelBody>
+                </InspectorControls>
+
+                {!!items && this.showCols(items)}
+
+                <div class="govuk-clearfix"></div>
+                
                 <p class="idsk-crossroad__item">
                     <input
                         class="idsk-button"

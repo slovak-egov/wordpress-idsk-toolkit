@@ -60,6 +60,58 @@
     display: none;
 }
 
+.idsk-crossroad-1 {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 15px;
+}
+
+@media (min-width: 40.0625em) {
+    .idsk-crossroad-1 {
+        width: 100%;
+    }
+}
+
+@media (min-width: 20em) {
+    .idsk-crossroad-2 {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0 15px;
+    }
+}
+@media (min-width: 20em) and (min-width: 40.0625em) {
+    .idsk-crossroad-2 {
+        width: 100%;
+        float: left;
+    }
+}
+@media (orientation: landscape) {
+    .idsk-crossroad-2 {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0 15px;
+    }
+}
+@media (orientation: landscape) and (min-width: 40.0625em) {
+    .idsk-crossroad-2 {
+        width: 50%;
+        float: left;
+    }
+}
+@media (min-width: 48.0625em) {
+    .idsk-crossroad-2 {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0 15px;
+    }
+}
+@media (min-width: 48.0625em) and (min-width: 40.0625em) {
+    .idsk-crossroad-2 {
+        width: 50%;
+        float: left;
+    }
+}
+
 .idsk-crossroad-title {
     font-family: "Source Sans Pro", "Arial", sans-serif;
     -webkit-font-smoothing: antialiased;
@@ -127,9 +179,9 @@
 }
 @media (min-width: 40.0625em) {
     .idsk-crossroad-subtitle {
-        font-size: 16px;
-        font-size: 1rem;
-        line-height: 1.25;
+        font-size: 16px !important;
+        font-size: 1rem !important;
+        line-height: 1.25 !important;
     }
 }
 @media print {
