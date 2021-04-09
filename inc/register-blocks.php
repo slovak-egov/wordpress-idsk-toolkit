@@ -76,6 +76,12 @@ function idsktk_gov_page_block_category ( $categories, $post ) {
         ),
         array (
             array (
+                'slug'  => 'idsk-grids',
+                'title' => __( 'ID-SK Rozloženie stránky', 'idsk' ),
+            ),
+        ),
+        array (
+            array (
                 'slug'  => 'gov-blocks-container',
                 'title' => __( 'GOV ID-SK kontajner', 'idsk-toolkit' ),
             ),

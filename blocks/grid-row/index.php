@@ -16,12 +16,6 @@ function idsktk_register_row_grid() {
     }
   
     // Hook server side rendering into render callback
-    register_block_type('idsk/row', array(
-        'render_callback' => 'idsktk_render_row_grid'
-    ));
+    register_block_type('idsk/row');
 }
 add_action('init', 'idsktk_register_row_grid');
-
-function idsktk_render_row_grid($attributes, $content) {
-    return $content; // Print row data
-}

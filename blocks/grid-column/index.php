@@ -16,12 +16,6 @@ function idsktk_register_column_grid() {
   }
 
   // Hook server side rendering into render callback
-  register_block_type('idsk/column', array(
-      'render_callback' => 'idsktk_render_column_grid'
-  ));
+  register_block_type('idsk/column');
 }
 add_action('init', 'idsktk_register_column_grid');
-    
-function idsktk_render_column_grid($attributes, $content) {
-  return $content; // Print column data
-}
