@@ -53,6 +53,8 @@ function idsktk_allowed_block_types( $allowed_blocks ) {
         'idsk/timeline',
         'idsk/stepper',
         'idsk/card',
+        'idsk/row',
+        'idsk/column',
         'davidyeiser-detailer/book-details',
     );
 
@@ -73,6 +75,12 @@ function idsktk_gov_page_block_category ( $categories, $post ) {
             array (
                 'slug'  => 'idsk-components',
                 'title' => __( 'ID-SK Komponenty', 'idsk-toolkit' ),
+            ),
+        ),
+        array (
+            array (
+                'slug'  => 'idsk-grids',
+                'title' => __( 'ID-SK Rozloženie stránky', 'idsk' ),
             ),
         ),
         array (

@@ -18,3 +18,5 @@
 @import "book-details/style.css";
 @import "block-stepper/editor.css";
 @import "block-card/editor.css";
+@import "grid-row/editor.css";
+@import "grid-column/editor.css";

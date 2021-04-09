@@ -1,0 +1,89 @@
+.is-style-full,
+.is-style-one-half,
+.is-style-one-quarter,
+.is-style-one-third,
+.is-style-three-quarters,
+.is-style-two-thirds
+{
+    width: 100%;
+    float: left;
+    display: table;
+    border: 1px solid transparent;
+    min-height: 50px;
+    padding: 0 15px;
+}
+
+@media (min-width: 40.0625em) {
+    .is-style-full {
+        width: 100%;
+    }
+    .is-style-one-half {
+        width: 50%;
+    }
+    .is-style-one-quarter {
+        width: 25%;
+    }
+    .is-style-one-third {
+        width: 33.3333%;
+    }
+    .is-style-three-quarters {
+        width: 75%;
+    }
+    .is-style-two-thirds {
+        width: 66.6666%;
+    }
+}
+
+.block-list-appender {
+    float: left;
+}
+.block-editor-block-list__layout.is-root-container > .block-list-appender,
+div[data-type="idsk/column"] > .block-editor-inner-blocks > .block-editor-block-list__layout > .block-list-appender {
+    float: unset;
+}
+
+.main-govuk-grid-column {
+    display: contents;
+}
+.is-style-full:hover,
+.is-style-one-half:hover,
+.is-style-one-quarter:hover,
+.is-style-one-third:hover,
+.is-style-three-quarters:hover,
+.is-style-two-thirds:hover
+{
+    border-color: rgb(0, 0, 0);
+    border-color: rgba(0, 0, 0, .1);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+}
+.is-style-full:focus-within,
+.is-style-one-half:focus-within,
+.is-style-one-quarter:focus-within,
+.is-style-one-third:focus-within,
+.is-style-three-quarters:focus-within,
+.is-style-two-thirds:focus-within
+{
+    border-color: rgb(0, 0, 0);
+    border-color: rgba(0, 0, 0, .3);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+}
+.is-style-full:active,
+.is-style-one-half:active,
+.is-style-one-quarter:active,
+.is-style-one-third:active,
+.is-style-three-quarters:active,
+.is-style-two-thirds:active,
+.is-style-full:focus,
+.is-style-one-half:focus,
+.is-style-one-quarter:focus,
+.is-style-one-third:focus,
+.is-style-three-quarters:focus,
+.is-style-two-thirds:focus
+{
+    border-color: rgb(0, 0, 0);
+    border-color: rgba(0, 0, 0, .5);
+    -webkit-background-clip: padding-box; /* for Safari */
+    background-clip: padding-box; /* for IE9+, Firefox 4+, Opera, Chrome */
+}
