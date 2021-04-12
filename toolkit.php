@@ -24,11 +24,11 @@ include 'inc/custom-shortcodes.php';
 include 'inc/frontend.php';
 include 'inc/block-editor-adjustments.php';
 
-function cc_mime_types($mimes) {
+function idsk_mime_types($mimes) {
     $mimes['svg'] = 'image/svg+xml';
     return $mimes;
 }
-add_filter('upload_mimes', 'cc_mime_types');
+add_filter('upload_mimes', 'idsk_mime_types');
 
 // Register Custom Post Type
 function idsktk_post_type() {
