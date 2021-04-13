@@ -20,3 +20,4 @@ require plugin_dir_path(__DIR__) . '/blocks/block-stepper/index.php';
 require plugin_dir_path(__DIR__) . '/blocks/block-card/index.php';
 require plugin_dir_path(__DIR__) . '/blocks/grid-row/index.php';
 require plugin_dir_path(__DIR__) . '/blocks/grid-column/index.php';
+require plugin_dir_path(__DIR__) . '/blocks/block-map-component/index.php';
