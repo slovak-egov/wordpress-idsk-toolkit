@@ -55,7 +55,6 @@ function idsktk_allowed_block_types( $allowed_blocks ) {
         'idsk/card',
         'idsk/row',
         'idsk/column',
-        'davidyeiser-detailer/book-details',
     );
 
 }

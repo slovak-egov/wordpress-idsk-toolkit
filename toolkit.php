@@ -110,6 +110,14 @@ function idsktk_taxonomy() {
 }
 add_action( 'init', 'idsktk_taxonomy', 0 );
 
+// Add backend styles for Gutenberg.
+add_action('enqueue_block_editor_assets', 'gutenberg_editor_assets');
+
+function gutenberg_editor_assets() {
+    // Load the theme styles within Gutenberg.
+    wp_enqueue_style('my-gutenberg-editor-styles', get_template_directory_uri().'/assets/css/gutenberg-editor-styles.css', FALSE);
+}
+
 // Registering blocks
 /**
  * Block, ACF functions

@@ -342,7 +342,7 @@ registerBlockType('idsk/stepper', {
                                     <input
                                         className="button-secondary button"
                                         type="submit"
-                                        value={ item.subStep != '' ? 'Vymazať čiastočný krok' : 'Vymazať krok' }
+                                        value={ item.subStep != '' ? __('Vymazať čiastočný krok', 'idsk-toolkit') : __('Vymazať krok', 'idsk-toolkit') }
                                         onClick={(e) => this.removeItem(e, index)}
                                     />
                                 </p>

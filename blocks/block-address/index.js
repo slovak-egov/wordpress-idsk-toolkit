@@ -142,17 +142,17 @@ registerBlockType('idsk/address', {
 
             return <div className={className}>
                 <InspectorControls>
-                    <PanelBody title={__('Rozloženie obsahu')}>
+                    <PanelBody title={__('Rozloženie obsahu', 'idsk-toolkit')}>
                         <PanelRow>
                             <ToggleControl
                                 className="js-address-grid-type"
                                 checked={gridType}
-                                label={gridType ? "1/3 šírky" : "Celá šírka"}
+                                label={gridType ? __('1/3 šírky', 'idsk-toolkit') : __('Celá šírka', 'idsk-toolkit')}
                                 onChange={checked => setAttributes({ gridType: checked })}
                             />
                         </PanelRow>
                     </PanelBody>
-                    <PanelBody title={__('Súradnice mapy')}>
+                    <PanelBody title={__('Súradnice mapy', 'idsk-toolkit')}>
                         <TextControl
                             className="js-address-map"
                             label={__('Zadajte adresu miesta', 'idsk-toolkit')}

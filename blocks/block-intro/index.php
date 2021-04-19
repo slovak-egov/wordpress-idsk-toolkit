@@ -91,7 +91,7 @@ function idsktk_render_dynamic_intro_block($attributes) {
                     <?php if ($search) { ?>
                         <form role="search" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                             <div class="idsk-intro-block__search">
-                                <input class="govuk-input govuk-input--width-30 idsk-intro-block__input" name="s" type="search" placeholder="<?php _e('Zadajte hľadaný výraz', 'idsk-toolkit') ?>" aria-describedby="input-width-30-hint" value="<?php echo get_search_query(); ?>">
+                                <input class="govuk-input govuk-input--width-30 idsk-intro-block__input" name="s" type="search" placeholder="<?php esc_html_e('Zadajte hľadaný výraz', 'idsk-toolkit') ?>" aria-describedby="input-width-30-hint" value="<?php echo get_search_query(); ?>">
                                 <button type="submit" class="govuk-button idsk-intro-block__search__button">
                                     <svg width="31" height="30" viewbox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                                         <path d="M21.0115 13.103C21.0115 17.2495 17.5484 20.6238 13.2928 20.6238C9.03714 20.6238 5.57404 17.2495 5.57404 13.103C5.57404 8.95643 9.03714 5.58212 13.2928 5.58212C17.5484 5.58212 21.0115 8.95643 21.0115 13.103ZM29.833 27.0702C29.833 26.4994 29.5918 25.9455 29.1955 25.5593L23.2858 19.8012C24.6814 17.8371 25.4223 15.4868 25.4223 13.103C25.4223 6.57259 19.995 1.28451 13.2928 1.28451C6.59058 1.28451 1.16333 6.57259 1.16333 13.103C1.16333 19.6333 6.59058 24.9214 13.2928 24.9214C15.7394 24.9214 18.1515 24.1995 20.1673 22.8398L26.077 28.5811C26.4732 28.984 27.0418 29.219 27.6276 29.219C28.8337 29.219 29.833 28.2453 29.833 27.0702Z" fill="white"/>

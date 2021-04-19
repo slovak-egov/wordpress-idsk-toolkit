@@ -288,7 +288,7 @@ registerBlockType('idsk/card', {
                             {(cardType != 'profile-vertical' && cardType != 'profile-horizontal' && cardType != 'basic-variant') &&
                             <div class="idsk-card-meta-container">
                                 <span class="idsk-card-meta idsk-card-meta-date">
-                                    <a href={dateLink} class="govuk-link">{date ? dateI18n('d.m.Y', date) : "01.01.1970"}</a>
+                                    <a href={dateLink} class="govuk-link">{date ? dateI18n('d.m.Y', date) : __('01.01.1970', 'idsk-toolkit')}</a>
                                 </span> 
 
                                 {!!tagText1 &&
@@ -358,7 +358,7 @@ registerBlockType('idsk/card', {
                             {(cardType == 'basic-variant') &&
                             <div class="idsk-card-meta-container">
                                 <span class="idsk-card-meta idsk-card-meta-date">
-                                    <a href={dateLink} class="govuk-link">{date ? dateI18n('d.m.Y', date) : "test"}</a>
+                                    <a href={dateLink} class="govuk-link">{date ? dateI18n('d.m.Y', date) : __('01.01.1970', 'idsk-toolkit')}</a>
                                 </span> 
                                 <span class="idsk-card-meta idsk-card-meta-tag">
                                     <a href={tag1} class="govuk-link">{tagText1}</a>

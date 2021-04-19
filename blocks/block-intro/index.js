@@ -230,7 +230,7 @@ registerBlockType('idsk/intro', {
 
                     {!!withSearch &&
                     <PanelBody title={__('Odkazy pre vyhľadávanie', 'idsk-toolkit')}>
-                        <h3>Odkaz 1</h3>
+                        <h3>{__('Odkaz 1', 'idsk-toolkit')}</h3>
                         <TextControl
                             className="js-search-link-1-text"
                             key="editable"
@@ -248,7 +248,7 @@ registerBlockType('idsk/intro', {
                             onChange={value => this.onChange('url1', value)} 
                         />
                         
-                        <h3>Odkaz 2</h3>
+                        <h3>{__('Odkaz 2', 'idsk-toolkit')}</h3>
                         <TextControl
                             className="js-search-link-2-text"
                             key="editable"
@@ -266,7 +266,7 @@ registerBlockType('idsk/intro', {
                             onChange={value => this.onChange('url2', value)}  
                         />
                         
-                        <h3>Odkaz 3</h3>
+                        <h3>{__('Odkaz 3', 'idsk-toolkit')}</h3>
                         <TextControl
                             className="js-search-link-3-text"
                             key="editable"
@@ -284,7 +284,7 @@ registerBlockType('idsk/intro', {
                             onChange={value => this.onChange('url3', value)} 
                         />
                         
-                        <h3>Odkaz 4</h3>
+                        <h3>{__('Odkaz 4', 'idsk-toolkit')}</h3>
                         <TextControl
                             className="js-search-link-4-text"
                             key="editable"
@@ -302,7 +302,7 @@ registerBlockType('idsk/intro', {
                             onChange={value => this.onChange('url4', value)} 
                         />
                         
-                        <h3>Odkaz 5</h3>
+                        <h3>{__('Odkaz 5', 'idsk-toolkit')}</h3>
                         <TextControl
                             className="js-search-link-5-text"
                             key="editable"

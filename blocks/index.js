@@ -12,7 +12,6 @@ import './block-related-content';
 import './block-warning-text';
 import './block-crossroad';
 import './block-intro';
-import './book-details';
 import './block-address';
 import './block-timeline';
 import './block-stepper';

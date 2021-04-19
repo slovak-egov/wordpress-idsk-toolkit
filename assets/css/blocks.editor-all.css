@@ -1192,29 +1192,6 @@
     margin-bottom: 0 !important;
     margin-top: -40px !important;
 }
-.wp-admin-book-details-author {
-  font-style: italic;
-}
-.wp-admin-book-details-summary {
-  margin-top: 24px;
-}
-.wp-admin-book-details-quote {
-  margin-top: 24px;
-  padding-top: 18px;
-  border-top: 1px solid #eee;
-}
-.wp-admin-book-details-quote-content p {
-  margin: 0;
-  font-size: 16px;
-  font-style: italic;
-}
-.wp-admin-book-details-quote-page-ref p {
-  margin: 10px 0 0 0;
-  font-size: 15px;
-}
-
-.production-only { display: block; }
-
 .govuk-heading-l {
     color: #0b0c0c;
     font-family: "Source Sans Pro", "Arial", sans-serif;

@@ -134,7 +134,7 @@ registerBlockType('idsk/crossroad', {
 
             if (this.props.attributes.hideTiles) {
                 button = <div class="govuk-grid-column-full idsk-crossroad__collapse--shadow idsk-crossroad__uncollapse-div">
-                    <button class="idsk-crossroad__colapse--button" type="button">Zobraziť viac</button>
+                    <button class="idsk-crossroad__colapse--button" type="button">{__('Zobraziť viac', 'idsk-toolkit')}</button>
                 </div>
             }
 
@@ -150,7 +150,7 @@ registerBlockType('idsk/crossroad', {
                             value={item.title}
                             onChange={value => this.editItem('title', index, value)}
                             tagName="a"
-                            placeholder="Titulok"
+                            placeholder={__('Titulok', 'idsk-toolkit')}
                         />
 
                         <RichText
@@ -158,7 +158,7 @@ registerBlockType('idsk/crossroad', {
                             value={item.subtitle}
                             onChange={value => this.editItem('subtitle', index, value)}
                             tagName="p"
-                            placeholder="Popis"
+                            placeholder={__('Popis', 'idsk-toolkit')}
                         />
 
                         <RichText
@@ -166,7 +166,7 @@ registerBlockType('idsk/crossroad', {
                             value={item.link}
                             onChange={value => this.editItem('link', index, value)}
                             tagName="p"
-                            placeholder="URL Adresa"
+                            placeholder={__('URL Adresa', 'idsk-toolkit')}
                         />
                         <hr class="idsk-crossroad-line" aria-hidden="true" />
 
@@ -213,12 +213,12 @@ registerBlockType('idsk/crossroad', {
             return (<div data-module="idsk-crossroad" className={className}>
                 <div class="govuk-clearfix"></div>
                 <InspectorControls>
-                    <PanelBody title={__('Nastavenie razcestníka')}>
+                    <PanelBody title={__('Nastavenie razcestníka', 'idsk-toolkit')}>
                         <PanelRow>
                             <ToggleControl
                                 className="js-crossroad-two-cols"
                                 checked={numberOfCols}
-                                label={numberOfCols ? "Dva Stlpce" : "Jeden Stlpec"}
+                                label={numberOfCols ? __('Dva Stlpce', 'idsk-toolkit') : __('Jeden Stlpec', 'idsk-toolkit')}
                                 onChange={checked => setAttributes({ numberOfCols: checked })}
                             />
                         </PanelRow>

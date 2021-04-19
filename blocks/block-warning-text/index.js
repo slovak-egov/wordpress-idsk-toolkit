@@ -57,12 +57,12 @@ registerBlockType('idsk/warning-text', {
                 <div class="govuk-width-container">
                     <div class="idsk-warning-text__text">
                         <InspectorControls>
-                            <PanelBody title={__('Typ lišty')}>
+                            <PanelBody title={__('Typ lišty', 'idsk-toolkit')}>
                                 <PanelRow>
                                     <ToggleControl
                                         className="js-related-content-grid-type"
                                         checked={textType}
-                                        label={textType ? "Informačná lišta" : "Lišta s varovaním"}
+                                        label={textType ? __('Informačná lišta', 'idsk-toolkit') : __('Lišta s varovaním', 'idsk-toolkit')}
                                         onChange={checked => setAttributes({ textType: checked })}
                                     />
                                 </PanelRow>

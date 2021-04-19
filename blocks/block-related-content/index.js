@@ -73,12 +73,12 @@ registerBlockType('idsk/related-content', {
 
         return <div className={className}>
             <InspectorControls>
-                <PanelBody title={__('Rozloženie obsahu')}>
+                <PanelBody title={__('Rozloženie obsahu', 'idsk-toolkit')}>
                     <PanelRow>
                         <ToggleControl
                             className="js-related-content-grid-type"
                             checked={gridType}
-                            label={gridType ? "rozloženie 2/3 obsahu" : "rozloženie 1/3 obsahu"}
+                            label={gridType ? __('rozloženie 2/3 obsahu', 'idsk-toolkit') : __('rozloženie 1/3 obsahu', 'idsk-toolkit')}
                             onChange={checked => setAttributes({ gridType: checked })}
                         />
                     </PanelRow>
@@ -102,7 +102,7 @@ registerBlockType('idsk/related-content', {
                         key="editable"
                         tagName="ul"
                         multiline="li"
-                        placeholder="Súvisiaca téma č. 1"
+                        placeholder={__('Súvisiaca téma č. 1', 'idsk-toolkit')}
                         value={body}
                         onChange={value => onChange('body', value)} />
                     <InnerBlocks allowedBlocks={ALLOWED_BLOCKS} />
