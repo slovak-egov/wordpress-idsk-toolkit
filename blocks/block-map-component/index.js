@@ -36,6 +36,9 @@ registerBlockType('idsk/map-component', {
 
     // custom attributes
     attributes: {
+        blockId: {
+            type: 'string'
+        },
         title: {
             type: 'string',
             selector: 'h2.govuk-heading-l'
@@ -181,7 +184,11 @@ registerBlockType('idsk/map-component', {
 
             // Pull out specific attributes for clarity below
             const { periodOption, indicatorOption } = this.state
-            const { title, indicatorOptions, iframeMapTitle, iframeTableTitle, iframeMap, iframeTable, csvDownload, downloadText, source } = attributes
+            const { blockId, title, indicatorOptions, iframeMapTitle, iframeTableTitle, iframeMap, iframeTable, csvDownload, downloadText, source } = attributes
+
+            if (!blockId) {
+                this.props.setAttributes( { blockId: nanoid() } )
+            }
 
             return <div className={className}>
                 <InspectorControls>
@@ -277,12 +284,12 @@ registerBlockType('idsk/map-component', {
                                 <div class="govuk-form-group">
                                     <div class="govuk-radios govuk-radios--inline">
                                         <div class="govuk-radios__item idsk-intereactive-map__radio-map">
-                                            <input class="govuk-radios__input" name="interactive-radios-b" id="interactive-radios-b-1" type="radio" value="map" checked />
-                                            <label class="govuk-label govuk-radios__label" for="interactive-radios-b-1">{__('Mapa', 'idsk-toolkit')}</label>
+                                            <input class="govuk-radios__input" name="interactive-radios-b" id={blockId + "-interactive-radios-b-1"} type="radio" value="map" checked />
+                                            <label class="govuk-label govuk-radios__label" for={blockId + "-interactive-radios-b-1"}>{__('Mapa', 'idsk-toolkit')}</label>
                                         </div>
                                         <div class="govuk-radios__item idsk-intereactive-map__radio-table">
-                                            <input class="govuk-radios__input" name="interactive-radios-b" id="interactive-radios-b-2" type="radio" value="table" />
-                                            <label class="govuk-label govuk-radios__label" for="interactive-radios-b-2">{__('Tabuľka', 'idsk-toolkit')}</label>
+                                            <input class="govuk-radios__input" name="interactive-radios-b" id={blockId + "-interactive-radios-b-2"} type="radio" value="table" />
+                                            <label class="govuk-label govuk-radios__label" for={blockId + "-interactive-radios-b-2"}>{__('Tabuľka', 'idsk-toolkit')}</label>
                                         </div>
                                     </div>
                                 </div>
