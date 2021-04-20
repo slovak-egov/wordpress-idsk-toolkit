@@ -18,3 +18,4 @@ import './block-stepper';
 import './block-card';
 import './grid-row';
 import './grid-column';
+import './block-graph-component';
