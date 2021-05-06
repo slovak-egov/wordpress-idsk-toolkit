@@ -42,7 +42,7 @@ function idsktk_render_dynamic_stepper_block($attributes) {
             <div class="idsk-stepper__subtitle--heading govuk-grid-column-three-quarters">
                 <h3 class="govuk-heading-m idsk-stepper__section-subtitle"><?= $stepperSubtitle ?></h3>
             </div>
-            <div class="idsk-stepper__controls govuk-grid-column-one-quarter">
+            <div class="idsk-stepper__controls govuk-grid-column-one-quarter" data-line1="<?php echo __( 'Zobraziť všetko', 'idsk-toolkit' ); ?>" data-line2="<?php echo __( 'Zatvoriť všetko', 'idsk-toolkit' ); ?>">
             </div>
         </div>
 
@@ -75,7 +75,7 @@ function idsktk_render_dynamic_stepper_block($attributes) {
                     <?php
                         $sectionContent = new DOMDocument();
                         if ($item['sectionContent'] != '') {
-                            $sectionContent->loadHTML($item['sectionContent']);
+                            $sectionContent->loadHTML('<?xml encoding="utf-8" ?>' . $item['sectionContent']);
                         }
 
                         // data modification
