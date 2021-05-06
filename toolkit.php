@@ -24,6 +24,8 @@ include 'inc/custom-shortcodes.php';
 include 'inc/frontend.php';
 include 'inc/block-editor-adjustments.php';
 
+remove_filter('widget_text_content', 'wpautop');
+
 function idsk_mime_types($mimes) {
     $mimes['svg'] = 'image/svg+xml';
     return $mimes;
