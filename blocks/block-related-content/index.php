@@ -35,15 +35,17 @@ function idsktk_render_dynamic_related_content_block($attributes) {
 
   ob_start(); // Turn on output buffering
   ?>
-  <div class="<?php echo $related_content_grid_type ? 'govuk-grid-column-two-thirds' : 'govuk-grid-column-one-third'; ?> <?php echo $className; ?>">
-    <div class="idsk-related-content " data-module="idsk-related-content">
-      <hr class="idsk-related-content__line" aria-hidden="true" />
-      <h4 class="idsk-related-content__heading govuk-heading-s"><?php echo $title; ?></h4>
-      <ul class="idsk-related-content__list govuk-list">
-        <?php echo $body_final; ?> 
-      </ul>
+  <div class="govuk-grid-row">
+    <div class="<?php echo $related_content_grid_type ? 'govuk-grid-column-two-thirds' : 'govuk-grid-column-one-third'; ?> <?php echo $className; ?>">
+      <div class="idsk-related-content " data-module="idsk-related-content">
+        <hr class="idsk-related-content__line" aria-hidden="true" />
+        <h4 class="idsk-related-content__heading govuk-heading-s"><?php echo $title; ?></h4>
+        <ul class="idsk-related-content__list govuk-list">
+          <?php echo $body_final; ?> 
+        </ul>
+      </div>
     </div>
-  </div>
+  </div> 
 
   <?php
     /* END HTML OUTPUT */

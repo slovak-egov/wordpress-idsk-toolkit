@@ -85,7 +85,7 @@ registerBlockType('idsk/related-content', {
                 </PanelBody>
             </InspectorControls>
 
-            <div>
+            <div class="govuk-grid-row">
                 {/* TODO: nejak premysliet toto tu.. */}
                 {/* <div class={gridType ? 'govuk-grid-column-two-thirds' : 'govuk-grid-column-one-third'}> */}
                 <div class="idsk-related-content" data-module="idsk-related-content">
