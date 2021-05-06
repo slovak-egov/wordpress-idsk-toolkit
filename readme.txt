@@ -3,7 +3,7 @@ Contributors: slovenskoit
 Tags: idsk, id-sk, toolkit, idsk-toolkit, idsk toolkit, id-sk toolkit
 Requires at least: 5.4
 Tested up to: 5.7
-Stable tag: 1.1.0
+Stable tag: 1.2.0
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -24,6 +24,12 @@ Soon.
 
 == Changelog ==
 
+= 1.2.0 =
+Pridanie nových komponentov.
+* Grafový komponent
+* Mapový komponent
+Fixy v existujúcich komponentoch.
+
 = 1.1.0 =
 * Pridanie nových ID-SK komponentov
 * Optimalizácia kódu, oprava chýb
@@ -32,6 +38,9 @@ Soon.
 * Vydanie pluginu
 
 == Upgrade Notice ==
+
+= 1.2.0 =
+Pridanie nových komponentov, fixy v existujúcich komponentoch.
 
 = 1.1.0 =
 Pridanie nových komponentov, optimalizácia kódu.
