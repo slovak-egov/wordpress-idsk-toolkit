@@ -47,7 +47,7 @@ function idsktk_render_dynamic_graph_component_block($attributes) {
     ob_start(); // Turn on output buffering
     ?>
 
-    <div data-module="idsk-graph" class="idsk-graph" id=<?php echo $blockId; ?>>
+    <div data-module="idsk-graph" class="idsk-graph" id="<?php echo $blockId; ?>">
         <div class="govuk-grid-row idsk-graph__heading">
             <div class="idsk-graph__title">
                 <h2 class="govuk-heading-m"><?php echo $title; ?></h2>
@@ -59,8 +59,8 @@ function idsktk_render_dynamic_graph_component_block($attributes) {
                         <?php if (count($graphOptions) > 0) { ?>
                             <?php foreach ($graphOptions as $key => $item) { ?>
                                 <div class="govuk-radios__item">
-                                    <input class="govuk-radios__input idsk-graph__radio" name=<?php echo "radio-".$blockId; ?> id="radio-<?php echo $blockId."-".($key+1) ?>" type="radio" value="<?php echo $item['value'] ?>" <?php if ($key == 0) { echo 'checked'; } ?>>
-                                    <label class="govuk-label govuk-radios__label" for="radio-<?php echo $blockId."-".($key+1) ?>"><?php echo $item['name'] ?></label>
+                                    <input class="govuk-radios__input idsk-graph__radio" name="<?php echo 'radio-'.$blockId; ?>" id="<?php echo 'radio-'.$blockId.'-'.($key+1) ?>" type="radio" value="<?php echo $item['value'] ?>" <?php if ($key == 0) { echo 'checked'; } ?>>
+                                    <label class="govuk-label govuk-radios__label" for="<?php echo 'radio-'.$blockId.'-'.($key+1) ?>"><?php echo $item['name'] ?></label>
                                 </div>
                             <?php } ?>
                         <?php } ?>
@@ -157,7 +157,7 @@ function idsktk_render_dynamic_graph_component_block($attributes) {
                                 <a title="<?php echo __('Emailom', 'idsk-toolkit') ?>" href="<?php echo "#".$blockId; ?>" class="govuk-link idsk-graph__send-link-by-email" ><?php echo __('Emailom', 'idsk-toolkit') ?></a>
                             </li>
                             <li>
-                                <a title="<?php echo __('na Facebooku', 'idsk-toolkit') ?>" href="<?php echo "#".$blockId; ?>" class="govuk-link idsk-graph__share-on-facebook" target=_blank><?php echo __('na Facebooku', 'idsk-toolkit') ?></a>
+                                <a title="<?php echo __('na Facebooku', 'idsk-toolkit') ?>" href="<?php echo "#".$blockId; ?>" class="govuk-link idsk-graph__share-on-facebook" target="_blank"><?php echo __('na Facebooku', 'idsk-toolkit') ?></a>
                             </li>
                         </ul>
                     </div>
