@@ -25,10 +25,10 @@ Soon.
 == Changelog ==
 
 = 1.2.0 =
-Pridanie nových komponentov.
-* Grafový komponent
-* Mapový komponent
-Fixy v existujúcich komponentoch.
+* Pridanie nových komponentov.
+ * Grafový komponent
+ * Mapový komponent
+* Fixy v existujúcich komponentoch.
 
 = 1.1.0 =
 * Pridanie nových ID-SK komponentov
