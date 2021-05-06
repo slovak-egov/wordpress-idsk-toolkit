@@ -328,7 +328,7 @@ registerBlockType('idsk/intro', {
                         <div class="govuk-grid-row ">
                             <div class="govuk-grid-column-full govuk-grid-column-two-thirds-from-desktop">
                                 <RichText
-                                    className="govuk-heading-l h2-main"
+                                    className="govuk-heading-xl h2-main"
                                     key="editable"
                                     tagName="h2"
                                     placeholder={__('Hlavný nadpis', 'idsk-toolkit')}
