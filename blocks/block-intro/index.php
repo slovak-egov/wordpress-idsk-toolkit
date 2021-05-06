@@ -45,7 +45,7 @@ function idsktk_render_dynamic_intro_block($attributes) {
 
     $sideContent = new DOMDocument();
     if (isset($attributes['sideContent']) && $attributes['sideContent'] != '') {
-        $sideContent->loadHTML($attributes['sideContent']);
+        $sideContent->loadHTML('<?xml encoding="utf-8" ?>' . $attributes['sideContent']);
     }
 
     // data modification
@@ -84,7 +84,7 @@ function idsktk_render_dynamic_intro_block($attributes) {
         <div class="idsk-intro-block ">
             <div class="govuk-grid-row ">
                 <div class="govuk-grid-column-full govuk-grid-column-two-thirds-from-desktop">
-                    <h2 class="govuk-heading-l">
+                    <h2 class="govuk-heading-xl">
                         <?php echo $title ?>
                     </h2>
                     <p class="idsk-intro-block__subtitle govuk-caption-l"><?php echo $subTitle ?></p>
@@ -151,22 +151,22 @@ function idsktk_render_dynamic_intro_block($attributes) {
                     <?php } ?>
                 </div>
                 <div class="<?php echo !$defaultStyle ? 'idsk-intro-block__side-menu' : '' ?>">
-                        <div id="<?php echo $defaultStyle ? 'idsk-intro-block__side-menu__default' : 'idsk-intro-block__side-menu__title' ?>" class='govuk-grid-column-full govuk-grid-column-one-third-from-desktop <?php echo $sideStyle ?>'>
-                            <h2 class="govuk-heading-l">
-                                <?php echo $sideTitle ?>
-                            </h2>
-                            <?php echo $defaultStyle ? '<div class="idsk-intro-block__side-menu__default__subtitle">' : '' ?>
-                                <ul class="<?php echo $defaultStyle ? 'idsk-intro-block__side-menu__default__ul' : 'idsk-intro-block__side-menu__ul' ?>">
-                                
-                                    <?php 
-                                    foreach ($sideList as $key => $val) {
-                                        echo $val;
-                                    }
-                                    ?>
+                    <div id="<?php echo $defaultStyle ? 'idsk-intro-block__side-menu__default' : 'idsk-intro-block__side-menu__title' ?>" class='govuk-grid-column-full govuk-grid-column-one-third-from-desktop <?php echo $sideStyle ?>'>
+                        <h2 class="govuk-heading-l">
+                            <?php echo $sideTitle ?>
+                        </h2>
+                        <?php echo $defaultStyle ? '<div class="idsk-intro-block__side-menu__default__subtitle">' : '' ?>
+                            <ul class="<?php echo $defaultStyle ? 'idsk-intro-block__side-menu__default__ul' : 'idsk-intro-block__side-menu__ul' ?>">
+                            
+                                <?php 
+                                foreach ($sideList as $key => $val) {
+                                    echo $val;
+                                }
+                                ?>
 
-                                </ul>
-                            <?php echo $defaultStyle ? '</div>' : '' ?>
-                        </div>
+                            </ul>
+                        <?php echo $defaultStyle ? '</div>' : '' ?>
+                    </div>
                 </div>
             </div>
         </div>
