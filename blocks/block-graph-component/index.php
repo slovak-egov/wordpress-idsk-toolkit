@@ -50,7 +50,7 @@ function idsktk_render_dynamic_graph_component_block($attributes) {
     <div data-module="idsk-graph" class="idsk-graph" id="<?php echo $blockId; ?>">
         <div class="govuk-grid-row idsk-graph__heading">
             <div class="idsk-graph__title">
-                <h2 class="govuk-heading-m"><?php echo $title; ?></h2>
+                <h2 class="govuk-heading-m" data-lines="<?php echo __('Kliknite na odkaz vyššie alebo ho skopírujte a vložte do prehliadača: ', 'idsk-toolkit'); ?>"><?php echo $title; ?></h2>
             </div>
             <div class="idsk-graph__controls">
                 <div class="govuk-form-group">
