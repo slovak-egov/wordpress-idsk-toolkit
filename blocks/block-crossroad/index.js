@@ -25,12 +25,12 @@ const { __ } = wp.i18n;
 
 registerBlockType('idsk/crossroad', {
     // built-in attributes
-    title: __('Rozcestník', 'idsk-toolkit'),
+    title: __('Rázcestník', 'idsk-toolkit'),
     description: __('Rázcestník má formu jednoduchej dlaždice, zloženej z nadpisu, popisku a oddeľovacej čiary. Jeho účelom je prehľadne a jednoducho zoskupiť resp. usporiadať pre používateľa odkazy na súvisiaci obsah, ktorý je rozmiestnený na rôznych, samostatných podstránkach.', 'idsk-toolkit'),
     icon: 'menu',
     category: 'idsk-components',
     keywords: [
-        __('Rozcestník', 'idsk-toolkit'),
+        __('Rázcestník', 'idsk-toolkit'),
     ],
 
     // custom attributes
@@ -213,7 +213,7 @@ registerBlockType('idsk/crossroad', {
             return (<div data-module="idsk-crossroad" className={className}>
                 <div class="govuk-clearfix"></div>
                 <InspectorControls>
-                    <PanelBody title={__('Nastavenie razcestníka', 'idsk-toolkit')}>
+                    <PanelBody title={__('Nastavenie rázcestníka', 'idsk-toolkit')}>
                         <PanelRow>
                             <ToggleControl
                                 className="js-crossroad-two-cols"
