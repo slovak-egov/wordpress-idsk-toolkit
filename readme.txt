@@ -16,6 +16,10 @@ Súbor nástrojov funkcionalít k ID-SK téme. Tento súbor odporúčame použí
 
 Pre viac informácií o jednotlivých komponentoch a spôsoboch ich použitia navštívte [ID-SK Frontend – Jednotný dizajn manuál elektronických služieb](https://idsk.gov.sk/).
 
+== Copyright ==
+ID-SK Toolkit WordPress plugin, Copyright 2021 Slovensko IT, a.s..
+ID-SK is distributed under the terms of the GNU GPLv2 or later and under the terms of [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)
+
 == Frequently Asked Questions ==
 
 = When FAQ will be availiable? =

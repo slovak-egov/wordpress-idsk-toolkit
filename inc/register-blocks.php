@@ -24,27 +24,27 @@ function idsktk_allowed_block_types( $allowed_blocks ) {
         'core/separator',
         'core/shortcode',
         'core/freeform',
-        'acf/section-accordion-open',
-        'acf/section-accordion-open-body',
-        'acf/section-accordion-close',
-        'acf/section-accordion-close-body',
-        'acf/section-tab-open',
-        'acf/section-tab-section-open',
-        'acf/section-tab-section-close',
-        'acf/section-tab-close',
-        'acf/section-announce',
-        'acf/section-button',
-        'acf/section-heading',
-        'acf/section-hidden',
-        'acf/section-lists',
-        'acf/section-inset',
-        'acf/section-row-open',
-        'acf/section-row-close',
-        'acf/section-col-open',
-        'acf/section-col-close',
-        'acf/section-container-open',
-        'acf/section-container-close',
-        'acf/section-news',
+        // 'acf/section-accordion-open',
+        // 'acf/section-accordion-open-body',
+        // 'acf/section-accordion-close',
+        // 'acf/section-accordion-close-body',
+        // 'acf/section-tab-open',
+        // 'acf/section-tab-section-open',
+        // 'acf/section-tab-section-close',
+        // 'acf/section-tab-close',
+        // 'acf/section-announce',
+        // 'acf/section-button',
+        // 'acf/section-heading',
+        // 'acf/section-hidden',
+        // 'acf/section-lists',
+        // 'acf/section-inset',
+        // 'acf/section-row-open',
+        // 'acf/section-row-close',
+        // 'acf/section-col-open',
+        // 'acf/section-col-close',
+        // 'acf/section-container-open',
+        // 'acf/section-container-close',
+        // 'acf/section-news',
         'idsk/related-content',
         'idsk/warning-text',
         'idsk/crossroad',
@@ -57,6 +57,7 @@ function idsktk_allowed_block_types( $allowed_blocks ) {
         'idsk/column',
         'idsk/map-component',
         'idsk/graph-component',
+        // 'idsk/accordion',
     );
 
 }
@@ -81,7 +82,7 @@ function idsktk_gov_page_block_category ( $categories, $post ) {
         array (
             array (
                 'slug'  => 'idsk-grids',
-                'title' => __( 'ID-SK Rozloženie stránky', 'idsk' ),
+                'title' => __( 'ID-SK Rozloženie stránky', 'idsk-toolkit' ),
             ),
         ),
         array (
@@ -124,17 +125,17 @@ add_filter( 'block_categories', 'idsktk_gov_page_block_category', 10, 2 );
  */
 //require plugin_dir_path(__DIR__) . '/blocks/block-example/block.php';
 //require plugin_dir_path(__DIR__) . '/blocks/block-images/block.php';
-require plugin_dir_path(__DIR__) . '/blocks/block-accordion/block.php';
-require plugin_dir_path(__DIR__) . '/blocks/block-heading/block.php';
-require plugin_dir_path(__DIR__) . '/blocks/block-announce/block.php';
-require plugin_dir_path(__DIR__) . '/blocks/block-inset/block.php';
-require plugin_dir_path(__DIR__) . '/blocks/block-hidden/block.php';
-require plugin_dir_path(__DIR__) . '/blocks/block-button/block.php';
-require plugin_dir_path(__DIR__) . '/blocks/block-lists/block.php';
-require plugin_dir_path(__DIR__) . '/blocks/block-tab/block.php';
-require plugin_dir_path(__DIR__) . '/blocks/block-grid/block.php';
-require plugin_dir_path(__DIR__) . '/blocks/block-container/block.php';
-require plugin_dir_path(__DIR__) . '/blocks/block-news/block.php';
+// require plugin_dir_path(__DIR__) . '/blocks/block-accordion/block.php';
+// require plugin_dir_path(__DIR__) . '/blocks/block-heading/block.php';
+// require plugin_dir_path(__DIR__) . '/blocks/block-announce/block.php';
+// require plugin_dir_path(__DIR__) . '/blocks/block-inset/block.php';
+// require plugin_dir_path(__DIR__) . '/blocks/block-hidden/block.php';
+// require plugin_dir_path(__DIR__) . '/blocks/block-button/block.php';
+// require plugin_dir_path(__DIR__) . '/blocks/block-lists/block.php';
+// require plugin_dir_path(__DIR__) . '/blocks/block-tab/block.php';
+// require plugin_dir_path(__DIR__) . '/blocks/block-grid/block.php';
+// require plugin_dir_path(__DIR__) . '/blocks/block-container/block.php';
+// require plugin_dir_path(__DIR__) . '/blocks/block-news/block.php';
 
 /**
  * Light editor toolbar
