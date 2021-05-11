@@ -58,6 +58,14 @@ function idsktk_allowed_block_types( $allowed_blocks ) {
         'idsk/map-component',
         'idsk/graph-component',
         // 'idsk/accordion',
+        // 'idsk/announce',
+        // 'idsk/button',
+        // 'idsk/container',
+        // 'idsk/heading',
+        // 'idsk/hidden', details
+        // 'idsk/inset-text',
+        // 'idsk/lists',
+        // 'idsk/tabs',
     );
 
 }
