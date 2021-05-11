@@ -20,3 +20,4 @@ import './grid-row';
 import './grid-column';
 import './block-map-component';
 import './block-graph-component';
+import './block-button';
