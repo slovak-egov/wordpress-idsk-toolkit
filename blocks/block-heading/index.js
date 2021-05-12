@@ -110,27 +110,27 @@ registerBlockType('idsk/heading', {
                         selected={ headingType }
                         options={ [
                             { 
-                                label: __('Nadpis 1', 'idsk-toolkit'),
+                                label: __('(H1) Nadpis 1', 'idsk-toolkit'),
                                 value: 'h1' 
                             },
                             { 
-                                label: __('Nadpis 2', 'idsk-toolkit'),
+                                label: __('(H2) Nadpis 2', 'idsk-toolkit'),
                                 value: 'h2' 
                             },
                             { 
-                                label: __('Nadpis 3', 'idsk-toolkit'),
+                                label: __('(H3) Nadpis 3', 'idsk-toolkit'),
                                 value: 'h3'
                             },
                             { 
-                                label: __('Nadpis 4', 'idsk-toolkit'),
+                                label: __('(H4) Nadpis 4', 'idsk-toolkit'),
                                 value: 'h4'
                             },
                             { 
-                                label: __('Nadpis 5', 'idsk-toolkit'),
+                                label: __('(H5) Nadpis 5', 'idsk-toolkit'),
                                 value: 'h5'
                             },
                             { 
-                                label: __('Nadpis 6', 'idsk-toolkit'),
+                                label: __('(H6) Nadpis 6', 'idsk-toolkit'),
                                 value: 'h6'
                             },
                         ] }
@@ -142,19 +142,19 @@ registerBlockType('idsk/heading', {
                         selected={ headingClass }
                         options={ [
                             { 
-                                label: __('48 px Tučný nadpis (XL)', 'idsk-toolkit'),
+                                label: __('(XL) 48 px Tučný nadpis', 'idsk-toolkit'),
                                 value: 'xl' 
                             },
                             { 
-                                label: __('36 px Tučný nadpis (L)', 'idsk-toolkit'),
+                                label: __('(L) 36 px Tučný nadpis', 'idsk-toolkit'),
                                 value: 'l' 
                             },
                             { 
-                                label: __('24 px Tučný nadpis (M)', 'idsk-toolkit'),
+                                label: __('(M) 24 px Tučný nadpis', 'idsk-toolkit'),
                                 value: 'm'
                             },
                             { 
-                                label: __('19 px Tučný nadpis (S)', 'idsk-toolkit'),
+                                label: __('(S) 19 px Tučný nadpis', 'idsk-toolkit'),
                                 value: 's'
                             },
                         ] }
