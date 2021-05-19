@@ -8,7 +8,9 @@
  * @since ID-SK 1.0
  */
 
-// based on https://github.com/WordPress/gutenberg/blob/trunk/packages/rich-text/src/
+// based on https://github.com/WordPress/gutenberg/blob/trunk/packages/block-editor/src/components/block-list
+// + https://github.com/WordPress/gutenberg/blob/trunk/packages/rich-text/src/
+// wp icons on https://github.com/WordPress/gutenberg/tree/trunk/packages/icons/src/library
 
 // Used to make item ids
 import { nanoid } from 'nanoid'
