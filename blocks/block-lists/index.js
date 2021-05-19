@@ -212,7 +212,6 @@ registerBlockType('idsk/lists', {
             
             // make a true copy of items
             const items = JSON.parse(JSON.stringify(this.state.items))
-            // const { items } = this.props.attributes
             let newItems = []
             let toDelete = [itemId]
             let index
