@@ -26,3 +26,4 @@ require plugin_dir_path(__DIR__) . '/blocks/block-announce/index.php';
 require plugin_dir_path(__DIR__) . '/blocks/block-button/index.php';
 require plugin_dir_path(__DIR__) . '/blocks/block-heading/index.php';
 require plugin_dir_path(__DIR__) . '/blocks/block-details/index.php';
+require plugin_dir_path(__DIR__) . '/blocks/block-lists/index.php';

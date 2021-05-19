@@ -64,7 +64,7 @@ function idsktk_allowed_block_types( $allowed_blocks ) {
         'idsk/heading',
         'idsk/details',
         // 'idsk/inset-text',
-        // 'idsk/lists',
+        'idsk/lists',
         // 'idsk/tabs',
     );
 

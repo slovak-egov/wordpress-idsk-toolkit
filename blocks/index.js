@@ -25,3 +25,4 @@ import './block-announce';
 import './block-button';
 import './block-heading';
 import './block-details';
+import './block-lists';
