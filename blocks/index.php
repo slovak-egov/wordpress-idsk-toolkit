@@ -24,3 +24,4 @@ require plugin_dir_path(__DIR__) . '/blocks/block-graph-component/index.php';
 require plugin_dir_path(__DIR__) . '/blocks/block-accordion/index.php';
 require plugin_dir_path(__DIR__) . '/blocks/block-announce/index.php';
 require plugin_dir_path(__DIR__) . '/blocks/block-button/index.php';
+require plugin_dir_path(__DIR__) . '/blocks/block-heading/index.php';

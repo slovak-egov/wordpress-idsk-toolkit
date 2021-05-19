@@ -23,3 +23,4 @@ import './block-graph-component';
 import './block-accordion';
 import './block-announce';
 import './block-button';
+import './block-heading';
