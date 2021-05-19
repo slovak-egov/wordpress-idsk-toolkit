@@ -59,7 +59,7 @@ function idsktk_allowed_block_types( $allowed_blocks ) {
         'idsk/graph-component',
         'idsk/accordion',
         'idsk/announce',
-        // 'idsk/button',
+        'idsk/button',
         // 'idsk/container',
         // 'idsk/heading',
         // 'idsk/hidden', details

@@ -22,3 +22,4 @@ import './block-map-component';
 import './block-graph-component';
 import './block-accordion';
 import './block-announce';
+import './block-button';
