@@ -3655,6 +3655,38 @@ div[data-type="idsk/column"] > .block-editor-inner-blocks > .block-editor-block-
 .govuk-list .govuk-list, .app-prose-scope ul .govuk-list, .app-prose-scope ol .govuk-list, .govuk-list .app-prose-scope ul, .app-prose-scope .govuk-list ul, .app-prose-scope ul ul, .app-prose-scope ol ul, .govuk-list .app-prose-scope ol, .app-prose-scope .govuk-list ol, .app-prose-scope ul ol, .app-prose-scope ol ol {
     margin-top: 10px;
 }
+.govuk-inset-text {
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #0b0c0c;
+    padding: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    clear: both;
+    border-left: 10px solid #bfc1c3;
+}
+@media (min-width: 40.0625em) {
+    .govuk-inset-text {
+        font-size: 19px;
+        font-size: 1.1875rem;
+        line-height: 1.31579;
+    }
+}
+@media (min-width: 40.0625em) {
+    .govuk-inset-text {
+        margin-top: 30px;
+    }
+}
+@media (min-width: 40.0625em) {
+    .govuk-inset-text {
+        margin-bottom: 30px;
+    }
+}
 /**
  * Import custom blocks CSS
  *

@@ -26,3 +26,4 @@ import './block-button';
 import './block-heading';
 import './block-details';
 import './block-lists';
+import './block-inset-text';
