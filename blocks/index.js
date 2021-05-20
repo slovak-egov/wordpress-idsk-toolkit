@@ -27,3 +27,5 @@ import './block-heading';
 import './block-details';
 import './block-lists';
 import './block-inset-text';
+import './block-tab';
+import './block-tabs';

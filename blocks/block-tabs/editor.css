@@ -1,0 +1,42 @@
+.govuk-tabs .block-list-appender {
+    float: unset;
+}
+.govuk-tabs {
+    margin-top: 5px;
+    margin-bottom: 20px;
+    min-height: 100px;
+}
+@media (min-width: 40.0625em) {
+    .govuk-tabs {
+        margin-top: 5px;
+    }
+}
+@media (min-width: 40.0625em) {
+    .govuk-tabs {
+        margin-bottom: 30px;
+    }
+}
+
+.govuk-tabs__title {
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #0b0c0c;
+    margin-bottom: 10px;
+}
+@media (min-width: 40.0625em) {
+    .govuk-tabs__title {
+        font-size: 19px;
+        font-size: 1.1875rem;
+        line-height: 1.31579;
+    }
+}
+@media (min-width: 40.0625em) {
+    .js-enabled .govuk-tabs__title {
+        display: none;
+    }
+}

@@ -27,3 +27,5 @@
 @import "block-details/editor.css";
 @import "block-lists/editor.css";
 @import "block-inset-text/editor.css";
+@import "block-tab/editor.css";
+@import "block-tabs/editor.css";
