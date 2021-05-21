@@ -117,7 +117,7 @@ add_action('enqueue_block_editor_assets', 'gutenberg_editor_assets');
 
 function gutenberg_editor_assets() {
     // Load the theme styles within Gutenberg.
-    wp_enqueue_style('my-gutenberg-editor-styles', get_template_directory_uri().'/assets/css/gutenberg-editor-styles.css', FALSE);
+    wp_enqueue_style('my-gutenberg-editor-styles', plugin_dir_url(__FILE__).'/assets/css/gutenberg-editor-styles.css', FALSE);
 }
 
 // Registering blocks
@@ -125,7 +125,6 @@ function gutenberg_editor_assets() {
  * Block, ACF functions
  */
 require plugin_dir_path(__FILE__) . '/inc/register-blocks.php';
-require plugin_dir_path(__FILE__) . '/inc/acf-settings.php';
 
 /* Custom gutenberg IDSK blocks */
 require plugin_dir_path(__FILE__) . '/blocks/index.php';
