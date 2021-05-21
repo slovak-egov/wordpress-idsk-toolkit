@@ -9,7 +9,15 @@
  */
 
 const { registerBlockType, registerBlockStyle } = wp.blocks; // the notation same as: import registerBlockType from wp.blocks;
-const { InnerBlocks, useBlockProps } = wp.blockEditor;
+const { 
+    InspectorControls, 
+    InnerBlocks, 
+    useBlockProps 
+} = wp.blockEditor;
+const {
+    PanelBody,
+    RadioControl
+} = wp.components;
 const { __ } = wp.i18n;
 
 // registering custom styles for block
@@ -60,12 +68,27 @@ registerBlockType('idsk/column', {
     attributes: {
         classShort: {
             type: 'string'
+        },
+        bgColor: {
+            option: '',
+            default: '',
+            selector: 'js-column-color'
+        },
+        paddingTop: {
+            option: '',
+            default: '',
+            selector: 'js-column-pt'
+        },
+        paddingBottom: {
+            option: '',
+            default: '',
+            selector: 'js-column-pb'
         }
     },
 
     // The UI for the WordPress editor
     edit({ attributes, setAttributes, className }) {
-        const { classShort } = attributes;
+        const { classShort, bgColor, paddingTop, paddingBottom } = attributes;
         let getClass = 'full';
         
         if (className.includes('is-style')) {
@@ -76,7 +99,140 @@ registerBlockType('idsk/column', {
         setAttributes({ classShort: getClass });
 
         return <div className={className}>
-            <div class={"main-govuk-grid-column-" + classShort}>
+            <InspectorControls>
+                <PanelBody title={__('Nastavenie stĺpca', 'idsk-toolkit')}>
+                    <RadioControl
+                        className="js-column-color"
+                        label={__('Farba pozadia', 'idsk-toolkit')}
+                        selected={ bgColor }
+                        options={ [
+                            { 
+                                label: __('Bez pozadia', 'idsk-toolkit'),
+                                value: '' 
+                            },
+                            { 
+                                label: __('Modré', 'idsk-toolkit'),
+                                value: 'app-pane-blue' 
+                            },
+                            { 
+                                label: __('Svetlo šedé', 'idsk-toolkit'),
+                                value: 'app-pane-lgray'
+                            },
+                            { 
+                                label: __('Šedé', 'idsk-toolkit'),
+                                value: 'app-pane-gray'
+                            }
+                        ] }
+                        onChange={ ( option ) => { setAttributes( { bgColor: option } ) } }
+                    />
+                    <RadioControl
+                        className="js-column-pt"
+                        label={__('Odsadenie zhora', 'idsk-toolkit')}
+                        selected={ paddingTop }
+                        options={ [
+                            { 
+                                label: __('Bez odsadenia', 'idsk-toolkit'),
+                                value: '' 
+                            },
+                            { 
+                                label: __('0px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-top-0' 
+                            },
+                            { 
+                                label: __('5px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-top-1' 
+                            },
+                            { 
+                                label: __('10px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-top-2' 
+                            },
+                            { 
+                                label: __('15px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-top-3' 
+                            },
+                            { 
+                                label: __('20px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-top-4' 
+                            },
+                            { 
+                                label: __('25px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-top-5' 
+                            },
+                            { 
+                                label: __('30px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-top-6' 
+                            },
+                            { 
+                                label: __('40px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-top-7' 
+                            },
+                            { 
+                                label: __('50px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-top-8' 
+                            },
+                            { 
+                                label: __('60px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-top-9' 
+                            },
+                        ] }
+                        onChange={ ( option ) => { setAttributes( { paddingTop: option } ) } }
+                    />
+                    <RadioControl
+                        className="js-column-pb"
+                        label={__('Odsadenie zdola', 'idsk-toolkit')}
+                        selected={ paddingBottom }
+                        options={ [
+                            { 
+                                label: __('Bez odsadenia', 'idsk-toolkit'),
+                                value: '' 
+                            },
+                            { 
+                                label: __('0px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-bottom-0' 
+                            },
+                            { 
+                                label: __('5px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-bottom-1' 
+                            },
+                            { 
+                                label: __('10px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-bottom-2' 
+                            },
+                            { 
+                                label: __('15px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-bottom-3' 
+                            },
+                            { 
+                                label: __('20px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-bottom-4' 
+                            },
+                            { 
+                                label: __('25px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-bottom-5' 
+                            },
+                            { 
+                                label: __('30px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-bottom-6' 
+                            },
+                            { 
+                                label: __('40px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-bottom-7' 
+                            },
+                            { 
+                                label: __('50px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-bottom-8' 
+                            },
+                            { 
+                                label: __('60px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-bottom-9' 
+                            },
+                        ] }
+                        onChange={ ( option ) => { setAttributes( { paddingBottom: option } ) } }
+                    />
+                </PanelBody>
+            </InspectorControls>
+
+            <div class={"main-govuk-grid-column-"+classShort+" "+bgColor+" "+paddingTop+" "+paddingBottom}>
                 <div { ...useBlockProps() }>
                     <InnerBlocks />
                 </div>
@@ -87,7 +243,7 @@ registerBlockType('idsk/column', {
     // Save inserted content
     save({ attributes, className }) {
         return <div className={className}>
-            <div class={"govuk-grid-column-" + attributes.classShort}>
+            <div class={"govuk-grid-column-"+attributes.classShort+" "+attributes.bgColor+" "+attributes.paddingTop+" "+attributes.paddingBottom}>
                 <div { ...useBlockProps.save() }>
                     <InnerBlocks.Content />
                 </div>
