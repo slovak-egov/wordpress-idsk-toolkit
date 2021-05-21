@@ -47,7 +47,9 @@ registerBlockType('idsk/tab', {
 
         componentDidUpdate(prevProps, prevState) {
             if (prevProps.attributes.heading !== this.props.attributes.heading) {
-                const parentClientId = select( 'core/block-editor' ).getBlockHierarchyRootClientId( this.props.clientId );
+                // Get direct parent block
+                const parentBlocks = select( 'core/block-editor' ).getBlockParents(this.props.clientId)
+                const parentClientId = parentBlocks[parentBlocks.length-1]
                 const parentBlock = select( 'core/block-editor' ).getBlock( parentClientId );
                 let parentHeadings = parentBlock.attributes.headings
                 let parentBlockIds = parentBlock.attributes.blockIds
