@@ -60,7 +60,7 @@ function idsktk_allowed_block_types( $allowed_blocks ) {
         'idsk/accordion',
         'idsk/announce',
         'idsk/button',
-        // 'idsk/container',
+        'idsk/container',
         'idsk/heading',
         'idsk/details',
         'idsk/inset-text',
