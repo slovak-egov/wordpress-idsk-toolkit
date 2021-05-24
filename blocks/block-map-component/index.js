@@ -44,7 +44,8 @@ registerBlockType('idsk/map-component', {
             selector: 'h2.govuk-heading-l'
         },
         indicatorOptions: {
-            type: 'array'
+            type: 'array',
+            default: []
         },
         iframeMapTitle: {
             type: 'string',
@@ -84,7 +85,7 @@ registerBlockType('idsk/map-component', {
             // Match current state to saved quotes (if they exist)
             this.state = {
                 periodOption: __('Celé obdobie', 'idsk-toolkit'),
-                indicatorOption: this.props.attributes.indicatorOptions ? this.props.attributes.indicatorOptions[0].text : '',
+                indicatorOption: this.props.attributes.indicatorOptions.length > 0 ? this.props.attributes.indicatorOptions[0].text : '',
                 indicatorOptions: this.props.attributes.indicatorOptions || []
             }
 
@@ -226,6 +227,14 @@ registerBlockType('idsk/map-component', {
                         <TextControl
                             className="js-csv-download"
                             key="editable"
+                            placeholder={__('napr. Stiahnuť údaje (CSV, 42 kb)', 'idsk-toolkit')}
+                            label={__('Názov odkazu súboru na stiahnutie', 'idsk-toolkit')}
+                            value={downloadText}
+                            onChange={value => this.onChange('downloadText', value)} 
+                        />
+                        <TextControl
+                            className="js-csv-download"
+                            key="editable"
                             placeholder={__('https://www.google.com', 'idsk-toolkit')}
                             label={__('URL zdroj súboru na stiahnutie', 'idsk-toolkit')}
                             value={csvDownload}
@@ -260,6 +269,7 @@ registerBlockType('idsk/map-component', {
                                 <div class="govuk-clearfix"></div>
                             </>
                         )}
+                        <br/>
                         <input
                             className="button-primary button"
                             type="submit"
@@ -338,15 +348,8 @@ registerBlockType('idsk/map-component', {
                         </div>
                     </div>
                     <div class="idsk-interactive-map__meta">
-                        {(!!csvDownload && csvDownload != '') &&
-                            <RichText
-                                className="idsk-interactive-map__meta-data"
-                                key="editable"
-                                tagName="a"
-                                placeholder={__('Stiahnuť údaje (CSV, 42 kb)', 'idsk-toolkit')}
-                                value={downloadText}
-                                onChange={value => this.onChange('downloadText', value)} 
-                            />
+                        {(csvDownload != '' || downloadText != '') &&
+                            <a class="govuk-link idsk-interactive-map__meta-data" title={downloadText} href="#">{downloadText}</a>
                         }
                         <RichText
                             className="idsk-interactive-map__meta-source"
