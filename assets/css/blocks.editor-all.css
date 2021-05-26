@@ -413,6 +413,16 @@
     border: none;
     height: 2px;
 }
+.idsk-address__separator-bottom {
+    display: none;
+}
+.idsk-address--full-width .idsk-address__separator-bottom {
+    background-color: #f3f2f1;
+    border: none;
+    display: block;
+    height: 2px;
+    margin-top: 0;
+}
 
 .idsk-address__content {
     position: relative;
