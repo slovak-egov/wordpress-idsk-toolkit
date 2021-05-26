@@ -211,7 +211,6 @@ registerBlockType('idsk/crossroad', {
             const { numberOfCols, hideTiles, items } = attributes
 
             return (<div data-module="idsk-crossroad" className={className}>
-                <div class="govuk-clearfix"></div>
                 <InspectorControls>
                     <PanelBody title={__('Nastavenie rázcestníka', 'idsk-toolkit')}>
                         <PanelRow>

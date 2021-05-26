@@ -2,6 +2,7 @@
     box-sizing: border-box;
     width: 100%;
     padding: 0 15px;
+    padding: 0;
 }
 
 @media (min-width: 40.0625em) {
@@ -41,12 +42,23 @@
         box-sizing: border-box;
         width: 100%;
         padding: 0 15px;
+        padding: 0;
     }
 }
 @media (min-width: 48.0625em) and (min-width: 40.0625em) {
     .idsk-crossroad-2 {
         width: 50%;
         float: left;
+    }
+}
+@media (min-width: 48.0625em) {
+    .idsk-crossroad-2:first-child, .idsk-crossroad-2.\:first-child {
+        padding-right: 15px;
+    }
+}
+@media (min-width: 48.0625em) {
+    .idsk-crossroad-2:nth-child(2), .idsk-crossroad-2.\:nth-child\(2\) {
+        padding-left: 15px;
     }
 }
 
