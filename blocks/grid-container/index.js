@@ -193,8 +193,8 @@ registerBlockType('idsk/container', {
     },
 
     // Save inserted content
-    save({ attributes, className }) {
-        return <div className={className+" "+attributes.bgColor+" "+attributes.paddingTop+" "+attributes.paddingBottom}>
+    save({ attributes }) {
+        return <div className={attributes.bgColor+" "+attributes.paddingTop+" "+attributes.paddingBottom}>
             <div class="govuk-width-container">
                 <div { ...useBlockProps.save() } >
                     <InnerBlocks.Content />
