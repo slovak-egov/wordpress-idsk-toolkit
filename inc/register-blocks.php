@@ -24,6 +24,7 @@ function idsktk_allowed_block_types( $allowed_blocks ) {
         'core/separator',
         'core/shortcode',
         'core/freeform',
+        'core/image',
         'idsk/related-content',
         'idsk/warning-text',
         'idsk/crossroad',
