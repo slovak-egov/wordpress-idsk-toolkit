@@ -123,21 +123,3 @@ function idsktk_consent_submit_shortcode($atts, $content)
     return '<button type="button" class="govuk-button" id="consent_save">' . $a['name'] . '</button>';
 }
 add_shortcode('consent_submit', 'idsktk_consent_submit_shortcode');
-
-    /**
-     * Yoast SEO clenauot spans
-     * @param $link_output
-     * @param $link
-     * @return string|string[]|null
-     */
-    function idsktk_id_sk_filter_breadcrumbs( $link_output, $link ) {
-
-        //$link_output = preg_replace("/<span\s(.+?)>(.+?)<\/span>/is", "<h1 $1>$2</h1>", $link_output);
-        //$output = strip_tags( $link_output, '<a>' );
-        if( isset( $link['url'] ) ) {
-            $link_output = '<li class="govuk-breadcrumbs__list-item"><a href="' . esc_url( $link['url'] ) . '" class="govuk-breadcrumbs__link">' . esc_html( $link['text'] ) . '</a></li>';
-        }
-
-        return $link_output;
-    }
-    add_filter('wpseo_breadcrumb_single_link', 'idsktk_id_sk_filter_breadcrumbs', 10, 2);
