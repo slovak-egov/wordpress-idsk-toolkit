@@ -3,7 +3,7 @@ Contributors: slovenskoit
 Tags: idsk, id-sk, toolkit, idsk-toolkit, idsk toolkit, id-sk toolkit
 Requires at least: 5.4
 Tested up to: 5.7
-Stable tag: 1.3.0
+Stable tag: 1.3.1
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -27,6 +27,11 @@ ID-SK is distributed under the terms of the GNU GPLv2 or later and under the ter
 Soon.
 
 == Changelog ==
+
+= 1.3.1 =
+* Globálne úpravy v existujúcich komponentoch ID-SK
+* Doplnenie odsadení zľava zprava pre grid column komponent
+* Fixy v existujúcich komponentoch
 
 = 1.3.0 =
 * Doplnenie nových komponentov
@@ -54,6 +59,9 @@ Soon.
 * Vydanie pluginu
 
 == Upgrade Notice ==
+
+= 1.3.1 =
+Globálne úpravy a fixy v existujúcich komponentoch.
 
 = 1.3.0 =
 Pridanie nových komponentov, fixy v existujúcich komponentoch.
