@@ -30,7 +30,13 @@ function idsktk_render_dynamic_accordion_block($attributes) {
     ob_start(); // Turn on output buffering
     ?>
 
-    <div class="govuk-accordion" data-module="govuk-accordion" id="<?php echo $blockId; ?>">
+    <div class="govuk-accordion" data-module="idsk-accordion" id="<?php echo $blockId; ?>">
+        <div class="govuk-accordion__controls">
+            <button class="govuk-accordion__open-all" data-open-title="<?php echo esc_attr__('Otvoriť všetky', 'idsk-toolkit'); ?>" data-close-title="<?php echo esc_attr__('Zatvoriť všetky', 'idsk-toolkit'); ?>" type="button" aria-expanded="false">
+                <span class="govuk-visually-hidden govuk-accordion__controls-span" data-section-title="<?php echo esc_attr__('sekcie', 'idsk-toolkit'); ?>"></span>
+            </button>
+        </div>
+
         <?php foreach ($items as $key => $item) { ?>
             <div class="govuk-accordion__section <?php echo $item['open'] ? 'govuk-accordion__section--expanded' : '' ?>">
                 <div class="govuk-accordion__section-header">

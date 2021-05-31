@@ -149,7 +149,14 @@ registerBlockType('idsk/accordion', {
                         )}
                     </PanelBody>
                 </InspectorControls>
-                <div class="govuk-accordion" data-module="govuk-accordion" id="with-descriptions">
+                <div class="govuk-accordion" data-module="idsk-accordion" id="with-descriptions">
+                    <div class="govuk-accordion__controls">
+                        <button class="govuk-accordion__open-all" data-open-title={__('Otvoriť všetky', 'idsk-toolkit')} data-close-title={__('Zatvoriť všetky', 'idsk-toolkit')} type="button" aria-expanded="false">
+                            {__('Zatvoriť všetky', 'idsk-toolkit')}
+                            <span class="govuk-visually-hidden govuk-accordion__controls-span" data-section-title={__('sekcie', 'idsk-toolkit')}></span>
+                        </button>
+                    </div>
+
                     {!!items && items.map((item, index) =>
                         <>
                             <div key={item.id || index} class="govuk-accordion__section govuk-accordion__section--expanded">
