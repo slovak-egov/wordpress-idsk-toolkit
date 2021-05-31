@@ -83,12 +83,22 @@ registerBlockType('idsk/column', {
             option: '',
             default: '',
             selector: 'js-column-pb'
+        },
+        paddingLeft: {
+            option: '',
+            default: '',
+            selector: 'js-column-pl'
+        },
+        paddingRight: {
+            option: '',
+            default: '',
+            selector: 'js-column-pr'
         }
     },
 
     // The UI for the WordPress editor
     edit({ attributes, setAttributes, className }) {
-        const { classShort, bgColor, paddingTop, paddingBottom } = attributes;
+        const { classShort, bgColor, paddingTop, paddingBottom, paddingLeft, paddingRight } = attributes;
         let getClass = 'full';
         
         if (className.includes('is-style')) {
@@ -229,10 +239,114 @@ registerBlockType('idsk/column', {
                         ] }
                         onChange={ ( option ) => { setAttributes( { paddingBottom: option } ) } }
                     />
+                    <RadioControl
+                        className="js-column-pl"
+                        label={__('Odsadenie zľava', 'idsk-toolkit')}
+                        selected={ paddingLeft }
+                        options={ [
+                            { 
+                                label: __('Bez odsadenia', 'idsk-toolkit'),
+                                value: '' 
+                            },
+                            { 
+                                label: __('0px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-left-0' 
+                            },
+                            { 
+                                label: __('5px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-left-1' 
+                            },
+                            { 
+                                label: __('10px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-left-2' 
+                            },
+                            { 
+                                label: __('15px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-left-3' 
+                            },
+                            { 
+                                label: __('20px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-left-4' 
+                            },
+                            { 
+                                label: __('25px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-left-5' 
+                            },
+                            { 
+                                label: __('30px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-left-6' 
+                            },
+                            { 
+                                label: __('40px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-left-7' 
+                            },
+                            { 
+                                label: __('50px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-left-8' 
+                            },
+                            { 
+                                label: __('60px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-left-9' 
+                            },
+                        ] }
+                        onChange={ ( option ) => { setAttributes( { paddingLeft: option } ) } }
+                    />
+                    <RadioControl
+                        className="js-column-pr"
+                        label={__('Odsadenie zprava', 'idsk-toolkit')}
+                        selected={ paddingRight }
+                        options={ [
+                            { 
+                                label: __('Bez odsadenia', 'idsk-toolkit'),
+                                value: '' 
+                            },
+                            { 
+                                label: __('0px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-right-0' 
+                            },
+                            { 
+                                label: __('5px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-right-1' 
+                            },
+                            { 
+                                label: __('10px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-right-2' 
+                            },
+                            { 
+                                label: __('15px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-right-3' 
+                            },
+                            { 
+                                label: __('20px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-right-4' 
+                            },
+                            { 
+                                label: __('25px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-right-5' 
+                            },
+                            { 
+                                label: __('30px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-right-6' 
+                            },
+                            { 
+                                label: __('40px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-right-7' 
+                            },
+                            { 
+                                label: __('50px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-right-8' 
+                            },
+                            { 
+                                label: __('60px', 'idsk-toolkit'),
+                                value: 'govuk-!-padding-right-9' 
+                            },
+                        ] }
+                        onChange={ ( option ) => { setAttributes( { paddingRight: option } ) } }
+                    />
                 </PanelBody>
             </InspectorControls>
 
-            <div class={"main-govuk-grid-column-"+classShort+" "+bgColor+" "+paddingTop+" "+paddingBottom}>
+            <div class={"main-govuk-grid-column-"+classShort+" "+bgColor+" "+paddingTop+" "+paddingBottom+" "+paddingLeft+" "+paddingRight}>
                 <div { ...useBlockProps() }>
                     <InnerBlocks />
                 </div>
@@ -243,8 +357,8 @@ registerBlockType('idsk/column', {
     // Save inserted content
     save({ attributes, className }) {
         return <div className={className}>
-            <div class={"govuk-grid-column-"+attributes.classShort+" "+attributes.bgColor+" "+attributes.paddingTop+" "+attributes.paddingBottom}>
-                <div { ...useBlockProps.save() }>
+            <div class={"govuk-grid-column-"+attributes.classShort}>
+                <div { ...useBlockProps.save() } className={attributes.bgColor+" "+attributes.paddingTop+" "+attributes.paddingBottom+" "+attributes.paddingLeft+" "+attributes.paddingRight}>
                     <InnerBlocks.Content />
                 </div>
             </div>
