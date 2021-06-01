@@ -272,6 +272,7 @@ registerBlockType('idsk/card', {
                                     <img 
                                     alt={imgAlt}
                                     src={attributes.img}
+                                    class={"idsk-card-img idsk-card-img-" + cardType}
                                     onClick={open}
                                     />
                                 ) : (

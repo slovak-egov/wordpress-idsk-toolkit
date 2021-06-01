@@ -69,6 +69,38 @@
     }
 }
 
+.idsk-card-img-secondary-horizontal, .idsk-card-img-profile-horizontal {
+    box-sizing: border-box;
+    float: left;
+    padding-right: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+}
+@media (min-width: 40.0625em) {
+    .idsk-card-img-secondary-horizontal, .idsk-card-img-profile-horizontal {
+        padding-bottom: 0;
+        width: 33%;
+    }
+}
+.idsk-card-img-hero {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 15px;
+    padding: 0;
+    float: none;
+}
+@media (min-width: 40.0625em) {
+    .idsk-card-img-hero {
+        width: 50%;
+        float: left;
+    }
+}
+@media (min-width: 40.0625em) {
+    .idsk-card-img-hero {
+        padding-right: 15px;
+    }
+}
+
 .idsk-card-meta-container {
     padding-bottom: 10px;
 }
