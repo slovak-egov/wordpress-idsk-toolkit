@@ -119,3 +119,9 @@
         margin-top: 6px;
     }
 }
+
+@media (min-width: 40.0625em) {
+    .idsk-address__map {
+        border-right: 2px solid !important;
+    }
+}
