@@ -8,6 +8,8 @@
  * @since ID-SK 1.0
  */
 
+// Used to make item ids
+import { nanoid } from 'nanoid'
 const { registerBlockType } = wp.blocks; // the notation same as: import registerBlockType from wp.blocks;
 const {
     RichText,
@@ -80,23 +82,10 @@ registerBlockType('idsk/card', {
             type: 'string',
             selector: 'js-date-link'
         },
-
-        tag1: {
-            type: 'string',
-            selector: 'js-tag-1-href'
-        },
-        tagText1: {
-            type: 'string',
-            selector: 'js-tag-1-text'
-        },
-        tag2: {
-            type: 'string',
-            selector: 'js-tag-2-href'
-        },
-        tagText2: {
-            type: 'string',
-            selector: 'js-tag-2-text'
-        },
+        tags: {
+            type: 'array',
+            default: []
+        }
     },
     
     edit: class Card extends Component {
@@ -105,11 +94,15 @@ registerBlockType('idsk/card', {
 
             // Match current state to saved quotes (if they exist)
             this.state = {
-                cardType: this.props.attributes.cardType
+                cardType: this.props.attributes.cardType,
+                tags: this.props.attributes.tags || []
             };
 
-            this.onChange = this.onChange.bind(this);
-            this.selectImage = this.selectImage.bind(this);
+            this.onChange = this.onChange.bind(this)
+            this.selectImage = this.selectImage.bind(this)
+            this.addItem = this.addItem.bind(this)
+            this.removeItem = this.removeItem.bind(this)
+            this.editItem = this.editItem.bind(this)
         }
 
         onChange(attribute, value) {
@@ -127,13 +120,74 @@ registerBlockType('idsk/card', {
                 })
             )
         }
+
+        // adds empty placeholder for item
+        addItem(e) {
+            e.preventDefault()
+
+            // get items from state
+            const { tags } = this.state
+
+            // set up empty item
+            const emptyItem = {
+                id: nanoid(),
+                text: '',
+                url: ''
+            }
+
+            // append new emptyItem object to tags
+            const newTags = [...tags, emptyItem]
+
+            // save new placeholder to WordPress
+            this.props.setAttributes({ tags: newTags })
+
+            // and update state
+            return this.setState({ tags: newTags })
+        }
+
+        // remove item
+        removeItem(e, index) {
+            e.preventDefault()
+
+            // make a true copy of tags
+            const tags = JSON.parse(JSON.stringify(this.state.tags))
+
+            // remove specified item
+            tags.splice(index, 1)
+
+            // save updated tags and update state (in callback)
+            return (
+                this.props.setAttributes(
+                    { tags: tags },
+                    this.setState({ tags: tags })
+                )
+            )
+        }
+
+        // handler function to update item
+        editItem(key, index, value) {
+            // make a true copy of tags
+            const tags = JSON.parse(JSON.stringify(this.state.tags))
+            if (tags.length === 0) return
+
+            // update value
+            tags[index][key] = value
+
+            // save values in WordPress and update state (in callback)
+            return (
+                this.props.setAttributes(
+                    { tags: tags },
+                    this.setState({ tags: tags })
+                )
+            )
+        }
         
         render() {
             // Pull out the props we'll use
             const { attributes, className, setAttributes } = this.props
 
             // Pull out specific attributes for clarity below
-            const { title, subTitle, imgLink, imgAlt, profileQuote, cardType, date, dateLink, tag1, tagText1, tag2, tagText2 } = attributes
+            const { title, subTitle, imgLink, imgAlt, profileQuote, cardType, date, dateLink, tags } = attributes
 
             return <div className={className}>
                 <InspectorControls>
@@ -204,9 +258,8 @@ registerBlockType('idsk/card', {
                     }
 
                     {(cardType != 'profile-vertical' && cardType != 'profile-horizontal') &&
-                    <PanelBody title={__('Dátum a tagy', 'idsk-toolkit')}>
-                        
-                        <h3>Dátum</h3>
+                    <>
+                    <PanelBody title={__('Dátum', 'idsk-toolkit')}>
                         <DatePicker
                             className="js-date-picker"
                             currentDate={ date }
@@ -220,43 +273,45 @@ registerBlockType('idsk/card', {
                             value={dateLink}
                             onChange={value => this.onChange('dateLink', value)} 
                         />
-                        
-                        <h3>Tag 1</h3>
-                        <TextControl
-                            className="js-tag-1-text"
-                            key="editable"
-                            placeholder={__('Tag 1', 'idsk-toolkit')}
-                            label={__('Názov tagu 1', 'idsk-toolkit')}
-                            value={tagText1}
-                            onChange={value => this.onChange('tagText1', value)} 
-                        />
-                        <TextControl
-                            className="js-tag-1-href"
-                            key="editable"
-                            placeholder={__('https://www.google.com', 'idsk-toolkit')}
-                            label={__('URL k tagu 1', 'idsk-toolkit')}
-                            value={tag1}
-                            onChange={value => this.onChange('tag1', value)} 
-                        />
-                        
-                        <h3>Tag 2</h3>
-                        <TextControl
-                            className="js-tag-2-text"
-                            key="editable"
-                            placeholder={__('Tag 2', 'idsk-toolkit')}
-                            label={__('Názov tagu 2', 'idsk-toolkit')}
-                            value={tagText2}
-                            onChange={value => this.onChange('tagText2', value)} 
-                        />
-                        <TextControl
-                            className="js-tag-2-href"
-                            key="editable"
-                            placeholder={__('https://www.google.com', 'idsk-toolkit')}
-                            label={__('URL k tagu 2', 'idsk-toolkit')}
-                            value={tag2}
-                            onChange={value => this.onChange('tag2', value)}  
+                    </PanelBody>
+                    
+                    <PanelBody title={__('Tagy', 'idsk-toolkit')}>
+                        {!!tags && tags.map((item, index) =>
+                            <>
+                                <h2>{__('Tag', 'idsk-toolkit')} {index+1}</h2>
+                                <div key={item.id || index}>
+                                    <TextControl
+                                        key="editable"
+                                        label={__('Názov tagu', 'idsk-toolkit')}
+                                        value={item.text}
+                                        onChange={value => this.editItem('text', index, value)} 
+                                    />
+                                    <TextControl
+                                        key="editable"
+                                        label={__('URL tagu', 'idsk-toolkit')}
+                                        placeholder={__('https://www.google.com', 'idsk-toolkit')}
+                                        value={item.url}
+                                        onChange={value => this.editItem('url', index, value)} 
+                                    />
+                                </div>
+                                <input
+                                    className="button-secondary button"
+                                    type="submit"
+                                    value={__('Vymazať tag', 'idsk-toolkit')}
+                                    onClick={(e) => this.removeItem(e, index)}
+                                />
+                                <div class="govuk-clearfix"></div>
+                            </>
+                        )}
+                        <br/>
+                        <input
+                            className="button-primary button"
+                            type="submit"
+                            value={__('Pridať tag', 'idsk-toolkit')}
+                            onClick={(e) => this.addItem(e)}
                         />
                     </PanelBody>
+                    </>
                     }
                 </InspectorControls>
                 
@@ -288,20 +343,16 @@ registerBlockType('idsk/card', {
                         <div class="meta-handler-top">
                             {(cardType != 'profile-vertical' && cardType != 'profile-horizontal' && cardType != 'basic-variant') &&
                             <div class="idsk-card-meta-container">
+                                {!!date &&
                                 <span class="idsk-card-meta idsk-card-meta-date">
-                                    <a href={dateLink} class="govuk-link">{date ? dateI18n('d.m.Y', date) : __('01.01.1970', 'idsk-toolkit')}</a>
+                                    <a href={dateLink} class="govuk-link">{dateI18n('d.m.Y', date)}</a>
                                 </span> 
-
-                                {!!tagText1 &&
-                                <span class="idsk-card-meta idsk-card-meta-tag">
-                                    <a href={tag1} class="govuk-link">{tagText1}</a>
-                                </span>
                                 }
-                                {!!tagText2 &&
-                                <span class="idsk-card-meta idsk-card-meta-tag">
-                                    <a href={tag2} class="govuk-link">{tagText2}</a>
+                                {!!tags && tags.map((item, index) =>
+                                <span key={item.id || index} class="idsk-card-meta idsk-card-meta-tag">
+                                    <a href={item.url} class="govuk-link">{item.text}</a>
                                 </span>
-                                }
+                                )}
                             </div>
                             }
                         </div>
@@ -358,15 +409,16 @@ registerBlockType('idsk/card', {
                         <div class="meta-handler-bottom">
                             {(cardType == 'basic-variant') &&
                             <div class="idsk-card-meta-container">
+                                {!!date &&
                                 <span class="idsk-card-meta idsk-card-meta-date">
-                                    <a href={dateLink} class="govuk-link">{date ? dateI18n('d.m.Y', date) : __('01.01.1970', 'idsk-toolkit')}</a>
+                                    <a href={dateLink} class="govuk-link">{dateI18n('d.m.Y', date)}</a>
                                 </span> 
-                                <span class="idsk-card-meta idsk-card-meta-tag">
-                                    <a href={tag1} class="govuk-link">{tagText1}</a>
+                                }
+                                {!!tags && tags.map((item, index) =>
+                                <span key={item.id || index} class="idsk-card-meta idsk-card-meta-tag">
+                                    <a href={item.url} class="govuk-link">{item.text}</a>
                                 </span>
-                                <span class="idsk-card-meta idsk-card-meta-tag">
-                                    <a href={tag2} class="govuk-link">{tagText2}</a>
-                                </span>
+                                )}
                             </div>
                             }
                         </div>

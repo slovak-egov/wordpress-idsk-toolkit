@@ -35,10 +35,7 @@ function idsktk_render_dynamic_card_block($attributes) {
     $date = isset($attributes['date']) ? date_i18n( 'd.m.Y', strtotime($attributes['date']) ) : '';
     $dateLink = isset($attributes['dateLink']) ? $attributes['dateLink'] : '';
 
-    $tag1 = isset($attributes['tag1']) ? $attributes['tag1'] : '';
-    $tagText1 = isset($attributes['tagText1']) ? $attributes['tagText1'] : '';
-    $tag2 = isset($attributes['tag2']) ? $attributes['tag2'] : '';
-    $tagText2 = isset($attributes['tagText2']) ? $attributes['tagText2'] : '';
+    $tags = isset($attributes['tags']) ? $attributes['tags'] : array();
 
     $profileQuote = isset($attributes['profileQuote']) ? $attributes['profileQuote'] : '';
 
@@ -59,7 +56,9 @@ function idsktk_render_dynamic_card_block($attributes) {
 
         <div class="idsk-card-content idsk-card-content-<?= $cardType ?>">
             <?php if ($cardType != 'profile-vertical' && $cardType != 'profile-horizontal' && $cardType != 'basic-variant') { ?>
+                <?php if ($date != '' || !empty($tags)) { ?>
                 <div class="idsk-card-meta-container">
+                    <?php if ($date != '') { ?>
                     <span class="idsk-card-meta idsk-card-meta-date">
                         <?php if ($dateLink != '') { ?>
                             <a href="<?= $dateLink ?>" class="govuk-link" title="<?= $date ?>"><?= $date ?></a>
@@ -67,25 +66,18 @@ function idsktk_render_dynamic_card_block($attributes) {
                             <?= $date ?>
                         <?php } ?>
                     </span> 
-                    <?php if ($tagText1 != '') { ?>
-                    <span class="idsk-card-meta idsk-card-meta-tag">
-                        <?php if ($tag1 != '') { ?>
-                            <a href="<?= $tag1 ?>" class="govuk-link" title="<?= $tagText1 ?>"><?= $tagText1 ?></a>
-                        <?php } else { ?>
-                            <?= $tagText1 ?>
-                        <?php } ?>
-                    </span>
                     <?php } ?>
-                    <?php if ($tagText2 != '') { ?>
+                    <?php foreach ($tags as $key => $item) { ?>
                     <span class="idsk-card-meta idsk-card-meta-tag">
-                        <?php if ($tag2 != '') { ?>
-                            <a href="<?= $tag2 ?>" class="govuk-link" title="<?= $tagText2 ?>"><?= $tagText2 ?></a>
+                        <?php if ($item['url'] != '') { ?>
+                            <a href="<?= $item['url'] ?>" class="govuk-link" title="<?= $item['text'] ?>"><?= $item['text'] ?></a>
                         <?php } else { ?>
-                            <?= $tagText2 ?>
+                            <?= $item['text'] ?>
                         <?php } ?>
                     </span>
                     <?php } ?>
                 </div>
+                <?php } ?>
             <?php } ?>
 
 
@@ -127,7 +119,9 @@ function idsktk_render_dynamic_card_block($attributes) {
             <?php } ?>
 
             <?php if ($cardType == 'basic-variant') { ?>
+                <?php if ($date != '' || !empty($tags)) { ?>
                 <div class="idsk-card-meta-container">
+                    <?php if ($date != '') { ?>
                     <span class="idsk-card-meta idsk-card-meta-date">
                         <?php if ($dateLink != '') { ?>
                             <a href="<?= $dateLink ?>" class="govuk-link" title="<?= $date ?>"><?= $date ?></a>
@@ -135,21 +129,18 @@ function idsktk_render_dynamic_card_block($attributes) {
                             <?= $date ?>
                         <?php } ?>
                     </span> 
+                    <?php } ?>
+                    <?php foreach ($tags as $key => $item) { ?>
                     <span class="idsk-card-meta idsk-card-meta-tag">
-                        <?php if ($tag1 != '') { ?>
-                            <a href="<?= $tag1 ?>" class="govuk-link" title="<?= $tagText1 ?>"><?= $tagText1 ?></a>
+                        <?php if ($item['url'] != '') { ?>
+                            <a href="<?= $item['url'] ?>" class="govuk-link" title="<?= $item['text'] ?>"><?= $item['text'] ?></a>
                         <?php } else { ?>
-                            <?= $tagText1 ?>
+                            <?= $item['text'] ?>
                         <?php } ?>
                     </span>
-                    <span class="idsk-card-meta idsk-card-meta-tag">
-                        <?php if ($tag2 != '') { ?>
-                            <a href="<?= $tag2 ?>" class="govuk-link" title="<?= $tagText2 ?>"><?= $tagText2 ?></a>
-                        <?php } else { ?>
-                            <?= $tagText2 ?>
-                        <?php } ?>
-                    </span>
+                    <?php } ?>
                 </div>
+                <?php } ?>
             <?php } ?>
 
         </div>
