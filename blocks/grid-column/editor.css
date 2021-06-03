@@ -414,6 +414,9 @@ div[data-type="idsk/column"] > .block-editor-inner-blocks > .block-editor-block-
 .app-pane-blue {
     background-color: #0065b3;
 }
+.app-pane-blue * {
+    color: #ffffff; 
+}
 .app-pane-lgray {
     background-color: #f1f1f1;
 }
