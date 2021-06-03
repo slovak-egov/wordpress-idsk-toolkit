@@ -32,6 +32,7 @@ function idsktk_render_dynamic_card_block($attributes) {
 
     $title = isset($attributes['title']) ? $attributes['title'] : '';
     $subTitle = isset($attributes['subTitle']) ? $attributes['subTitle'] : '';
+    $dateVisible = isset($attributes['dateVisible']) ? $attributes['dateVisible'] : false;
     $date = isset($attributes['date']) ? date_i18n( 'd.m.Y', strtotime($attributes['date']) ) : '';
     $dateLink = isset($attributes['dateLink']) ? $attributes['dateLink'] : '';
 
@@ -56,9 +57,9 @@ function idsktk_render_dynamic_card_block($attributes) {
 
         <div class="idsk-card-content idsk-card-content-<?= $cardType ?>">
             <?php if ($cardType != 'profile-vertical' && $cardType != 'profile-horizontal' && $cardType != 'basic-variant') { ?>
-                <?php if ($date != '' || !empty($tags)) { ?>
+                <?php if (($dateVisible && $date != '') || !empty($tags)) { ?>
                 <div class="idsk-card-meta-container">
-                    <?php if ($date != '') { ?>
+                    <?php if ($dateVisible && $date != '') { ?>
                     <span class="idsk-card-meta idsk-card-meta-date">
                         <?php if ($dateLink != '') { ?>
                             <a href="<?= $dateLink ?>" class="govuk-link" title="<?= $date ?>"><?= $date ?></a>
@@ -119,9 +120,9 @@ function idsktk_render_dynamic_card_block($attributes) {
             <?php } ?>
 
             <?php if ($cardType == 'basic-variant') { ?>
-                <?php if ($date != '' || !empty($tags)) { ?>
+                <?php if (($dateVisible && $date != '') || !empty($tags)) { ?>
                 <div class="idsk-card-meta-container">
-                    <?php if ($date != '') { ?>
+                    <?php if ($dateVisible && $date != '') { ?>
                     <span class="idsk-card-meta idsk-card-meta-date">
                         <?php if ($dateLink != '') { ?>
                             <a href="<?= $dateLink ?>" class="govuk-link" title="<?= $date ?>"><?= $date ?></a>

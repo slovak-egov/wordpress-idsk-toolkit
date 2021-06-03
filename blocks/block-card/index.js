@@ -13,7 +13,6 @@ import { nanoid } from 'nanoid'
 const { registerBlockType } = wp.blocks; // the notation same as: import registerBlockType from wp.blocks;
 const {
     RichText,
-    InnerBlocks,
     InspectorControls,
     MediaUpload
 } = wp.blockEditor;
@@ -21,6 +20,7 @@ const {
     PanelBody,
     PanelRow,
     TextControl,
+    ToggleControl,
     RadioControl,
     DatePicker
 } = wp.components;
@@ -74,6 +74,11 @@ registerBlockType('idsk/card', {
             selector: 'idsk-quote'
         },
 
+        dateVisible: {
+            type: 'boolean',
+            selector: 'js-date-visible',
+            default: false
+        },
         date: {
             type: 'string',
             selector: 'js-date-picker'
@@ -187,7 +192,7 @@ registerBlockType('idsk/card', {
             const { attributes, className, setAttributes } = this.props
 
             // Pull out specific attributes for clarity below
-            const { title, subTitle, imgLink, imgAlt, profileQuote, cardType, date, dateLink, tags } = attributes
+            const { title, subTitle, imgLink, imgAlt, profileQuote, cardType, dateVisible, date, dateLink, tags } = attributes
 
             return <div className={className}>
                 <InspectorControls>
@@ -260,19 +265,32 @@ registerBlockType('idsk/card', {
                     {(cardType != 'profile-vertical' && cardType != 'profile-horizontal') &&
                     <>
                     <PanelBody title={__('Dátum', 'idsk-toolkit')}>
-                        <DatePicker
-                            className="js-date-picker"
-                            currentDate={ date }
-                            onChange={ (date) => this.onChange('date', date)} 
-                        />
-                        <TextControl
-                            className="js-date-link"
-                            key="editable"
-                            placeholder={__('https://www.google.com', 'idsk-toolkit')}
-                            label={__('Odkaz k dátumu', 'idsk-toolkit')}
-                            value={dateLink}
-                            onChange={value => this.onChange('dateLink', value)} 
-                        />
+                        <PanelRow>
+                            <ToggleControl
+                                className="js-date-visible"
+                                checked={dateVisible}
+                                label={__('Zobrazenie dátumu', 'idsk-toolkit')}
+                                help={dateVisible ? __('Zobrazený', 'idsk-toolkit') : __('Skrytý', 'idsk-toolkit')}
+                                onChange={checked => setAttributes({ dateVisible: checked })}
+                            />
+                        </PanelRow>
+                        {!!dateVisible &&
+                        <>
+                            <DatePicker
+                                className="js-date-picker"
+                                currentDate={ date }
+                                onChange={ (date) => this.onChange('date', date)} 
+                            />
+                            <TextControl
+                                className="js-date-link"
+                                key="editable"
+                                placeholder={__('https://www.google.com', 'idsk-toolkit')}
+                                label={__('Odkaz k dátumu', 'idsk-toolkit')}
+                                value={dateLink}
+                                onChange={value => this.onChange('dateLink', value)} 
+                            />
+                        </>
+                        }
                     </PanelBody>
                     
                     <PanelBody title={__('Tagy', 'idsk-toolkit')}>
@@ -343,7 +361,7 @@ registerBlockType('idsk/card', {
                         <div class="meta-handler-top">
                             {(cardType != 'profile-vertical' && cardType != 'profile-horizontal' && cardType != 'basic-variant') &&
                             <div class="idsk-card-meta-container">
-                                {!!date &&
+                                {(!!dateVisible && !!date) &&
                                 <span class="idsk-card-meta idsk-card-meta-date">
                                     <a href={dateLink} class="govuk-link">{dateI18n('d.m.Y', date)}</a>
                                 </span> 
@@ -409,7 +427,7 @@ registerBlockType('idsk/card', {
                         <div class="meta-handler-bottom">
                             {(cardType == 'basic-variant') &&
                             <div class="idsk-card-meta-container">
-                                {!!date &&
+                                {(!!dateVisible && !!date) &&
                                 <span class="idsk-card-meta idsk-card-meta-date">
                                     <a href={dateLink} class="govuk-link">{dateI18n('d.m.Y', date)}</a>
                                 </span> 
