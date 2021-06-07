@@ -197,6 +197,9 @@
 .app-pane-blue * {
     color: #ffffff; 
 }
+.app-pane-blue li::marker {
+    color: #ffffff;
+}
 .app-pane-lgray {
     background-color: #f1f1f1;
 }

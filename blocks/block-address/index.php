@@ -31,7 +31,7 @@ function idsktk_render_dynamic_address_block($attributes) {
         $body->loadHTML('<?xml encoding="utf-8" ?>' . $attributes['body']);
     }
     $coords = isset($attributes['mapCoords']) ? $attributes['mapCoords'] : '0,0';
-    $mapApi = isset($attributes['mapApi']) ? $attributes['mapApi'] : get_theme_mod('idsk_main_settings_map_api');
+    $mapApi = (isset($attributes['mapApi']) && $attributes['mapApi']) ? $attributes['mapApi'] : get_theme_mod('idsktk_main_settings_map_api');
     $className = isset($attributes['className']) ? $attributes['className'] : '';
     // block settings
     $address_grid_type = isset($attributes['gridType']) ? FALSE : TRUE;
