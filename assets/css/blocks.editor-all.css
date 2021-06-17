@@ -4687,6 +4687,67 @@ div[data-type="idsk/column"] > .block-editor-inner-blocks > .block-editor-block-
 .app-pane-gray {
     background-color: #dee0e2;
 }
+.idsk-banner__content {
+    padding-left: 15px;
+}
+.idsk-banner .app-pane-grey {
+    background-color: #dee0e2;
+    border-bottom: 1px solid #003078;
+}
+.govuk-heading-s {
+    color: #0b0c0c;
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+@media (min-width: 40.0625em) {
+    .govuk-heading-s {
+        font-size: 19px;
+        font-size: 1.1875rem;
+        line-height: 1.31579;
+    }
+}
+@media (min-width: 40.0625em) {
+    .govuk-heading-s {
+        margin-bottom: 20px;
+    }
+}
+.idsk-banner .govuk-heading-s {
+    margin-bottom: 0 !important;
+    padding-top: 15px;
+}
+.govuk-heading-m {
+    color: #0b0c0c;
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.11111;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+@media (min-width: 40.0625em) {
+    .govuk-heading-m {
+        font-size: 24px;
+        font-size: 1.5rem;
+        line-height: 1.25;
+    }
+}
+@media (min-width: 40.0625em) {
+    .govuk-heading-m {
+        margin-bottom: 20px;
+    }
+}
 /**
  * Import custom blocks CSS
  *

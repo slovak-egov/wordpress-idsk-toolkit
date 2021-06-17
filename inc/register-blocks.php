@@ -47,6 +47,7 @@ function idsktk_allowed_block_types( $allowed_blocks ) {
         'idsk/lists',
         'idsk/tab',
         'idsk/tabs',
+        'idsk/stepper-banner',
     );
 
 }

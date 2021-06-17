@@ -30,3 +30,4 @@ import './block-inset-text';
 import './block-tab';
 import './block-tabs';
 import './grid-container';
+import './block-stepper-banner';
