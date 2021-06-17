@@ -36,6 +36,10 @@ registerBlockType('idsk/heading', {
 
     // custom attributes
     attributes: {
+        anchor: { 
+            type: 'string', 
+            selector: 'js-heading-anchor', 
+        },
         headingType: {
             option: '',
             default: 'h1',
@@ -63,7 +67,7 @@ registerBlockType('idsk/heading', {
 
     // The UI for the WordPress editor
     edit({ attributes, setAttributes, className }) {
-        const { headingType, headingClass, headingText, isCaption, captionText } = attributes;
+        const { headingType, headingClass, headingText, isCaption, captionText, anchor } = attributes;
 
         function getHeading() {
             return <RichText
@@ -78,17 +82,17 @@ registerBlockType('idsk/heading', {
         function checkHeading(type) {
             switch(type) {
                 case 'h2':
-                    return <h2 class={"govuk-heading-"+headingClass}>{getHeading()}</h2>;
+                    return <h2 id={anchor} class={"govuk-heading-"+headingClass}>{getHeading()}</h2>;
                 case 'h3':
-                    return <h3 class={"govuk-heading-"+headingClass}>{getHeading()}</h3>;
+                    return <h3 id={anchor} class={"govuk-heading-"+headingClass}>{getHeading()}</h3>;
                 case 'h4':
-                    return <h4 class={"govuk-heading-"+headingClass}>{getHeading()}</h4>;
+                    return <h4 id={anchor} class={"govuk-heading-"+headingClass}>{getHeading()}</h4>;
                 case 'h5':
-                    return <h5 class={"govuk-heading-"+headingClass}>{getHeading()}</h5>;
+                    return <h5 id={anchor} class={"govuk-heading-"+headingClass}>{getHeading()}</h5>;
                 case 'h6':
-                    return <h6 class={"govuk-heading-"+headingClass}>{getHeading()}</h6>;
+                    return <h6 id={anchor} class={"govuk-heading-"+headingClass}>{getHeading()}</h6>;
                 default:
-                    return <h1 class={"govuk-heading-"+headingClass}>{getHeading()}</h1>;
+                    return <h1 id={anchor} class={"govuk-heading-"+headingClass}>{getHeading()}</h1>;
 
             }
         }
@@ -159,6 +163,14 @@ registerBlockType('idsk/heading', {
                             },
                         ] }
                         onChange={ ( option ) => { setAttributes( { headingClass: option } ) } }
+                    />
+                    <TextControl
+                        className="js-heading-anchor"
+                        key="editable"
+                        label={__('HTML kotva', 'idsk-toolkit')}
+                        help={__('Zadajte slovo alebo dve slová - bez medzier - a vytvorte jedinečnú webovú adresu iba pre tento blok, ktorá sa nazýva „kotva“. Potom budete môcť vytvoriť odkaz priamo na túto časť svojej stránky.', 'idsk-toolkit')}
+                        value={anchor}
+                        onChange={value => setAttributes({ anchor: value })} 
                     />
                 </PanelBody>
             </InspectorControls>

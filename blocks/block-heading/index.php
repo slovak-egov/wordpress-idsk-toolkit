@@ -23,7 +23,8 @@ function idsktk_register_dynamic_heading_block() {
 add_action('init', 'idsktk_register_dynamic_heading_block');
     
 function idsktk_render_dynamic_heading_block($attributes) {
-    // block attributes
+    // block 
+    $anchor = isset($attributes['anchor']) ? $attributes['anchor'] : '';
     $headingType = isset($attributes['headingType']) ? $attributes['headingType'] : 'h1';
     $headingClass = isset($attributes['headingClass']) ? $attributes['headingClass'] : 'xl';
     $headingText = isset($attributes['headingText']) ? $attributes['headingText'] : '';
@@ -36,7 +37,7 @@ function idsktk_render_dynamic_heading_block($attributes) {
     <?php if ($isCaption) { ?>
         <span class="<?php echo 'govuk-caption-'.($headingClass != 's' ? $headingClass : 'm'); ?>"><?php echo $captionText; ?></span>
     <?php } ?>
-    <<?php echo $headingType; ?> class="<?php echo 'govuk-heading-'.$headingClass ?>"><?php echo $headingText; ?></<?php echo $headingType; ?>>
+    <<?php echo $headingType; ?> <?php echo $anchor != '' ? 'id="'.$anchor.'"' : '' ?> class="<?php echo 'govuk-heading-'.$headingClass ?>"><?php echo $headingText; ?></<?php echo $headingType; ?>>
 
     <?php
     /* END HTML OUTPUT */
