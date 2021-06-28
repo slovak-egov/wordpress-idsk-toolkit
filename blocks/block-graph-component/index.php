@@ -43,7 +43,11 @@ function idsktk_render_dynamic_graph_component_block($attributes) {
     $downloadLinks = isset($attributes['downloadLinks']) ? $attributes['downloadLinks'] : array();
     $shareOption = isset($attributes['shareOption']) ? FALSE : TRUE;
     $source = isset($attributes['source']) ? $attributes['source'] : '';
-  
+
+    // get actual page for mail link
+    global $wp;
+    $actualPage = home_url( add_query_arg( array(), $wp->request ) );
+ 
     ob_start(); // Turn on output buffering
     ?>
 
@@ -151,10 +155,10 @@ function idsktk_render_dynamic_graph_component_block($attributes) {
                         </a>
                         <ul class="idsk-graph__meta-list">
                             <li>
-                                <a title="<?php echo __('Kopírovať link', 'idsk-toolkit') ?>" href="<?php echo $iframeGraph1 ?>" class="govuk-link idsk-graph__copy-to-clickboard" ><?php echo __('Kopírovať link', 'idsk-toolkit') ?></a>
+                                <a title="<?php echo __('Kopírovať link', 'idsk-toolkit') ?>" href="<?php echo "#".$blockId; ?>" class="govuk-link idsk-graph__copy-to-clickboard" ><?php echo __('Kopírovať link', 'idsk-toolkit') ?></a>
                             </li>
                             <li>
-                                <a title="<?php echo __('Emailom', 'idsk-toolkit') ?>" href="<?php echo "#".$blockId; ?>" class="govuk-link idsk-graph__send-link-by-email" ><?php echo __('Emailom', 'idsk-toolkit') ?></a>
+                                <a title="<?php echo __('Emailom', 'idsk-toolkit') ?>" href="<?php echo "mailto:?body=".$actualPage.'%2f%23'.$blockId; ?>" class="govuk-link idsk-graph__send-link-by-email" ><?php echo __('Emailom', 'idsk-toolkit') ?></a>
                             </li>
                             <li>
                                 <a title="<?php echo __('na Facebooku', 'idsk-toolkit') ?>" href="<?php echo "#".$blockId; ?>" class="govuk-link idsk-graph__share-on-facebook" target="_blank"><?php echo __('na Facebooku', 'idsk-toolkit') ?></a>
