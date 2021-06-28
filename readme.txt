@@ -12,7 +12,7 @@ Súbor nástrojov funkcionalít k ID-SK téme.
 
 == Popis ==
 
-Súbor nástrojov funkcionalít k ID-SK téme. Tento súbor odporúčame používať spoločne s WordPress témou ID-SK.
+Súbor nástrojov funkcionalít k ID-SK téme. Tento súbor odporúčame používať spoločne s WordPress témou [ID-SK Template](https://wordpress.org/themes/idsk-template/).
 
 Pre viac informácií o jednotlivých komponentoch a spôsoboch ich použitia navštívte [ID-SK Frontend – Jednotný dizajn manuál elektronických služieb](https://idsk.gov.sk/).
 
