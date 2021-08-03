@@ -1,0 +1,1727 @@
+# Copyright (C) 2021 SlovenskoIT a.s.
+# This file is distributed under the GPL v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: ID-SK Toolkit 1.4.2\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/idsk-toolkit\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2021-08-03T10:22:29+02:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.5.0\n"
+"X-Domain: idsk-toolkit\n"
+
+#. Plugin Name of the plugin
+msgid "ID-SK Toolkit"
+msgstr ""
+
+#. Description of the plugin
+msgid "Súbor nástrojov funkcionalít k ID-SK téme."
+msgstr ""
+
+#. Author of the plugin
+msgid "SlovenskoIT a.s."
+msgstr ""
+
+#. Author URI of the plugin
+msgid "https://slovenskoit.sk"
+msgstr ""
+
+#: blocks/block-accordion/index.php:35
+#: blocks/block-accordion/index.js:154
+msgid "Otvoriť všetky"
+msgstr ""
+
+#: blocks/block-accordion/index.php:35
+#: blocks/block-accordion/index.js:154
+#: blocks/block-accordion/index.js:155
+msgid "Zatvoriť všetky"
+msgstr ""
+
+#: blocks/block-accordion/index.php:36
+#: blocks/block-accordion/index.js:156
+msgid "sekcie"
+msgstr ""
+
+#: blocks/block-announce/index.php:36
+msgid "Upozornenie"
+msgstr ""
+
+#: blocks/block-crossroad/index.php:71
+#: blocks/block-crossroad/index.js:137
+msgid "Zobraziť viac"
+msgstr ""
+
+#: blocks/block-crossroad/index.php:71
+msgid "Zobraziť menej"
+msgstr ""
+
+#: blocks/block-graph-component/index.php:57
+msgid "Kliknite na odkaz vyššie alebo ho skopírujte a vložte do prehliadača: "
+msgstr ""
+
+#: blocks/block-graph-component/index.php:88
+#: blocks/block-details/index.js:58
+#: blocks/block-graph-component/index.js:441
+msgid "Obsah"
+msgstr ""
+
+#: blocks/block-graph-component/index.php:133
+#: blocks/block-graph-component/index.php:134
+#: blocks/block-graph-component/index.js:511
+#: blocks/block-graph-component/index.js:512
+msgid "Stiahnuť údaje"
+msgstr ""
+
+#: blocks/block-graph-component/index.php:150
+#: blocks/block-graph-component/index.php:151
+#: blocks/block-graph-component/index.js:530
+#: blocks/block-graph-component/index.js:531
+msgid "Zdielať údaje"
+msgstr ""
+
+#: blocks/block-graph-component/index.php:158
+#: blocks/block-graph-component/index.js:538
+msgid "Kopírovať link"
+msgstr ""
+
+#: blocks/block-graph-component/index.php:161
+#: blocks/block-graph-component/index.js:541
+msgid "Emailom"
+msgstr ""
+
+#: blocks/block-graph-component/index.php:164
+#: blocks/block-graph-component/index.js:544
+msgid "na Facebooku"
+msgstr ""
+
+#: blocks/block-intro/index.php:94
+#: blocks/block-intro/index.js:349
+msgid "Zadajte hľadaný výraz"
+msgstr ""
+
+#: blocks/block-intro/index.php:117
+msgid "Vyhľadávanie"
+msgstr ""
+
+#: blocks/block-map-component/index.php:51
+#: blocks/block-map-component/index.js:298
+msgid "Mapa"
+msgstr ""
+
+#: blocks/block-map-component/index.php:55
+#: blocks/block-map-component/index.js:302
+msgid "Tabuľka"
+msgstr ""
+
+#: blocks/block-map-component/index.php:63
+#: blocks/block-map-component/index.js:310
+msgid "Obdobie"
+msgstr ""
+
+#: blocks/block-map-component/index.php:66
+#: blocks/block-map-component/index.js:313
+msgid "Posledný mesiac"
+msgstr ""
+
+#: blocks/block-map-component/index.php:67
+#: blocks/block-map-component/index.js:314
+msgid "Posledné 3 mesiace"
+msgstr ""
+
+#: blocks/block-map-component/index.php:68
+#: blocks/block-map-component/index.js:315
+msgid "Posledných 6 mesiacov"
+msgstr ""
+
+#: blocks/block-map-component/index.php:69
+#: blocks/block-map-component/index.js:87
+#: blocks/block-map-component/index.js:316
+msgid "Celé obdobie"
+msgstr ""
+
+#: blocks/block-map-component/index.php:76
+#: blocks/block-map-component/index.js:248
+#: blocks/block-map-component/index.js:323
+msgid "Ukazovateľ"
+msgstr ""
+
+#: blocks/block-map-component/index.php:89
+#: blocks/block-map-component/index.js:337
+msgid "za"
+msgstr ""
+
+#: blocks/block-map-component/index.php:89
+msgid "celé obdobie"
+msgstr ""
+
+#: blocks/block-stepper/index.php:45
+msgid "Zobraziť všetko"
+msgstr ""
+
+#: blocks/block-stepper/index.php:45
+msgid "Zatvoriť všetko"
+msgstr ""
+
+#: inc/custom-shortcodes.php:133
+msgid "od"
+msgstr ""
+
+#: inc/custom-shortcodes.php:134
+msgid "do"
+msgstr ""
+
+#: inc/register-blocks.php:69
+msgid "ID-SK Komponenty"
+msgstr ""
+
+#: inc/register-blocks.php:75
+msgid "ID-SK Rozloženie stránky"
+msgstr ""
+
+#: lib/template-customizer.php:17
+msgid "Nastavenia Google Maps API"
+msgstr ""
+
+#: lib/template-customizer.php:31
+msgid "Google Maps - API kľúč"
+msgstr ""
+
+#: lib/template-customizer.php:44
+msgid "Nastavenie vyhľadávania"
+msgstr ""
+
+#: lib/template-customizer.php:63
+msgid "Zobraziť hlavné vyhľadávanie"
+msgstr ""
+
+#: lib/template-customizer.php:64
+msgid "Zobrazuje veľké vyhľadávanie alebo malé pri filtroch"
+msgstr ""
+
+#: toolkit.php:44
+msgctxt "Post Type General Name"
+msgid "Aktuality inštitúcií"
+msgstr ""
+
+#: toolkit.php:45
+msgctxt "Post Type Singular Name"
+msgid "Aktuality inštitúcií"
+msgstr ""
+
+#: toolkit.php:46
+#: toolkit.php:47
+#: toolkit.php:65
+#: toolkit.php:66
+msgid "Aktuality inštitúcií"
+msgstr ""
+
+#: toolkit.php:48
+#: toolkit.php:95
+msgid "Zobraziť všetky"
+msgstr ""
+
+#: toolkit.php:49
+#: toolkit.php:50
+#: toolkit.php:51
+#: toolkit.php:97
+msgid "Pridať nový"
+msgstr ""
+
+#: toolkit.php:52
+msgid "Editovať"
+msgstr ""
+
+#: toolkit.php:53
+#: toolkit.php:99
+msgid "Aktualizovať"
+msgstr ""
+
+#: toolkit.php:54
+#: toolkit.php:55
+#: toolkit.php:100
+msgid "Zobraziť"
+msgstr ""
+
+#: toolkit.php:56
+msgid "Hľadať"
+msgstr ""
+
+#: toolkit.php:57
+#: toolkit.php:103
+#: toolkit.php:104
+msgid "Nenájdený"
+msgstr ""
+
+#: toolkit.php:58
+msgid "Nenájdený v koši"
+msgstr ""
+
+#: toolkit.php:59
+msgid "Obrázok"
+msgstr ""
+
+#: toolkit.php:60
+msgid "Vložiť obrázok"
+msgstr ""
+
+#: toolkit.php:61
+msgid "Vymazať obrázok"
+msgstr ""
+
+#: toolkit.php:62
+msgid "Použiť obrázok"
+msgstr ""
+
+#: toolkit.php:92
+msgctxt "Taxonomy General Name"
+msgid "Kategórie aktualít"
+msgstr ""
+
+#: toolkit.php:93
+msgctxt "Taxonomy Singular Name"
+msgid "Kategórie"
+msgstr ""
+
+#: toolkit.php:94
+msgid "Kategórie aktualít"
+msgstr ""
+
+#: toolkit.php:96
+msgid "Názov"
+msgstr ""
+
+#: toolkit.php:98
+msgid "Upraviť"
+msgstr ""
+
+#: toolkit.php:101
+msgid "Pridať alebo zmazať"
+msgstr ""
+
+#: toolkit.php:102
+msgid "Vyhľadať"
+msgstr ""
+
+#: toolkit.php:105
+msgid "Zoznam"
+msgstr ""
+
+#: toolkit.php:145
+msgid "Tlačidlo späť"
+msgstr ""
+
+#: toolkit.php:163
+msgid "Text pre tlačidlo späť"
+msgstr ""
+
+#: toolkit.php:168
+msgid "URL pre tlačidlo späť (ak ostane prázdne, späť sa nezobrazí)"
+msgstr ""
+
+#: assets/js/editor.blocks.js:1
+msgid "Súvisiaci obsah"
+msgstr ""
+
+#: assets/js/editor.blocks.js:1
+msgid "Súvisiaci obsah slúži na to, aby ste používateľovi zobrazili odkazy na podobné, súvisiace témy."
+msgstr ""
+
+#: assets/js/editor.blocks.js:1
+msgid "Súvisiaci"
+msgstr ""
+
+#: assets/js/editor.blocks.js:1
+msgid "obsah"
+msgstr ""
+
+#: assets/js/editor.blocks.js:1
+msgid "related"
+msgstr ""
+
+#: assets/js/editor.blocks.js:1
+#: blocks/block-address/index.js:145
+msgid "Rozloženie obsahu"
+msgstr ""
+
+#: assets/js/editor.blocks.js:1
+msgid "rozloženie 2/3 obsahu"
+msgstr ""
+
+#: assets/js/editor.blocks.js:1
+msgid "rozloženie 1/3 obsahu"
+msgstr ""
+
+#: assets/js/editor.blocks.js:1
+msgid "Súvisiace témy (⅔)"
+msgstr ""
+
+#: assets/js/editor.blocks.js:1
+msgid "Súvisiaca téma č. 1"
+msgstr ""
+
+#: blocks/block-accordion/index.js:28
+#: blocks/block-accordion/index.js:144
+msgid "Akordeón"
+msgstr ""
+
+#: blocks/block-accordion/index.js:29
+msgid "Zobrazuje skladací blok."
+msgstr ""
+
+#: blocks/block-accordion/index.js:33
+msgid "accordion"
+msgstr ""
+
+#: blocks/block-accordion/index.js:34
+msgid "akordeón"
+msgstr ""
+
+#: blocks/block-accordion/index.js:35
+#: blocks/block-intro/index.js:35
+msgid "blok"
+msgstr ""
+
+#: blocks/block-accordion/index.js:139
+msgid "Nastavenia akordeónu"
+msgstr ""
+
+#: blocks/block-accordion/index.js:145
+msgid "Rozbalený"
+msgstr ""
+
+#: blocks/block-accordion/index.js:145
+msgid "Zbalený"
+msgstr ""
+
+#: blocks/block-accordion/index.js:169
+msgid "Nadpis sekcie"
+msgstr ""
+
+#: blocks/block-accordion/index.js:178
+msgid "Popis sekcie"
+msgstr ""
+
+#: blocks/block-accordion/index.js:187
+msgid "Obsah sekcie"
+msgstr ""
+
+#: blocks/block-accordion/index.js:197
+msgid "Vymazať akordeón"
+msgstr ""
+
+#: blocks/block-accordion/index.js:206
+msgid "Pridať akordeón"
+msgstr ""
+
+#: blocks/block-address/index.js:29
+msgid "Adresa"
+msgstr ""
+
+#: blocks/block-address/index.js:30
+msgid "Zobrazuje adresu s minimapou. K dispozícii sú dve možné zobrazenia."
+msgstr ""
+
+#: blocks/block-address/index.js:34
+msgid "adresa"
+msgstr ""
+
+#: blocks/block-address/index.js:35
+#: blocks/block-map-component/index.js:32
+msgid "mapa"
+msgstr ""
+
+#: blocks/block-address/index.js:36
+msgid "podujatie"
+msgstr ""
+
+#: blocks/block-address/index.js:150
+msgid "1/3 šírky"
+msgstr ""
+
+#: blocks/block-address/index.js:150
+msgid "Celá šírka"
+msgstr ""
+
+#: blocks/block-address/index.js:155
+msgid "Súradnice mapy"
+msgstr ""
+
+#: blocks/block-address/index.js:158
+msgid "Zadajte adresu miesta"
+msgstr ""
+
+#: blocks/block-address/index.js:165
+msgid "Zadajte API kľúč pre Google Mapy"
+msgstr ""
+
+#: blocks/block-address/index.js:182
+#: blocks/block-card/index.js:382
+#: blocks/block-intro/index.js:334
+msgid "Hlavný nadpis"
+msgstr ""
+
+#: blocks/block-address/index.js:189
+#: blocks/block-intro/index.js:342
+msgid "Vedľajší nadpis"
+msgstr ""
+
+#: blocks/block-address/index.js:197
+#: blocks/block-card/index.js:392
+#: blocks/block-crossroad/index.js:161
+#: blocks/block-timeline/index.js:218
+msgid "Popis"
+msgstr ""
+
+#: blocks/block-announce/index.js:25
+msgid "Oznámenie"
+msgstr ""
+
+#: blocks/block-announce/index.js:26
+msgid "Zobrazuje oznam s varovaním."
+msgstr ""
+
+#: blocks/block-announce/index.js:30
+msgid "announce"
+msgstr ""
+
+#: blocks/block-announce/index.js:31
+msgid "warning"
+msgstr ""
+
+#: blocks/block-announce/index.js:32
+#: blocks/block-details/index.js:22
+#: blocks/block-inset-text/index.js:22
+msgid "text"
+msgstr ""
+
+#: blocks/block-announce/index.js:33
+msgid "oznámenie"
+msgstr ""
+
+#: blocks/block-announce/index.js:34
+#: blocks/block-warning-text/index.js:32
+msgid "varovanie"
+msgstr ""
+
+#: blocks/block-announce/index.js:56
+msgid "napr. Môžete byť pokutovaný ak sa nezaregistrujete."
+msgstr ""
+
+#: blocks/block-button/index.js:27
+msgid "Tlačidlo"
+msgstr ""
+
+#: blocks/block-button/index.js:28
+msgid "Zobrazuje tlačidlo s odkazom."
+msgstr ""
+
+#: blocks/block-button/index.js:32
+msgid "button"
+msgstr ""
+
+#: blocks/block-button/index.js:33
+msgid "tlačidlo"
+msgstr ""
+
+#: blocks/block-button/index.js:34
+msgid "odkaz"
+msgstr ""
+
+#: blocks/block-button/index.js:70
+msgid "Nastavenie tlačidla"
+msgstr ""
+
+#: blocks/block-button/index.js:73
+msgid "Odkaz tlačidla"
+msgstr ""
+
+#: blocks/block-button/index.js:81
+msgid "Otvoriť odkaz v novom okne"
+msgstr ""
+
+#: blocks/block-button/index.js:87
+msgid "Farba tlačidla"
+msgstr ""
+
+#: blocks/block-button/index.js:91
+msgid "Zelená"
+msgstr ""
+
+#: blocks/block-button/index.js:95
+msgid "Sivá"
+msgstr ""
+
+#: blocks/block-button/index.js:99
+msgid "Červená"
+msgstr ""
+
+#: blocks/block-button/index.js:109
+msgid "Zobraziť šípku v tlačidle"
+msgstr ""
+
+#: blocks/block-button/index.js:121
+msgid "Text tlačidla."
+msgstr ""
+
+#: blocks/block-card/index.js:33
+msgid "Karta"
+msgstr ""
+
+#: blocks/block-card/index.js:34
+msgid "Zobrazuje kartičku na stránke. K dispozícii sú viaceré varianty zobrazenia."
+msgstr ""
+
+#: blocks/block-card/index.js:38
+msgid "karta"
+msgstr ""
+
+#: blocks/block-card/index.js:39
+msgid "profil"
+msgstr ""
+
+#: blocks/block-card/index.js:40
+msgid "hero"
+msgstr ""
+
+#: blocks/block-card/index.js:199
+msgid "Zobrazenie kartičky"
+msgstr ""
+
+#: blocks/block-card/index.js:203
+msgid "Štýl zobrazenia kartičky"
+msgstr ""
+
+#: blocks/block-card/index.js:207
+msgid "Základná kartička"
+msgstr ""
+
+#: blocks/block-card/index.js:211
+msgid "Sekundárna kartička"
+msgstr ""
+
+#: blocks/block-card/index.js:215
+msgid "Sekundárna kartička - horizontálna"
+msgstr ""
+
+#: blocks/block-card/index.js:219
+msgid "Jednoduchá kartička"
+msgstr ""
+
+#: blocks/block-card/index.js:223
+msgid "Hero kartička"
+msgstr ""
+
+#: blocks/block-card/index.js:227
+msgid "Základná kartička - bez obrázka"
+msgstr ""
+
+#: blocks/block-card/index.js:231
+msgid "Profilová kartička - vertikálna"
+msgstr ""
+
+#: blocks/block-card/index.js:235
+msgid "Profilová kartička - horizontálna"
+msgstr ""
+
+#: blocks/block-card/index.js:245
+msgid "Atribúty obrázka"
+msgstr ""
+
+#: blocks/block-card/index.js:249
+msgid "Názov obrázka"
+msgstr ""
+
+#: blocks/block-card/index.js:250
+msgid "Alternatívny názov obrázka"
+msgstr ""
+
+#: blocks/block-card/index.js:257
+#: blocks/block-card/index.js:287
+#: blocks/block-card/index.js:310
+#: blocks/block-graph-component/index.js:274
+#: blocks/block-graph-component/index.js:291
+#: blocks/block-graph-component/index.js:308
+#: blocks/block-graph-component/index.js:366
+#: blocks/block-intro/index.js:245
+#: blocks/block-intro/index.js:263
+#: blocks/block-intro/index.js:281
+#: blocks/block-intro/index.js:299
+#: blocks/block-intro/index.js:317
+#: blocks/block-map-component/index.js:207
+#: blocks/block-map-component/index.js:222
+#: blocks/block-map-component/index.js:238
+msgid "https://www.google.com"
+msgstr ""
+
+#: blocks/block-card/index.js:258
+msgid "Odkaz presmerovania po kliknutí na obrázok"
+msgstr ""
+
+#: blocks/block-card/index.js:267
+msgid "Dátum"
+msgstr ""
+
+#: blocks/block-card/index.js:272
+msgid "Zobrazenie dátumu"
+msgstr ""
+
+#: blocks/block-card/index.js:273
+msgid "Zobrazený"
+msgstr ""
+
+#: blocks/block-card/index.js:273
+msgid "Skrytý"
+msgstr ""
+
+#: blocks/block-card/index.js:288
+msgid "Odkaz k dátumu"
+msgstr ""
+
+#: blocks/block-card/index.js:296
+msgid "Tagy"
+msgstr ""
+
+#: blocks/block-card/index.js:299
+msgid "Tag"
+msgstr ""
+
+#: blocks/block-card/index.js:303
+msgid "Názov tagu"
+msgstr ""
+
+#: blocks/block-card/index.js:309
+msgid "URL tagu"
+msgstr ""
+
+#: blocks/block-card/index.js:318
+msgid "Vymazať tag"
+msgstr ""
+
+#: blocks/block-card/index.js:328
+msgid "Pridať tag"
+msgstr ""
+
+#: blocks/block-card/index.js:352
+msgid "Nahrajte obrázok"
+msgstr ""
+
+#: blocks/block-card/index.js:412
+msgid "Citácia"
+msgstr ""
+
+#: blocks/block-crossroad/index.js:28
+#: blocks/block-crossroad/index.js:33
+msgid "Rázcestník"
+msgstr ""
+
+#: blocks/block-crossroad/index.js:29
+msgid "Rázcestník má formu jednoduchej dlaždice, zloženej z nadpisu, popisku a oddeľovacej čiary. Jeho účelom je prehľadne a jednoducho zoskupiť resp. usporiadať pre používateľa odkazy na súvisiaci obsah, ktorý je rozmiestnený na rôznych, samostatných podstránkach."
+msgstr ""
+
+#: blocks/block-crossroad/index.js:153
+#: blocks/block-heading/index.js:184
+msgid "Titulok"
+msgstr ""
+
+#: blocks/block-crossroad/index.js:169
+msgid "URL Adresa"
+msgstr ""
+
+#: blocks/block-crossroad/index.js:177
+msgid "Vymazať odkaz"
+msgstr ""
+
+#: blocks/block-crossroad/index.js:215
+msgid "Nastavenie rázcestníka"
+msgstr ""
+
+#: blocks/block-crossroad/index.js:220
+msgid "Dva Stlpce"
+msgstr ""
+
+#: blocks/block-crossroad/index.js:220
+msgid "Jeden Stlpec"
+msgstr ""
+
+#: blocks/block-crossroad/index.js:228
+msgid "Rozbaliteľný blok"
+msgstr ""
+
+#: blocks/block-crossroad/index.js:244
+msgid "Pridať odkaz"
+msgstr ""
+
+#: blocks/block-details/index.js:17
+msgid "Skrytý text"
+msgstr ""
+
+#: blocks/block-details/index.js:18
+msgid "Zobrazuje skrytý text na rozbalenie."
+msgstr ""
+
+#: blocks/block-details/index.js:23
+msgid "skrytý"
+msgstr ""
+
+#: blocks/block-details/index.js:49
+msgid "Sumárny popis"
+msgstr ""
+
+#: blocks/block-graph-component/index.js:28
+msgid "Grafový komponent"
+msgstr ""
+
+#: blocks/block-graph-component/index.js:29
+msgid "Grafové zobrazenie údajov pomáha používateľom lepšie pochopiť prezentované údaje. Grafový komponent použite, keď chcete používateľom zobrazovať nejaký jav v závislosti na ďalšej premennej - napríklad vývoj javu v čase (napr. vývoj počtu nakazených COVID-19 na Slovensku)."
+msgstr ""
+
+#: blocks/block-graph-component/index.js:33
+msgid "graf"
+msgstr ""
+
+#: blocks/block-graph-component/index.js:34
+#: blocks/block-map-component/index.js:33
+msgid "komponent"
+msgstr ""
+
+#: blocks/block-graph-component/index.js:35
+msgid "grafový komponent"
+msgstr ""
+
+#: blocks/block-graph-component/index.js:262
+msgid "Nastavenia pohľadov"
+msgstr ""
+
+#: blocks/block-graph-component/index.js:263
+#: blocks/block-graph-component/index.js:267
+#: blocks/block-graph-component/index.js:275
+#: blocks/block-graph-component/index.js:449
+msgid "Pohľad 1"
+msgstr ""
+
+#: blocks/block-graph-component/index.js:267
+#: blocks/block-graph-component/index.js:284
+#: blocks/block-graph-component/index.js:301
+msgid " - titulok iframe pohľadu"
+msgstr ""
+
+#: blocks/block-graph-component/index.js:275
+#: blocks/block-graph-component/index.js:292
+#: blocks/block-graph-component/index.js:309
+msgid " - URL zdroj pre iframe pohľadu"
+msgstr ""
+
+#: blocks/block-graph-component/index.js:280
+#: blocks/block-graph-component/index.js:284
+#: blocks/block-graph-component/index.js:292
+#: blocks/block-graph-component/index.js:459
+msgid "Pohľad 2"
+msgstr ""
+
+#: blocks/block-graph-component/index.js:297
+#: blocks/block-graph-component/index.js:301
+#: blocks/block-graph-component/index.js:309
+#: blocks/block-graph-component/index.js:469
+msgid "Pohľad 3"
+msgstr ""
+
+#: blocks/block-graph-component/index.js:315
+msgid "Nastavenia zobrazenia javov v grafe"
+msgstr ""
+
+#: blocks/block-graph-component/index.js:318
+msgid "Zobrazenie javu"
+msgstr ""
+
+#: blocks/block-graph-component/index.js:322
+msgid "Názov javu"
+msgstr ""
+
+#: blocks/block-graph-component/index.js:328
+msgid "Hodnota (value) javu"
+msgstr ""
+
+#: blocks/block-graph-component/index.js:336
+msgid "Vymazať jav grafu"
+msgstr ""
+
+#: blocks/block-graph-component/index.js:345
+msgid "Pridať jav grafu"
+msgstr ""
+
+#: blocks/block-graph-component/index.js:350
+msgid "Nastavenia súborov na stiahnutie"
+msgstr ""
+
+#: blocks/block-graph-component/index.js:353
+msgid "Súbor na stiahnutie"
+msgstr ""
+
+#: blocks/block-graph-component/index.js:357
+msgid "Názov odkazu"
+msgstr ""
+
+#: blocks/block-graph-component/index.js:359
+msgid "ako CSV (54 kB)"
+msgstr ""
+
+#: blocks/block-graph-component/index.js:364
+msgid "URL odkazu"
+msgstr ""
+
+#: blocks/block-graph-component/index.js:373
+msgid "Vymazať súbor na stiahnutie"
+msgstr ""
+
+#: blocks/block-graph-component/index.js:382
+msgid "Pridať súbor na stiahnutie"
+msgstr ""
+
+#: blocks/block-graph-component/index.js:387
+msgid "Nastavenie zdieľania"
+msgstr ""
+
+#: blocks/block-graph-component/index.js:391
+msgid "Povolené"
+msgstr ""
+
+#: blocks/block-graph-component/index.js:391
+msgid "Zakázané"
+msgstr ""
+
+#: blocks/block-graph-component/index.js:404
+msgid "Nadpis grafového komponentu"
+msgstr ""
+
+#: blocks/block-graph-component/index.js:431
+msgid "Súhrnný popis grafového komponentu"
+msgstr ""
+
+#: blocks/block-graph-component/index.js:479
+msgid "Metodika"
+msgstr ""
+
+#: blocks/block-graph-component/index.js:500
+msgid "Podrobný popis metodiky"
+msgstr ""
+
+#: blocks/block-graph-component/index.js:554
+msgid "Zdroj: zdroj grafového prehľadu"
+msgstr ""
+
+#: blocks/block-heading/index.js:27
+#: blocks/block-heading/index.js:77
+#: blocks/block-timeline/index.js:184
+msgid "Nadpis"
+msgstr ""
+
+#: blocks/block-heading/index.js:28
+msgid "Zobrazuje nadpis s titulkom."
+msgstr ""
+
+#: blocks/block-heading/index.js:32
+msgid "heading"
+msgstr ""
+
+#: blocks/block-heading/index.js:33
+msgid "nadpis"
+msgstr ""
+
+#: blocks/block-heading/index.js:34
+msgid "titulok"
+msgstr ""
+
+#: blocks/block-heading/index.js:102
+msgid "Nastavenie nadpisu"
+msgstr ""
+
+#: blocks/block-heading/index.js:107
+msgid "Zobraziť titulok nad nadpisom"
+msgstr ""
+
+#: blocks/block-heading/index.js:113
+msgid "Úroveň nadpisu"
+msgstr ""
+
+#: blocks/block-heading/index.js:117
+msgid "(H1) Nadpis 1"
+msgstr ""
+
+#: blocks/block-heading/index.js:121
+msgid "(H2) Nadpis 2"
+msgstr ""
+
+#: blocks/block-heading/index.js:125
+msgid "(H3) Nadpis 3"
+msgstr ""
+
+#: blocks/block-heading/index.js:129
+msgid "(H4) Nadpis 4"
+msgstr ""
+
+#: blocks/block-heading/index.js:133
+msgid "(H5) Nadpis 5"
+msgstr ""
+
+#: blocks/block-heading/index.js:137
+msgid "(H6) Nadpis 6"
+msgstr ""
+
+#: blocks/block-heading/index.js:145
+msgid "Štýl nadpisu"
+msgstr ""
+
+#: blocks/block-heading/index.js:149
+msgid "(XL) 48 px Tučný nadpis"
+msgstr ""
+
+#: blocks/block-heading/index.js:153
+msgid "(L) 36 px Tučný nadpis"
+msgstr ""
+
+#: blocks/block-heading/index.js:157
+msgid "(M) 24 px Tučný nadpis"
+msgstr ""
+
+#: blocks/block-heading/index.js:161
+msgid "(S) 19 px Tučný nadpis"
+msgstr ""
+
+#: blocks/block-heading/index.js:170
+msgid "HTML kotva"
+msgstr ""
+
+#: blocks/block-heading/index.js:171
+msgid "Zadajte slovo alebo dve slová - bez medzier - a vytvorte jedinečnú webovú adresu iba pre tento blok, ktorá sa nazýva „kotva“. Potom budete môcť vytvoriť odkaz priamo na túto časť svojej stránky."
+msgstr ""
+
+#: blocks/block-inset-text/index.js:17
+msgid "Vsadený text"
+msgstr ""
+
+#: blocks/block-inset-text/index.js:18
+msgid "Pre upriamenie pozornosti na dôležitý obsah stránky je vhodné používať ohraničený vsadený text."
+msgstr ""
+
+#: blocks/block-inset-text/index.js:23
+msgid "vsadený"
+msgstr ""
+
+#: blocks/block-inset-text/index.js:44
+msgid "Vsadený text na doplnenie."
+msgstr ""
+
+#: blocks/block-intro/index.js:29
+msgid "Úvodný blok"
+msgstr ""
+
+#: blocks/block-intro/index.js:30
+msgid "Zobrazuje úvodný blok pre webové sídla. K dispozícii sú viaceré varianty zobrazenia."
+msgstr ""
+
+#: blocks/block-intro/index.js:34
+msgid "úvod"
+msgstr ""
+
+#: blocks/block-intro/index.js:36
+msgid "vyhľadávanie"
+msgstr ""
+
+#: blocks/block-intro/index.js:145
+#: blocks/block-intro/index.js:170
+msgid "Bočný panel"
+msgstr ""
+
+#: blocks/block-intro/index.js:155
+#: blocks/block-intro/index.js:179
+msgid "Odkazy bočného panela"
+msgstr ""
+
+#: blocks/block-intro/index.js:198
+msgid "Zobrazenie obsahu"
+msgstr ""
+
+#: blocks/block-intro/index.js:203
+msgid "S vyhľadávaním"
+msgstr ""
+
+#: blocks/block-intro/index.js:203
+msgid "Bez vyhľadávania"
+msgstr ""
+
+#: blocks/block-intro/index.js:210
+msgid "Štýl zobrazenia bočného panelu"
+msgstr ""
+
+#: blocks/block-intro/index.js:214
+msgid "Základné zobrazenie"
+msgstr ""
+
+#: blocks/block-intro/index.js:218
+msgid "Šedé zobrazenie"
+msgstr ""
+
+#: blocks/block-intro/index.js:222
+msgid "Modré zobrazenie"
+msgstr ""
+
+#: blocks/block-intro/index.js:232
+msgid "Odkazy pre vyhľadávanie"
+msgstr ""
+
+#: blocks/block-intro/index.js:233
+#: blocks/block-intro/index.js:237
+msgid "Odkaz 1"
+msgstr ""
+
+#: blocks/block-intro/index.js:238
+msgid "Názov odkazu 1"
+msgstr ""
+
+#: blocks/block-intro/index.js:246
+msgid "URL k odkazu 1"
+msgstr ""
+
+#: blocks/block-intro/index.js:251
+#: blocks/block-intro/index.js:255
+msgid "Odkaz 2"
+msgstr ""
+
+#: blocks/block-intro/index.js:256
+msgid "Názov odkazu 2"
+msgstr ""
+
+#: blocks/block-intro/index.js:264
+msgid "URL k odkazu 2"
+msgstr ""
+
+#: blocks/block-intro/index.js:269
+#: blocks/block-intro/index.js:273
+msgid "Odkaz 3"
+msgstr ""
+
+#: blocks/block-intro/index.js:274
+msgid "Názov odkazu 3"
+msgstr ""
+
+#: blocks/block-intro/index.js:282
+msgid "URL k odkazu 3"
+msgstr ""
+
+#: blocks/block-intro/index.js:287
+#: blocks/block-intro/index.js:291
+msgid "Odkaz 4"
+msgstr ""
+
+#: blocks/block-intro/index.js:292
+msgid "Názov odkazu 4"
+msgstr ""
+
+#: blocks/block-intro/index.js:300
+msgid "URL k odkazu 4"
+msgstr ""
+
+#: blocks/block-intro/index.js:305
+#: blocks/block-intro/index.js:309
+msgid "Odkaz 5"
+msgstr ""
+
+#: blocks/block-intro/index.js:310
+msgid "Názov odkazu 5"
+msgstr ""
+
+#: blocks/block-intro/index.js:318
+msgid "URL k odkazu 5"
+msgstr ""
+
+#: blocks/block-intro/index.js:363
+msgid "Hľadáte toto?"
+msgstr ""
+
+#: blocks/block-lists/index.js:27
+msgid "Zoznamy"
+msgstr ""
+
+#: blocks/block-lists/index.js:28
+msgid "Zobrazuje zoznamy s možnosťami."
+msgstr ""
+
+#: blocks/block-lists/index.js:32
+msgid "zoznam"
+msgstr ""
+
+#: blocks/block-lists/index.js:33
+msgid "zoznamy"
+msgstr ""
+
+#: blocks/block-lists/index.js:90
+#: blocks/block-lists/index.js:273
+msgid "Nastavenie zoznamu"
+msgstr ""
+
+#: blocks/block-lists/index.js:92
+#: blocks/block-lists/index.js:276
+msgid "Typ zoznamu"
+msgstr ""
+
+#: blocks/block-lists/index.js:96
+#: blocks/block-lists/index.js:280
+msgid "Bez odrážok"
+msgstr ""
+
+#: blocks/block-lists/index.js:100
+#: blocks/block-lists/index.js:284
+msgid "Guličky"
+msgstr ""
+
+#: blocks/block-lists/index.js:104
+#: blocks/block-lists/index.js:288
+msgid "Čísla"
+msgstr ""
+
+#: blocks/block-lists/index.js:121
+#: blocks/block-lists/index.js:306
+msgid "Položka"
+msgstr ""
+
+#: blocks/block-lists/index.js:131
+#: blocks/block-lists/index.js:316
+msgid "Vložiť zoznam"
+msgstr ""
+
+#: blocks/block-lists/index.js:138
+#: blocks/block-lists/index.js:323
+msgid "Vymazať položku"
+msgstr ""
+
+#: blocks/block-lists/index.js:152
+#: blocks/block-lists/index.js:337
+msgid "Pridať položku"
+msgstr ""
+
+#: blocks/block-map-component/index.js:27
+msgid "Mapový komponent"
+msgstr ""
+
+#: blocks/block-map-component/index.js:28
+msgid "Mapový komponent použite, keď chcete používateľom zobrazovať nejaký jav vzťahujúci sa k priestoru (napr. počet zaočkovaných proti COVID-19 na Slovensku v krajoch)."
+msgstr ""
+
+#: blocks/block-map-component/index.js:34
+msgid "mapový komponent"
+msgstr ""
+
+#: blocks/block-map-component/index.js:196
+msgid "Nastavenia odkazov"
+msgstr ""
+
+#: blocks/block-map-component/index.js:200
+msgid "Titulok iframe mapového prehľadu"
+msgstr ""
+
+#: blocks/block-map-component/index.js:208
+msgid "URL zdroj pre iframe mapového prehľadu"
+msgstr ""
+
+#: blocks/block-map-component/index.js:215
+msgid "Titulok iframe tabuľkového prehľadu"
+msgstr ""
+
+#: blocks/block-map-component/index.js:223
+msgid "URL zdroj pre iframe tabuľkového prehľadu"
+msgstr ""
+
+#: blocks/block-map-component/index.js:230
+msgid "napr. Stiahnuť údaje (CSV, 42 kb)"
+msgstr ""
+
+#: blocks/block-map-component/index.js:231
+msgid "Názov odkazu súboru na stiahnutie"
+msgstr ""
+
+#: blocks/block-map-component/index.js:239
+msgid "URL zdroj súboru na stiahnutie"
+msgstr ""
+
+#: blocks/block-map-component/index.js:245
+msgid "Nastavenia ukazovateľov"
+msgstr ""
+
+#: blocks/block-map-component/index.js:252
+msgid "Hodnota (value) ukazovateľa"
+msgstr ""
+
+#: blocks/block-map-component/index.js:258
+msgid "Text ukazovateľa"
+msgstr ""
+
+#: blocks/block-map-component/index.js:266
+msgid "Vymazať ukazovateľ"
+msgstr ""
+
+#: blocks/block-map-component/index.js:276
+msgid "Pridať ukazovateľ"
+msgstr ""
+
+#: blocks/block-map-component/index.js:287
+msgid "Nadpis mapového komponentu"
+msgstr ""
+
+#: blocks/block-map-component/index.js:358
+msgid "Zdroj: zdroj mapového prehľadu"
+msgstr ""
+
+#: blocks/block-stepper-banner/index.js:17
+msgid "Stepper banner"
+msgstr ""
+
+#: blocks/block-stepper-banner/index.js:18
+msgid "Banner použite na začiatku stránky s konkrétnym obsahom (po kliknutí na odkaz v stepperi), aby používateľ vedel, že tento obsah patrí pod danú životnú situáciu/návod."
+msgstr ""
+
+#: blocks/block-stepper-banner/index.js:22
+#: blocks/block-stepper/index.js:25
+msgid "stepper"
+msgstr ""
+
+#: blocks/block-stepper-banner/index.js:23
+msgid "banner"
+msgstr ""
+
+#: blocks/block-stepper-banner/index.js:51
+msgid "napr. Súčasť životnej situácie"
+msgstr ""
+
+#: blocks/block-stepper-banner/index.js:58
+msgid "napr. Narodenie dieťaťa: krok za krokom"
+msgstr ""
+
+#: blocks/block-stepper/index.js:20
+msgid "Stepper"
+msgstr ""
+
+#: blocks/block-stepper/index.js:21
+msgid "Zobrazuje sled udalostí, procesných úkonov."
+msgstr ""
+
+#: blocks/block-stepper/index.js:26
+msgid "proces"
+msgstr ""
+
+#: blocks/block-stepper/index.js:27
+msgid "kroky"
+msgstr ""
+
+#: blocks/block-stepper/index.js:253
+msgid "Nadpis steppera"
+msgstr ""
+
+#: blocks/block-stepper/index.js:261
+msgid "Popis steppera"
+msgstr ""
+
+#: blocks/block-stepper/index.js:273
+#: blocks/block-stepper/index.js:292
+msgid "Nadpis míľnika"
+msgstr ""
+
+#: blocks/block-stepper/index.js:314
+msgid "Nadpis kroku"
+msgstr ""
+
+#: blocks/block-stepper/index.js:326
+msgid "Časť kroku"
+msgstr ""
+
+#: blocks/block-stepper/index.js:335
+msgid "Pridať čiastočný krok"
+msgstr ""
+
+#: blocks/block-stepper/index.js:345
+msgid "Vymazať čiastočný krok"
+msgstr ""
+
+#: blocks/block-stepper/index.js:345
+msgid "Vymazať krok"
+msgstr ""
+
+#: blocks/block-stepper/index.js:358
+msgid "Pridať krok"
+msgstr ""
+
+#: blocks/block-tab/index.js:22
+msgid "Záložka"
+msgstr ""
+
+#: blocks/block-tab/index.js:23
+msgid "Zobrazuje záložku s vlastným obsahom."
+msgstr ""
+
+#: blocks/block-tab/index.js:27
+#: blocks/block-tabs/index.js:30
+msgid "záložky"
+msgstr ""
+
+#: blocks/block-tab/index.js:28
+#: blocks/block-tabs/index.js:31
+msgid "taby"
+msgstr ""
+
+#: blocks/block-tab/index.js:79
+msgid "Názov záložky"
+msgstr ""
+
+#: blocks/block-tab/index.js:81
+msgid "Zadajte názov záložky"
+msgstr ""
+
+#: blocks/block-tabs/index.js:25
+msgid "Záložky"
+msgstr ""
+
+#: blocks/block-tabs/index.js:26
+msgid "Zobrazuje záložky s vlastným obsahom."
+msgstr ""
+
+#: blocks/block-tabs/index.js:90
+msgid "Názov komponentu záložky"
+msgstr ""
+
+#: blocks/block-tabs/index.js:92
+msgid "Zadajte názov komponentu so záložkami"
+msgstr ""
+
+#: blocks/block-tabs/index.js:97
+msgid "Zoznam záložiek"
+msgstr ""
+
+#: blocks/block-timeline/index.js:20
+msgid "Časová os - timeline"
+msgstr ""
+
+#: blocks/block-timeline/index.js:21
+msgid "Zobrazuje chronologicky usporiadaný obsah."
+msgstr ""
+
+#: blocks/block-timeline/index.js:25
+msgid "timeline"
+msgstr ""
+
+#: blocks/block-timeline/index.js:26
+msgid "časová os"
+msgstr ""
+
+#: blocks/block-timeline/index.js:168
+msgid "január 1970"
+msgstr ""
+
+#: blocks/block-timeline/index.js:199
+msgid "01.01.1970"
+msgstr ""
+
+#: blocks/block-timeline/index.js:207
+msgid "8:30 - 12:00"
+msgstr ""
+
+#: blocks/block-timeline/index.js:229
+msgid "Pridať popis"
+msgstr ""
+
+#: blocks/block-timeline/index.js:238
+msgid "Vymazať popis"
+msgstr ""
+
+#: blocks/block-timeline/index.js:252
+msgid "Pridať blok časovej osi"
+msgstr ""
+
+#: blocks/block-warning-text/index.js:25
+msgid "Informačná lišta / Lišta s varovaním"
+msgstr ""
+
+#: blocks/block-warning-text/index.js:26
+msgid "Lištu použite vtedy, keď chcete niečo zdôrazniť alebo na niečo upozorniť. K dispozícii sú dva typy lišty."
+msgstr ""
+
+#: blocks/block-warning-text/index.js:30
+msgid "lišta"
+msgstr ""
+
+#: blocks/block-warning-text/index.js:31
+msgid "Informacna"
+msgstr ""
+
+#: blocks/block-warning-text/index.js:60
+msgid "Typ lišty"
+msgstr ""
+
+#: blocks/block-warning-text/index.js:65
+msgid "Informačná lišta"
+msgstr ""
+
+#: blocks/block-warning-text/index.js:65
+msgid "Lišta s varovaním"
+msgstr ""
+
+#: blocks/block-warning-text/index.js:74
+msgid "npr. Nový obsah na stránke, nové znenie vyhlášky, novú stratégiu a podobne"
+msgstr ""
+
+#: blocks/grid-column/index.js:26
+msgid "Stĺpec - 1/1"
+msgstr ""
+
+#: blocks/grid-column/index.js:31
+msgid "Stĺpec - 1/2"
+msgstr ""
+
+#: blocks/grid-column/index.js:36
+msgid "Stĺpec - 1/4"
+msgstr ""
+
+#: blocks/grid-column/index.js:41
+msgid "Stĺpec - 1/3"
+msgstr ""
+
+#: blocks/grid-column/index.js:46
+msgid "Stĺpec - 3/4"
+msgstr ""
+
+#: blocks/grid-column/index.js:51
+msgid "Stĺpec - 2/3"
+msgstr ""
+
+#: blocks/grid-column/index.js:57
+msgid "Stĺpec"
+msgstr ""
+
+#: blocks/grid-column/index.js:58
+msgid "Vloží stĺpec v plnej šírke."
+msgstr ""
+
+#: blocks/grid-column/index.js:62
+msgid "stĺpec"
+msgstr ""
+
+#: blocks/grid-column/index.js:63
+#: blocks/grid-container/index.js:35
+#: blocks/grid-row/index.js:35
+msgid "stránka"
+msgstr ""
+
+#: blocks/grid-column/index.js:113
+msgid "Nastavenie stĺpca"
+msgstr ""
+
+#: blocks/grid-column/index.js:116
+#: blocks/grid-container/index.js:66
+#: blocks/grid-row/index.js:66
+msgid "Farba pozadia"
+msgstr ""
+
+#: blocks/grid-column/index.js:120
+#: blocks/grid-container/index.js:70
+#: blocks/grid-row/index.js:70
+msgid "Bez pozadia"
+msgstr ""
+
+#: blocks/grid-column/index.js:124
+#: blocks/grid-container/index.js:74
+#: blocks/grid-row/index.js:74
+msgid "Modré"
+msgstr ""
+
+#: blocks/grid-column/index.js:128
+#: blocks/grid-container/index.js:78
+#: blocks/grid-row/index.js:78
+msgid "Svetlo šedé"
+msgstr ""
+
+#: blocks/grid-column/index.js:132
+#: blocks/grid-container/index.js:82
+#: blocks/grid-row/index.js:82
+msgid "Šedé"
+msgstr ""
+
+#: blocks/grid-column/index.js:140
+#: blocks/grid-container/index.js:90
+#: blocks/grid-row/index.js:90
+msgid "Odsadenie zhora"
+msgstr ""
+
+#: blocks/grid-column/index.js:144
+#: blocks/grid-column/index.js:196
+#: blocks/grid-column/index.js:248
+#: blocks/grid-column/index.js:300
+#: blocks/grid-row/index.js:94
+#: blocks/grid-row/index.js:146
+msgid "Bez odsadenia"
+msgstr ""
+
+#: blocks/grid-column/index.js:148
+#: blocks/grid-column/index.js:200
+#: blocks/grid-column/index.js:252
+#: blocks/grid-column/index.js:304
+#: blocks/grid-container/index.js:94
+#: blocks/grid-container/index.js:142
+#: blocks/grid-row/index.js:98
+#: blocks/grid-row/index.js:150
+msgid "0px"
+msgstr ""
+
+#: blocks/grid-column/index.js:152
+#: blocks/grid-column/index.js:204
+#: blocks/grid-column/index.js:256
+#: blocks/grid-column/index.js:308
+#: blocks/grid-container/index.js:98
+#: blocks/grid-container/index.js:146
+#: blocks/grid-row/index.js:102
+#: blocks/grid-row/index.js:154
+msgid "5px"
+msgstr ""
+
+#: blocks/grid-column/index.js:156
+#: blocks/grid-column/index.js:208
+#: blocks/grid-column/index.js:260
+#: blocks/grid-column/index.js:312
+#: blocks/grid-container/index.js:102
+#: blocks/grid-container/index.js:150
+#: blocks/grid-row/index.js:106
+#: blocks/grid-row/index.js:158
+msgid "10px"
+msgstr ""
+
+#: blocks/grid-column/index.js:160
+#: blocks/grid-column/index.js:212
+#: blocks/grid-column/index.js:264
+#: blocks/grid-column/index.js:316
+#: blocks/grid-container/index.js:106
+#: blocks/grid-container/index.js:154
+#: blocks/grid-row/index.js:110
+#: blocks/grid-row/index.js:162
+msgid "15px"
+msgstr ""
+
+#: blocks/grid-column/index.js:164
+#: blocks/grid-column/index.js:216
+#: blocks/grid-column/index.js:268
+#: blocks/grid-column/index.js:320
+#: blocks/grid-container/index.js:110
+#: blocks/grid-container/index.js:158
+#: blocks/grid-row/index.js:114
+#: blocks/grid-row/index.js:166
+msgid "20px"
+msgstr ""
+
+#: blocks/grid-column/index.js:168
+#: blocks/grid-column/index.js:220
+#: blocks/grid-column/index.js:272
+#: blocks/grid-column/index.js:324
+#: blocks/grid-container/index.js:114
+#: blocks/grid-container/index.js:162
+#: blocks/grid-row/index.js:118
+#: blocks/grid-row/index.js:170
+msgid "25px"
+msgstr ""
+
+#: blocks/grid-column/index.js:172
+#: blocks/grid-column/index.js:224
+#: blocks/grid-column/index.js:276
+#: blocks/grid-column/index.js:328
+#: blocks/grid-container/index.js:118
+#: blocks/grid-container/index.js:166
+#: blocks/grid-row/index.js:122
+#: blocks/grid-row/index.js:174
+msgid "30px"
+msgstr ""
+
+#: blocks/grid-column/index.js:176
+#: blocks/grid-column/index.js:228
+#: blocks/grid-column/index.js:280
+#: blocks/grid-column/index.js:332
+#: blocks/grid-container/index.js:122
+#: blocks/grid-container/index.js:170
+#: blocks/grid-row/index.js:126
+#: blocks/grid-row/index.js:178
+msgid "40px"
+msgstr ""
+
+#: blocks/grid-column/index.js:180
+#: blocks/grid-column/index.js:232
+#: blocks/grid-column/index.js:284
+#: blocks/grid-column/index.js:336
+#: blocks/grid-container/index.js:126
+#: blocks/grid-container/index.js:174
+#: blocks/grid-row/index.js:130
+#: blocks/grid-row/index.js:182
+msgid "50px"
+msgstr ""
+
+#: blocks/grid-column/index.js:184
+#: blocks/grid-column/index.js:236
+#: blocks/grid-column/index.js:288
+#: blocks/grid-column/index.js:340
+#: blocks/grid-container/index.js:130
+#: blocks/grid-container/index.js:178
+#: blocks/grid-row/index.js:134
+#: blocks/grid-row/index.js:186
+msgid "60px"
+msgstr ""
+
+#: blocks/grid-column/index.js:192
+#: blocks/grid-container/index.js:138
+#: blocks/grid-row/index.js:142
+msgid "Odsadenie zdola"
+msgstr ""
+
+#: blocks/grid-column/index.js:244
+msgid "Odsadenie zľava"
+msgstr ""
+
+#: blocks/grid-column/index.js:296
+msgid "Odsadenie zprava"
+msgstr ""
+
+#: blocks/grid-container/index.js:28
+msgid "Kontajner"
+msgstr ""
+
+#: blocks/grid-container/index.js:29
+msgid "Vloží blok kontajnera na stránku. Používajte len so šablónou \"Bez kontajnera\"."
+msgstr ""
+
+#: blocks/grid-container/index.js:33
+msgid "kontajner"
+msgstr ""
+
+#: blocks/grid-container/index.js:34
+msgid "grid"
+msgstr ""
+
+#: blocks/grid-container/index.js:63
+msgid "Nastavenie kontajnera"
+msgstr ""
+
+#: blocks/grid-row/index.js:28
+msgid "Riadok"
+msgstr ""
+
+#: blocks/grid-row/index.js:29
+msgid "Vloží blok riadku na stránku."
+msgstr ""
+
+#: blocks/grid-row/index.js:33
+msgid "row"
+msgstr ""
+
+#: blocks/grid-row/index.js:34
+msgid "riadok"
+msgstr ""
+
+#: blocks/grid-row/index.js:63
+msgid "Nastavenie riadka"
+msgstr ""

@@ -10,7 +10,7 @@
  * @wordpress-plugin
  * Plugin Name:       ID-SK Toolkit
  * Description:       Súbor nástrojov funkcionalít k ID-SK téme.
- * Version:           1.4.2
+ * Version:           1.4.3
  * Requires at least: 5.4
  * Requires PHP:      7.0
  * Author:            SlovenskoIT a.s.
@@ -26,11 +26,17 @@ include 'inc/block-editor-adjustments.php';
 
 remove_filter('widget_text_content', 'wpautop');
 
-function idsk_mime_types($mimes) {
+function idsktk_mime_types($mimes) {
     $mimes['svg'] = 'image/svg+xml';
     return $mimes;
 }
-add_filter('upload_mimes', 'idsk_mime_types');
+add_filter('upload_mimes', 'idsktk_mime_types');
+
+// Translations
+function idsktk_load_textdomain() {
+    load_plugin_textdomain( 'idsk-toolkit', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
+}
+add_action( 'init', 'idsktk_load_textdomain' );
 
 // Register Custom Post Type
 function idsktk_post_type() {
