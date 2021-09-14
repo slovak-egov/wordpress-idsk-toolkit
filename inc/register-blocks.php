@@ -51,7 +51,12 @@ function idsktk_allowed_block_types( $allowed_blocks ) {
     );
 
 }
-add_filter( 'allowed_block_types', 'idsktk_allowed_block_types' );
+
+if ( version_compare( $GLOBALS['wp_version'], '5.8-alpha-1', '<' ) ) {
+    add_filter( 'allowed_block_types', 'idsktk_allowed_block_types' );
+} else {
+    add_filter( 'allowed_block_types_all', 'idsktk_allowed_block_types' );
+}
 
 /**
  * new category of blocks
@@ -78,4 +83,8 @@ function idsktk_gov_page_block_category ( $categories, $post ) {
     ));
 }
 
-add_filter( 'block_categories', 'idsktk_gov_page_block_category', 10, 2 );
+if ( version_compare( $GLOBALS['wp_version'], '5.8-alpha-1', '<' ) ) {
+    add_filter( 'block_categories', 'idsktk_gov_page_block_category', 10, 2 );
+} else {
+    add_filter( 'block_categories_all', 'idsktk_gov_page_block_category', 10, 2 );
+}
