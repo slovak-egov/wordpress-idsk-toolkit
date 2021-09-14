@@ -5,11 +5,19 @@
  *  for block editor only.
  */
 function idsktk_enqueue_block_assets() {
+  $deps = ['wp-i18n', 'wp-element', 'wp-blocks', 'wp-components'];
+  
+  if ( version_compare( $GLOBALS['wp_version'], '5.8-alpha-1', '<' ) ) {
+    array_push($deps, 'wp-editor');
+  } else {
+    array_push($deps, 'wp-block-editor');
+  }
+
   // Enqueue the bundled block JS file
   wp_enqueue_script(
     'idsk/blocks-js',
     plugin_dir_url(__DIR__) . '/assets/js/editor.blocks.js',
-    ['wp-i18n', 'wp-element', 'wp-blocks', 'wp-components', 'wp-editor'],
+    $deps,
     null
   );
 
