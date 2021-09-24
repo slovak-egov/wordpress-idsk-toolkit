@@ -333,7 +333,7 @@
 
 @media (min-width: 48.0625em) {
     .idsk-intro-block__bottom-menu__li {
-        display: inline-grid;
+        display: inline-grid !important;
         padding-bottom: 0;
         padding-right: 20px;
     }
