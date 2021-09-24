@@ -54,7 +54,7 @@ function idsktk_render_dynamic_crossroad_block($attributes) {
                                 ) ? ' idsk-crossroad__item--two-columns-hide' : '';
                         } ?>
                         <div class="idsk-crossroad__item <?php echo $classes; ?>">
-                            <a href="<?php echo $item['link']; ?>" class="idsk-crossroad-title" title="<?php echo $item['title']; ?>" aria-hidden="<?php echo $aria; ?>">
+                            <a href="<?php echo $item['link']; ?>" class="govuk-link idsk-crossroad-title" title="<?php echo $item['title']; ?>" aria-hidden="<?php echo $aria; ?>">
                                 <?php echo $item['title']; ?>
                             </a>
                             <p class="idsk-crossroad-subtitle" aria-hidden="<?php echo $aria; ?>"><?php echo $item['subtitle']; ?></p>

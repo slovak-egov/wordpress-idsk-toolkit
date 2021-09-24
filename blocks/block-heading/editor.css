@@ -1,5 +1,5 @@
 .govuk-caption-xl {
-    font-family: "GDS Transport",arial,sans-serif;
+    font-family: "Source Sans Pro", "Arial", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 400;
@@ -18,7 +18,7 @@
     }
 }
 .govuk-caption-l {
-    font-family: "GDS Transport",arial,sans-serif;
+    font-family: "Source Sans Pro", "Arial", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 400;
@@ -42,7 +42,7 @@
     }
 }
 .govuk-caption-m {
-    font-family: "GDS Transport",arial,sans-serif;
+    font-family: "Source Sans Pro", "Arial", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 400;
@@ -62,7 +62,7 @@
 
 .govuk-heading-xl, .app-prose-scope h1 {
     color: #0b0c0c;
-    font-family: "GDS Transport",arial,sans-serif;
+    font-family: "Source Sans Pro", "Arial", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 700;
@@ -87,7 +87,7 @@
 }
 .govuk-heading-l, .app-prose-scope h2 {
     color: #0b0c0c;
-    font-family: "GDS Transport",arial,sans-serif;
+    font-family: "Source Sans Pro", "Arial", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 700;
@@ -112,7 +112,7 @@
 }
 .govuk-heading-m, .app-contact-panel__heading, .app-prose-scope h3 {
     color: #0b0c0c;
-    font-family: "GDS Transport",arial,sans-serif;
+    font-family: "Source Sans Pro", "Arial", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 700;
@@ -137,7 +137,7 @@
 }
 .govuk-heading-s, .app-prose-scope h4 {
     color: #0b0c0c;
-    font-family: "GDS Transport",arial,sans-serif;
+    font-family: "Source Sans Pro", "Arial", sans-serif;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     font-weight: 700;

@@ -127,3 +127,7 @@
         margin-left: 10px;
     }
 }
+
+.govuk-button .js-button-text {
+    position: relative;
+}
