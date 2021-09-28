@@ -357,9 +357,10 @@ function gutenberg_editor_assets() {
 
 // Registering blocks
 /**
- * Block, ACF functions
+ * Blocks, patterns
  */
 require plugin_dir_path(__FILE__) . '/inc/register-blocks.php';
+require plugin_dir_path(__FILE__) . '/inc/register-patterns.php';
 
 /* Custom gutenberg IDSK blocks */
 require plugin_dir_path(__FILE__) . '/blocks/index.php';

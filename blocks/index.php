@@ -32,3 +32,4 @@ require plugin_dir_path(__DIR__) . '/blocks/block-tab/index.php';
 require plugin_dir_path(__DIR__) . '/blocks/block-tabs/index.php';
 require plugin_dir_path(__DIR__) . '/blocks/grid-container/index.php';
 require plugin_dir_path(__DIR__) . '/blocks/block-stepper-banner/index.php';
+require plugin_dir_path(__DIR__) . '/blocks/block-separator/index.php';
