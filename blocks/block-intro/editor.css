@@ -500,12 +500,14 @@
 .idsk-intro-block__side-menu__ul {
     float: none;
     padding-bottom: 20px !important;
-    display: contents;
+    display: block;
+    margin: 0 !important;
+    padding: 0 !important;
 }
 
 @media (min-width: 48.0625em) {
     .idsk-intro-block__side-menu__ul {
-        float: right;
+        float: left;
         padding-bottom: 0 !important;
     }
 }

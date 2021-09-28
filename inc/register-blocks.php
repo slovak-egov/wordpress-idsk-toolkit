@@ -21,7 +21,6 @@ function idsktk_allowed_block_types( $allowed_blocks ) {
         'core/html',
         'core/paragraph',
         'core/spacer',
-        'core/separator',
         'core/shortcode',
         'core/freeform',
         'core/image',
@@ -48,6 +47,7 @@ function idsktk_allowed_block_types( $allowed_blocks ) {
         'idsk/tab',
         'idsk/tabs',
         'idsk/stepper-banner',
+        'idsk/separator',
     );
 
 }
