@@ -19,7 +19,6 @@ import './block-card';
 import './grid-row';
 import './grid-column';
 import './block-map-component';
-import './block-graph-component';
 import './block-accordion';
 import './block-announce';
 import './block-button';
