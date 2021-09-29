@@ -35,7 +35,6 @@ function idsktk_allowed_block_types( $allowed_blocks ) {
         'idsk/row',
         'idsk/column',
         'idsk/map-component',
-        'idsk/graph-component',
         'idsk/accordion',
         'idsk/announce',
         'idsk/button',
