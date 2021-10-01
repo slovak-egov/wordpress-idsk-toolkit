@@ -3,7 +3,7 @@ Contributors: slovenskoit
 Tags: idsk, id-sk, toolkit, idsk-toolkit, idsk toolkit, id-sk toolkit
 Requires at least: 5.4
 Tested up to: 5.8
-Stable tag: 1.4.3
+Stable tag: 1.5.0
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -27,6 +27,15 @@ ID-SK is distributed under the terms of the GNU GPLv2 or later and under the ter
 Soon.
 
 == Changelog ==
+
+= 1.5.0 =
+* Aktualizácia komponentov k ID-SK 2.6.2
+* Doplnenie vzorov stránok
+* Doplnenie nového komponentu
+ * Oddeľovač
+* Odstránenie Grafového komponentu
+* Fix v komponente Tlačidlo
+* Fix pre WordPress 5.8
 
 = 1.4.3 =
 * Doplnená podpora jazykových mutácií
@@ -77,6 +86,15 @@ Soon.
 
 == Upgrade Notice ==
 
+= 1.5.0 =
+* Aktualizácia komponentov k ID-SK 2.6.2
+* Doplnenie vzorov stránok
+* Doplnenie nového komponentu
+ * Oddeľovač
+* Odstránenie Grafového komponentu
+* Fix v komponente Tlačidlo
+* Fix pre WordPress 5.8
+
 = 1.4.3 =
 Doplnená podpora jazykových mutácií.
 
@@ -107,5 +125,6 @@ Vydanie pluginu pre použitie spoločne s ID-SK témou.
 == Rozširujúce funkcionality ==
 
 1. Gutenberg ID-SK komponenty
-2. Podpora nahrávania SVG obrázkov
-3. Vlastné články - Aktuality inštitúcií
+2. Gutenberg ID-SK vzory
+3. Podpora nahrávania SVG obrázkov
+4. Vlastné články - Aktuality inštitúcií

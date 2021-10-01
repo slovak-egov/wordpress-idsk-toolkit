@@ -2,14 +2,14 @@
 # This file is distributed under the GPL v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: ID-SK Toolkit 1.4.2\n"
+"Project-Id-Version: ID-SK Toolkit 1.5.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/idsk-toolkit\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-08-03T10:22:29+02:00\n"
+"POT-Creation-Date: 2021-10-01T16:00:34+02:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.5.0\n"
 "X-Domain: idsk-toolkit\n"
@@ -59,51 +59,13 @@ msgstr ""
 msgid "Zobraziť menej"
 msgstr ""
 
-#: blocks/block-graph-component/index.php:57
-msgid "Kliknite na odkaz vyššie alebo ho skopírujte a vložte do prehliadača: "
-msgstr ""
-
-#: blocks/block-graph-component/index.php:88
-#: blocks/block-details/index.js:58
-#: blocks/block-graph-component/index.js:441
-msgid "Obsah"
-msgstr ""
-
-#: blocks/block-graph-component/index.php:133
-#: blocks/block-graph-component/index.php:134
-#: blocks/block-graph-component/index.js:511
-#: blocks/block-graph-component/index.js:512
-msgid "Stiahnuť údaje"
-msgstr ""
-
-#: blocks/block-graph-component/index.php:150
-#: blocks/block-graph-component/index.php:151
-#: blocks/block-graph-component/index.js:530
-#: blocks/block-graph-component/index.js:531
-msgid "Zdielať údaje"
-msgstr ""
-
-#: blocks/block-graph-component/index.php:158
-#: blocks/block-graph-component/index.js:538
-msgid "Kopírovať link"
-msgstr ""
-
-#: blocks/block-graph-component/index.php:161
-#: blocks/block-graph-component/index.js:541
-msgid "Emailom"
-msgstr ""
-
-#: blocks/block-graph-component/index.php:164
-#: blocks/block-graph-component/index.js:544
-msgid "na Facebooku"
-msgstr ""
-
-#: blocks/block-intro/index.php:94
-#: blocks/block-intro/index.js:349
+#: blocks/block-intro/index.php:79
+#: blocks/block-intro/index.js:317
 msgid "Zadajte hľadaný výraz"
 msgstr ""
 
-#: blocks/block-intro/index.php:117
+#: blocks/block-intro/index.php:108
+#: blocks/block-intro/index.js:321
 msgid "Vyhľadávanie"
 msgstr ""
 
@@ -174,12 +136,582 @@ msgstr ""
 msgid "do"
 msgstr ""
 
-#: inc/register-blocks.php:69
+#: inc/register-blocks.php:73
 msgid "ID-SK Komponenty"
 msgstr ""
 
-#: inc/register-blocks.php:75
+#: inc/register-blocks.php:79
 msgid "ID-SK Rozloženie stránky"
+msgstr ""
+
+#: inc/register-patterns.php:18
+msgid "Vzory stránok"
+msgstr ""
+
+#: inc/register-patterns.php:44
+msgid "Domovská stránka"
+msgstr ""
+
+#: inc/register-patterns.php:45
+msgctxt "Popis vzoru domovskej stránky"
+msgid "Domovská stránka s úvodnym blokom, kartičkami a rázcestníkmi. Odporúčame použiť so šablónou <strong>\"Bez kontajnera a bez nadpisu\"</strong>"
+msgstr ""
+
+#: inc/register-patterns.php:49
+msgid "Vitajte na stránke"
+msgstr ""
+
+#: inc/register-patterns.php:49
+msgid "Dozvedieť sa \\u003ca href=\\u0022#\\u0022\\u003eviac o stránkach\\u003c/a\\u003e."
+msgstr ""
+
+#: inc/register-patterns.php:49
+#: blocks/block-intro/index.js:330
+msgid "Hľadáte toto?"
+msgstr ""
+
+#: inc/register-patterns.php:49
+msgid "Dokumenty"
+msgstr ""
+
+#: inc/register-patterns.php:49
+msgid "Info"
+msgstr ""
+
+#: inc/register-patterns.php:49
+#: inc/register-patterns.php:53
+#: inc/register-patterns.php:289
+msgid "Aktuality"
+msgstr ""
+
+#: inc/register-patterns.php:49
+msgid "Podmienky"
+msgstr ""
+
+#: inc/register-patterns.php:49
+msgid "O nás"
+msgstr ""
+
+#: inc/register-patterns.php:49
+#: inc/register-patterns.php:285
+msgid "Populárny obsah"
+msgstr ""
+
+#: inc/register-patterns.php:49
+#: inc/register-patterns.php:285
+msgid "\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003eDokumenty\\u003c/a\\u003e\\u003c/li\\u003e\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003eInfo\\u003c/a\\u003e\\u003c/li\\u003e\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003eAktuality\\u003c/a\\u003e\\u003c/li\\u003e\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003ePodmienky\\u003c/a\\u003e\\u003c/li\\u003e\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003eO nás\\u003c/a\\u003e\\u003c/li\\u003e"
+msgstr ""
+
+#: inc/register-patterns.php:57
+#: inc/register-patterns.php:63
+#: inc/register-patterns.php:67
+#: inc/register-patterns.php:71
+#: inc/register-patterns.php:293
+#: inc/register-patterns.php:299
+#: inc/register-patterns.php:303
+#: inc/register-patterns.php:307
+msgid "Demo obrázok"
+msgstr ""
+
+#: inc/register-patterns.php:57
+#: inc/register-patterns.php:293
+msgid "\\u003ca href=\\u0022#\\u0022\\u003eHlavná aktualita\\u003c/a\\u003e"
+msgstr ""
+
+#: inc/register-patterns.php:57
+#: inc/register-patterns.php:63
+#: inc/register-patterns.php:67
+#: inc/register-patterns.php:71
+#: inc/register-patterns.php:85
+#: inc/register-patterns.php:93
+#: inc/register-patterns.php:99
+#: inc/register-patterns.php:123
+#: inc/register-patterns.php:143
+#: inc/register-patterns.php:157
+#: inc/register-patterns.php:170
+#: inc/register-patterns.php:267
+#: inc/register-patterns.php:293
+#: inc/register-patterns.php:299
+#: inc/register-patterns.php:303
+#: inc/register-patterns.php:307
+#: inc/register-patterns.php:317
+#: inc/register-patterns.php:322
+#: inc/register-patterns.php:325
+#: inc/register-patterns.php:338
+#: inc/register-patterns.php:342
+#: inc/register-patterns.php:348
+#: inc/register-patterns.php:352
+#: inc/register-patterns.php:366
+#: inc/register-patterns.php:370
+#: inc/register-patterns.php:388
+#: inc/register-patterns.php:409
+#: inc/register-patterns.php:414
+#: inc/register-patterns.php:419
+#: inc/register-patterns.php:424
+#: inc/register-patterns.php:433
+#: inc/register-patterns.php:438
+#: inc/register-patterns.php:447
+#: inc/register-patterns.php:463
+#: inc/register-patterns.php:467
+#: inc/register-patterns.php:471
+#: inc/register-patterns.php:481
+#: inc/register-patterns.php:485
+#: inc/register-patterns.php:489
+#: inc/register-patterns.php:493
+#: inc/register-patterns.php:499
+#: inc/register-patterns.php:503
+#: inc/register-patterns.php:507
+#: inc/register-patterns.php:511
+#: inc/register-patterns.php:515
+#: inc/register-patterns.php:519
+#: inc/register-patterns.php:523
+#: inc/register-patterns.php:527
+msgid "Lorem ipsum dolor sit amet, consenctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+msgstr ""
+
+#: inc/register-patterns.php:57
+#: inc/register-patterns.php:63
+#: inc/register-patterns.php:67
+#: inc/register-patterns.php:71
+#: inc/register-patterns.php:293
+#: inc/register-patterns.php:299
+#: inc/register-patterns.php:303
+#: inc/register-patterns.php:307
+msgid "Tag 1"
+msgstr ""
+
+#: inc/register-patterns.php:57
+#: inc/register-patterns.php:63
+#: inc/register-patterns.php:67
+#: inc/register-patterns.php:71
+#: inc/register-patterns.php:293
+#: inc/register-patterns.php:299
+#: inc/register-patterns.php:303
+#: inc/register-patterns.php:307
+msgid "Tag 2"
+msgstr ""
+
+#: inc/register-patterns.php:63
+#: inc/register-patterns.php:67
+#: inc/register-patterns.php:71
+#: inc/register-patterns.php:299
+#: inc/register-patterns.php:303
+#: inc/register-patterns.php:307
+msgid "\\u003ca href=\\u0022#\\u0022\\u003eĎalšia aktualita\\u003c/a\\u003e"
+msgstr ""
+
+#: inc/register-patterns.php:77
+#: inc/register-patterns.php:313
+#: inc/register-patterns.php:430
+msgid "Sekcia"
+msgstr ""
+
+#: inc/register-patterns.php:80
+#: inc/register-patterns.php:118
+#: inc/register-patterns.php:138
+#: inc/register-patterns.php:152
+#: inc/register-patterns.php:192
+#: inc/register-patterns.php:262
+msgid "Lorem ipsum dolor sit amet, consenctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore <a href=\"#\">magna aliqua</a>."
+msgstr ""
+
+#: inc/register-patterns.php:85
+#: inc/register-patterns.php:93
+#: inc/register-patterns.php:99
+#: inc/register-patterns.php:123
+#: inc/register-patterns.php:143
+#: inc/register-patterns.php:157
+#: inc/register-patterns.php:317
+#: inc/register-patterns.php:414
+#: inc/register-patterns.php:424
+#: inc/register-patterns.php:438
+msgid "Rázcestník 1"
+msgstr ""
+
+#: inc/register-patterns.php:85
+#: inc/register-patterns.php:93
+#: inc/register-patterns.php:99
+#: inc/register-patterns.php:123
+#: inc/register-patterns.php:143
+#: inc/register-patterns.php:157
+#: inc/register-patterns.php:317
+#: inc/register-patterns.php:414
+#: inc/register-patterns.php:424
+#: inc/register-patterns.php:438
+msgid "Rázcestník 2"
+msgstr ""
+
+#: inc/register-patterns.php:85
+#: inc/register-patterns.php:93
+#: inc/register-patterns.php:99
+#: inc/register-patterns.php:123
+#: inc/register-patterns.php:143
+#: inc/register-patterns.php:157
+#: inc/register-patterns.php:317
+#: inc/register-patterns.php:414
+#: inc/register-patterns.php:424
+#: inc/register-patterns.php:438
+msgid "Rázcestník 3"
+msgstr ""
+
+#: inc/register-patterns.php:85
+#: inc/register-patterns.php:123
+#: inc/register-patterns.php:143
+#: inc/register-patterns.php:157
+#: inc/register-patterns.php:317
+#: inc/register-patterns.php:414
+#: inc/register-patterns.php:424
+#: inc/register-patterns.php:438
+msgid "Rázcestník 4"
+msgstr ""
+
+#: inc/register-patterns.php:91
+msgid "Podsekcia 1"
+msgstr ""
+
+#: inc/register-patterns.php:97
+msgid "Podsekcia 2"
+msgstr ""
+
+#: inc/register-patterns.php:107
+msgid "Vedenie"
+msgstr ""
+
+#: inc/register-patterns.php:109
+msgid "\\u003ca href=\\u0022#\\u0022\\u003eMacko Pú\\u003c/a\\u003e"
+msgstr ""
+
+#: inc/register-patterns.php:109
+msgid "\\u003ca href=\\u0022#\\u0022\\u003eŠtátny tajomník medu a radosti\\u003c/a\\u003e"
+msgstr ""
+
+#: inc/register-patterns.php:109
+msgid "“Aký je deň?” spýtal sa Pú. “Je dnes,” odpovedalo prasiatko. “Môj najobľúbenejší deň,” povedal Pú."
+msgstr ""
+
+#: inc/register-patterns.php:115
+msgid "Informatizácia"
+msgstr ""
+
+#: inc/register-patterns.php:127
+msgid "Služby"
+msgstr ""
+
+#: inc/register-patterns.php:129
+msgid "\\u003ca href=\\u0022#\\u0022\\u003e\\u003cstrong\\u003ePoložka 1\\u003c/strong\\u003e\\u003c/a\\u003e"
+msgstr ""
+
+#: inc/register-patterns.php:129
+msgid "\\u003ca href=\\u0022#\\u0022\\u003e\\u003cstrong\\u003ePoložka 2\\u003c/strong\\u003e\\u003c/a\\u003e"
+msgstr ""
+
+#: inc/register-patterns.php:129
+msgid "\\u003ca href=\\u0022#\\u0022\\u003e\\u003cstrong\\u003ePoložka 3\\u003c/strong\\u003e\\u003c/a\\u003e"
+msgstr ""
+
+#: inc/register-patterns.php:129
+msgid "\\u003ca href=\\u0022#\\u0022\\u003e\\u003cstrong\\u003ePoložka 4\\u003c/strong\\u003e\\u003c/a\\u003e"
+msgstr ""
+
+#: inc/register-patterns.php:129
+msgid "\\u003ca href=\\u0022#\\u0022\\u003e\\u003cstrong\\u003ePoložka 5\\u003c/strong\\u003e\\u003c/a\\u003e"
+msgstr ""
+
+#: inc/register-patterns.php:129
+msgid "\\u003ca href=\\u0022#\\u0022\\u003e\\u003cstrong\\u003ePoložka 6\\u003c/strong\\u003e\\u003c/a\\u003e"
+msgstr ""
+
+#: inc/register-patterns.php:135
+#: inc/register-patterns.php:363
+#: inc/register-patterns.php:444
+msgid "Sekcia 2"
+msgstr ""
+
+#: inc/register-patterns.php:149
+#: inc/register-patterns.php:385
+msgid "Sekcia 3"
+msgstr ""
+
+#: inc/register-patterns.php:157
+#: inc/register-patterns.php:317
+#: inc/register-patterns.php:414
+#: inc/register-patterns.php:424
+#: inc/register-patterns.php:438
+msgid "Rázcestník 5"
+msgstr ""
+
+#: inc/register-patterns.php:157
+#: inc/register-patterns.php:317
+#: inc/register-patterns.php:414
+#: inc/register-patterns.php:424
+msgid "Rázcestník 6"
+msgstr ""
+
+#: inc/register-patterns.php:167
+#: inc/register-patterns.php:333
+msgid "Banner"
+msgstr ""
+
+#: inc/register-patterns.php:174
+msgid "<a href=\"#\">Zistiť viac</a>"
+msgstr ""
+
+#: inc/register-patterns.php:189
+msgid "Podujatia"
+msgstr ""
+
+#: inc/register-patterns.php:198
+#: inc/register-patterns.php:208
+#: inc/register-patterns.php:218
+#: inc/register-patterns.php:228
+#: inc/register-patterns.php:238
+#: inc/register-patterns.php:248
+msgid "<strong><a href=\"#\">Lorem ipsum dolor sit amet</a></strong>"
+msgstr ""
+
+#: inc/register-patterns.php:202
+#: inc/register-patterns.php:212
+#: inc/register-patterns.php:222
+#: inc/register-patterns.php:232
+#: inc/register-patterns.php:242
+#: inc/register-patterns.php:252
+msgid "26.02.2021"
+msgstr ""
+
+#: inc/register-patterns.php:259
+msgid "Projekty"
+msgstr ""
+
+#: inc/register-patterns.php:267
+msgid "Projekt 1"
+msgstr ""
+
+#: inc/register-patterns.php:267
+msgid "Projekt 2"
+msgstr ""
+
+#: inc/register-patterns.php:267
+msgid "Projekt 3"
+msgstr ""
+
+#: inc/register-patterns.php:267
+msgid "Projekt 4"
+msgstr ""
+
+#: inc/register-patterns.php:267
+msgid "Projekt 5"
+msgstr ""
+
+#: inc/register-patterns.php:267
+msgid "Projekt 6"
+msgstr ""
+
+#: inc/register-patterns.php:267
+msgid "Projekt 7"
+msgstr ""
+
+#: inc/register-patterns.php:267
+msgid "Projekt 8"
+msgstr ""
+
+#: inc/register-patterns.php:267
+msgid "Projekt 9"
+msgstr ""
+
+#: inc/register-patterns.php:267
+msgid "Projekt 10"
+msgstr ""
+
+#: inc/register-patterns.php:267
+msgid "Projekt 11"
+msgstr ""
+
+#: inc/register-patterns.php:267
+msgid "Projekt 12"
+msgstr ""
+
+#: inc/register-patterns.php:267
+msgid "Projekt 13"
+msgstr ""
+
+#: inc/register-patterns.php:267
+msgid "Projekt 14"
+msgstr ""
+
+#: inc/register-patterns.php:267
+msgid "Projekt 15"
+msgstr ""
+
+#: inc/register-patterns.php:280
+#: inc/register-patterns.php:285
+msgid "Podstránka"
+msgstr ""
+
+#: inc/register-patterns.php:281
+msgctxt "Popis vzoru podstránky"
+msgid "Podstránka s úvodnym blokom, kartičkami, rázcestníkmi a akordeónmi. Odporúčame použiť so šablónou <strong>\"Bez kontajnera a bez nadpisu\"</strong>"
+msgstr ""
+
+#: inc/register-patterns.php:285
+msgid "Lorem ipsum dolor sit amet, consenctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore \\u003ca href=\\u0022#\\u0022\\u003emagna aliqua\\u003c/a\\u003e."
+msgstr ""
+
+#: inc/register-patterns.php:325
+#: inc/register-patterns.php:442
+#: inc/register-patterns.php:450
+msgid "Akordeón 1"
+msgstr ""
+
+#: inc/register-patterns.php:325
+#: inc/register-patterns.php:442
+#: inc/register-patterns.php:450
+msgid "Akordeón 2"
+msgstr ""
+
+#: inc/register-patterns.php:325
+#: inc/register-patterns.php:442
+#: inc/register-patterns.php:450
+msgid "Akordeón 3"
+msgstr ""
+
+#: inc/register-patterns.php:325
+#: inc/register-patterns.php:442
+#: inc/register-patterns.php:450
+msgid "Akordeón 4"
+msgstr ""
+
+#: inc/register-patterns.php:325
+#: inc/register-patterns.php:442
+#: inc/register-patterns.php:450
+msgid "Akordeón 5"
+msgstr ""
+
+#: inc/register-patterns.php:325
+#: inc/register-patterns.php:442
+#: inc/register-patterns.php:450
+msgid "Akordeón 6"
+msgstr ""
+
+#: inc/register-patterns.php:325
+#: inc/register-patterns.php:442
+#: inc/register-patterns.php:450
+msgid "Akordeón 7"
+msgstr ""
+
+#: inc/register-patterns.php:374
+#: inc/register-patterns.php:378
+#: inc/register-patterns.php:392
+msgid "<a href=\"#\">Dokument (PDF, 10kB)</a>"
+msgstr ""
+
+#: inc/register-patterns.php:381
+#: inc/register-patterns.php:395
+msgid "Ďalšie dokumenty"
+msgstr ""
+
+#: inc/register-patterns.php:381
+#: inc/register-patterns.php:395
+msgid "\\u003ca href=\\u0022#\\u0022\\u003eDokument (PDF, 10kB)\\u003c/a\\u003e"
+msgstr ""
+
+#: inc/register-patterns.php:406
+msgid "Podstránka s dokumentmi"
+msgstr ""
+
+#: inc/register-patterns.php:407
+msgctxt "Popis vzoru podstránky s dokumentmi"
+msgid "Podstránka s rázcestníkmi a akordeónmi."
+msgstr ""
+
+#: inc/register-patterns.php:414
+#: inc/register-patterns.php:424
+msgid "Rázcestník 7"
+msgstr ""
+
+#: inc/register-patterns.php:414
+msgid "Rázcestník 8"
+msgstr ""
+
+#: inc/register-patterns.php:442
+#: inc/register-patterns.php:450
+msgid "Popis\\u003cbr\\u003e\\u003ca href=\\u0022#\\u0022\\u003eDokument (PDF, 10kB)\\u003c/a\\u003e\\u003cbr\\u003e\\u003ca href=\\u0022#\\u0022\\u003eDokument (PDF, 10kB)\\u003c/a\\u003e\\u003cbr\\u003e\\u003ca href=\\u0022#\\u0022\\u003eDokument (PDF, 10kB)\\u003c/a\\u003e"
+msgstr ""
+
+#: inc/register-patterns.php:442
+msgid "Akordeón 8"
+msgstr ""
+
+#: inc/register-patterns.php:458
+msgid "Podstránka so stepperom"
+msgstr ""
+
+#: inc/register-patterns.php:459
+msgctxt "Popis vzoru podstránky so stepperom"
+msgid "Podstránka so stepperom a súvisiacim obsahom. Odporúčame použiť so šablónou <strong>\"In-page navigácia\"</strong>"
+msgstr ""
+
+#: inc/register-patterns.php:460
+#: inc/register-patterns.php:532
+msgid "Súčasť životnej situácie"
+msgstr ""
+
+#: inc/register-patterns.php:460
+#: inc/register-patterns.php:532
+msgid "\\u003ca href=\\u0022#\\u0022\\u003eNarodenie dieťaťa: krok za krokom\\u003c/a\\u003e"
+msgstr ""
+
+#: inc/register-patterns.php:478
+msgid "Nadpis 1"
+msgstr ""
+
+#: inc/register-patterns.php:496
+msgid "Nadpis 2"
+msgstr ""
+
+#: inc/register-patterns.php:530
+#: inc/register-patterns.php:536
+msgid "Súvisiace témy"
+msgstr ""
+
+#: inc/register-patterns.php:530
+#: inc/register-patterns.php:536
+msgid "\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003eSúvisiaca téma\\u003c/a\\u003e\\u003c/li\\u003e\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003eSúvisiaca téma\\u003c/a\\u003e\\u003c/li\\u003e\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003eSúvisiaca téma\\u003c/a\\u003e\\u003c/li\\u003e"
+msgstr ""
+
+#: inc/register-patterns.php:534
+msgid "Pred narodením dieťaťa"
+msgstr ""
+
+#: inc/register-patterns.php:534
+msgid "Krok 1"
+msgstr ""
+
+#: inc/register-patterns.php:534
+msgid "\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003eOdkaz na podstránku\\u003c/a\\u003e\\u003c/li\\u003e"
+msgstr ""
+
+#: inc/register-patterns.php:534
+msgid "Krok 2"
+msgstr ""
+
+#: inc/register-patterns.php:534
+msgid "Po narodení dieťaťa"
+msgstr ""
+
+#: inc/register-patterns.php:534
+msgid "Krok 3"
+msgstr ""
+
+#: inc/register-patterns.php:534
+msgid "Čiastočný krok"
+msgstr ""
+
+#: inc/register-patterns.php:534
+msgid "Krok 4"
+msgstr ""
+
+#: inc/register-patterns.php:534
+msgid "Krok 5"
 msgstr ""
 
 #: lib/template-customizer.php:17
@@ -460,12 +992,12 @@ msgstr ""
 
 #: blocks/block-address/index.js:182
 #: blocks/block-card/index.js:382
-#: blocks/block-intro/index.js:334
+#: blocks/block-intro/index.js:302
 msgid "Hlavný nadpis"
 msgstr ""
 
 #: blocks/block-address/index.js:189
-#: blocks/block-intro/index.js:342
+#: blocks/block-intro/index.js:310
 msgid "Vedľajší nadpis"
 msgstr ""
 
@@ -642,15 +1174,11 @@ msgstr ""
 #: blocks/block-card/index.js:257
 #: blocks/block-card/index.js:287
 #: blocks/block-card/index.js:310
-#: blocks/block-graph-component/index.js:274
-#: blocks/block-graph-component/index.js:291
-#: blocks/block-graph-component/index.js:308
-#: blocks/block-graph-component/index.js:366
-#: blocks/block-intro/index.js:245
-#: blocks/block-intro/index.js:263
-#: blocks/block-intro/index.js:281
-#: blocks/block-intro/index.js:299
-#: blocks/block-intro/index.js:317
+#: blocks/block-intro/index.js:213
+#: blocks/block-intro/index.js:231
+#: blocks/block-intro/index.js:249
+#: blocks/block-intro/index.js:267
+#: blocks/block-intro/index.js:285
 #: blocks/block-map-component/index.js:207
 #: blocks/block-map-component/index.js:222
 #: blocks/block-map-component/index.js:238
@@ -771,146 +1299,8 @@ msgstr ""
 msgid "Sumárny popis"
 msgstr ""
 
-#: blocks/block-graph-component/index.js:28
-msgid "Grafový komponent"
-msgstr ""
-
-#: blocks/block-graph-component/index.js:29
-msgid "Grafové zobrazenie údajov pomáha používateľom lepšie pochopiť prezentované údaje. Grafový komponent použite, keď chcete používateľom zobrazovať nejaký jav v závislosti na ďalšej premennej - napríklad vývoj javu v čase (napr. vývoj počtu nakazených COVID-19 na Slovensku)."
-msgstr ""
-
-#: blocks/block-graph-component/index.js:33
-msgid "graf"
-msgstr ""
-
-#: blocks/block-graph-component/index.js:34
-#: blocks/block-map-component/index.js:33
-msgid "komponent"
-msgstr ""
-
-#: blocks/block-graph-component/index.js:35
-msgid "grafový komponent"
-msgstr ""
-
-#: blocks/block-graph-component/index.js:262
-msgid "Nastavenia pohľadov"
-msgstr ""
-
-#: blocks/block-graph-component/index.js:263
-#: blocks/block-graph-component/index.js:267
-#: blocks/block-graph-component/index.js:275
-#: blocks/block-graph-component/index.js:449
-msgid "Pohľad 1"
-msgstr ""
-
-#: blocks/block-graph-component/index.js:267
-#: blocks/block-graph-component/index.js:284
-#: blocks/block-graph-component/index.js:301
-msgid " - titulok iframe pohľadu"
-msgstr ""
-
-#: blocks/block-graph-component/index.js:275
-#: blocks/block-graph-component/index.js:292
-#: blocks/block-graph-component/index.js:309
-msgid " - URL zdroj pre iframe pohľadu"
-msgstr ""
-
-#: blocks/block-graph-component/index.js:280
-#: blocks/block-graph-component/index.js:284
-#: blocks/block-graph-component/index.js:292
-#: blocks/block-graph-component/index.js:459
-msgid "Pohľad 2"
-msgstr ""
-
-#: blocks/block-graph-component/index.js:297
-#: blocks/block-graph-component/index.js:301
-#: blocks/block-graph-component/index.js:309
-#: blocks/block-graph-component/index.js:469
-msgid "Pohľad 3"
-msgstr ""
-
-#: blocks/block-graph-component/index.js:315
-msgid "Nastavenia zobrazenia javov v grafe"
-msgstr ""
-
-#: blocks/block-graph-component/index.js:318
-msgid "Zobrazenie javu"
-msgstr ""
-
-#: blocks/block-graph-component/index.js:322
-msgid "Názov javu"
-msgstr ""
-
-#: blocks/block-graph-component/index.js:328
-msgid "Hodnota (value) javu"
-msgstr ""
-
-#: blocks/block-graph-component/index.js:336
-msgid "Vymazať jav grafu"
-msgstr ""
-
-#: blocks/block-graph-component/index.js:345
-msgid "Pridať jav grafu"
-msgstr ""
-
-#: blocks/block-graph-component/index.js:350
-msgid "Nastavenia súborov na stiahnutie"
-msgstr ""
-
-#: blocks/block-graph-component/index.js:353
-msgid "Súbor na stiahnutie"
-msgstr ""
-
-#: blocks/block-graph-component/index.js:357
-msgid "Názov odkazu"
-msgstr ""
-
-#: blocks/block-graph-component/index.js:359
-msgid "ako CSV (54 kB)"
-msgstr ""
-
-#: blocks/block-graph-component/index.js:364
-msgid "URL odkazu"
-msgstr ""
-
-#: blocks/block-graph-component/index.js:373
-msgid "Vymazať súbor na stiahnutie"
-msgstr ""
-
-#: blocks/block-graph-component/index.js:382
-msgid "Pridať súbor na stiahnutie"
-msgstr ""
-
-#: blocks/block-graph-component/index.js:387
-msgid "Nastavenie zdieľania"
-msgstr ""
-
-#: blocks/block-graph-component/index.js:391
-msgid "Povolené"
-msgstr ""
-
-#: blocks/block-graph-component/index.js:391
-msgid "Zakázané"
-msgstr ""
-
-#: blocks/block-graph-component/index.js:404
-msgid "Nadpis grafového komponentu"
-msgstr ""
-
-#: blocks/block-graph-component/index.js:431
-msgid "Súhrnný popis grafového komponentu"
-msgstr ""
-
-#: blocks/block-graph-component/index.js:479
-msgid "Metodika"
-msgstr ""
-
-#: blocks/block-graph-component/index.js:500
-msgid "Podrobný popis metodiky"
-msgstr ""
-
-#: blocks/block-graph-component/index.js:554
-msgid "Zdroj: zdroj grafového prehľadu"
+#: blocks/block-details/index.js:58
+msgid "Obsah"
 msgstr ""
 
 #: blocks/block-heading/index.js:27
@@ -1031,115 +1421,109 @@ msgstr ""
 msgid "vyhľadávanie"
 msgstr ""
 
-#: blocks/block-intro/index.js:145
-#: blocks/block-intro/index.js:170
-msgid "Bočný panel"
-msgstr ""
-
-#: blocks/block-intro/index.js:155
-#: blocks/block-intro/index.js:179
-msgid "Odkazy bočného panela"
-msgstr ""
-
-#: blocks/block-intro/index.js:198
+#: blocks/block-intro/index.js:166
 msgid "Zobrazenie obsahu"
 msgstr ""
 
-#: blocks/block-intro/index.js:203
+#: blocks/block-intro/index.js:171
 msgid "S vyhľadávaním"
 msgstr ""
 
-#: blocks/block-intro/index.js:203
+#: blocks/block-intro/index.js:171
 msgid "Bez vyhľadávania"
 msgstr ""
 
-#: blocks/block-intro/index.js:210
+#: blocks/block-intro/index.js:178
 msgid "Štýl zobrazenia bočného panelu"
 msgstr ""
 
-#: blocks/block-intro/index.js:214
+#: blocks/block-intro/index.js:182
 msgid "Základné zobrazenie"
 msgstr ""
 
-#: blocks/block-intro/index.js:218
+#: blocks/block-intro/index.js:186
 msgid "Šedé zobrazenie"
 msgstr ""
 
-#: blocks/block-intro/index.js:222
+#: blocks/block-intro/index.js:190
 msgid "Modré zobrazenie"
 msgstr ""
 
-#: blocks/block-intro/index.js:232
+#: blocks/block-intro/index.js:200
 msgid "Odkazy pre vyhľadávanie"
 msgstr ""
 
-#: blocks/block-intro/index.js:233
-#: blocks/block-intro/index.js:237
+#: blocks/block-intro/index.js:201
+#: blocks/block-intro/index.js:205
 msgid "Odkaz 1"
 msgstr ""
 
-#: blocks/block-intro/index.js:238
+#: blocks/block-intro/index.js:206
 msgid "Názov odkazu 1"
 msgstr ""
 
-#: blocks/block-intro/index.js:246
+#: blocks/block-intro/index.js:214
 msgid "URL k odkazu 1"
 msgstr ""
 
-#: blocks/block-intro/index.js:251
-#: blocks/block-intro/index.js:255
+#: blocks/block-intro/index.js:219
+#: blocks/block-intro/index.js:223
 msgid "Odkaz 2"
 msgstr ""
 
-#: blocks/block-intro/index.js:256
+#: blocks/block-intro/index.js:224
 msgid "Názov odkazu 2"
 msgstr ""
 
-#: blocks/block-intro/index.js:264
+#: blocks/block-intro/index.js:232
 msgid "URL k odkazu 2"
 msgstr ""
 
-#: blocks/block-intro/index.js:269
-#: blocks/block-intro/index.js:273
+#: blocks/block-intro/index.js:237
+#: blocks/block-intro/index.js:241
 msgid "Odkaz 3"
 msgstr ""
 
-#: blocks/block-intro/index.js:274
+#: blocks/block-intro/index.js:242
 msgid "Názov odkazu 3"
 msgstr ""
 
-#: blocks/block-intro/index.js:282
+#: blocks/block-intro/index.js:250
 msgid "URL k odkazu 3"
 msgstr ""
 
-#: blocks/block-intro/index.js:287
-#: blocks/block-intro/index.js:291
+#: blocks/block-intro/index.js:255
+#: blocks/block-intro/index.js:259
 msgid "Odkaz 4"
 msgstr ""
 
-#: blocks/block-intro/index.js:292
+#: blocks/block-intro/index.js:260
 msgid "Názov odkazu 4"
 msgstr ""
 
-#: blocks/block-intro/index.js:300
+#: blocks/block-intro/index.js:268
 msgid "URL k odkazu 4"
 msgstr ""
 
-#: blocks/block-intro/index.js:305
-#: blocks/block-intro/index.js:309
+#: blocks/block-intro/index.js:273
+#: blocks/block-intro/index.js:277
 msgid "Odkaz 5"
 msgstr ""
 
-#: blocks/block-intro/index.js:310
+#: blocks/block-intro/index.js:278
 msgid "Názov odkazu 5"
 msgstr ""
 
-#: blocks/block-intro/index.js:318
+#: blocks/block-intro/index.js:286
 msgid "URL k odkazu 5"
 msgstr ""
 
-#: blocks/block-intro/index.js:363
-msgid "Hľadáte toto?"
+#: blocks/block-intro/index.js:381
+msgid "Bočný panel"
+msgstr ""
+
+#: blocks/block-intro/index.js:390
+msgid "Odkazy bočného panela"
 msgstr ""
 
 #: blocks/block-lists/index.js:27
@@ -1211,6 +1595,10 @@ msgstr ""
 msgid "Mapový komponent použite, keď chcete používateľom zobrazovať nejaký jav vzťahujúci sa k priestoru (napr. počet zaočkovaných proti COVID-19 na Slovensku v krajoch)."
 msgstr ""
 
+#: blocks/block-map-component/index.js:33
+msgid "komponent"
+msgstr ""
+
 #: blocks/block-map-component/index.js:34
 msgid "mapový komponent"
 msgstr ""
@@ -1273,6 +1661,161 @@ msgstr ""
 
 #: blocks/block-map-component/index.js:358
 msgid "Zdroj: zdroj mapového prehľadu"
+msgstr ""
+
+#: blocks/block-separator/index.js:23
+msgid "Oddeľovač"
+msgstr ""
+
+#: blocks/block-separator/index.js:24
+msgid "Oddeľovač použite vtedy, keď chcete vizuálne oddeliť jednotlivé časti obsahu na stránke."
+msgstr ""
+
+#: blocks/block-separator/index.js:28
+msgid "separator"
+msgstr ""
+
+#: blocks/block-separator/index.js:29
+msgid "oddelovac"
+msgstr ""
+
+#: blocks/block-separator/index.js:51
+msgid "Nastavenia oddeľovača"
+msgstr ""
+
+#: blocks/block-separator/index.js:56
+msgid "Skrytý na mobilných zariadeniach"
+msgstr ""
+
+#: blocks/block-separator/index.js:56
+msgid "Stále viditeľný"
+msgstr ""
+
+#: blocks/block-separator/index.js:62
+#: blocks/grid-column/index.js:192
+#: blocks/grid-container/index.js:138
+#: blocks/grid-row/index.js:142
+msgid "Odsadenie zdola"
+msgstr ""
+
+#: blocks/block-separator/index.js:66
+#: blocks/grid-column/index.js:148
+#: blocks/grid-column/index.js:200
+#: blocks/grid-column/index.js:252
+#: blocks/grid-column/index.js:304
+#: blocks/grid-container/index.js:94
+#: blocks/grid-container/index.js:142
+#: blocks/grid-row/index.js:98
+#: blocks/grid-row/index.js:150
+msgid "0px"
+msgstr ""
+
+#: blocks/block-separator/index.js:70
+#: blocks/grid-column/index.js:152
+#: blocks/grid-column/index.js:204
+#: blocks/grid-column/index.js:256
+#: blocks/grid-column/index.js:308
+#: blocks/grid-container/index.js:98
+#: blocks/grid-container/index.js:146
+#: blocks/grid-row/index.js:102
+#: blocks/grid-row/index.js:154
+msgid "5px"
+msgstr ""
+
+#: blocks/block-separator/index.js:74
+#: blocks/grid-column/index.js:156
+#: blocks/grid-column/index.js:208
+#: blocks/grid-column/index.js:260
+#: blocks/grid-column/index.js:312
+#: blocks/grid-container/index.js:102
+#: blocks/grid-container/index.js:150
+#: blocks/grid-row/index.js:106
+#: blocks/grid-row/index.js:158
+msgid "10px"
+msgstr ""
+
+#: blocks/block-separator/index.js:78
+#: blocks/grid-column/index.js:160
+#: blocks/grid-column/index.js:212
+#: blocks/grid-column/index.js:264
+#: blocks/grid-column/index.js:316
+#: blocks/grid-container/index.js:106
+#: blocks/grid-container/index.js:154
+#: blocks/grid-row/index.js:110
+#: blocks/grid-row/index.js:162
+msgid "15px"
+msgstr ""
+
+#: blocks/block-separator/index.js:82
+#: blocks/grid-column/index.js:164
+#: blocks/grid-column/index.js:216
+#: blocks/grid-column/index.js:268
+#: blocks/grid-column/index.js:320
+#: blocks/grid-container/index.js:110
+#: blocks/grid-container/index.js:158
+#: blocks/grid-row/index.js:114
+#: blocks/grid-row/index.js:166
+msgid "20px"
+msgstr ""
+
+#: blocks/block-separator/index.js:86
+#: blocks/grid-column/index.js:168
+#: blocks/grid-column/index.js:220
+#: blocks/grid-column/index.js:272
+#: blocks/grid-column/index.js:324
+#: blocks/grid-container/index.js:114
+#: blocks/grid-container/index.js:162
+#: blocks/grid-row/index.js:118
+#: blocks/grid-row/index.js:170
+msgid "25px"
+msgstr ""
+
+#: blocks/block-separator/index.js:90
+#: blocks/grid-column/index.js:172
+#: blocks/grid-column/index.js:224
+#: blocks/grid-column/index.js:276
+#: blocks/grid-column/index.js:328
+#: blocks/grid-container/index.js:118
+#: blocks/grid-container/index.js:166
+#: blocks/grid-row/index.js:122
+#: blocks/grid-row/index.js:174
+msgid "30px"
+msgstr ""
+
+#: blocks/block-separator/index.js:94
+#: blocks/grid-column/index.js:176
+#: blocks/grid-column/index.js:228
+#: blocks/grid-column/index.js:280
+#: blocks/grid-column/index.js:332
+#: blocks/grid-container/index.js:122
+#: blocks/grid-container/index.js:170
+#: blocks/grid-row/index.js:126
+#: blocks/grid-row/index.js:178
+msgid "40px"
+msgstr ""
+
+#: blocks/block-separator/index.js:98
+#: blocks/grid-column/index.js:180
+#: blocks/grid-column/index.js:232
+#: blocks/grid-column/index.js:284
+#: blocks/grid-column/index.js:336
+#: blocks/grid-container/index.js:126
+#: blocks/grid-container/index.js:174
+#: blocks/grid-row/index.js:130
+#: blocks/grid-row/index.js:182
+msgid "50px"
+msgstr ""
+
+#: blocks/block-separator/index.js:102
+#: blocks/grid-column/index.js:184
+#: blocks/grid-column/index.js:236
+#: blocks/grid-column/index.js:288
+#: blocks/grid-column/index.js:340
+#: blocks/grid-container/index.js:130
+#: blocks/grid-container/index.js:178
+#: blocks/grid-row/index.js:134
+#: blocks/grid-row/index.js:186
+msgid "60px"
 msgstr ""
 
 #: blocks/block-stepper-banner/index.js:17
@@ -1560,122 +2103,6 @@ msgstr ""
 #: blocks/grid-row/index.js:94
 #: blocks/grid-row/index.js:146
 msgid "Bez odsadenia"
-msgstr ""
-
-#: blocks/grid-column/index.js:148
-#: blocks/grid-column/index.js:200
-#: blocks/grid-column/index.js:252
-#: blocks/grid-column/index.js:304
-#: blocks/grid-container/index.js:94
-#: blocks/grid-container/index.js:142
-#: blocks/grid-row/index.js:98
-#: blocks/grid-row/index.js:150
-msgid "0px"
-msgstr ""
-
-#: blocks/grid-column/index.js:152
-#: blocks/grid-column/index.js:204
-#: blocks/grid-column/index.js:256
-#: blocks/grid-column/index.js:308
-#: blocks/grid-container/index.js:98
-#: blocks/grid-container/index.js:146
-#: blocks/grid-row/index.js:102
-#: blocks/grid-row/index.js:154
-msgid "5px"
-msgstr ""
-
-#: blocks/grid-column/index.js:156
-#: blocks/grid-column/index.js:208
-#: blocks/grid-column/index.js:260
-#: blocks/grid-column/index.js:312
-#: blocks/grid-container/index.js:102
-#: blocks/grid-container/index.js:150
-#: blocks/grid-row/index.js:106
-#: blocks/grid-row/index.js:158
-msgid "10px"
-msgstr ""
-
-#: blocks/grid-column/index.js:160
-#: blocks/grid-column/index.js:212
-#: blocks/grid-column/index.js:264
-#: blocks/grid-column/index.js:316
-#: blocks/grid-container/index.js:106
-#: blocks/grid-container/index.js:154
-#: blocks/grid-row/index.js:110
-#: blocks/grid-row/index.js:162
-msgid "15px"
-msgstr ""
-
-#: blocks/grid-column/index.js:164
-#: blocks/grid-column/index.js:216
-#: blocks/grid-column/index.js:268
-#: blocks/grid-column/index.js:320
-#: blocks/grid-container/index.js:110
-#: blocks/grid-container/index.js:158
-#: blocks/grid-row/index.js:114
-#: blocks/grid-row/index.js:166
-msgid "20px"
-msgstr ""
-
-#: blocks/grid-column/index.js:168
-#: blocks/grid-column/index.js:220
-#: blocks/grid-column/index.js:272
-#: blocks/grid-column/index.js:324
-#: blocks/grid-container/index.js:114
-#: blocks/grid-container/index.js:162
-#: blocks/grid-row/index.js:118
-#: blocks/grid-row/index.js:170
-msgid "25px"
-msgstr ""
-
-#: blocks/grid-column/index.js:172
-#: blocks/grid-column/index.js:224
-#: blocks/grid-column/index.js:276
-#: blocks/grid-column/index.js:328
-#: blocks/grid-container/index.js:118
-#: blocks/grid-container/index.js:166
-#: blocks/grid-row/index.js:122
-#: blocks/grid-row/index.js:174
-msgid "30px"
-msgstr ""
-
-#: blocks/grid-column/index.js:176
-#: blocks/grid-column/index.js:228
-#: blocks/grid-column/index.js:280
-#: blocks/grid-column/index.js:332
-#: blocks/grid-container/index.js:122
-#: blocks/grid-container/index.js:170
-#: blocks/grid-row/index.js:126
-#: blocks/grid-row/index.js:178
-msgid "40px"
-msgstr ""
-
-#: blocks/grid-column/index.js:180
-#: blocks/grid-column/index.js:232
-#: blocks/grid-column/index.js:284
-#: blocks/grid-column/index.js:336
-#: blocks/grid-container/index.js:126
-#: blocks/grid-container/index.js:174
-#: blocks/grid-row/index.js:130
-#: blocks/grid-row/index.js:182
-msgid "50px"
-msgstr ""
-
-#: blocks/grid-column/index.js:184
-#: blocks/grid-column/index.js:236
-#: blocks/grid-column/index.js:288
-#: blocks/grid-column/index.js:340
-#: blocks/grid-container/index.js:130
-#: blocks/grid-container/index.js:178
-#: blocks/grid-row/index.js:134
-#: blocks/grid-row/index.js:186
-msgid "60px"
-msgstr ""
-
-#: blocks/grid-column/index.js:192
-#: blocks/grid-container/index.js:138
-#: blocks/grid-row/index.js:142
-msgid "Odsadenie zdola"
 msgstr ""
 
 #: blocks/grid-column/index.js:244
