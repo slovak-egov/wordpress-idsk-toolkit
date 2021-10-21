@@ -1,26 +1,3 @@
-.govuk-grid-column-two-thirds {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 0 15px;
-}
-@media (min-width: 40.0625em) {
-    .govuk-grid-column-two-thirds {
-        width: 66.6666%;
-        float: left;
-    }
-}
-.govuk-grid-column-one-third {
-    box-sizing: border-box;
-    width: 100%;
-    padding: 0 15px;
-}
-@media (min-width: 40.0625em) {
-    .govuk-grid-column-one-third {
-        width: 33.3333%;
-        float: left;
-    }
-}
-
 .idsk-related-content__line {
     background-color: #003078;
     height: 2px;
