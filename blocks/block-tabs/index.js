@@ -101,8 +101,8 @@ registerBlockType('idsk/tabs', {
                     </PanelBody>
                 </InspectorControls>
 
-                <div class="govuk-tabs" data-module="govuk-tabs">
-                    <h2 class="govuk-tabs__title">{heading}</h2>
+                <div class="idsk-tabs" data-module="idsk-tabs">
+                    <h2 class="idsk-tabs__title">{heading}</h2>
                     <InnerBlocks allowedBlocks={ALLOWED_BLOCKS} />
                 </div>
             </div>;

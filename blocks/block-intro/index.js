@@ -183,12 +183,12 @@ registerBlockType('idsk/intro', {
                                         value: 'default' 
                                     },
                                     { 
-                                        label: __('Šedé zobrazenie', 'idsk-toolkit'),
-                                        value: 'app-pane-grey' 
-                                    },
-                                    { 
                                         label: __('Modré zobrazenie', 'idsk-toolkit'),
                                         value: 'app-pane-blue' 
+                                    },
+                                    { 
+                                        label: __('Transparentné zobrazenie', 'idsk-toolkit'),
+                                        value: 'app-pane-transparent' 
                                     },
                                 ] }
                                 onChange={ ( option ) => { setAttributes( { sideStyle: option } ) } }

@@ -31,18 +31,20 @@ function idsktk_render_dynamic_tabs_block($attributes, $content) {
     ob_start(); // Turn on output buffering
     ?>
 
-    <div class="govuk-tabs" data-module="govuk-tabs">
-        <h2 class="govuk-tabs__title"><?php echo $mainHeading; ?></h2>
+    <div class="idsk-tabs" data-module="idsk-tabs">
+        <h2 class="idsk-tabs__title"><?php echo $mainHeading; ?></h2>
         
-        <ul class="govuk-tabs__list">
+        <ul class="idsk-tabs__list">
             <?php foreach ($headings as $i=>$heading) { ?>
-                <li class="govuk-tabs__list-item">
-                    <a class="govuk-tabs__tab" href="<?php echo '#tab-'.$blockIds[$i] ?>"><?php echo $heading; ?></a>
+                <li class="idsk-tabs__list-item <?php $i == 0 ? 'idsk-tabs__list-item--selected' : '' ?>">
+                    <a class="idsk-tabs__tab" href="<?php echo '#tid-'.$blockIds[$i] ?>" item="<?php echo $i ?>" title="<?php echo $heading; ?>"><?php echo $heading; ?></a>
                 </li>
             <?php } ?>
         </ul>
 
-        <?php echo $content; ?>
+        <ul class="idsk-tabs__list--mobile" role="tablist">
+            <?php echo $content; ?>
+        </ul>
     </div>
 
     <?php
