@@ -36,6 +36,9 @@ registerBlockType('idsk/tab', {
         },
         blockId: {
             type: 'string'
+        },
+        tabItem: {
+            type: 'string'
         }
     },
      
@@ -58,6 +61,7 @@ registerBlockType('idsk/tab', {
                 parentBlockIds.map((blockId, index) => {
                     if (blockId == this.props.attributes.blockId) {
                         onPosition = index
+                        this.props.setAttributes({ tabItem: onPosition })
                     }
                 })
 
@@ -85,15 +89,21 @@ registerBlockType('idsk/tab', {
                     </PanelBody>
                 </InspectorControls>
 
-                <ul class="govuk-tabs__list">
-                    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
+                <ul class="idsk-tabs__list">
+                    <li class="idsk-tabs__list-item idsk-tabs__list-item--selected">
                         {heading}
                     </li>
                 </ul>
 
-                <section class="govuk-tabs__panel">
-                    <InnerBlocks />
-                </section>
+                <ul class="idsk-tabs__list--mobile" role="tablist">
+                    <li class="idsk-tabs__list-item--mobile" role="presentation">
+                        <section class="idsk-tabs__panel">
+                            <div class="idsk-tabs__panel-content">
+                                <InnerBlocks />
+                            </div>
+                        </section>
+                    </li>
+                </ul>
 
             </div>;
         }

@@ -123,6 +123,17 @@
 
 /* search */
 .idsk-search-component {
+    margin-bottom: 30px;
+}
+
+@media (min-width: 48.0625em) {
+    .idsk-search-component {
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+}
+
+.idsk-search-component {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -270,6 +281,7 @@
     height: 40px !important;
     background-color: #0065b3 !important;
     box-shadow: none !important;
+    margin-bottom: 0 !important;
 }
 
 .govuk-button::before {
@@ -428,9 +440,19 @@
     }
 }
 
+.idsk-intro-block__side-menu {
+    padding: 20px;
+}
+
 @media (min-width: 48.0625em) {
     .idsk-intro-block__side-menu {
         margin-left: 50px;
+    }
+}
+
+@media (min-width: 48.0625em) {
+    .idsk-intro-block__side-menu {
+        background-color: #dee0e2;
     }
 }
 
@@ -444,6 +466,10 @@
 
 .app-pane-blue * {
     color: #ffffff !important;
+}
+
+.app-pane-transparent {
+    background-color: transparent;
 }
 
 @media (min-width: 48.0625em) {
