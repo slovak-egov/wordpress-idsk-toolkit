@@ -67,7 +67,7 @@ registerBlockType('idsk/related-content', {
                     className="idsk-related-content__heading govuk-heading-s"
                     key="editable"
                     tagName="h4"
-                    placeholder={__('Súvisiace témy (⅔)', 'idsk-toolkit')}
+                    placeholder={__('Súvisiace témy', 'idsk-toolkit')}
                     value={title}
                     onChange={value => onChange('title', value)} />
                 <RichText
