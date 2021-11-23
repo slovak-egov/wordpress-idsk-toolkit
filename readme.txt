@@ -28,6 +28,13 @@ Soon.
 
 == Changelog ==
 
+= 1.6.0 =
+* Pridanie funkcionality cookies
+* Zmena nastavení štýlu zobrazenia bočného panela v komponente Úvodný blok
+* Aktualizácia komponentu Záložky na novšiu verziu
+* Odstránenie nastavení rozloženia komponentu Súvisiaci obsah
+* Odstránenie vlastných článkov - Aktuality inštitúcií
+
 = 1.5.0 =
 * Aktualizácia komponentov k ID-SK 2.6.2
 * Doplnenie vzorov stránok
@@ -86,6 +93,13 @@ Soon.
 
 == Upgrade Notice ==
 
+= 1.6.0 =
+* Doplnenie funkcionality cookies.
+* Zmena nastavení štýlu zobrazenia bočného panela v komponente Úvodný blok.
+* Aktualizácia komponentu Záložky na novšiu verziu.
+* Odstránenie nastavení rozloženia komponentu Súvisiaci obsah.
+* Odstránenie vlastných článkov - Aktuality inštitúcií.
+
 = 1.5.0 =
 * Aktualizácia komponentov k ID-SK 2.6.2
 * Doplnenie vzorov stránok
@@ -127,4 +141,58 @@ Vydanie pluginu pre použitie spoločne s ID-SK témou.
 1. Gutenberg ID-SK komponenty
 2. Gutenberg ID-SK vzory
 3. Podpora nahrávania SVG obrázkov
-4. Vlastné články - Aktuality inštitúcií
+4. Cookies
+
+== Shortcodes & Custom functions ==
+
+= Cookies =
+
+Základné cookies sú automaticky povolené pre vyhľadávacie stroje.
+
+Zobrazenie všetkých aktívnych cookies v tabuľkovom zozname:
+~~~
+[idsk-cookie-list]
+~~~
+
+**Cookies môžete blokovať v textovom editore nasledovne:**
+
+Doplní na stránku obsah v bloku ak sú nastavené základné cookies:
+~~~
+[idsk-cookie]Your content[/idsk-cookie]
+~~~
+
+Doplní na stránku obsah v bloku ak sú prijaté cookies so špecifickým ID:
+~~~
+[idsk-cookie id="example1"]Your content[/idsk-cookie]
+~~~
+
+**Taktiež môžete blokovať cookies v PHP nasledovne:**
+
+Doplní na stránku obsah ak sú nastavené základné cookies:
+~~~
+if ( function_exists('idsktk_cookies_allowed') && idsktk_cookies_allowed() ) {
+    // Your code
+}
+~~~
+
+Doplní na stránku obsah ak sú prijaté cookies so špecifickým ID:
+~~~
+if ( function_exists('idsktk_cookies_allowed') && idsktk_cookies_allowed('example1') ) {
+    // Your code
+}
+~~~
+
+**Stránka s nastaveniami cookies a pridanie vlastných cookies**
+
+Pridanie začiarkavacieho políčka s povolením cookies:
+~~~
+[idsk-cookie-allow id="example1" title="Cookie name/Cookie category name"]
+Cookie details
+[/idsk-cookie-allow]
+~~~
+* Ak nieje uvedené ID, zobrazí sa začiarkavacie políčko pre základné cookies
+
+Pridanie tlačidla pre uloženie nastavení cookies. Tlačidlo je potrebné umiestniť na rovnakú stránku ako začiarkavacie políčka s povolením cookies.
+~~~
+[idsk-cookie-submit title="Save settings"]
+~~~
