@@ -186,9 +186,7 @@ if ( function_exists('idsktk_cookies_allowed') && idsktk_cookies_allowed('exampl
 
 Pridanie začiarkavacieho políčka s povolením cookies:
 ~~~
-[idsk-cookie-allow id="example1" title="Cookie name/Cookie category name"]
-Cookie details
-[/idsk-cookie-allow]
+[idsk-cookie-allow id="example1" title="Cookie name/Cookie category name"]Cookie details[/idsk-cookie-allow]
 ~~~
 * Ak nieje uvedené ID, zobrazí sa začiarkavacie políčko pre základné cookies
 

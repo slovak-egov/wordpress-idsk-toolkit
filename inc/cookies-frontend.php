@@ -201,13 +201,8 @@ function idsktk_cookies_allowed( $name = '', $value = '' ) {
 
     if ( isset( $_COOKIE[$cname] ) || $idskCookie ) {
         if ( $value != '') {
-            if ( $_COOKIE[$cname] == $value ) {
-                return true;
-            } else {
-                return false;
-            }
+            return $_COOKIE[$cname] == $value ? true : false;
         }
-
         return true;
     } else {
         return false;
