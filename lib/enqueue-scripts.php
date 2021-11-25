@@ -40,7 +40,7 @@ add_action('enqueue_block_editor_assets', 'idsktk_enqueue_block_assets');
 
 /**
  * Enqueue JavaScript and CSS
- * for template
+ * for template.
  */
 function idsktk_register_template_scripts () {
 
@@ -51,3 +51,27 @@ function idsktk_register_template_scripts () {
 }
 
 add_action( 'wp_enqueue_scripts', 'idsktk_register_template_scripts' );
+
+/**
+ * Enqueue JavaScript
+ * for cookies.
+ */
+function idsktk_cookies_script() {
+  global $idskCookie;
+
+  $theme_version = wp_get_theme()->get( 'Version' );
+
+  if ( idsktk_is_search_engine() ) {
+    $idskCookie = 1;
+  }
+
+  $idskCookieData = array(
+    'cookieSet'     => ( $idskCookie || idsktk_cookies_allowed() ),
+    'cookieExpire'  => idsktk_cookie_expire()
+  );
+
+  wp_enqueue_script( 'idsk-js-cookies', plugin_dir_url(__DIR__).'assets/js/cookies.js', array(), $theme_version, TRUE );
+  wp_localize_script( 'idsk-js-cookies', 'idsk_cookie_data', $idskCookieData );
+}
+
+add_action( 'wp_enqueue_scripts', 'idsktk_cookies_script' );

@@ -2,14 +2,14 @@
 # This file is distributed under the GPL v2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: ID-SK Toolkit 1.5.1.1\n"
+"Project-Id-Version: ID-SK Toolkit 1.5.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/idsk-toolkit\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-11-04T10:28:00+01:00\n"
+"POT-Creation-Date: 2021-11-23T22:15:15+01:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.5.0\n"
 "X-Domain: idsk-toolkit\n"
@@ -128,12 +128,24 @@ msgstr ""
 msgid "Zatvoriť všetko"
 msgstr ""
 
-#: inc/custom-shortcodes.php:133
-msgid "od"
+#: inc/cookies-frontend.php:58
+msgid "Nevyhnutne nutné súbory cookie"
 msgstr ""
 
-#: inc/custom-shortcodes.php:134
-msgid "do"
+#: inc/cookies-frontend.php:88
+msgid "Uložiť nastavenia"
+msgstr ""
+
+#: inc/cookies-frontend.php:101
+msgid "Aktívne cookies"
+msgstr ""
+
+#: inc/cookies-frontend.php:104
+msgid "Názov"
+msgstr ""
+
+#: inc/cookies-frontend.php:105
+msgid "Hodnota"
 msgstr ""
 
 #: inc/register-blocks.php:73
@@ -736,123 +748,59 @@ msgstr ""
 msgid "Zobrazuje veľké vyhľadávanie alebo malé pri filtroch"
 msgstr ""
 
-#: toolkit.php:44
-msgctxt "Post Type General Name"
-msgid "Aktuality inštitúcií"
+#: lib/template-customizer.php:74
+msgid "Cookies"
 msgstr ""
 
-#: toolkit.php:45
-msgctxt "Post Type Singular Name"
-msgid "Aktuality inštitúcií"
+#: lib/template-customizer.php:93
+msgid "Povoliť cookies a zobrazenie cookies bannera"
 msgstr ""
 
-#: toolkit.php:46
-#: toolkit.php:47
-#: toolkit.php:65
-#: toolkit.php:66
-msgid "Aktuality inštitúcií"
+#: lib/template-customizer.php:110
+msgid "Dĺžka platnosti cookies"
 msgstr ""
 
-#: toolkit.php:48
-#: toolkit.php:95
-msgid "Zobraziť všetky"
+#: lib/template-customizer.php:129
+msgid "Dní"
 msgstr ""
 
-#: toolkit.php:49
-#: toolkit.php:50
-#: toolkit.php:51
-#: toolkit.php:97
-msgid "Pridať nový"
+#: lib/template-customizer.php:130
+msgid "Mesiacov"
 msgstr ""
 
-#: toolkit.php:52
-msgid "Editovať"
+#: lib/template-customizer.php:145
+msgid "Nadpis bannera"
 msgstr ""
 
-#: toolkit.php:53
-#: toolkit.php:99
-msgid "Aktualizovať"
+#: lib/template-customizer.php:162
+msgid "Textový obsah banera"
 msgstr ""
 
-#: toolkit.php:54
-#: toolkit.php:55
-#: toolkit.php:100
-msgid "Zobraziť"
+#: lib/template-customizer.php:182
+msgid "Zobraziť tlačidlá pre povolenie všetkých cookies"
 msgstr ""
 
-#: toolkit.php:56
-msgid "Hľadať"
+#: lib/template-customizer.php:196
+msgid "Vlastný text po prijatí cookies"
 msgstr ""
 
-#: toolkit.php:57
-#: toolkit.php:103
-#: toolkit.php:104
-msgid "Nenájdený"
+#: lib/template-customizer.php:213
+msgid "Vlastný text po odmietnutí cookies"
 msgstr ""
 
-#: toolkit.php:58
-msgid "Nenájdený v koši"
-msgstr ""
-
-#: toolkit.php:59
-msgid "Obrázok"
-msgstr ""
-
-#: toolkit.php:60
-msgid "Vložiť obrázok"
-msgstr ""
-
-#: toolkit.php:61
-msgid "Vymazať obrázok"
+#: lib/template-customizer.php:230
+msgid "URL stránky s nastaveniami cookies"
 msgstr ""
 
 #: toolkit.php:62
-msgid "Použiť obrázok"
-msgstr ""
-
-#: toolkit.php:92
-msgctxt "Taxonomy General Name"
-msgid "Kategórie aktualít"
-msgstr ""
-
-#: toolkit.php:93
-msgctxt "Taxonomy Singular Name"
-msgid "Kategórie"
-msgstr ""
-
-#: toolkit.php:94
-msgid "Kategórie aktualít"
-msgstr ""
-
-#: toolkit.php:96
-msgid "Názov"
-msgstr ""
-
-#: toolkit.php:98
-msgid "Upraviť"
-msgstr ""
-
-#: toolkit.php:101
-msgid "Pridať alebo zmazať"
-msgstr ""
-
-#: toolkit.php:102
-msgid "Vyhľadať"
-msgstr ""
-
-#: toolkit.php:105
-msgid "Zoznam"
-msgstr ""
-
-#: toolkit.php:145
 msgid "Tlačidlo späť"
 msgstr ""
 
-#: toolkit.php:163
+#: toolkit.php:80
 msgid "Text pre tlačidlo späť"
 msgstr ""
 
-#: toolkit.php:168
+#: toolkit.php:85
 msgid "URL pre tlačidlo späť (ak ostane prázdne, späť sa nezobrazí)"
 msgstr ""
 
