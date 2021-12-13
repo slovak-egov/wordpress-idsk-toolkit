@@ -31,3 +31,4 @@ import './block-tabs';
 import './grid-container';
 import './block-stepper-banner';
 import './block-separator';
+import './block-posts';

@@ -50,27 +50,7 @@ function idsktk_register_patterns() {
                                 
                                 <!-- wp:idsk/separator {"separatorType":false} /-->
                                 
-                                <!-- wp:idsk/heading {"headingType":"h2","headingClass":"l","headingText":"' . esc_attr__('Aktuality', 'idsk-toolkit') . '"} /-->
-                                
-                                <!-- wp:idsk/row -->
-                                <div class="wp-block-idsk-row"><div class="govuk-grid-row   "><div class="wp-block-idsk-row"><!-- wp:idsk/column {"classShort":"full"} -->
-                                <div class="wp-block-idsk-column"><div class="govuk-grid-column-full"><div class="    "><!-- wp:idsk/card {"cardType":"hero","img":"","imgAlt":"' . esc_attr__('Demo obrázok', 'idsk-toolkit') . '","imgLink":"#","title":"' . esc_html__('\u003ca href=\u0022#\u0022\u003eHlavná aktualita\u003c/a\u003e', 'idsk-toolkit') . '","subTitle":"' . esc_html__('Lorem ipsum dolor sit amet, consenctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'idsk-toolkit') . '","dateVisible":true,"date":"2021-09-01T15:36:00","dateLink":"#","tags":[{"id":"rdzY8eaOkqq6wDu1jJynF","text":"' . esc_attr__('Tag 1', 'idsk-toolkit') . '","url":"#"},{"id":"BWwAzN50sxGsFxb2J7kwu","text":"' . esc_attr__('Tag 2', 'idsk-toolkit') . '","url":"#"}]} /--></div></div></div>
-                                <!-- /wp:idsk/column --></div></div></div>
-                                <!-- /wp:idsk/row -->
-                                
-                                <!-- wp:idsk/row -->
-                                <div class="wp-block-idsk-row"><div class="govuk-grid-row   "><div class="wp-block-idsk-row"><!-- wp:idsk/column {"classShort":"one-third","className":"is-style-one-third"} -->
-                                <div class="wp-block-idsk-column is-style-one-third"><div class="govuk-grid-column-one-third"><div class="    "><!-- wp:idsk/card {"cardType":"secondary","img":"","imgAlt":"' . esc_attr__('Demo obrázok', 'idsk-toolkit') . '","imgLink":"#","title":"' . esc_html__('\u003ca href=\u0022#\u0022\u003eĎalšia aktualita\u003c/a\u003e', 'idsk-toolkit') . '","subTitle":"' . esc_html__('Lorem ipsum dolor sit amet, consenctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'idsk-toolkit') . '","dateVisible":true,"date":"2021-09-01T15:38:00","dateLink":"#","tags":[{"id":"iaJ9fNeMM_7ICLCcQpjDz","text":"' . esc_attr__('Tag 1', 'idsk-toolkit') . '","url":"#"},{"id":"fDgQ5wFhdIC4Nj6LhSfw_","text":"' . esc_attr__('Tag 2', 'idsk-toolkit') . '","url":"#"}]} /--></div></div></div>
-                                <!-- /wp:idsk/column -->
-                                
-                                <!-- wp:idsk/column {"classShort":"one-third","className":"is-style-one-third"} -->
-                                <div class="wp-block-idsk-column is-style-one-third"><div class="govuk-grid-column-one-third"><div class="    "><!-- wp:idsk/card {"cardType":"secondary","img":"","imgAlt":"' . esc_attr__('Demo obrázok', 'idsk-toolkit') . '","imgLink":"#","title":"' . esc_html__('\u003ca href=\u0022#\u0022\u003eĎalšia aktualita\u003c/a\u003e', 'idsk-toolkit') . '","subTitle":"' . esc_html__('Lorem ipsum dolor sit amet, consenctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'idsk-toolkit') . '","dateVisible":true,"date":"2021-09-01T15:40:00","dateLink":"#","tags":[{"id":"oNSd1PxMxXzCgihEPr3ES","text":"' . esc_attr__('Tag 1', 'idsk-toolkit') . '","url":"#"},{"id":"hK5FRnyI9QAoe4kYjAfDv","text":"' . esc_attr__('Tag 2', 'idsk-toolkit') . '","url":"#"}]} /--></div></div></div>
-                                <!-- /wp:idsk/column -->
-                                
-                                <!-- wp:idsk/column {"classShort":"one-third","className":"is-style-one-third"} -->
-                                <div class="wp-block-idsk-column is-style-one-third"><div class="govuk-grid-column-one-third"><div class="    "><!-- wp:idsk/card {"cardType":"secondary","img":"","imgAlt":"' . esc_attr__('Demo obrázok', 'idsk-toolkit') . '","imgLink":"#","title":"' . esc_html__('\u003ca href=\u0022#\u0022\u003eĎalšia aktualita\u003c/a\u003e', 'idsk-toolkit') . '","subTitle":"' . esc_html__('Lorem ipsum dolor sit amet, consenctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'idsk-toolkit') . '","dateVisible":true,"date":"2021-09-01T15:43:00","dateLink":"#","tags":[{"id":"8SqArDeJ7_iBIyPx7v657","text":"' . esc_attr__('Tag 1', 'idsk-toolkit') . '","url":"#"},{"id":"-aZsyVmLR1U9hpE32FxdN","text":"' . esc_attr__('Tag 2', 'idsk-toolkit') . '","url":"#"}]} /--></div></div></div>
-                                <!-- /wp:idsk/column --></div></div></div>
-                                <!-- /wp:idsk/row -->
+                                <!-- wp:idsk/posts {"title":"' . esc_attr__('Aktuality', 'idsk-toolkit') . '"} /-->
                                 
                                 <!-- wp:idsk/separator /-->
                                 
@@ -286,27 +266,7 @@ function idsktk_register_patterns() {
                                 
                                 <!-- wp:idsk/separator /-->
                                 
-                                <!-- wp:idsk/heading {"headingType":"h2","headingClass":"l","headingText":"' . esc_attr__('Aktuality', 'idsk-toolkit') . '"} /-->
-                                
-                                <!-- wp:idsk/row -->
-                                <div class="wp-block-idsk-row"><div class="govuk-grid-row   "><div class="wp-block-idsk-row"><!-- wp:idsk/column {"classShort":"full"} -->
-                                <div class="wp-block-idsk-column"><div class="govuk-grid-column-full"><div class="    "><!-- wp:idsk/card {"cardType":"hero","img":"","imgAlt":"' . esc_attr__('Demo obrázok', 'idsk-toolkit') . '","imgLink":"#","title":"' . esc_html__('\u003ca href=\u0022#\u0022\u003eHlavná aktualita\u003c/a\u003e', 'idsk-toolkit') . '","subTitle":"' . esc_html__('Lorem ipsum dolor sit amet, consenctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'idsk-toolkit') . '","dateVisible":true,"date":"2021-09-01T10:58:00","dateLink":"#","tags":[{"id":"IMQDaJHNQoBQNmJGp9C9S","text":"' . esc_attr__('Tag 1', 'idsk-toolkit') . '","url":"#"},{"id":"UaMNgUVRo5iUc9U2R4ctt","text":"' . esc_attr__('Tag 2', 'idsk-toolkit') . '","url":"#"}]} /--></div></div></div>
-                                <!-- /wp:idsk/column --></div></div></div>
-                                <!-- /wp:idsk/row -->
-                                
-                                <!-- wp:idsk/row -->
-                                <div class="wp-block-idsk-row"><div class="govuk-grid-row   "><div class="wp-block-idsk-row"><!-- wp:idsk/column {"classShort":"one-third","className":"is-style-one-third"} -->
-                                <div class="wp-block-idsk-column is-style-one-third"><div class="govuk-grid-column-one-third"><div class="    "><!-- wp:idsk/card {"cardType":"secondary","img":"","imgAlt":"' . esc_attr__('Demo obrázok', 'idsk-toolkit') . '","imgLink":"#","title":"' . esc_html__('\u003ca href=\u0022#\u0022\u003eĎalšia aktualita\u003c/a\u003e', 'idsk-toolkit') . '","subTitle":"' . esc_html__('Lorem ipsum dolor sit amet, consenctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'idsk-toolkit') . '","dateVisible":true,"date":"2021-09-01T11:01:00","dateLink":"#","tags":[{"id":"-nWLcnSGLkmRhNYG9A4NB","text":"' . esc_attr__('Tag 1', 'idsk-toolkit') . '","url":"#"},{"id":"zJ1Q6nI9XQttl7OC3Yo8Y","text":"' . esc_attr__('Tag 2', 'idsk-toolkit') . '","url":"#"}]} /--></div></div></div>
-                                <!-- /wp:idsk/column -->
-                                
-                                <!-- wp:idsk/column {"classShort":"one-third","className":"is-style-one-third"} -->
-                                <div class="wp-block-idsk-column is-style-one-third"><div class="govuk-grid-column-one-third"><div class="    "><!-- wp:idsk/card {"cardType":"secondary","img":"","imgAlt":"' . esc_attr__('Demo obrázok', 'idsk-toolkit') . '","imgLink":"#","title":"' . esc_html__('\u003ca href=\u0022#\u0022\u003eĎalšia aktualita\u003c/a\u003e', 'idsk-toolkit') . '","subTitle":"' . esc_html__('Lorem ipsum dolor sit amet, consenctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'idsk-toolkit') . '","dateVisible":true,"date":"2021-09-01T11:01:00","dateLink":"#","tags":[{"id":"g-_fsl82_wA_pwEUECnee","text":"' . esc_attr__('Tag 1', 'idsk-toolkit') . '","url":"#"},{"id":"_n9vl6Clem2CC-wNoEwJh","text":"' . esc_attr__('Tag 2', 'idsk-toolkit') . '","url":"#"}]} /--></div></div></div>
-                                <!-- /wp:idsk/column -->
-                                
-                                <!-- wp:idsk/column {"classShort":"one-third","className":"is-style-one-third"} -->
-                                <div class="wp-block-idsk-column is-style-one-third"><div class="govuk-grid-column-one-third"><div class="    "><!-- wp:idsk/card {"cardType":"secondary","img":"","imgAlt":"' . esc_attr__('Demo obrázok', 'idsk-toolkit') . '","imgLink":"#","title":"' . esc_html__('\u003ca href=\u0022#\u0022\u003eĎalšia aktualita\u003c/a\u003e', 'idsk-toolkit') . '","subTitle":"' . esc_html__('Lorem ipsum dolor sit amet, consenctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.', 'idsk-toolkit') . '","dateVisible":true,"date":"2021-09-01T11:00:00","dateLink":"#","tags":[{"id":"e3aV4-gwOjZAZKjVoOZNN","text":"' . esc_attr__('Tag 1', 'idsk-toolkit') . '","url":"#"},{"id":"Kv4tnWHZlLmE6iKT994wo","text":"' . esc_attr__('Tag 2', 'idsk-toolkit') . '","url":"#"}]} /--></div></div></div>
-                                <!-- /wp:idsk/column --></div></div></div>
-                                <!-- /wp:idsk/row -->
+                                <!-- wp:idsk/posts {"title":"' . esc_attr__('Aktuality', 'idsk-toolkit') . '"} /-->
                                 
                                 <!-- wp:idsk/separator /-->
                                 

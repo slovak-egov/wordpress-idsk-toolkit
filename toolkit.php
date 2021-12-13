@@ -36,77 +36,8 @@ function idsktk_load_textdomain() {
 }
 add_action( 'init', 'idsktk_load_textdomain' );
 
-/**
- * get values of meta boxes
- *
- * @param $value
- * @return bool|mixed|string
- */
-function idsktk_back_button_get_meta ( $value ) {
-    global $post;
-
-    $field = get_post_meta( $post->ID, $value, TRUE );
-    if ( !empty( $field ) ) {
-        return is_array( $field ) ? stripslashes_deep( $field ) : stripslashes( wp_kses_decode_entities( $field ) );
-    } else {
-        return FALSE;
-    }
-}
-
-/**
- * add metaboxes
- */
-function idsktk_back_button_add_meta_box () {
-    add_meta_box(
-        'idsktk_back_button',
-        __( 'Tlačidlo späť', 'idsk-toolkit' ),
-        'idsktk_back_button_html',
-        'page',
-        'normal',
-        'high'
-    );
-}
-add_action( 'add_meta_boxes', 'idsktk_back_button_add_meta_box' );
-
-/**
- * display metaboxes
- *
- * @param $post
- */
-function idsktk_back_button_html ( $post ) {
-    wp_nonce_field( '_idsktk_back_button_nonce', 'idsktk_back_button_nonce' ); ?>
-
-    <p>
-        <label for="idsktk_back_button_text"><?php esc_html_e( 'Text pre tlačidlo späť', 'idsk-toolkit' ); ?></label>
-        <input type="text" name="idsktk_back_button_text" id="idsktk_back_button_text"
-                value="<?php echo esc_attr( idsktk_back_button_get_meta( 'idsktk_back_button_text' ) ); ?>">
-    </p>
-    <p>
-    <label for="idsktk_back_button_url"><?php esc_html_e( 'URL pre tlačidlo späť (ak ostane prázdne, späť sa nezobrazí)', 'idsk-toolkit' ); ?></label>
-    <input type="text" name="idsktk_back_button_url" id="idsktk_back_button_url"
-            value="<?php echo esc_url( idsktk_back_button_get_meta( 'idsktk_back_button_url' ) ); ?>">
-    </p><?php
-}
-
-/**
- * save metaboxes
- *
- * @param $post_id
- */
-function idsktk_back_button_save ( $post_id ) {
-    if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
-        return;
-    if ( !isset( $_POST['idsktk_back_button_nonce'] ) || !wp_verify_nonce( $_POST['idsktk_back_button_nonce'], '_idsktk_back_button_nonce' ) )
-        return;
-    if ( !current_user_can( 'edit_post', $post_id ) )
-        return;
-
-    if ( isset( $_POST['idsktk_back_button_text'] ) )
-        update_post_meta( $post_id, 'idsktk_back_button_text', esc_attr( $_POST['idsktk_back_button_text'] ) );
-    if ( isset( $_POST['idsktk_back_button_url'] ) )
-        update_post_meta( $post_id, 'idsktk_back_button_url', esc_url( $_POST['idsktk_back_button_url'] ) );
-}
-add_action( 'save_post', 'idsktk_back_button_save' );
+// Custom metaboxes
+require plugin_dir_path(__FILE__) . '/inc/register-meta.php';
 
 // Customizer options
 require plugin_dir_path(__FILE__) . '/lib/template-customizer.php';
@@ -143,14 +74,14 @@ add_action( 'rest_api_init', 'idsktk_rest_api_init' );
  * Custom search properties
  */
 // Custom search query vars
-function idsk_query_vars( $qvars ) {
+function idsktk_query_vars( $qvars ) {
     $qvars[] = 'scat';
     $qvars[] = 'tags';
     $qvars[] = 'datum-od';
     $qvars[] = 'datum-do';
     return $qvars;
 }
-add_filter( 'query_vars', 'idsk_query_vars' );
+add_filter( 'query_vars', 'idsktk_query_vars' );
 
 /**
  * Custom search
@@ -264,9 +195,9 @@ function idsktk_advanced_search_query( $query ) {
 add_action( 'pre_get_posts', 'idsktk_advanced_search_query' );
 
 // Add backend styles for Gutenberg.
-add_action('enqueue_block_editor_assets', 'gutenberg_editor_assets');
+add_action('enqueue_block_editor_assets', 'idsktk_gutenberg_editor_assets');
 
-function gutenberg_editor_assets() {
+function idsktk_gutenberg_editor_assets() {
     // Load the theme styles within Gutenberg.
     wp_enqueue_style('my-gutenberg-editor-styles', plugin_dir_url(__FILE__).'/assets/css/gutenberg-editor-styles.css', FALSE);
 }

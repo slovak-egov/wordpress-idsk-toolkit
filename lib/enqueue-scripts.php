@@ -20,6 +20,13 @@ function idsktk_enqueue_block_assets() {
     $deps,
     null
   );
+  wp_localize_script(
+    'idsk/blocks-js',
+    'pluginData',
+    array(
+      'dir' => plugin_dir_url(__DIR__)
+    )
+  );
 
   // Enqueue optional editor-only styles
   wp_enqueue_style(
@@ -75,3 +82,19 @@ function idsktk_cookies_script() {
 }
 
 add_action( 'wp_enqueue_scripts', 'idsktk_cookies_script' );
+
+/**
+ * Enqueue JavaScript
+ * for admin.
+ * 
+ * @param int $hook Hook suffix for the current admin page.
+ */
+function idsktk_admin_enqueue_scripts( $hook ) {
+  if ( $hook != 'post.php' && $hook != 'post-new.php' ) {
+    return;
+  }
+
+  wp_enqueue_script( 'idsk-js-meta-boxes', plugin_dir_url(__DIR__).'assets/js/meta-boxes.js', array (), null, TRUE );
+}
+
+add_action( 'admin_enqueue_scripts', 'idsktk_admin_enqueue_scripts' );
