@@ -20,6 +20,9 @@ Pre viac informácií o jednotlivých komponentoch a spôsoboch ich použitia na
 ID-SK Toolkit WordPress plugin, Copyright 2021 Slovensko IT, a.s..
 ID-SK is distributed under the terms of the GNU GPLv2 or later and under the terms of [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)
 
+== Resources ==
+Unless otherwise specified, all the plugin images are created by us and licensed under the same license as the plugin is.
+
 == Frequently Asked Questions ==
 
 = When FAQ will be availiable? =
@@ -30,10 +33,15 @@ Soon.
 
 = 1.6.0 =
 * Pridanie funkcionality cookies
+* Pridanie nových polí pre články
+* Doplnenie nového komponentu
+ * Články
 * Zmena nastavení štýlu zobrazenia bočného panela v komponente Úvodný blok
 * Aktualizácia komponentu Záložky na novšiu verziu
 * Odstránenie nastavení rozloženia komponentu Súvisiaci obsah
 * Odstránenie vlastných článkov - Aktuality inštitúcií
+
+Z dôvodu úpravy logiky metaboxov je potrebné pri stránkach aktualizovať odkaz na stránku späť.
 
 = 1.5.0 =
 * Aktualizácia komponentov k ID-SK 2.6.2
@@ -95,10 +103,15 @@ Soon.
 
 = 1.6.0 =
 * Doplnenie funkcionality cookies.
+* Doplnenie nových polí pre články.
+* Doplnenie nového komponentu.
+ * Články
 * Zmena nastavení štýlu zobrazenia bočného panela v komponente Úvodný blok.
 * Aktualizácia komponentu Záložky na novšiu verziu.
 * Odstránenie nastavení rozloženia komponentu Súvisiaci obsah.
 * Odstránenie vlastných článkov - Aktuality inštitúcií.
+
+Z dôvodu úpravy logiky metaboxov je potrebné pri stránkach aktualizovať odkaz na stránku späť.
 
 = 1.5.0 =
 * Aktualizácia komponentov k ID-SK 2.6.2

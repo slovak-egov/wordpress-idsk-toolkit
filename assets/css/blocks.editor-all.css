@@ -545,8 +545,8 @@
 
 @media (min-width: 48.0625em) {
     .govuk-grid-column-two-thirds-from-desktop {
-        width: 66.6666%;
-        float: left;
+        width: 66.6666% !important;
+        float: left !important;
     }
 }
 
@@ -939,7 +939,7 @@
 }
 
 .idsk-intro-block__side-menu {
-    padding: 20px;
+    padding: 20px !important;
 }
 
 @media (min-width: 48.0625em) {
@@ -4356,6 +4356,255 @@ div[data-type="idsk/column"] > .block-editor-inner-blocks > .block-editor-block-
 @media (min-width: 40.0625em) {
     .govuk-\!-margin-bottom-9 {
         margin-bottom: 60px !important;
+    }
+}
+.govuk-heading-l, .app-prose-scope h2 {
+    color: #0b0c0c;
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 24px;
+    font-size: 1.5rem;
+    line-height: 1.04167;
+    display: block;
+    margin-top: 0;
+    margin-bottom: 20px;
+}
+@media (min-width: 40.0625em) {
+    .govuk-heading-l, .app-prose-scope h2 {
+        font-size: 36px;
+        font-size: 2.25rem;
+        line-height: 1.11111;
+    }
+}
+@media (min-width: 40.0625em) {
+    .govuk-heading-l, .app-prose-scope h2 {
+        margin-bottom: 30px;
+    }
+}
+
+.govuk-grid-row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.govuk-grid-row:after {
+    content: "";
+    display: block;
+    clear: both;
+}
+.govuk-grid-column-full {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 15px;
+}
+@media (min-width: 40.0625em) {
+    .govuk-grid-column-full {
+        width: 100%;
+        float: left;
+    }
+}
+.govuk-grid-column-one-third {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 15px;
+}
+@media (min-width: 40.0625em) {
+    .govuk-grid-column-one-third {
+        width: 33.3333%;
+        float: left;
+    }
+}
+
+.idsk-card {
+    display: inline-block;
+    margin-bottom: 15px;
+    position: relative;
+}
+@media (min-width: 40.0625em) {
+    .idsk-card {
+        margin-bottom: 30px;
+    }
+}
+
+.idsk-card-img-hero {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 15px;
+    padding: 0;
+    float: none;
+}
+@media (min-width: 40.0625em) {
+    .idsk-card-img-hero {
+        width: 50%;
+        float: left;
+    }
+}
+@media (min-width: 40.0625em) {
+    .idsk-card-img-hero {
+        padding-right: 15px;
+    }
+}
+
+.idsk-card-content-hero {
+    box-sizing: border-box;
+    width: 100%;
+    padding: 0 15px;
+    float: none;
+    padding: 0;
+}
+@media (min-width: 40.0625em) {
+    .idsk-card-content-hero {
+        width: 50%;
+        float: left;
+    }
+}
+@media (min-width: 40.0625em) {
+    .idsk-card-content-hero {
+        padding: 0 0 0 15px;
+    }
+}
+
+.idsk-card-meta-container {
+    padding-bottom: 10px;
+    overflow-wrap: anywhere;
+}
+.idsk-card-meta {
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.14286;
+    color: #626a6e;
+    display: inline;
+    text-decoration: none;
+}
+@media (min-width: 40.0625em) {
+    .idsk-card-meta {
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.25;
+    }
+}
+.idsk-card-meta-date:after {
+    content: "\00a0-\00a0";
+}
+.idsk-card-meta-container span:last-child:after, .idsk-card-meta-container span.\:last-child:after {
+    content: "";
+}
+
+.govuk-link {
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-decoration: underline;
+    text-decoration-thickness: max(1px, .0625rem);
+    text-underline-offset: 0.1em;
+}
+.govuk-link:link, .govuk-link.\:link {
+    color: #0065b3;
+}
+
+.idsk-card-meta .govuk-link {
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.14286;
+    color: #626a6e;
+}
+@media (min-width: 40.0625em) {
+    .idsk-card-meta .govuk-link {
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.25;
+    }
+}
+
+.idsk-heading {
+    padding-bottom: 10px;
+}
+@media (min-width: 40.0625em) {
+    .idsk-heading {
+        padding-bottom: 10px;
+    }
+}
+.idsk-heading-hero {
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 18px;
+    font-size: 1.125rem;
+    line-height: 1.11111;
+}
+@media (min-width: 40.0625em) {
+    .idsk-heading-hero {
+        font-size: 24px;
+        font-size: 1.5rem;
+        line-height: 1.25;
+    }
+}
+.idsk-heading-secondary {
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 700;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+}
+@media (min-width: 40.0625em) {
+    .idsk-heading-secondary {
+        font-size: 19px;
+        font-size: 1.1875rem;
+        line-height: 1.31579;
+    }
+}
+
+.idsk-card-title {
+    cursor: pointer;
+    margin: 0;
+}
+
+.idsk-body {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+.idsk-body-hero {
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 16px;
+    font-size: 1rem;
+    line-height: 1.25;
+}
+@media (min-width: 40.0625em) {
+    .idsk-body-basic, .idsk-body-basic-variant, .idsk-body-hero, .idsk-body-secondary-horizontal {
+        font-size: 19px;
+        font-size: 1.1875rem;
+        line-height: 1.31579;
+    }
+}
+.idsk-body-secondary {
+    font-family: "Source Sans Pro", "Arial", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-weight: 400;
+    font-size: 14px;
+    font-size: 0.875rem;
+    line-height: 1.14286;
+}
+@media (min-width: 40.0625em) {
+    .idsk-body-secondary {
+        font-size: 16px;
+        font-size: 1rem;
+        line-height: 1.25;
     }
 }
 /**

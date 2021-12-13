@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-11-23T22:15:15+01:00\n"
+"POT-Creation-Date: 2021-12-13T12:18:38+01:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.5.0\n"
 "X-Domain: idsk-toolkit\n"
@@ -120,12 +120,26 @@ msgstr ""
 msgid "celé obdobie"
 msgstr ""
 
+#: blocks/block-posts/index.php:83
+#: blocks/block-posts/index.php:117
+#: blocks/block-posts/index.js:245
+msgid "Pridané dňa:"
+msgstr ""
+
 #: blocks/block-stepper/index.php:45
 msgid "Zobraziť všetko"
 msgstr ""
 
 #: blocks/block-stepper/index.php:45
 msgid "Zatvoriť všetko"
+msgstr ""
+
+#: classes/MetaBoxes.php:193
+msgid "Odstrániť záznam"
+msgstr ""
+
+#: classes/MetaBoxes.php:201
+msgid "Pridať záznam"
 msgstr ""
 
 #: inc/cookies-frontend.php:58
@@ -148,12 +162,84 @@ msgstr ""
 msgid "Hodnota"
 msgstr ""
 
-#: inc/register-blocks.php:73
+#: inc/register-blocks.php:74
 msgid "ID-SK Komponenty"
 msgstr ""
 
-#: inc/register-blocks.php:79
+#: inc/register-blocks.php:80
 msgid "ID-SK Rozloženie stránky"
+msgstr ""
+
+#: inc/register-meta.php:18
+msgid "Tlačidlo späť"
+msgstr ""
+
+#: inc/register-meta.php:24
+msgid "Text pre tlačidlo späť"
+msgstr ""
+
+#: inc/register-meta.php:28
+msgid "URL pre tlačidlo späť (ak ostane prázdne, späť sa nezobrazí)"
+msgstr ""
+
+#: inc/register-meta.php:36
+msgid "Zoznam aktualizácií"
+msgstr ""
+
+#: inc/register-meta.php:39
+msgid "Povoliť zobrazenie obsahu aktualizácií"
+msgstr ""
+
+#: inc/register-meta.php:44
+msgid "Dňa"
+msgstr ""
+
+#: inc/register-meta.php:48
+msgid "Bližší popis"
+msgstr ""
+
+#: inc/register-meta.php:55
+msgid "Zdieľanie článku na sociálnych sieťach"
+msgstr ""
+
+#: inc/register-meta.php:58
+msgid "Povoliť zdieľanie článku na sociálnych sieťach"
+msgstr ""
+
+#: inc/register-meta.php:63
+#: inc/register-patterns.php:490
+#: inc/register-patterns.php:496
+#: assets/js/editor.blocks.js:1
+#: blocks/block-related-content/index.js:70
+msgid "Súvisiace témy"
+msgstr ""
+
+#: inc/register-meta.php:66
+msgid "Povoliť zobrazenie súvisiacich tém"
+msgstr ""
+
+#: inc/register-meta.php:71
+msgid "Názov témy"
+msgstr ""
+
+#: inc/register-meta.php:75
+msgid "Odkaz na tému"
+msgstr ""
+
+#: inc/register-meta.php:82
+msgid "Súvisiace články"
+msgstr ""
+
+#: inc/register-meta.php:85
+msgid "Povoliť zobrazenie súvisiacich článkov"
+msgstr ""
+
+#: inc/register-meta.php:90
+msgid "Článok"
+msgstr ""
+
+#: inc/register-meta.php:91
+msgid "Vyberte článok"
 msgstr ""
 
 #: inc/register-patterns.php:18
@@ -192,7 +278,7 @@ msgstr ""
 
 #: inc/register-patterns.php:49
 #: inc/register-patterns.php:53
-#: inc/register-patterns.php:289
+#: inc/register-patterns.php:269
 msgid "Aktuality"
 msgstr ""
 
@@ -205,526 +291,464 @@ msgid "O nás"
 msgstr ""
 
 #: inc/register-patterns.php:49
-#: inc/register-patterns.php:285
+#: inc/register-patterns.php:265
 msgid "Populárny obsah"
 msgstr ""
 
 #: inc/register-patterns.php:49
-#: inc/register-patterns.php:285
+#: inc/register-patterns.php:265
 msgid "\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003eDokumenty\\u003c/a\\u003e\\u003c/li\\u003e\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003eInfo\\u003c/a\\u003e\\u003c/li\\u003e\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003eAktuality\\u003c/a\\u003e\\u003c/li\\u003e\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003ePodmienky\\u003c/a\\u003e\\u003c/li\\u003e\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003eO nás\\u003c/a\\u003e\\u003c/li\\u003e"
 msgstr ""
 
 #: inc/register-patterns.php:57
-#: inc/register-patterns.php:63
-#: inc/register-patterns.php:67
-#: inc/register-patterns.php:71
-#: inc/register-patterns.php:293
-#: inc/register-patterns.php:299
-#: inc/register-patterns.php:303
-#: inc/register-patterns.php:307
-msgid "Demo obrázok"
-msgstr ""
-
-#: inc/register-patterns.php:57
-#: inc/register-patterns.php:293
-msgid "\\u003ca href=\\u0022#\\u0022\\u003eHlavná aktualita\\u003c/a\\u003e"
-msgstr ""
-
-#: inc/register-patterns.php:57
-#: inc/register-patterns.php:63
-#: inc/register-patterns.php:67
-#: inc/register-patterns.php:71
-#: inc/register-patterns.php:85
-#: inc/register-patterns.php:93
-#: inc/register-patterns.php:99
-#: inc/register-patterns.php:123
-#: inc/register-patterns.php:143
-#: inc/register-patterns.php:157
-#: inc/register-patterns.php:170
-#: inc/register-patterns.php:267
-#: inc/register-patterns.php:293
-#: inc/register-patterns.php:299
-#: inc/register-patterns.php:303
-#: inc/register-patterns.php:307
-#: inc/register-patterns.php:317
-#: inc/register-patterns.php:322
-#: inc/register-patterns.php:325
-#: inc/register-patterns.php:338
-#: inc/register-patterns.php:342
-#: inc/register-patterns.php:348
-#: inc/register-patterns.php:352
-#: inc/register-patterns.php:366
-#: inc/register-patterns.php:370
-#: inc/register-patterns.php:388
-#: inc/register-patterns.php:409
-#: inc/register-patterns.php:414
-#: inc/register-patterns.php:419
-#: inc/register-patterns.php:424
-#: inc/register-patterns.php:433
-#: inc/register-patterns.php:438
-#: inc/register-patterns.php:447
-#: inc/register-patterns.php:463
-#: inc/register-patterns.php:467
-#: inc/register-patterns.php:471
-#: inc/register-patterns.php:481
-#: inc/register-patterns.php:485
-#: inc/register-patterns.php:489
-#: inc/register-patterns.php:493
-#: inc/register-patterns.php:499
-#: inc/register-patterns.php:503
-#: inc/register-patterns.php:507
-#: inc/register-patterns.php:511
-#: inc/register-patterns.php:515
-#: inc/register-patterns.php:519
-#: inc/register-patterns.php:523
-#: inc/register-patterns.php:527
-msgid "Lorem ipsum dolor sit amet, consenctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-msgstr ""
-
-#: inc/register-patterns.php:57
-#: inc/register-patterns.php:63
-#: inc/register-patterns.php:67
-#: inc/register-patterns.php:71
-#: inc/register-patterns.php:293
-#: inc/register-patterns.php:299
-#: inc/register-patterns.php:303
-#: inc/register-patterns.php:307
-msgid "Tag 1"
-msgstr ""
-
-#: inc/register-patterns.php:57
-#: inc/register-patterns.php:63
-#: inc/register-patterns.php:67
-#: inc/register-patterns.php:71
-#: inc/register-patterns.php:293
-#: inc/register-patterns.php:299
-#: inc/register-patterns.php:303
-#: inc/register-patterns.php:307
-msgid "Tag 2"
-msgstr ""
-
-#: inc/register-patterns.php:63
-#: inc/register-patterns.php:67
-#: inc/register-patterns.php:71
-#: inc/register-patterns.php:299
-#: inc/register-patterns.php:303
-#: inc/register-patterns.php:307
-msgid "\\u003ca href=\\u0022#\\u0022\\u003eĎalšia aktualita\\u003c/a\\u003e"
-msgstr ""
-
-#: inc/register-patterns.php:77
-#: inc/register-patterns.php:313
-#: inc/register-patterns.php:430
+#: inc/register-patterns.php:273
+#: inc/register-patterns.php:390
 msgid "Sekcia"
 msgstr ""
 
-#: inc/register-patterns.php:80
+#: inc/register-patterns.php:60
+#: inc/register-patterns.php:98
 #: inc/register-patterns.php:118
-#: inc/register-patterns.php:138
-#: inc/register-patterns.php:152
-#: inc/register-patterns.php:192
-#: inc/register-patterns.php:262
+#: inc/register-patterns.php:132
+#: inc/register-patterns.php:172
+#: inc/register-patterns.php:242
 msgid "Lorem ipsum dolor sit amet, consenctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore <a href=\"#\">magna aliqua</a>."
 msgstr ""
 
-#: inc/register-patterns.php:85
-#: inc/register-patterns.php:93
-#: inc/register-patterns.php:99
+#: inc/register-patterns.php:65
+#: inc/register-patterns.php:73
+#: inc/register-patterns.php:79
+#: inc/register-patterns.php:103
 #: inc/register-patterns.php:123
-#: inc/register-patterns.php:143
-#: inc/register-patterns.php:157
-#: inc/register-patterns.php:317
-#: inc/register-patterns.php:414
-#: inc/register-patterns.php:424
-#: inc/register-patterns.php:438
+#: inc/register-patterns.php:137
+#: inc/register-patterns.php:277
+#: inc/register-patterns.php:374
+#: inc/register-patterns.php:384
+#: inc/register-patterns.php:398
 msgid "Rázcestník 1"
 msgstr ""
 
-#: inc/register-patterns.php:85
-#: inc/register-patterns.php:93
-#: inc/register-patterns.php:99
+#: inc/register-patterns.php:65
+#: inc/register-patterns.php:73
+#: inc/register-patterns.php:79
+#: inc/register-patterns.php:103
 #: inc/register-patterns.php:123
-#: inc/register-patterns.php:143
-#: inc/register-patterns.php:157
-#: inc/register-patterns.php:317
-#: inc/register-patterns.php:414
-#: inc/register-patterns.php:424
-#: inc/register-patterns.php:438
+#: inc/register-patterns.php:137
+#: inc/register-patterns.php:150
+#: inc/register-patterns.php:247
+#: inc/register-patterns.php:277
+#: inc/register-patterns.php:282
+#: inc/register-patterns.php:285
+#: inc/register-patterns.php:298
+#: inc/register-patterns.php:302
+#: inc/register-patterns.php:308
+#: inc/register-patterns.php:312
+#: inc/register-patterns.php:326
+#: inc/register-patterns.php:330
+#: inc/register-patterns.php:348
+#: inc/register-patterns.php:369
+#: inc/register-patterns.php:374
+#: inc/register-patterns.php:379
+#: inc/register-patterns.php:384
+#: inc/register-patterns.php:393
+#: inc/register-patterns.php:398
+#: inc/register-patterns.php:407
+#: inc/register-patterns.php:423
+#: inc/register-patterns.php:427
+#: inc/register-patterns.php:431
+#: inc/register-patterns.php:441
+#: inc/register-patterns.php:445
+#: inc/register-patterns.php:449
+#: inc/register-patterns.php:453
+#: inc/register-patterns.php:459
+#: inc/register-patterns.php:463
+#: inc/register-patterns.php:467
+#: inc/register-patterns.php:471
+#: inc/register-patterns.php:475
+#: inc/register-patterns.php:479
+#: inc/register-patterns.php:483
+#: inc/register-patterns.php:487
+msgid "Lorem ipsum dolor sit amet, consenctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+msgstr ""
+
+#: inc/register-patterns.php:65
+#: inc/register-patterns.php:73
+#: inc/register-patterns.php:79
+#: inc/register-patterns.php:103
+#: inc/register-patterns.php:123
+#: inc/register-patterns.php:137
+#: inc/register-patterns.php:277
+#: inc/register-patterns.php:374
+#: inc/register-patterns.php:384
+#: inc/register-patterns.php:398
 msgid "Rázcestník 2"
 msgstr ""
 
-#: inc/register-patterns.php:85
-#: inc/register-patterns.php:93
-#: inc/register-patterns.php:99
+#: inc/register-patterns.php:65
+#: inc/register-patterns.php:73
+#: inc/register-patterns.php:79
+#: inc/register-patterns.php:103
 #: inc/register-patterns.php:123
-#: inc/register-patterns.php:143
-#: inc/register-patterns.php:157
-#: inc/register-patterns.php:317
-#: inc/register-patterns.php:414
-#: inc/register-patterns.php:424
-#: inc/register-patterns.php:438
+#: inc/register-patterns.php:137
+#: inc/register-patterns.php:277
+#: inc/register-patterns.php:374
+#: inc/register-patterns.php:384
+#: inc/register-patterns.php:398
 msgid "Rázcestník 3"
 msgstr ""
 
-#: inc/register-patterns.php:85
+#: inc/register-patterns.php:65
+#: inc/register-patterns.php:103
 #: inc/register-patterns.php:123
-#: inc/register-patterns.php:143
-#: inc/register-patterns.php:157
-#: inc/register-patterns.php:317
-#: inc/register-patterns.php:414
-#: inc/register-patterns.php:424
-#: inc/register-patterns.php:438
+#: inc/register-patterns.php:137
+#: inc/register-patterns.php:277
+#: inc/register-patterns.php:374
+#: inc/register-patterns.php:384
+#: inc/register-patterns.php:398
 msgid "Rázcestník 4"
 msgstr ""
 
-#: inc/register-patterns.php:91
+#: inc/register-patterns.php:71
 msgid "Podsekcia 1"
 msgstr ""
 
-#: inc/register-patterns.php:97
+#: inc/register-patterns.php:77
 msgid "Podsekcia 2"
 msgstr ""
 
-#: inc/register-patterns.php:107
+#: inc/register-patterns.php:87
 msgid "Vedenie"
 msgstr ""
 
-#: inc/register-patterns.php:109
+#: inc/register-patterns.php:89
 msgid "\\u003ca href=\\u0022#\\u0022\\u003eMacko Pú\\u003c/a\\u003e"
 msgstr ""
 
-#: inc/register-patterns.php:109
+#: inc/register-patterns.php:89
 msgid "\\u003ca href=\\u0022#\\u0022\\u003eŠtátny tajomník medu a radosti\\u003c/a\\u003e"
 msgstr ""
 
-#: inc/register-patterns.php:109
+#: inc/register-patterns.php:89
 msgid "“Aký je deň?” spýtal sa Pú. “Je dnes,” odpovedalo prasiatko. “Môj najobľúbenejší deň,” povedal Pú."
 msgstr ""
 
-#: inc/register-patterns.php:115
+#: inc/register-patterns.php:95
 msgid "Informatizácia"
 msgstr ""
 
-#: inc/register-patterns.php:127
+#: inc/register-patterns.php:107
 msgid "Služby"
 msgstr ""
 
-#: inc/register-patterns.php:129
+#: inc/register-patterns.php:109
 msgid "\\u003ca href=\\u0022#\\u0022\\u003e\\u003cstrong\\u003ePoložka 1\\u003c/strong\\u003e\\u003c/a\\u003e"
 msgstr ""
 
-#: inc/register-patterns.php:129
+#: inc/register-patterns.php:109
 msgid "\\u003ca href=\\u0022#\\u0022\\u003e\\u003cstrong\\u003ePoložka 2\\u003c/strong\\u003e\\u003c/a\\u003e"
 msgstr ""
 
-#: inc/register-patterns.php:129
+#: inc/register-patterns.php:109
 msgid "\\u003ca href=\\u0022#\\u0022\\u003e\\u003cstrong\\u003ePoložka 3\\u003c/strong\\u003e\\u003c/a\\u003e"
 msgstr ""
 
-#: inc/register-patterns.php:129
+#: inc/register-patterns.php:109
 msgid "\\u003ca href=\\u0022#\\u0022\\u003e\\u003cstrong\\u003ePoložka 4\\u003c/strong\\u003e\\u003c/a\\u003e"
 msgstr ""
 
-#: inc/register-patterns.php:129
+#: inc/register-patterns.php:109
 msgid "\\u003ca href=\\u0022#\\u0022\\u003e\\u003cstrong\\u003ePoložka 5\\u003c/strong\\u003e\\u003c/a\\u003e"
 msgstr ""
 
-#: inc/register-patterns.php:129
+#: inc/register-patterns.php:109
 msgid "\\u003ca href=\\u0022#\\u0022\\u003e\\u003cstrong\\u003ePoložka 6\\u003c/strong\\u003e\\u003c/a\\u003e"
 msgstr ""
 
-#: inc/register-patterns.php:135
-#: inc/register-patterns.php:363
-#: inc/register-patterns.php:444
+#: inc/register-patterns.php:115
+#: inc/register-patterns.php:323
+#: inc/register-patterns.php:404
 msgid "Sekcia 2"
 msgstr ""
 
-#: inc/register-patterns.php:149
-#: inc/register-patterns.php:385
+#: inc/register-patterns.php:129
+#: inc/register-patterns.php:345
 msgid "Sekcia 3"
 msgstr ""
 
-#: inc/register-patterns.php:157
-#: inc/register-patterns.php:317
-#: inc/register-patterns.php:414
-#: inc/register-patterns.php:424
-#: inc/register-patterns.php:438
+#: inc/register-patterns.php:137
+#: inc/register-patterns.php:277
+#: inc/register-patterns.php:374
+#: inc/register-patterns.php:384
+#: inc/register-patterns.php:398
 msgid "Rázcestník 5"
 msgstr ""
 
-#: inc/register-patterns.php:157
-#: inc/register-patterns.php:317
-#: inc/register-patterns.php:414
-#: inc/register-patterns.php:424
+#: inc/register-patterns.php:137
+#: inc/register-patterns.php:277
+#: inc/register-patterns.php:374
+#: inc/register-patterns.php:384
 msgid "Rázcestník 6"
 msgstr ""
 
-#: inc/register-patterns.php:167
-#: inc/register-patterns.php:333
+#: inc/register-patterns.php:147
+#: inc/register-patterns.php:293
 msgid "Banner"
 msgstr ""
 
-#: inc/register-patterns.php:174
+#: inc/register-patterns.php:154
 msgid "<a href=\"#\">Zistiť viac</a>"
 msgstr ""
 
-#: inc/register-patterns.php:189
+#: inc/register-patterns.php:169
 msgid "Podujatia"
 msgstr ""
 
+#: inc/register-patterns.php:178
+#: inc/register-patterns.php:188
 #: inc/register-patterns.php:198
 #: inc/register-patterns.php:208
 #: inc/register-patterns.php:218
 #: inc/register-patterns.php:228
-#: inc/register-patterns.php:238
-#: inc/register-patterns.php:248
 msgid "<strong><a href=\"#\">Lorem ipsum dolor sit amet</a></strong>"
 msgstr ""
 
+#: inc/register-patterns.php:182
+#: inc/register-patterns.php:192
 #: inc/register-patterns.php:202
 #: inc/register-patterns.php:212
 #: inc/register-patterns.php:222
 #: inc/register-patterns.php:232
-#: inc/register-patterns.php:242
-#: inc/register-patterns.php:252
 msgid "26.02.2021"
 msgstr ""
 
-#: inc/register-patterns.php:259
+#: inc/register-patterns.php:239
 msgid "Projekty"
 msgstr ""
 
-#: inc/register-patterns.php:267
+#: inc/register-patterns.php:247
 msgid "Projekt 1"
 msgstr ""
 
-#: inc/register-patterns.php:267
+#: inc/register-patterns.php:247
 msgid "Projekt 2"
 msgstr ""
 
-#: inc/register-patterns.php:267
+#: inc/register-patterns.php:247
 msgid "Projekt 3"
 msgstr ""
 
-#: inc/register-patterns.php:267
+#: inc/register-patterns.php:247
 msgid "Projekt 4"
 msgstr ""
 
-#: inc/register-patterns.php:267
+#: inc/register-patterns.php:247
 msgid "Projekt 5"
 msgstr ""
 
-#: inc/register-patterns.php:267
+#: inc/register-patterns.php:247
 msgid "Projekt 6"
 msgstr ""
 
-#: inc/register-patterns.php:267
+#: inc/register-patterns.php:247
 msgid "Projekt 7"
 msgstr ""
 
-#: inc/register-patterns.php:267
+#: inc/register-patterns.php:247
 msgid "Projekt 8"
 msgstr ""
 
-#: inc/register-patterns.php:267
+#: inc/register-patterns.php:247
 msgid "Projekt 9"
 msgstr ""
 
-#: inc/register-patterns.php:267
+#: inc/register-patterns.php:247
 msgid "Projekt 10"
 msgstr ""
 
-#: inc/register-patterns.php:267
+#: inc/register-patterns.php:247
 msgid "Projekt 11"
 msgstr ""
 
-#: inc/register-patterns.php:267
+#: inc/register-patterns.php:247
 msgid "Projekt 12"
 msgstr ""
 
-#: inc/register-patterns.php:267
+#: inc/register-patterns.php:247
 msgid "Projekt 13"
 msgstr ""
 
-#: inc/register-patterns.php:267
+#: inc/register-patterns.php:247
 msgid "Projekt 14"
 msgstr ""
 
-#: inc/register-patterns.php:267
+#: inc/register-patterns.php:247
 msgid "Projekt 15"
 msgstr ""
 
-#: inc/register-patterns.php:280
-#: inc/register-patterns.php:285
+#: inc/register-patterns.php:260
+#: inc/register-patterns.php:265
 msgid "Podstránka"
 msgstr ""
 
-#: inc/register-patterns.php:281
+#: inc/register-patterns.php:261
 msgctxt "Popis vzoru podstránky"
 msgid "Podstránka s úvodnym blokom, kartičkami, rázcestníkmi a akordeónmi. Odporúčame použiť so šablónou <strong>\"Bez kontajnera a bez nadpisu\"</strong>"
 msgstr ""
 
-#: inc/register-patterns.php:285
+#: inc/register-patterns.php:265
 msgid "Lorem ipsum dolor sit amet, consenctetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore \\u003ca href=\\u0022#\\u0022\\u003emagna aliqua\\u003c/a\\u003e."
 msgstr ""
 
-#: inc/register-patterns.php:325
-#: inc/register-patterns.php:442
-#: inc/register-patterns.php:450
+#: inc/register-patterns.php:285
+#: inc/register-patterns.php:402
+#: inc/register-patterns.php:410
 msgid "Akordeón 1"
 msgstr ""
 
-#: inc/register-patterns.php:325
-#: inc/register-patterns.php:442
-#: inc/register-patterns.php:450
+#: inc/register-patterns.php:285
+#: inc/register-patterns.php:402
+#: inc/register-patterns.php:410
 msgid "Akordeón 2"
 msgstr ""
 
-#: inc/register-patterns.php:325
-#: inc/register-patterns.php:442
-#: inc/register-patterns.php:450
+#: inc/register-patterns.php:285
+#: inc/register-patterns.php:402
+#: inc/register-patterns.php:410
 msgid "Akordeón 3"
 msgstr ""
 
-#: inc/register-patterns.php:325
-#: inc/register-patterns.php:442
-#: inc/register-patterns.php:450
+#: inc/register-patterns.php:285
+#: inc/register-patterns.php:402
+#: inc/register-patterns.php:410
 msgid "Akordeón 4"
 msgstr ""
 
-#: inc/register-patterns.php:325
-#: inc/register-patterns.php:442
-#: inc/register-patterns.php:450
+#: inc/register-patterns.php:285
+#: inc/register-patterns.php:402
+#: inc/register-patterns.php:410
 msgid "Akordeón 5"
 msgstr ""
 
-#: inc/register-patterns.php:325
-#: inc/register-patterns.php:442
-#: inc/register-patterns.php:450
+#: inc/register-patterns.php:285
+#: inc/register-patterns.php:402
+#: inc/register-patterns.php:410
 msgid "Akordeón 6"
 msgstr ""
 
-#: inc/register-patterns.php:325
-#: inc/register-patterns.php:442
-#: inc/register-patterns.php:450
+#: inc/register-patterns.php:285
+#: inc/register-patterns.php:402
+#: inc/register-patterns.php:410
 msgid "Akordeón 7"
 msgstr ""
 
-#: inc/register-patterns.php:374
-#: inc/register-patterns.php:378
-#: inc/register-patterns.php:392
+#: inc/register-patterns.php:334
+#: inc/register-patterns.php:338
+#: inc/register-patterns.php:352
 msgid "<a href=\"#\">Dokument (PDF, 10kB)</a>"
 msgstr ""
 
-#: inc/register-patterns.php:381
-#: inc/register-patterns.php:395
+#: inc/register-patterns.php:341
+#: inc/register-patterns.php:355
 msgid "Ďalšie dokumenty"
 msgstr ""
 
-#: inc/register-patterns.php:381
-#: inc/register-patterns.php:395
+#: inc/register-patterns.php:341
+#: inc/register-patterns.php:355
 msgid "\\u003ca href=\\u0022#\\u0022\\u003eDokument (PDF, 10kB)\\u003c/a\\u003e"
 msgstr ""
 
-#: inc/register-patterns.php:406
+#: inc/register-patterns.php:366
 msgid "Podstránka s dokumentmi"
 msgstr ""
 
-#: inc/register-patterns.php:407
+#: inc/register-patterns.php:367
 msgctxt "Popis vzoru podstránky s dokumentmi"
 msgid "Podstránka s rázcestníkmi a akordeónmi."
 msgstr ""
 
-#: inc/register-patterns.php:414
-#: inc/register-patterns.php:424
+#: inc/register-patterns.php:374
+#: inc/register-patterns.php:384
 msgid "Rázcestník 7"
 msgstr ""
 
-#: inc/register-patterns.php:414
+#: inc/register-patterns.php:374
 msgid "Rázcestník 8"
 msgstr ""
 
-#: inc/register-patterns.php:442
-#: inc/register-patterns.php:450
+#: inc/register-patterns.php:402
+#: inc/register-patterns.php:410
 msgid "Popis\\u003cbr\\u003e\\u003ca href=\\u0022#\\u0022\\u003eDokument (PDF, 10kB)\\u003c/a\\u003e\\u003cbr\\u003e\\u003ca href=\\u0022#\\u0022\\u003eDokument (PDF, 10kB)\\u003c/a\\u003e\\u003cbr\\u003e\\u003ca href=\\u0022#\\u0022\\u003eDokument (PDF, 10kB)\\u003c/a\\u003e"
 msgstr ""
 
-#: inc/register-patterns.php:442
+#: inc/register-patterns.php:402
 msgid "Akordeón 8"
 msgstr ""
 
-#: inc/register-patterns.php:458
+#: inc/register-patterns.php:418
 msgid "Podstránka so stepperom"
 msgstr ""
 
-#: inc/register-patterns.php:459
+#: inc/register-patterns.php:419
 msgctxt "Popis vzoru podstránky so stepperom"
 msgid "Podstránka so stepperom a súvisiacim obsahom. Odporúčame použiť so šablónou <strong>\"In-page navigácia\"</strong>"
 msgstr ""
 
-#: inc/register-patterns.php:460
-#: inc/register-patterns.php:532
+#: inc/register-patterns.php:420
+#: inc/register-patterns.php:492
 msgid "Súčasť životnej situácie"
 msgstr ""
 
-#: inc/register-patterns.php:460
-#: inc/register-patterns.php:532
+#: inc/register-patterns.php:420
+#: inc/register-patterns.php:492
 msgid "\\u003ca href=\\u0022#\\u0022\\u003eNarodenie dieťaťa: krok za krokom\\u003c/a\\u003e"
 msgstr ""
 
-#: inc/register-patterns.php:478
+#: inc/register-patterns.php:438
 msgid "Nadpis 1"
 msgstr ""
 
-#: inc/register-patterns.php:496
+#: inc/register-patterns.php:456
 msgid "Nadpis 2"
 msgstr ""
 
-#: inc/register-patterns.php:530
-#: inc/register-patterns.php:536
-#: assets/js/editor.blocks.js:1
-#: blocks/block-related-content/index.js:70
-msgid "Súvisiace témy"
-msgstr ""
-
-#: inc/register-patterns.php:530
-#: inc/register-patterns.php:536
+#: inc/register-patterns.php:490
+#: inc/register-patterns.php:496
 msgid "\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003eSúvisiaca téma\\u003c/a\\u003e\\u003c/li\\u003e\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003eSúvisiaca téma\\u003c/a\\u003e\\u003c/li\\u003e\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003eSúvisiaca téma\\u003c/a\\u003e\\u003c/li\\u003e"
 msgstr ""
 
-#: inc/register-patterns.php:534
+#: inc/register-patterns.php:494
 msgid "Pred narodením dieťaťa"
 msgstr ""
 
-#: inc/register-patterns.php:534
+#: inc/register-patterns.php:494
 msgid "Krok 1"
 msgstr ""
 
-#: inc/register-patterns.php:534
+#: inc/register-patterns.php:494
 msgid "\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003eOdkaz na podstránku\\u003c/a\\u003e\\u003c/li\\u003e"
 msgstr ""
 
-#: inc/register-patterns.php:534
+#: inc/register-patterns.php:494
 msgid "Krok 2"
 msgstr ""
 
-#: inc/register-patterns.php:534
+#: inc/register-patterns.php:494
 msgid "Po narodení dieťaťa"
 msgstr ""
 
-#: inc/register-patterns.php:534
+#: inc/register-patterns.php:494
 msgid "Krok 3"
 msgstr ""
 
-#: inc/register-patterns.php:534
+#: inc/register-patterns.php:494
 msgid "Čiastočný krok"
 msgstr ""
 
-#: inc/register-patterns.php:534
+#: inc/register-patterns.php:494
 msgid "Krok 4"
 msgstr ""
 
-#: inc/register-patterns.php:534
+#: inc/register-patterns.php:494
 msgid "Krok 5"
 msgstr ""
 
@@ -790,18 +814,6 @@ msgstr ""
 
 #: lib/template-customizer.php:230
 msgid "URL stránky s nastaveniami cookies"
-msgstr ""
-
-#: toolkit.php:62
-msgid "Tlačidlo späť"
-msgstr ""
-
-#: toolkit.php:80
-msgid "Text pre tlačidlo späť"
-msgstr ""
-
-#: toolkit.php:85
-msgid "URL pre tlačidlo späť (ak ostane prázdne, späť sa nezobrazí)"
 msgstr ""
 
 #: assets/js/editor.blocks.js:1
@@ -1253,6 +1265,7 @@ msgstr ""
 
 #: blocks/block-heading/index.js:27
 #: blocks/block-heading/index.js:77
+#: blocks/block-posts/index.js:308
 #: blocks/block-timeline/index.js:184
 msgid "Nadpis"
 msgstr ""
@@ -1609,6 +1622,46 @@ msgstr ""
 
 #: blocks/block-map-component/index.js:358
 msgid "Zdroj: zdroj mapového prehľadu"
+msgstr ""
+
+#: blocks/block-posts/index.js:28
+msgid "Články"
+msgstr ""
+
+#: blocks/block-posts/index.js:29
+msgid "Zobrazuje články na stránke podľa nastavení."
+msgstr ""
+
+#: blocks/block-posts/index.js:33
+msgid "články"
+msgstr ""
+
+#: blocks/block-posts/index.js:34
+msgid "aktuality"
+msgstr ""
+
+#: blocks/block-posts/index.js:193
+msgid "Nenašli sa žiadne články"
+msgstr ""
+
+#: blocks/block-posts/index.js:268
+msgid "Vyberte kategóriu článkov"
+msgstr ""
+
+#: blocks/block-posts/index.js:282
+msgid "Nastavenia zobrazenia článkov"
+msgstr ""
+
+#: blocks/block-posts/index.js:286
+msgid "Zobrazovať úvodný článok"
+msgstr ""
+
+#: blocks/block-posts/index.js:291
+msgid "Počet zobrazených článkov"
+msgstr ""
+
+#: blocks/block-posts/index.js:297
+msgid "Kategória článkov"
 msgstr ""
 
 #: blocks/block-separator/index.js:23

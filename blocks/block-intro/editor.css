@@ -47,8 +47,8 @@
 
 @media (min-width: 48.0625em) {
     .govuk-grid-column-two-thirds-from-desktop {
-        width: 66.6666%;
-        float: left;
+        width: 66.6666% !important;
+        float: left !important;
     }
 }
 
@@ -441,7 +441,7 @@
 }
 
 .idsk-intro-block__side-menu {
-    padding: 20px;
+    padding: 20px !important;
 }
 
 @media (min-width: 48.0625em) {
