@@ -944,7 +944,7 @@
 
 @media (min-width: 48.0625em) {
     .idsk-intro-block__side-menu {
-        margin-left: 50px;
+        margin-left: 35px;
     }
 }
 
@@ -2038,7 +2038,6 @@
 .idsk-card-title {
     cursor: pointer;
     margin: 0;
-    text-decoration: none;
 }
 .govuk-link:link, .app-prose-scope a:link, .govuk-link.\:link, .app-prose-scope a.\:link {
     color: #0065b3;

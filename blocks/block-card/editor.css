@@ -232,7 +232,6 @@
 .idsk-card-title {
     cursor: pointer;
     margin: 0;
-    text-decoration: none;
 }
 .govuk-link:link, .app-prose-scope a:link, .govuk-link.\:link, .app-prose-scope a.\:link {
     color: #0065b3;
