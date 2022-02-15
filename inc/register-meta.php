@@ -11,8 +11,8 @@
 
 require_once plugin_dir_path(__DIR__) . 'classes/MetaBoxes.php';
 
+// Add page meta boxes
 new IDSK_Toolkit\IDSK_Meta_Boxes( array(
-    // Add page meta boxes
     array(
         'id'        => 'page_back_button',
         'title'     => __( 'Tlačidlo späť', 'idsk-toolkit' ),
@@ -29,8 +29,11 @@ new IDSK_Toolkit\IDSK_Meta_Boxes( array(
                 )
             )
         )
-    ),
-    // Add post meta boxes
+    )
+) );
+
+// Add post meta boxes
+new IDSK_Toolkit\IDSK_Meta_Boxes( array(
     array(
         'id'        => 'post_updates_list',
         'title'     => __( 'Zoznam aktualizácií', 'idsk-toolkit' ),
