@@ -72,7 +72,7 @@ if ( !class_exists( 'IDSK_Meta_Boxes' ) ) {
             foreach ( $this->meta_boxes as $mbox ) {
                 $mb_id = 'idsktk_'.$mbox['id'];
 
-                if ( !isset( $_POST[$mb_id.'_nonce'] ) || !wp_verify_nonce( $_POST[$mb_id.'_nonce'], '_idsktk_'.$mbox['id'].'_nonce' ) )
+                if ( !isset( $_POST[$mb_id.'_nonce'] ) || !wp_verify_nonce( $_POST[$mb_id.'_nonce'], '_'.$mb_id.'_nonce' ) )
                     return;
 
                 if ( isset( $mbox['args']['allow'] ) ) { 
