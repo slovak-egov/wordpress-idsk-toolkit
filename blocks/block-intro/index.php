@@ -69,9 +69,11 @@ function idsktk_render_dynamic_intro_block($attributes) {
         <div class="idsk-intro-block ">
             <div class="govuk-grid-row ">
                 <div class="govuk-grid-column-full govuk-grid-column-two-thirds-from-desktop">
-                    <h2 class="govuk-heading-m">
-                        <?php echo $title ?>
-                    </h2>
+                    <?php if ($title) { ?>
+                        <h2 class="govuk-heading-m">
+                            <?php echo $title ?>
+                        </h2>
+                    <?php } ?>
                     <p class="govuk-body"><?php echo $subTitle ?></p>
                     <?php if ($search) { ?>
                         <form role="search" action="<?php echo esc_url( home_url( '/' ) ); ?>">
