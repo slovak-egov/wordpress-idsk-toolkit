@@ -24,14 +24,14 @@ const { __ } = wp.i18n
 
 registerBlockType('idsk/map-component', {
     // built-in attributes
-    title: __('Mapový komponent', 'idsk-toolkit'),
-    description: __('Mapový komponent použite, keď chcete používateľom zobrazovať nejaký jav vzťahujúci sa k priestoru (napr. počet zaočkovaných proti COVID-19 na Slovensku v krajoch).', 'idsk-toolkit'),
+    title: __('Map component', 'idsk-toolkit'),
+    description: __('Use the map component when you want to show the users a phenomenon related to space (e.g. the number of people vaccinated against COVID-19 in Slovakia in different regions).', 'idsk-toolkit'),
     icon: 'admin-site-alt',
     category: 'idsk-components',
     keywords: [
-        __('mapa', 'idsk-toolkit'),
-        __('komponent', 'idsk-toolkit'),
-        __('mapový komponent', 'idsk-toolkit'),
+        __('map', 'idsk-toolkit'),
+        __('component', 'idsk-toolkit'),
+        __('map component', 'idsk-toolkit'),
     ],
 
     // custom attributes
@@ -84,7 +84,7 @@ registerBlockType('idsk/map-component', {
 
             // Match current state to saved quotes (if they exist)
             this.state = {
-                periodOption: __('Celé obdobie', 'idsk-toolkit'),
+                periodOption: __('Entire period', 'idsk-toolkit'),
                 indicatorOption: this.props.attributes.indicatorOptions.length > 0 ? this.props.attributes.indicatorOptions[0].text : '',
                 indicatorOptions: this.props.attributes.indicatorOptions || []
             }
@@ -193,11 +193,11 @@ registerBlockType('idsk/map-component', {
 
             return <div className={className}>
                 <InspectorControls>
-                    <PanelBody title={__('Nastavenia odkazov', 'idsk-toolkit')}>
+                    <PanelBody title={__('Links settings', 'idsk-toolkit')}>
                         <TextControl
                             className="js-iframe-map-title"
                             key="editable"
-                            label={__('Titulok iframe mapového prehľadu', 'idsk-toolkit')}
+                            label={__('Iframe title of map overview', 'idsk-toolkit')}
                             value={iframeMapTitle}
                             onChange={value => this.onChange('iframeMapTitle', value)} 
                         />
@@ -205,14 +205,14 @@ registerBlockType('idsk/map-component', {
                             className="js-iframe-map"
                             key="editable"
                             placeholder={__('https://www.google.com', 'idsk-toolkit')}
-                            label={__('URL zdroj pre iframe mapového prehľadu', 'idsk-toolkit')}
+                            label={__('URL source for iframe of map overview', 'idsk-toolkit')}
                             value={iframeMap}
                             onChange={value => this.onChange('iframeMap', value)} 
                         />
                         <TextControl
                             className="js-iframe-table-title"
                             key="editable"
-                            label={__('Titulok iframe tabuľkového prehľadu', 'idsk-toolkit')}
+                            label={__('Iframe title of table oveview', 'idsk-toolkit')}
                             value={iframeTableTitle}
                             onChange={value => this.onChange('iframeTableTitle', value)} 
                         />
@@ -220,15 +220,15 @@ registerBlockType('idsk/map-component', {
                             className="js-iframe-table"
                             key="editable"
                             placeholder={__('https://www.google.com', 'idsk-toolkit')}
-                            label={__('URL zdroj pre iframe tabuľkového prehľadu', 'idsk-toolkit')}
+                            label={__('URL source for iframe of table overview', 'idsk-toolkit')}
                             value={iframeTable}
                             onChange={value => this.onChange('iframeTable', value)} 
                         />
                         <TextControl
                             className="js-csv-download"
                             key="editable"
-                            placeholder={__('napr. Stiahnuť údaje (CSV, 42 kb)', 'idsk-toolkit')}
-                            label={__('Názov odkazu súboru na stiahnutie', 'idsk-toolkit')}
+                            placeholder={__('e.g. Download data (CSV, 42kb)', 'idsk-toolkit')}
+                            label={__('File link name to download', 'idsk-toolkit')}
                             value={downloadText}
                             onChange={value => this.onChange('downloadText', value)} 
                         />
@@ -236,26 +236,26 @@ registerBlockType('idsk/map-component', {
                             className="js-csv-download"
                             key="editable"
                             placeholder={__('https://www.google.com', 'idsk-toolkit')}
-                            label={__('URL zdroj súboru na stiahnutie', 'idsk-toolkit')}
+                            label={__('URL source for file to download', 'idsk-toolkit')}
                             value={csvDownload}
                             onChange={value => this.onChange('csvDownload', value)} 
                         />
                     </PanelBody>
 
-                    <PanelBody title={__('Nastavenia ukazovateľov', 'idsk-toolkit')}>
+                    <PanelBody title={__('Indicators settings', 'idsk-toolkit')}>
                         {!!indicatorOptions && indicatorOptions.map((item, index) =>
                             <>
-                                <h2>{__('Ukazovateľ', 'idsk-toolkit')} {index+1}</h2>
+                                <h2>{__('Indicator', 'idsk-toolkit')} {index+1}</h2>
                                 <div key={item.id || index}>
                                     <TextControl
                                         key="editable"
-                                        label={__('Hodnota (value) ukazovateľa', 'idsk-toolkit')}
+                                        label={__('Indicator value', 'idsk-toolkit')}
                                         value={item.value}
                                         onChange={value => this.editItem('value', index, value)} 
                                     />
                                     <TextControl
                                         key="editable"
-                                        label={__('Text ukazovateľa', 'idsk-toolkit')}
+                                        label={__('Indicator text', 'idsk-toolkit')}
                                         value={item.text}
                                         onChange={value => this.editItem('text', index, value)} 
                                     />
@@ -263,7 +263,7 @@ registerBlockType('idsk/map-component', {
                                 <input
                                     className="button-secondary button"
                                     type="submit"
-                                    value={__('Vymazať ukazovateľ', 'idsk-toolkit')}
+                                    value={__('Delete indicator', 'idsk-toolkit')}
                                     onClick={(e) => this.removeItem(e, index)}
                                 />
                                 <div class="govuk-clearfix"></div>
@@ -273,7 +273,7 @@ registerBlockType('idsk/map-component', {
                         <input
                             className="button-primary button"
                             type="submit"
-                            value={__('Pridať ukazovateľ', 'idsk-toolkit')}
+                            value={__('Add indicator', 'idsk-toolkit')}
                             onClick={(e) => this.addItem(e)}
                         />
                     </PanelBody>
@@ -284,7 +284,7 @@ registerBlockType('idsk/map-component', {
                         className="govuk-heading-l"
                         key="editable"
                         tagName="h2"
-                        placeholder={__('Nadpis mapového komponentu', 'idsk-toolkit')}
+                        placeholder={__('Map component heading', 'idsk-toolkit')}
                         value={title}
                         onChange={value => this.onChange('title', value)} 
                     />
@@ -295,11 +295,11 @@ registerBlockType('idsk/map-component', {
                                     <div class="govuk-radios govuk-radios--inline">
                                         <div class="govuk-radios__item idsk-intereactive-map__radio-map">
                                             <input class="govuk-radios__input" name="interactive-radios-b" id={blockId + "-interactive-radios-b-1"} type="radio" value="map" checked />
-                                            <label class="govuk-label govuk-radios__label" for={blockId + "-interactive-radios-b-1"}>{__('Mapa', 'idsk-toolkit')}</label>
+                                            <label class="govuk-label govuk-radios__label" for={blockId + "-interactive-radios-b-1"}>{__('Map', 'idsk-toolkit')}</label>
                                         </div>
                                         <div class="govuk-radios__item idsk-intereactive-map__radio-table">
                                             <input class="govuk-radios__input" name="interactive-radios-b" id={blockId + "-interactive-radios-b-2"} type="radio" value="table" />
-                                            <label class="govuk-label govuk-radios__label" for={blockId + "-interactive-radios-b-2"}>{__('Tabuľka', 'idsk-toolkit')}</label>
+                                            <label class="govuk-label govuk-radios__label" for={blockId + "-interactive-radios-b-2"}>{__('Table', 'idsk-toolkit')}</label>
                                         </div>
                                     </div>
                                 </div>
@@ -307,20 +307,20 @@ registerBlockType('idsk/map-component', {
                             <div class="idsk-interactive-map__header-selects">
                                 <div class="govuk-form-group">
                                     <div class="govuk-label-wrapper">
-                                        <label class="govuk-label" for="time-period"><strong>{__('Obdobie', 'idsk-toolkit')}</strong></label>
+                                        <label class="govuk-label" for="time-period"><strong>{__('Period', 'idsk-toolkit')}</strong></label>
                                     </div>
                                     <select class="idsk-interactive-map__select-time-period govuk-select" id="time-period" name="time-period" onChange={this.handleChange}>
-                                        <option value="30">{__('Posledný mesiac', 'idsk-toolkit')}</option>
-                                        <option value="90">{__('Posledné 3 mesiace', 'idsk-toolkit')}</option>
-                                        <option value="180">{__('Posledných 6 mesiacov', 'idsk-toolkit')}</option>
-                                        <option value="" selected="selected">{__('Celé obdobie', 'idsk-toolkit')}</option>
+                                        <option value="30">{__('Last month', 'idsk-toolkit')}</option>
+                                        <option value="90">{__('Last 3 months', 'idsk-toolkit')}</option>
+                                        <option value="180">{__('Last 6 months', 'idsk-toolkit')}</option>
+                                        <option value="" selected="selected">{__('Entire period', 'idsk-toolkit')}</option>
                                     </select>
                                 </div>
 
                                 {(!!indicatorOptions && indicatorOptions.length != 0) &&
                                     <div class="govuk-form-group">
                                         <div class="govuk-label-wrapper">
-                                            <label class="govuk-label" for="indicator"><strong>{__('Ukazovateľ', 'idsk-toolkit')}</strong></label>
+                                            <label class="govuk-label" for="indicator"><strong>{__('Indicator', 'idsk-toolkit')}</strong></label>
                                         </div>
                                         <select class="idsk-interactive-map__select-indicator govuk-select" id="indicator" name="indicator" onChange={this.handleChange}>
                                             {!!indicatorOptions && indicatorOptions.map((item, index) =>
@@ -334,7 +334,7 @@ registerBlockType('idsk/map-component', {
 
                         {(!!indicatorOptions && indicatorOptions.length != 0) &&
                             <h3 class="govuk-heading-m">
-                                <span class="idsk-interactive-map__current-indicator">{indicatorOption}</span> {__('za', 'idsk-toolkit')} <span class="idsk-interactive-map__current-time-period">{periodOption}</span>
+                                <span class="idsk-interactive-map__current-indicator">{indicatorOption}</span> {__('for', 'idsk-toolkit')} <span class="idsk-interactive-map__current-time-period">{periodOption}</span>
                             </h3>
                         }
 
@@ -355,7 +355,7 @@ registerBlockType('idsk/map-component', {
                             className="idsk-interactive-map__meta-source"
                             key="editable"
                             tagName="span"
-                            placeholder={__('Zdroj: zdroj mapového prehľadu', 'idsk-toolkit')}
+                            placeholder={__('Source: map overview source', 'idsk-toolkit')}
                             value={source}
                             onChange={value => this.onChange('source', value)} 
                         />

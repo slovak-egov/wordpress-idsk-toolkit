@@ -80,7 +80,7 @@ function idsktk_render_dynamic_posts_block($attributes) {
                             <div class="idsk-card-content idsk-card-content-hero">
                                 <div class="idsk-card-meta-container">
                                     <span class="idsk-card-meta idsk-card-meta-date">
-                                        <a href="<?php echo esc_url($post_data['url']); ?>" class="govuk-link" title="<?php echo esc_attr( __( 'Pridané dňa:', 'idsk-toolkit' ).' '.$post_data['created'] ); ?>"><?php echo esc_html($post_data['created']); ?></a>
+                                        <a href="<?php echo esc_url($post_data['url']); ?>" class="govuk-link" title="<?php echo esc_attr( __( 'Added on:', 'idsk-toolkit' ).' '.$post_data['created'] ); ?>"><?php echo esc_html($post_data['created']); ?></a>
                                     </span>
 
                                     <?php foreach ($post_data['categories'] as $category) { ?>
@@ -114,7 +114,7 @@ function idsktk_render_dynamic_posts_block($attributes) {
                         <div class="idsk-card-content idsk-card-content-secondary">
                             <div class="idsk-card-meta-container">
                                 <span class="idsk-card-meta idsk-card-meta-date">
-                                    <a href="<?php echo esc_url($post_data['url']); ?>" class="govuk-link" title="<?php echo esc_attr( __( 'Pridané dňa:', 'idsk-toolkit' ).' '.$post_data['created'] ); ?>"><?php echo esc_html($post_data['created']); ?></a>
+                                    <a href="<?php echo esc_url($post_data['url']); ?>" class="govuk-link" title="<?php echo esc_attr( __( 'Added on:', 'idsk-toolkit' ).' '.$post_data['created'] ); ?>"><?php echo esc_html($post_data['created']); ?></a>
                                 </span>
 
                                 <?php foreach ($post_data['categories'] as $category) { ?>

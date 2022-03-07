@@ -18,13 +18,15 @@ const { __ } = wp.i18n;
 registerBlockType('idsk/stepper', {
     // built-in attributes
     title: __('Stepper', 'idsk-toolkit'),
-    description: __('Zobrazuje sled udalostí, procesných úkonov.', 'idsk-toolkit'),
+    description: __('Shows a series of events, procedural acts.', 'idsk-toolkit'),
     icon: 'editor-ol',
     category: 'idsk-components',
     keywords: [
+        __('events', 'idsk-toolkit'),
+        __('event', 'idsk-toolkit'),
         __('stepper', 'idsk-toolkit'),
-        __('proces', 'idsk-toolkit'),
-        __('kroky', 'idsk-toolkit'),
+        __('procedure', 'idsk-toolkit'),
+        __('steps', 'idsk-toolkit'),
     ],
 
     // custom attributes
@@ -250,7 +252,7 @@ registerBlockType('idsk/stepper', {
                     className="govuk-heading-l"
                     key="editable"
                     tagName="h2"
-                    placeholder={__('Nadpis steppera', 'idsk-toolkit')}
+                    placeholder={__('Stepper heading', 'idsk-toolkit')}
                     value={title}
                     onChange={value => this.onChange('title', value)} 
                 />
@@ -258,7 +260,7 @@ registerBlockType('idsk/stepper', {
                     className="idsk-stepper__caption govuk-caption-m"
                     key="editable"
                     tagName="p"
-                    placeholder={__('Popis steppera', 'idsk-toolkit')}
+                    placeholder={__('Stepper caption', 'idsk-toolkit')}
                     value={caption}
                     onChange={value => this.onChange('caption', value)} 
                 />
@@ -270,7 +272,7 @@ registerBlockType('idsk/stepper', {
                                 className="govuk-heading-m idsk-stepper__section-subtitle"
                                 key="editable"
                                 tagName="h3"
-                                placeholder={__('Nadpis míľnika', 'idsk-toolkit')}
+                                placeholder={__('Milestone heading', 'idsk-toolkit')}
                                 value={stepperSubtitle}
                                 onChange={value => this.onChange('stepperSubtitle', value)} 
                             />
@@ -289,7 +291,7 @@ registerBlockType('idsk/stepper', {
                                         value={item.sectionTitle}
                                         onChange={value => this.editItem('sectionTitle', index, value)}
                                         tagName="p"
-                                        placeholder={__('Nadpis míľnika', 'idsk-toolkit')}
+                                        placeholder={__('Milestone heading', 'idsk-toolkit')}
                                     />
                                 </div>
                             </div>
@@ -311,7 +313,7 @@ registerBlockType('idsk/stepper', {
                                             value={item.sectionHeading}
                                             onChange={value => this.editItem('sectionHeading', index, value)}
                                             tagName="span"
-                                            placeholder={__('Nadpis kroku', 'idsk-toolkit')}
+                                            placeholder={__('Step heading', 'idsk-toolkit')}
                                         />
                                     </h4>
                                 </div>
@@ -323,7 +325,7 @@ registerBlockType('idsk/stepper', {
                                         onChange={value => this.editItem('sectionContent', index, value)}
                                         tagName="ul"
                                         multiline="li"
-                                        placeholder={__('Časť kroku', 'idsk-toolkit')}
+                                        placeholder={__('Part of a step', 'idsk-toolkit')}
                                     />
                                 </div>
 
@@ -332,7 +334,7 @@ registerBlockType('idsk/stepper', {
                                     <input
                                         className="button-primary button"
                                         type="submit"
-                                        value={__('Pridať čiastočný krok', 'idsk-toolkit')}
+                                        value={__('Add partial step', 'idsk-toolkit')}
                                         onClick={(e) => this.addItem(e, index)}
                                     />
                                 </p>
@@ -342,7 +344,7 @@ registerBlockType('idsk/stepper', {
                                     <input
                                         className="button-secondary button"
                                         type="submit"
-                                        value={ item.subStep != '' ? __('Vymazať čiastočný krok', 'idsk-toolkit') : __('Vymazať krok', 'idsk-toolkit') }
+                                        value={ item.subStep != '' ? __('Delete partial step', 'idsk-toolkit') : __('Delete step', 'idsk-toolkit') }
                                         onClick={(e) => this.removeItem(e, index)}
                                     />
                                 </p>
@@ -355,7 +357,7 @@ registerBlockType('idsk/stepper', {
                             class="idsk-button"
                             data-module="idsk-button"
                             type="submit"
-                            value={__('Pridať krok', 'idsk-toolkit')}
+                            value={__('Add step', 'idsk-toolkit')}
                             onClick={(e) => this.addItem(e)}
                         />
                     </p>

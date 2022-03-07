@@ -14,7 +14,7 @@ function idsktk_customize_register( $wp_customize ) {
     $wp_customize->add_section(
         'idsktk_main_settings',
         array(
-            'title'      => __( 'Nastavenia Google Maps API', 'idsk-toolkit' ),
+            'title'      => __( 'Google Maps API settings', 'idsk-toolkit' ),
             'priority'   => 11,
         )
     );
@@ -28,7 +28,7 @@ function idsktk_customize_register( $wp_customize ) {
         $wp_customize->add_control(
             'idsktk_main_settings_map_api_control',
             array(
-                'label'      => __( 'Google Maps - API kľúč', 'idsk-toolkit' ),
+                'label'      => __( 'Google Maps - API key', 'idsk-toolkit' ),
                 'section'    => 'idsktk_main_settings',
                 'settings'   => 'idsktk_main_settings_map_api',
                 'type'       => 'text',
@@ -41,7 +41,7 @@ function idsktk_customize_register( $wp_customize ) {
     $wp_customize->add_section(
         'idsktk_search_settings',
         array(
-            'title'      => __( 'Nastavenie vyhľadávania', 'idsk-toolkit' ),
+            'title'      => __( 'Search settings', 'idsk-toolkit' ),
             'priority'   => 17,
         )
     );
@@ -60,8 +60,8 @@ function idsktk_customize_register( $wp_customize ) {
             array(
                 'type'          => 'checkbox',
                 'section'       => 'idsktk_search_settings',
-                'label'         => __( 'Zobraziť hlavné vyhľadávanie', 'idsk-toolkit' ),
-                'description'   => __( 'Zobrazuje veľké vyhľadávanie alebo malé pri filtroch', 'idsk-toolkit' )
+                'label'         => __( 'Show main search', 'idsk-toolkit' ),
+                'description'   => __( 'Shows big search or small with filters', 'idsk-toolkit' )
             )
         );
 
@@ -90,7 +90,7 @@ function idsktk_customize_register( $wp_customize ) {
             array(
                 'type'     => 'checkbox',
                 'section'  => 'idsktk_cookies_settings',
-                'label'    => __( 'Povoliť cookies a zobrazenie cookies bannera', 'idsk-toolkit' )
+                'label'    => __( 'Enable cookies and display cookies banner', 'idsk-toolkit' )
             )
         );
 
@@ -107,7 +107,7 @@ function idsktk_customize_register( $wp_customize ) {
             array(
                 'type'     => 'number',
                 'section'  => 'idsktk_cookies_settings',
-                'label'    => __( 'Dĺžka platnosti cookies', 'idsk-toolkit' )
+                'label'    => __( 'Cookies validity period', 'idsk-toolkit' )
             )
         );
         
@@ -126,8 +126,8 @@ function idsktk_customize_register( $wp_customize ) {
                 'type'     => 'select',
                 'section'  => 'idsktk_cookies_settings',
                 'choices'  => array(
-                    'day'   => __( 'Dní', 'idsk-toolkit' ),
-                    'month' => __( 'Mesiacov', 'idsk-toolkit' ),
+                    'day'   => __( 'Days', 'idsk-toolkit' ),
+                    'month' => __( 'Months', 'idsk-toolkit' ),
                 )
             )
         );
@@ -142,7 +142,7 @@ function idsktk_customize_register( $wp_customize ) {
         $wp_customize->add_control(
             'idsktk_cookies_settings_banner_heading',
             array(
-                'label'      => __( 'Nadpis bannera', 'idsk-toolkit' ),
+                'label'      => __( 'Banner heading', 'idsk-toolkit' ),
                 'section'    => 'idsktk_cookies_settings',
                 'settings'   => 'idsktk_cookies_settings_banner_heading',
                 'type'       => 'text'
@@ -159,7 +159,7 @@ function idsktk_customize_register( $wp_customize ) {
         $wp_customize->add_control(
             'idsktk_cookies_settings_banner_text',
             array(
-                'label'      => __( 'Textový obsah banera', 'idsk-toolkit' ),
+                'label'      => __( 'Banner text content', 'idsk-toolkit' ),
                 'section'    => 'idsktk_cookies_settings',
                 'type'       => 'textarea'
             )
@@ -179,7 +179,7 @@ function idsktk_customize_register( $wp_customize ) {
             array(
                 'type'     => 'checkbox',
                 'section'  => 'idsktk_cookies_settings',
-                'label'    => __( 'Zobraziť tlačidlá pre povolenie všetkých cookies', 'idsk-toolkit' )
+                'label'    => __( 'Show buttons to enable all cookies', 'idsk-toolkit' )
             )
         );
         
@@ -193,7 +193,7 @@ function idsktk_customize_register( $wp_customize ) {
         $wp_customize->add_control(
             'idsktk_cookies_settings_banner_accepted',
             array(
-                'label'      => __( 'Vlastný text po prijatí cookies', 'idsk-toolkit' ),
+                'label'      => __( 'Custom text after accepting cookies', 'idsk-toolkit' ),
                 'section'    => 'idsktk_cookies_settings',
                 'type'       => 'textarea',
                 'active_callback' => 'idsktk_is_cookies_buttons'
@@ -210,7 +210,7 @@ function idsktk_customize_register( $wp_customize ) {
         $wp_customize->add_control(
             'idsktk_cookies_settings_banner_rejected',
             array(
-                'label'      => __( 'Vlastný text po odmietnutí cookies', 'idsk-toolkit' ),
+                'label'      => __( 'Custom text after rejecting cookies', 'idsk-toolkit' ),
                 'section'    => 'idsktk_cookies_settings',
                 'type'       => 'textarea',
                 'active_callback' => 'idsktk_is_cookies_buttons'
@@ -227,7 +227,7 @@ function idsktk_customize_register( $wp_customize ) {
         $wp_customize->add_control(
             'idsktk_cookies_settings_banner_page_link',
             array(
-                'label'      => __( 'URL stránky s nastaveniami cookies', 'idsk-toolkit' ),
+                'label'      => __( 'URL of the page with cookies settings', 'idsk-toolkit' ),
                 'section'    => 'idsktk_cookies_settings',
                 'settings'   => 'idsktk_cookies_settings_banner_page_link',
                 'type'       => 'url'

@@ -20,13 +20,12 @@ const { __ } = wp.i18n;
 
 registerBlockType('idsk/separator', {
     // built-in attributes
-    title: __('Oddeľovač', 'idsk-toolkit'),
-    description: __('Oddeľovač použite vtedy, keď chcete vizuálne oddeliť jednotlivé časti obsahu na stránke.', 'idsk-toolkit'),
+    title: __('Separator', 'idsk-toolkit'),
+    description: __('Use the separator when you want to visually separate different parts of content on the page.', 'idsk-toolkit'),
     icon: 'minus',
     category: 'idsk-components',
     keywords: [
         __('separator', 'idsk-toolkit'),
-        __('oddelovac', 'idsk-toolkit'),
     ],
 
     // custom attributes
@@ -48,18 +47,18 @@ registerBlockType('idsk/separator', {
 
         return <div className={className}>
             <InspectorControls>
-                <PanelBody title={__('Nastavenia oddeľovača', 'idsk-toolkit')}>
+                <PanelBody title={__('Separator settings', 'idsk-toolkit')}>
                     <PanelRow>
                         <ToggleControl
                             className="js-separator-type"
                             checked={separatorType}
-                            label={separatorType ? __('Skrytý na mobilných zariadeniach', 'idsk-toolkit') : __('Stále viditeľný', 'idsk-toolkit')}
+                            label={separatorType ? __('Hidden on mobile devices', 'idsk-toolkit') : __('Always visible', 'idsk-toolkit')}
                             onChange={checked => setAttributes({ separatorType: checked })}
                         />
                     </PanelRow>
                     <RadioControl
                         className="js-separator-mb"
-                        label={__('Odsadenie zdola', 'idsk-toolkit')}
+                        label={__('Margin bottom', 'idsk-toolkit')}
                         selected={ marginBottom }
                         options={ [
                             { 

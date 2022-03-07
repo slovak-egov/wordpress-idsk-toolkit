@@ -24,13 +24,13 @@ const { __ } = wp.i18n;
 
 registerBlockType('idsk/lists', {
     // built-in attributes
-    title: __('Zoznamy', 'idsk-toolkit'),
-    description: __('Zobrazuje zoznamy s možnosťami.', 'idsk-toolkit'),
+    title: __('Lists', 'idsk-toolkit'),
+    description: __('Shows lists with options.', 'idsk-toolkit'),
     icon: 'editor-ul',
     category: 'idsk-components',
     keywords: [
-        __('zoznam', 'idsk-toolkit'),
-        __('zoznamy', 'idsk-toolkit'),
+        __('list', 'idsk-toolkit'),
+        __('lists', 'idsk-toolkit'),
     ],
 
     // custom attributes
@@ -87,21 +87,21 @@ registerBlockType('idsk/lists', {
             
             return <TagName className={"govuk-list "+parentListType}>
                 <InspectorControls>
-                    <PanelBody title={indent+__('Nastavenie zoznamu', 'idsk-toolkit')}>
+                    <PanelBody title={indent+__('List settings', 'idsk-toolkit')}>
                         <RadioControl
-                            label={__('Typ zoznamu', 'idsk-toolkit')}
+                            label={__('List type', 'idsk-toolkit')}
                             selected={ parentListType }
                             options={ [
                                 { 
-                                    label: __('Bez odrážok', 'idsk-toolkit'),
+                                    label: __('No bullets', 'idsk-toolkit'),
                                     value: '' 
                                 },
                                 { 
-                                    label: __('Guličky', 'idsk-toolkit'),
+                                    label: __('Bullet points', 'idsk-toolkit'),
                                     value: 'govuk-list--bullet'
                                 },
                                 { 
-                                    label: __('Čísla', 'idsk-toolkit'),
+                                    label: __('Numbers', 'idsk-toolkit'),
                                     value: 'govuk-list--number' 
                                 },
                             ] }
@@ -118,7 +118,7 @@ registerBlockType('idsk/lists', {
                                 className="js-lists-item"
                                 tagName="span"
                                 multiline={false}
-                                placeholder={__('Položka', 'idsk-toolkit')}
+                                placeholder={__('Item', 'idsk-toolkit')}
                                 value={item.text}
                                 onChange={value => this.editItem('text', item.id, value)}
                             />
@@ -128,14 +128,14 @@ registerBlockType('idsk/lists', {
                                     <input
                                         className="button-primary button"
                                         type="submit"
-                                        value={__('Vložiť zoznam', 'idsk-toolkit')}
+                                        value={__('Insert list', 'idsk-toolkit')}
                                         onClick={(e) => this.addItem(e, item.id)}
                                     />
                                 }
                                 <input
                                     className="button-secondary button"
                                     type="submit"
-                                    value={__('Vymazať položku', 'idsk-toolkit')}
+                                    value={__('Delete item', 'idsk-toolkit')}
                                     onClick={(e) => this.removeItem(e, item.id)}
                                 />
                             </p>
@@ -149,7 +149,7 @@ registerBlockType('idsk/lists', {
                         class="idsk-button"
                         data-module="idsk-button"
                         type="submit"
-                        value={__('Pridať položku', 'idsk-toolkit')}
+                        value={__('Add item', 'idsk-toolkit')}
                         onClick={(e) => this.addItem(e, parentItem)}
                     />
                 </p>
@@ -270,22 +270,22 @@ registerBlockType('idsk/lists', {
 
             return <div className={className}>
                 <InspectorControls>
-                    <PanelBody title={__('Nastavenie zoznamu', 'idsk-toolkit')}>
+                    <PanelBody title={__('List settings', 'idsk-toolkit')}>
                         <RadioControl
                             className="js-lists-type"
-                            label={__('Typ zoznamu', 'idsk-toolkit')}
+                            label={__('List type', 'idsk-toolkit')}
                             selected={ listType }
                             options={ [
                                 { 
-                                    label: __('Bez odrážok', 'idsk-toolkit'),
+                                    label: __('No bullets', 'idsk-toolkit'),
                                     value: '' 
                                 },
                                 { 
-                                    label: __('Guličky', 'idsk-toolkit'),
+                                    label: __('Bullet points', 'idsk-toolkit'),
                                     value: 'govuk-list--bullet'
                                 },
                                 { 
-                                    label: __('Čísla', 'idsk-toolkit'),
+                                    label: __('Numbers', 'idsk-toolkit'),
                                     value: 'govuk-list--number' 
                                 },
                             ] }
@@ -303,7 +303,7 @@ registerBlockType('idsk/lists', {
                                     className="js-lists-item"
                                     tagName="span"
                                     multiline={false}
-                                    placeholder={__('Položka', 'idsk-toolkit')}
+                                    placeholder={__('Item', 'idsk-toolkit')}
                                     value={item.text}
                                     onChange={value => this.editItem('text', item.id, value)}
                                 />
@@ -313,14 +313,14 @@ registerBlockType('idsk/lists', {
                                         <input
                                             className="button-primary button"
                                             type="submit"
-                                            value={__('Vložiť zoznam', 'idsk-toolkit')}
+                                            value={__('Insert list', 'idsk-toolkit')}
                                             onClick={(e) => this.addItem(e, item.id)}
                                         />
                                     }
                                     <input
                                         className="button-secondary button"
                                         type="submit"
-                                        value={__('Vymazať položku', 'idsk-toolkit')}
+                                        value={__('Delete item', 'idsk-toolkit')}
                                         onClick={(e) => this.removeItem(e, item.id)}
                                     />
                                 </p>
@@ -334,7 +334,7 @@ registerBlockType('idsk/lists', {
                             class="idsk-button"
                             data-module="idsk-button"
                             type="submit"
-                            value={__('Pridať položku', 'idsk-toolkit')}
+                            value={__('Add item', 'idsk-toolkit')}
                             onClick={(e) => this.addItem(e)}
                         />
                     </p>

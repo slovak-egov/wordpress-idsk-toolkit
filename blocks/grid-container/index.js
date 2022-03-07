@@ -25,14 +25,14 @@ const ALLOWED_BLOCKS = [
 
 registerBlockType('idsk/container', {
     // built-in attributes
-    title: __('Kontajner', 'idsk-toolkit'),
-    description: __('Vloží blok kontajnera na stránku. Používajte len so šablónou "Bez kontajnera".', 'idsk-toolkit'),
+    title: __('Container', 'idsk-toolkit'),
+    description: __('Inserts a container block in a page. Only use with "Without container" template.', 'idsk-toolkit'),
     icon: 'welcome-add-page',
     category: 'idsk-grids',
     keywords: [
-        __('kontajner', 'idsk-toolkit'),
+        __('container', 'idsk-toolkit'),
         __('grid', 'idsk-toolkit'),
-        __('stránka', 'idsk-toolkit'),
+        __('page', 'idsk-toolkit'),
     ],
 
     // custom attributes
@@ -60,26 +60,26 @@ registerBlockType('idsk/container', {
 
         return <div className={className}>
             <InspectorControls>
-                <PanelBody title={__('Nastavenie kontajnera', 'idsk-toolkit')}>
+                <PanelBody title={__('Container settings', 'idsk-toolkit')}>
                     <RadioControl
                         className="js-container-color"
-                        label={__('Farba pozadia', 'idsk-toolkit')}
+                        label={__('Background color', 'idsk-toolkit')}
                         selected={ bgColor }
                         options={ [
                             { 
-                                label: __('Bez pozadia', 'idsk-toolkit'),
+                                label: __('No background', 'idsk-toolkit'),
                                 value: '' 
                             },
                             { 
-                                label: __('Modré', 'idsk-toolkit'),
+                                label: __('Blue', 'idsk-toolkit'),
                                 value: 'app-pane-blue' 
                             },
                             { 
-                                label: __('Svetlo šedé', 'idsk-toolkit'),
+                                label: __('Light grey', 'idsk-toolkit'),
                                 value: 'app-pane-lgray'
                             },
                             { 
-                                label: __('Šedé', 'idsk-toolkit'),
+                                label: __('Grey', 'idsk-toolkit'),
                                 value: 'app-pane-gray'
                             }
                         ] }
@@ -87,7 +87,7 @@ registerBlockType('idsk/container', {
                     />
                     <RadioControl
                         className="js-container-pt"
-                        label={__('Odsadenie zhora', 'idsk-toolkit')}
+                        label={__('Top margin', 'idsk-toolkit')}
                         selected={ paddingTop }
                         options={ [
                             { 
@@ -135,7 +135,7 @@ registerBlockType('idsk/container', {
                     />
                     <RadioControl
                         className="js-container-pb"
-                        label={__('Odsadenie zdola', 'idsk-toolkit')}
+                        label={__('Bottom margin', 'idsk-toolkit')}
                         selected={ paddingBottom }
                         options={ [
                             { 

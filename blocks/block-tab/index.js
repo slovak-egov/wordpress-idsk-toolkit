@@ -19,13 +19,13 @@ const { __ } = wp.i18n
 
 registerBlockType('idsk/tab', {
     // built-in attributes
-    title: __('Záložka', 'idsk-toolkit'),
-    description: __('Zobrazuje záložku s vlastným obsahom.', 'idsk-toolkit'),
+    title: __('Tab', 'idsk-toolkit'),
+    description: __('Shows a tab with own content.', 'idsk-toolkit'),
     icon: 'table-row-after',
     category: 'idsk-components',
     keywords: [
-        __('záložky', 'idsk-toolkit'),
-        __('taby', 'idsk-toolkit'),
+        __('tabs', 'idsk-toolkit'),
+        __('tab', 'idsk-toolkit'),
     ],
     parent: [ 'idsk/tabs' ],
 
@@ -80,9 +80,9 @@ registerBlockType('idsk/tab', {
 
             return <div className={className}>
                 <InspectorControls>
-                    <PanelBody title={__('Názov záložky', 'idsk-toolkit')}>
+                    <PanelBody title={__('Tab name', 'idsk-toolkit')}>
                         <TextControl
-                            label={__('Zadajte názov záložky', 'idsk-toolkit')}
+                            label={__('Enter tab name', 'idsk-toolkit')}
                             value={heading}
                             onChange={value => setAttributes({heading: value})}
                         />

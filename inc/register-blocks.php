@@ -71,13 +71,13 @@ function idsktk_gov_page_block_category ( $categories, $post ) {
         array (
             array (
                 'slug'  => 'idsk-components',
-                'title' => __( 'ID-SK Komponenty', 'idsk-toolkit' ),
+                'title' => __( 'ID-SK Components', 'idsk-toolkit' ),
             ),
         ),
         array (
             array (
                 'slug'  => 'idsk-grids',
-                'title' => __( 'ID-SK Rozloženie stránky', 'idsk-toolkit' ),
+                'title' => __( 'ID-SK Website layout', 'idsk-toolkit' ),
             ),
         )
     ));

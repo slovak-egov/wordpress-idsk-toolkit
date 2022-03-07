@@ -14,13 +14,13 @@ const { __ } = wp.i18n;
 
 registerBlockType('idsk/inset-text', {
     // built-in attributes
-    title: __('Vsadený text', 'idsk-toolkit'),
-    description: __('Pre upriamenie pozornosti na dôležitý obsah stránky je vhodné používať ohraničený vsadený text.', 'idsk-toolkit'),
+    title: __('Inset text', 'idsk-toolkit'),
+    description: __('To draw attention to important content on the page, it is good to use bordered inset text.', 'idsk-toolkit'),
     icon: 'align-pull-left',
     category: 'idsk-components',
     keywords: [
         __('text', 'idsk-toolkit'),
-        __('vsadený', 'idsk-toolkit'),
+        __('inset', 'idsk-toolkit'),
     ],
 
     // custom attributes
@@ -41,7 +41,7 @@ registerBlockType('idsk/inset-text', {
                     key="editable"
                     className="js-inset-text"
                     tagName="span"
-                    placeholder={__('Vsadený text na doplnenie.', 'idsk-toolkit')}
+                    placeholder={__('Inset text to be added.', 'idsk-toolkit')}
                     value={text}
                     onChange={value => setAttributes({ text: value })} />
             </div>

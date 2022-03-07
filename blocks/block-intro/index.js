@@ -26,14 +26,14 @@ const { __ } = wp.i18n;
 
 registerBlockType('idsk/intro', {
     // built-in attributes
-    title: __('Úvodný blok', 'idsk-toolkit'),
-    description: __('Zobrazuje úvodný blok pre webové sídla. K dispozícii sú viaceré varianty zobrazenia.', 'idsk-toolkit'),
+    title: __('Intro block', 'idsk-toolkit'),
+    description: __('Shows intro block for websites. Various types of displays are available.', 'idsk-toolkit'),
     icon: 'editor-table',
     category: 'idsk-components',
     keywords: [
-        __('úvod', 'idsk-toolkit'),
-        __('blok', 'idsk-toolkit'),
-        __('vyhľadávanie', 'idsk-toolkit'),
+        __('intro', 'idsk-toolkit'),
+        __('block', 'idsk-toolkit'),
+        __('search', 'idsk-toolkit'),
     ],
 
     // custom attributes
@@ -163,31 +163,31 @@ registerBlockType('idsk/intro', {
             
             return <div className={className}>
                 <InspectorControls>
-                    <PanelBody title={__('Zobrazenie obsahu', 'idsk-toolkit')}>
+                    <PanelBody title={__('Content display', 'idsk-toolkit')}>
                         <PanelRow>
                             <ToggleControl
                                 className="js-intro-search"
                                 checked={withSearch}
-                                label={withSearch ? __('S vyhľadávaním', 'idsk-toolkit') : __('Bez vyhľadávania', 'idsk-toolkit')}
+                                label={withSearch ? __('With search', 'idsk-toolkit') : __('Without search', 'idsk-toolkit')}
                                 onChange={checked => setAttributes({ withSearch: checked })}
                             />
                         </PanelRow>
                         <PanelRow>
                             <RadioControl
                                 className="js-side-style"
-                                label={__('Štýl zobrazenia bočného panelu', 'idsk-toolkit')}
+                                label={__('Sidebar display style', 'idsk-toolkit')}
                                 selected={ sideStyle }
                                 options={ [
                                     { 
-                                        label: __('Základné zobrazenie', 'idsk-toolkit'),
+                                        label: __('Basic display', 'idsk-toolkit'),
                                         value: 'default' 
                                     },
                                     { 
-                                        label: __('Modré zobrazenie', 'idsk-toolkit'),
+                                        label: __('Blue display', 'idsk-toolkit'),
                                         value: 'app-pane-blue' 
                                     },
                                     { 
-                                        label: __('Transparentné zobrazenie', 'idsk-toolkit'),
+                                        label: __('Transparent display', 'idsk-toolkit'),
                                         value: 'app-pane-transparent' 
                                     },
                                 ] }
@@ -197,13 +197,13 @@ registerBlockType('idsk/intro', {
                     </PanelBody>
 
                     {!!withSearch &&
-                    <PanelBody title={__('Odkazy pre vyhľadávanie', 'idsk-toolkit')}>
-                        <h3>{__('Odkaz 1', 'idsk-toolkit')}</h3>
+                    <PanelBody title={__('Search links', 'idsk-toolkit')}>
+                        <h3>{__('Link 1', 'idsk-toolkit')}</h3>
                         <TextControl
                             className="js-search-link-1-text"
                             key="editable"
-                            placeholder={__('Odkaz 1', 'idsk-toolkit')}
-                            label={__('Názov odkazu 1', 'idsk-toolkit')}
+                            placeholder={__('Link 1', 'idsk-toolkit')}
+                            label={__('Link 1 name', 'idsk-toolkit')}
                             value={urlText1}
                             onChange={value => this.onChange('urlText1', value)} 
                         />
@@ -211,17 +211,17 @@ registerBlockType('idsk/intro', {
                             className="js-search-link-1-href"
                             key="editable"
                             placeholder={__('https://www.google.com', 'idsk-toolkit')}
-                            label={__('URL k odkazu 1', 'idsk-toolkit')}
+                            label={__('Link 1 URL', 'idsk-toolkit')}
                             value={url1}
                             onChange={value => this.onChange('url1', value)} 
                         />
                         
-                        <h3>{__('Odkaz 2', 'idsk-toolkit')}</h3>
+                        <h3>{__('Link 2', 'idsk-toolkit')}</h3>
                         <TextControl
                             className="js-search-link-2-text"
                             key="editable"
-                            placeholder={__('Odkaz 2', 'idsk-toolkit')}
-                            label={__('Názov odkazu 2', 'idsk-toolkit')}
+                            placeholder={__('Link 2', 'idsk-toolkit')}
+                            label={__('Link 2 name', 'idsk-toolkit')}
                             value={urlText2}
                             onChange={value => this.onChange('urlText2', value)} 
                         />
@@ -229,17 +229,17 @@ registerBlockType('idsk/intro', {
                             className="js-search-link-2-href"
                             key="editable"
                             placeholder={__('https://www.google.com', 'idsk-toolkit')}
-                            label={__('URL k odkazu 2', 'idsk-toolkit')}
+                            label={__('Link 2 URL', 'idsk-toolkit')}
                             value={url2}
                             onChange={value => this.onChange('url2', value)}  
                         />
                         
-                        <h3>{__('Odkaz 3', 'idsk-toolkit')}</h3>
+                        <h3>{__('Link 3', 'idsk-toolkit')}</h3>
                         <TextControl
                             className="js-search-link-3-text"
                             key="editable"
-                            placeholder={__('Odkaz 3', 'idsk-toolkit')}
-                            label={__('Názov odkazu 3', 'idsk-toolkit')}
+                            placeholder={__('Link 3', 'idsk-toolkit')}
+                            label={__('Link 3 name', 'idsk-toolkit')}
                             value={urlText3}
                             onChange={value => this.onChange('urlText3', value)} 
                         />
@@ -247,17 +247,17 @@ registerBlockType('idsk/intro', {
                             className="js-search-link-3-href"
                             key="editable"
                             placeholder={__('https://www.google.com', 'idsk-toolkit')}
-                            label={__('URL k odkazu 3', 'idsk-toolkit')}
+                            label={__('Link 3 URL', 'idsk-toolkit')}
                             value={url3}
                             onChange={value => this.onChange('url3', value)} 
                         />
                         
-                        <h3>{__('Odkaz 4', 'idsk-toolkit')}</h3>
+                        <h3>{__('Link 4', 'idsk-toolkit')}</h3>
                         <TextControl
                             className="js-search-link-4-text"
                             key="editable"
-                            placeholder={__('Odkaz 4', 'idsk-toolkit')}
-                            label={__('Názov odkazu 4', 'idsk-toolkit')}
+                            placeholder={__('Link 4', 'idsk-toolkit')}
+                            label={__('Link 4 name', 'idsk-toolkit')}
                             value={urlText4}
                             onChange={value => this.onChange('urlText4', value)} 
                         />
@@ -265,17 +265,17 @@ registerBlockType('idsk/intro', {
                             className="js-search-link-4-href"
                             key="editable"
                             placeholder={__('https://www.google.com', 'idsk-toolkit')}
-                            label={__('URL k odkazu 4', 'idsk-toolkit')}
+                            label={__('Link 4 URL', 'idsk-toolkit')}
                             value={url4}
                             onChange={value => this.onChange('url4', value)} 
                         />
                         
-                        <h3>{__('Odkaz 5', 'idsk-toolkit')}</h3>
+                        <h3>{__('Link 5', 'idsk-toolkit')}</h3>
                         <TextControl
                             className="js-search-link-5-text"
                             key="editable"
-                            placeholder={__('Odkaz 5', 'idsk-toolkit')}
-                            label={__('Názov odkazu 5', 'idsk-toolkit')}
+                            placeholder={__('Link 5', 'idsk-toolkit')}
+                            label={__('Link 5 name', 'idsk-toolkit')}
                             value={urlText5}
                             onChange={value => this.onChange('urlText5', value)} 
                         />
@@ -283,7 +283,7 @@ registerBlockType('idsk/intro', {
                             className="js-search-link-5-href"
                             key="editable"
                             placeholder={__('https://www.google.com', 'idsk-toolkit')}
-                            label={__('URL k odkazu 5', 'idsk-toolkit')}
+                            label={__('Link 5 URL', 'idsk-toolkit')}
                             value={url5}
                             onChange={value => this.onChange('url5', value)} 
                         />
@@ -299,7 +299,7 @@ registerBlockType('idsk/intro', {
                                     className="govuk-heading-m h2-main"
                                     key="editable"
                                     tagName="h2"
-                                    placeholder={__('Hlavný nadpis', 'idsk-toolkit')}
+                                    placeholder={__('Main title', 'idsk-toolkit')}
                                     value={title}
                                     onChange={value => this.onChange('title', value)} 
                                 />
@@ -307,18 +307,18 @@ registerBlockType('idsk/intro', {
                                     className="govuk-body"
                                     key="editable"
                                     tagName="p"
-                                    placeholder={__('Vedľajší nadpis', 'idsk-toolkit')}
+                                    placeholder={__('Subtitle', 'idsk-toolkit')}
                                     value={subTitle}
                                     onChange={value => this.onChange('subTitle', value)} 
                                 />
                                 {!!withSearch &&
                                 <>
                                     <div data-module="idsk-search-component" class="idsk-search-component">
-                                        <label class="" for="intro-block-search">{__('Zadajte hľadaný výraz', 'idsk-toolkit')}</label>
+                                        <label class="" for="intro-block-search">{__('Enter search term', 'idsk-toolkit')}</label>
                                         <input class="govuk-input govuk-input--width-30 idsk-search-component__input " id="intro-block-search" name="s" type="text" disabled />
                                         <button type="submit" class="govuk-button idsk-search-component__button ">
                                             {searchIcon}
-                                            <span class="govuk-visually-hidden">{__('Vyhľadávanie', 'idsk-toolkit')}</span>
+                                            <span class="govuk-visually-hidden">{__('Search', 'idsk-toolkit')}</span>
                                         </button>
                                     </div>
                                     <div>
@@ -327,7 +327,7 @@ registerBlockType('idsk/intro', {
                                             <li class="idsk-intro-block__bottom-menu__li govuk-caption-m">
                                                 <RichText
                                                     tagName="span"
-                                                    placeholder={__('Hľadáte toto?', 'idsk-toolkit')}
+                                                    placeholder={__('Are you searching for this?', 'idsk-toolkit')}
                                                     value={searchTitle}
                                                     onChange={value => this.onChange('searchTitle', value)} 
                                                 />
@@ -378,7 +378,7 @@ registerBlockType('idsk/intro', {
                                     className="govuk-heading-s h2-side"
                                     key="editable"
                                     tagName="h2"
-                                    placeholder={__('Bočný panel', 'idsk-toolkit')}
+                                    placeholder={__('Sidebar', 'idsk-toolkit')}
                                     value={sideTitle}
                                     onChange={value => this.onChange('sideTitle', value)} 
                                 />
@@ -387,7 +387,7 @@ registerBlockType('idsk/intro', {
                                     key="editable"
                                     tagName="ul"
                                     multiline="li"
-                                    placeholder={__('Odkazy bočného panela', 'idsk-toolkit')}
+                                    placeholder={__('Sidebar links', 'idsk-toolkit')}
                                     value={sideContent}
                                     onChange={value => this.onChange('sideContent', value)} 
                                 />

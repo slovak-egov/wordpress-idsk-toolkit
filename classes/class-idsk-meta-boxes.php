@@ -190,7 +190,7 @@ if ( !class_exists( 'IDSK_Meta_Boxes' ) ) {
                     foreach ($datas as $data) {
                         $output .= '<div class="idsk-meta-single">';
                         $output .= $this->render_fields( $mb_id.'_fields['.$i.']', $fields, $data, '', '&nbsp;' );
-                        $output .= '<a class="button button-primary idsk-meta-remove" href="#" title="' . esc_attr__( 'Odstrániť záznam', 'idsk-toolkit' ) . '" style="background-color: red; vertical-align: middle;">' . esc_html__( 'Odstrániť záznam', 'idsk-toolkit' ) . '</a>';
+                        $output .= '<a class="button button-primary idsk-meta-remove" href="#" title="' . esc_attr__( 'Delete entry', 'idsk-toolkit' ) . '" style="background-color: red; vertical-align: middle;">' . esc_html__( 'Delete entry', 'idsk-toolkit' ) . '</a>';
                         $output .= '<hr />';
                         $output .= '</div>';
 
@@ -198,7 +198,7 @@ if ( !class_exists( 'IDSK_Meta_Boxes' ) ) {
                     }
                     
                     $output .= '<div>
-                            <a class="button button-primary idsk-meta-add" href="#" title="' . esc_attr__( 'Pridať záznam', 'idsk-toolkit' ) . '">' . esc_html__( 'Pridať záznam', 'idsk-toolkit' ) . '</a>
+                            <a class="button button-primary idsk-meta-add" href="#" title="' . esc_attr__( 'Add entry', 'idsk-toolkit' ) . '">' . esc_html__( 'Add entry', 'idsk-toolkit' ) . '</a>
                         </div>';
                 } else {
                     $output .= $this->render_fields( $mb_id.'_fields', $fields, $datas, '<p>', '</p>' );

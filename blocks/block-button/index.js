@@ -24,14 +24,13 @@ const { __ } = wp.i18n;
 
 registerBlockType('idsk/button', {
     // built-in attributes
-    title: __('Tlačidlo', 'idsk-toolkit'),
-    description: __('Zobrazuje tlačidlo s odkazom.', 'idsk-toolkit'),
+    title: __('Button', 'idsk-toolkit'),
+    description: __('Shows button with a link.', 'idsk-toolkit'),
     icon: 'button',
     category: 'idsk-components',
     keywords: [
         __('button', 'idsk-toolkit'),
-        __('tlačidlo', 'idsk-toolkit'),
-        __('odkaz', 'idsk-toolkit'),
+        __('link', 'idsk-toolkit'),
     ],
 
     // custom attributes
@@ -67,10 +66,10 @@ registerBlockType('idsk/button', {
 
         return <div className={className}>
             <InspectorControls>
-                <PanelBody title={__('Nastavenie tlačidla', 'idsk-toolkit')}>
+                <PanelBody title={__('Button settings', 'idsk-toolkit')}>
                     <TextControl
                         className="js-button-href"
-                        label={__('Odkaz tlačidla', 'idsk-toolkit')}
+                        label={__('Button link', 'idsk-toolkit')}
                         value={href}
                         onChange={value => setAttributes({ href: value })}
                     />
@@ -78,25 +77,25 @@ registerBlockType('idsk/button', {
                         <ToggleControl
                             className="js-button-target"
                             checked={target}
-                            label={__('Otvoriť odkaz v novom okne', 'idsk-toolkit')}
+                            label={__('Open link in new window', 'idsk-toolkit')}
                             onChange={checked => setAttributes({ target: checked })}
                         />
                     </PanelRow>
                     <RadioControl
                         className="js-button-color"
-                        label={__('Farba tlačidla', 'idsk-toolkit')}
+                        label={__('Button color', 'idsk-toolkit')}
                         selected={ color }
                         options={ [
                             { 
-                                label: __('Zelená', 'idsk-toolkit'),
+                                label: __('Green', 'idsk-toolkit'),
                                 value: '' 
                             },
                             { 
-                                label: __('Sivá', 'idsk-toolkit'),
+                                label: __('Grey', 'idsk-toolkit'),
                                 value: 'govuk-button--secondary' 
                             },
                             { 
-                                label: __('Červená', 'idsk-toolkit'),
+                                label: __('Red', 'idsk-toolkit'),
                                 value: 'govuk-button--warning' 
                             },
                         ] }
@@ -106,7 +105,7 @@ registerBlockType('idsk/button', {
                         <ToggleControl
                             className="js-button-arrow"
                             checked={arrow}
-                            label={__('Zobraziť šípku v tlačidle', 'idsk-toolkit')}
+                            label={__('Show arrow in button', 'idsk-toolkit')}
                             onChange={checked => setAttributes({ arrow: checked })}
                         />
                     </PanelRow>
@@ -118,7 +117,7 @@ registerBlockType('idsk/button', {
                     key="editable"
                     className="js-button-text"
                     tagName="span"
-                    placeholder={__('Text tlačidla.', 'idsk-toolkit')}
+                    placeholder={__('Button text.', 'idsk-toolkit')}
                     value={text}
                     onChange={value => setAttributes({ text: value })} />
                 {!!arrow &&

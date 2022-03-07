@@ -17,13 +17,13 @@ const { __ } = wp.i18n;
 
 registerBlockType('idsk/timeline', {
     // built-in attributes
-    title: __('Časová os - timeline', 'idsk-toolkit'),
-    description: __('Zobrazuje chronologicky usporiadaný obsah.', 'idsk-toolkit'),
+    title: __('Timeline', 'idsk-toolkit'),
+    description: __('Shows content in chronological order.', 'idsk-toolkit'),
     icon: 'align-right',
     category: 'idsk-components',
     keywords: [
         __('timeline', 'idsk-toolkit'),
-        __('časová os', 'idsk-toolkit'),
+        __('time line', 'idsk-toolkit'),
     ],
 
     // custom attributes
@@ -165,7 +165,7 @@ registerBlockType('idsk/timeline', {
                                                 value={item.dateText}
                                                 onChange={value => this.editItem('dateText', index, value)}
                                                 tagName="span"
-                                                placeholder={__('január 1970', 'idsk-toolkit')}
+                                                placeholder={__('january 1970', 'idsk-toolkit')}
                                             />
                                         </div>
                                     </div>
@@ -181,7 +181,7 @@ registerBlockType('idsk/timeline', {
                                                 value={item.heading}
                                                 onChange={value => this.editItem('heading', index, value)}
                                                 tagName="h3"
-                                                placeholder={__('Nadpis', 'idsk-toolkit')}
+                                                placeholder={__('Heading', 'idsk-toolkit')}
                                             />
                                         </div>
                                     </div>
@@ -215,7 +215,7 @@ registerBlockType('idsk/timeline', {
                                         value={item.content}
                                         onChange={value => this.editItem('content', index, value)}
                                         tagName="span"
-                                        placeholder={__('Popis', 'idsk-toolkit')}
+                                        placeholder={__('Caption', 'idsk-toolkit')}
                                     />                                    
                                 </div>
                                 }
@@ -226,7 +226,7 @@ registerBlockType('idsk/timeline', {
                                         <input
                                             className="button-primary button"
                                             type="submit"
-                                            value={__('Pridať popis', 'idsk-toolkit')}
+                                            value={__('Add caption', 'idsk-toolkit')}
                                             onClick={(e) => this.addItem(e, index)}
                                         />
                                     </p>
@@ -235,7 +235,7 @@ registerBlockType('idsk/timeline', {
                                         <input
                                             className="button-secondary button"
                                             type="submit"
-                                            value={__('Vymazať popis', 'idsk-toolkit')}
+                                            value={__('Delete caption', 'idsk-toolkit')}
                                             onClick={(e) => this.removeItem(e, index)}
                                         />
                                     </p>
@@ -249,7 +249,7 @@ registerBlockType('idsk/timeline', {
                                 class="idsk-button"
                                 data-module="idsk-button"
                                 type="submit"
-                                value={__('Pridať blok časovej osi', 'idsk-toolkit')}
+                                value={__('Add block to timeline', 'idsk-toolkit')}
                                 onClick={(e) => this.addItem(e)}
                             />
                         </p>
