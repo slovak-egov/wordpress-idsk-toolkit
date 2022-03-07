@@ -22,16 +22,15 @@ const { __ } = wp.i18n;
 
 registerBlockType('idsk/announce', {
     // built-in attributes
-    title: __('Oznámenie', 'idsk-toolkit'),
-    description: __('Zobrazuje oznam s varovaním.', 'idsk-toolkit'),
+    title: __('Announcement', 'idsk-toolkit'),
+    description: __('Shows announcement with warning.', 'idsk-toolkit'),
     icon: 'megaphone',
     category: 'idsk-components',
     keywords: [
         __('announce', 'idsk-toolkit'),
         __('warning', 'idsk-toolkit'),
         __('text', 'idsk-toolkit'),
-        __('oznámenie', 'idsk-toolkit'),
-        __('varovanie', 'idsk-toolkit'),
+        __('announcement', 'idsk-toolkit'),
     ],
 
     // custom attributes
@@ -53,7 +52,7 @@ registerBlockType('idsk/announce', {
                     key="editable"
                     className="govuk-warning-text__text"
                     tagName="strong"
-                    placeholder={__('napr. Môžete byť pokutovaný ak sa nezaregistrujete.', 'idsk-toolkit')}
+                    placeholder={__('e.g. You may be fined if you fail to register.', 'idsk-toolkit')}
                     value={text}
                     onChange={value => setAttributes({ text: value })} />
             </div>

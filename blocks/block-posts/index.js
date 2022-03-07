@@ -25,13 +25,14 @@ const { __ } = wp.i18n
 
 registerBlockType('idsk/posts', {
     // built-in attributes
-    title: __('Články', 'idsk-toolkit'),
-    description: __('Zobrazuje články na stránke podľa nastavení.', 'idsk-toolkit'),
+    title: __('Posts', 'idsk-toolkit'),
+    description: __('Displays posts on the page based on settings.', 'idsk-toolkit'),
     icon: 'feedback',
     category: 'idsk-components',
     keywords: [
-        __('články', 'idsk-toolkit'),
-        __('aktuality', 'idsk-toolkit'),
+        __('posts', 'idsk-toolkit'),
+        __('news', 'idsk-toolkit'),
+        __('articles', 'idsk-toolkit'),
     ],
 
     // custom attributes
@@ -190,7 +191,7 @@ registerBlockType('idsk/posts', {
                 }
             } else {
                 this.setState({
-                    postsOutput: __('Nenašli sa žiadne články', 'idsk-toolkit')
+                    postsOutput: __('No posts found', 'idsk-toolkit')
                 })
             }
         }
@@ -242,7 +243,7 @@ registerBlockType('idsk/posts', {
                 <div class={"idsk-card-content idsk-card-content-"+classType}>
                     <div class="idsk-card-meta-container">
                         <span class="idsk-card-meta idsk-card-meta-date">
-                            <a href={post.link} class="govuk-link" title={__( 'Pridané dňa:', 'idsk-toolkit' )+' '+postCreated}>{postCreated}</a>
+                            <a href={post.link} class="govuk-link" title={__( 'Added on:', 'idsk-toolkit' )+' '+postCreated}>{postCreated}</a>
                         </span>
                         {outputCategories}
                     </div>
@@ -265,7 +266,7 @@ registerBlockType('idsk/posts', {
 
             let options = [{
                 value: 0,
-                label: __('Vyberte kategóriu článkov', 'idsk-toolkit')
+                label: __('Select posts category', 'idsk-toolkit')
             }]
 
             if (this.state.postCategories.length > 0) {
@@ -279,22 +280,22 @@ registerBlockType('idsk/posts', {
 
             return <div className={className}>
                 <InspectorControls>
-                    <PanelBody title={__('Nastavenia zobrazenia článkov', 'idsk-toolkit')}>
+                    <PanelBody title={__('Posts display settings', 'idsk-toolkit')}>
                         <ToggleControl
                             className={"js-posts-show-intro"}
                             checked={showIntro}
-                            label={__('Zobrazovať úvodný článok', 'idsk-toolkit')}
+                            label={__('Display intro post', 'idsk-toolkit')}
                             onChange={checked => this.onChange('showIntro', checked)}
                         />
                         <TextControl
                             value={postCount}
-                            label={__('Počet zobrazených článkov', 'idsk-toolkit')}
+                            label={__('Number of posts displayed', 'idsk-toolkit')}
                             type="number"
                             onChange={value => value > 0 ? this.onChange('postCount', value, 'number') : this.onChange('postCount', 1, 'number')}
                         />
                         <SelectControl
                             value={postCategory}
-                            label={__('Kategória článkov', 'idsk-toolkit')}
+                            label={__('Posts category', 'idsk-toolkit')}
                             options={options}
                             onChange={value => this.onChange('postCategory', value, 'number')}
                         />
@@ -305,7 +306,7 @@ registerBlockType('idsk/posts', {
                     className="govuk-heading-l"
                     key="editable"
                     tagName="h2"
-                    placeholder={__('Nadpis', 'idsk-toolkit')}
+                    placeholder={__('Heading', 'idsk-toolkit')}
                     value={title}
                     onChange={value => this.onChange('title', value)}
                 />

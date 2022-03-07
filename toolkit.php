@@ -9,7 +9,7 @@
  *
  * @wordpress-plugin
  * Plugin Name:       ID-SK Toolkit
- * Description:       Súbor nástrojov funkcionalít k ID-SK téme.
+ * Description:       Features toolkit for ID-SK theme.
  * Version:           1.5.0
  * Requires at least: 5.4
  * Requires PHP:      7.0

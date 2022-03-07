@@ -78,7 +78,7 @@ function idsktk_render_dynamic_intro_block($attributes) {
                     <?php if ($search) { ?>
                         <form role="search" action="<?php echo esc_url( home_url( '/' ) ); ?>">
                             <div data-module="idsk-search-component" class="idsk-search-component">
-                                <label class="" for="intro-block-search"><?php esc_html_e('Zadajte hľadaný výraz', 'idsk-toolkit') ?></label>
+                                <label class="" for="intro-block-search"><?php esc_html_e('Enter search term', 'idsk-toolkit') ?></label>
                                 <input class="govuk-input govuk-input--width-30 idsk-search-component__input " id="intro-block-search" name="s" type="search" value="<?php echo get_search_query(); ?>">
                                 <button type="submit" class="govuk-button idsk-search-component__button ">
                                     <svg width="18" height="18" viewbox="0 0 31 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -107,7 +107,7 @@ function idsktk_render_dynamic_intro_block($attributes) {
                                             21.0196C8.81278 21.0196 5.16779 17.4681 5.16779 13.103Z"
                                         fill="white"/>
                                     </svg>
-                                    <span class="govuk-visually-hidden"><?php esc_html_e('Vyhľadávanie', 'idsk-toolkit') ?></span>
+                                    <span class="govuk-visually-hidden"><?php esc_html_e('Search', 'idsk-toolkit') ?></span>
                                 </button>
                             </div>
                         </form>

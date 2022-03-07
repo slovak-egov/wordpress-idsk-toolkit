@@ -25,13 +25,11 @@ const ALLOWED_BLOCKS = [
 
 registerBlockType('idsk/related-content', {
     // built-in attributes
-    title: __('Súvisiaci obsah', 'idsk-toolkit'),
-    description: __('Súvisiaci obsah slúži na to, aby ste používateľovi zobrazili odkazy na podobné, súvisiace témy.', 'idsk-toolkit'),
+    title: __('Related content', 'idsk-toolkit'),
+    description: __('Related content serves to show the user links to similar, related topics.', 'idsk-toolkit'),
     icon: 'admin-links',
     category: 'idsk-components',
     keywords: [
-        __('Súvisiaci', 'idsk-toolkit'),
-        __('obsah', 'idsk-toolkit'),
         __('related', 'idsk-toolkit'),
         __('content', 'idsk-toolkit'),
     ],
@@ -67,7 +65,7 @@ registerBlockType('idsk/related-content', {
                     className="idsk-related-content__heading govuk-heading-s"
                     key="editable"
                     tagName="h4"
-                    placeholder={__('Súvisiace témy', 'idsk-toolkit')}
+                    placeholder={__('Related topics', 'idsk-toolkit')}
                     value={title}
                     onChange={value => onChange('title', value)} />
                 <RichText
@@ -75,7 +73,7 @@ registerBlockType('idsk/related-content', {
                     key="editable"
                     tagName="ul"
                     multiline="li"
-                    placeholder={__('Súvisiaca téma č. 1', 'idsk-toolkit')}
+                    placeholder={__('Related topic 1', 'idsk-toolkit')}
                     value={body}
                     onChange={value => onChange('body', value)} />
                 <InnerBlocks allowedBlocks={ALLOWED_BLOCKS} />

@@ -23,44 +23,44 @@ const { __ } = wp.i18n;
 // registering custom styles for block
 registerBlockStyle('idsk/column', {
     name: 'full',
-    label: __('Stĺpec - 1/1', 'idsk-toolkit'),
+    label: __('Column - 1/1', 'idsk-toolkit'),
     isDefault: true
 });
 registerBlockStyle('idsk/column', {
     name: 'one-half',
-    label: __('Stĺpec - 1/2', 'idsk-toolkit'),
+    label: __('Column - 1/2', 'idsk-toolkit'),
     isDefault: false
 });
 registerBlockStyle('idsk/column', {
     name: 'one-quarter',
-    label: __('Stĺpec - 1/4', 'idsk-toolkit'),
+    label: __('Column - 1/4', 'idsk-toolkit'),
     isDefault: false
 });
 registerBlockStyle('idsk/column', {
     name: 'one-third',
-    label: __('Stĺpec - 1/3', 'idsk-toolkit'),
+    label: __('Column - 1/3', 'idsk-toolkit'),
     isDefault: false
 });
 registerBlockStyle('idsk/column', {
     name: 'three-quarters',
-    label: __('Stĺpec - 3/4', 'idsk-toolkit'),
+    label: __('Column - 3/4', 'idsk-toolkit'),
     isDefault: false
 });
 registerBlockStyle('idsk/column', {
     name: 'two-thirds',
-    label: __('Stĺpec - 2/3', 'idsk-toolkit'),
+    label: __('Column - 2/3', 'idsk-toolkit'),
     isDefault: false
 });
 
 registerBlockType('idsk/column', {
     // built-in attributes
-    title: __('Stĺpec', 'idsk-toolkit'),
-    description: __('Vloží stĺpec v plnej šírke.', 'idsk-toolkit'),
+    title: __('Column', 'idsk-toolkit'),
+    description: __('Inserts column in full width.', 'idsk-toolkit'),
     icon: 'columns',
     category: 'idsk-grids',
     keywords: [
-        __('stĺpec', 'idsk-toolkit'),
-        __('stránka', 'idsk-toolkit'),
+        __('Column', 'idsk-toolkit'),
+        __('page', 'idsk-toolkit'),
     ],
     parent: [ 'idsk/row' ],
     
@@ -110,26 +110,26 @@ registerBlockType('idsk/column', {
 
         return <div className={className}>
             <InspectorControls>
-                <PanelBody title={__('Nastavenie stĺpca', 'idsk-toolkit')}>
+                <PanelBody title={__('Column settings', 'idsk-toolkit')}>
                     <RadioControl
                         className="js-column-color"
-                        label={__('Farba pozadia', 'idsk-toolkit')}
+                        label={__('Background color', 'idsk-toolkit')}
                         selected={ bgColor }
                         options={ [
                             { 
-                                label: __('Bez pozadia', 'idsk-toolkit'),
+                                label: __('No background', 'idsk-toolkit'),
                                 value: '' 
                             },
                             { 
-                                label: __('Modré', 'idsk-toolkit'),
+                                label: __('Blue', 'idsk-toolkit'),
                                 value: 'app-pane-blue' 
                             },
                             { 
-                                label: __('Svetlo šedé', 'idsk-toolkit'),
+                                label: __('Light grey', 'idsk-toolkit'),
                                 value: 'app-pane-lgray'
                             },
                             { 
-                                label: __('Šedé', 'idsk-toolkit'),
+                                label: __('Grey', 'idsk-toolkit'),
                                 value: 'app-pane-gray'
                             }
                         ] }
@@ -137,11 +137,11 @@ registerBlockType('idsk/column', {
                     />
                     <RadioControl
                         className="js-column-pt"
-                        label={__('Odsadenie zhora', 'idsk-toolkit')}
+                        label={__('Top margin', 'idsk-toolkit')}
                         selected={ paddingTop }
                         options={ [
                             { 
-                                label: __('Bez odsadenia', 'idsk-toolkit'),
+                                label: __('No margin', 'idsk-toolkit'),
                                 value: '' 
                             },
                             { 
@@ -189,11 +189,11 @@ registerBlockType('idsk/column', {
                     />
                     <RadioControl
                         className="js-column-pb"
-                        label={__('Odsadenie zdola', 'idsk-toolkit')}
+                        label={__('Margin bottom', 'idsk-toolkit')}
                         selected={ paddingBottom }
                         options={ [
                             { 
-                                label: __('Bez odsadenia', 'idsk-toolkit'),
+                                label: __('No margin', 'idsk-toolkit'),
                                 value: '' 
                             },
                             { 
@@ -241,11 +241,11 @@ registerBlockType('idsk/column', {
                     />
                     <RadioControl
                         className="js-column-pl"
-                        label={__('Odsadenie zľava', 'idsk-toolkit')}
+                        label={__('Left margin', 'idsk-toolkit')}
                         selected={ paddingLeft }
                         options={ [
                             { 
-                                label: __('Bez odsadenia', 'idsk-toolkit'),
+                                label: __('No margin', 'idsk-toolkit'),
                                 value: '' 
                             },
                             { 
@@ -293,11 +293,11 @@ registerBlockType('idsk/column', {
                     />
                     <RadioControl
                         className="js-column-pr"
-                        label={__('Odsadenie zprava', 'idsk-toolkit')}
+                        label={__('Right margin', 'idsk-toolkit')}
                         selected={ paddingRight }
                         options={ [
                             { 
-                                label: __('Bez odsadenia', 'idsk-toolkit'),
+                                label: __('No margin', 'idsk-toolkit'),
                                 value: '' 
                             },
                             { 

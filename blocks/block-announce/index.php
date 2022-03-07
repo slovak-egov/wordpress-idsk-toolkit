@@ -33,7 +33,7 @@ function idsktk_render_dynamic_announce_block($attributes) {
     <div class="govuk-warning-text">
         <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
         <strong class="govuk-warning-text__text">
-            <span class="govuk-warning-text__assistive"><?php echo __('Upozornenie', 'idsk-toolkit') ?></span>
+            <span class="govuk-warning-text__assistive"><?php esc_html_e('Warning', 'idsk-toolkit') ?></span>
             <?php echo $text; ?>
         </strong>
     </div>

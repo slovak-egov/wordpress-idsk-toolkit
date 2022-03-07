@@ -68,7 +68,7 @@ function idsktk_render_dynamic_crossroad_block($attributes) {
             <?php $classes = ($number_of_items < 6 && $number_of_cols) || ($number_of_items < 11 && !$number_of_cols) ? ' idsk-crossroad__uncollapse-hide--desktop' : ''; ?>
             <?php $classes = $classes . ($number_of_items < 6 ? ' idsk-crossroad__uncollapse-hide--mobile' : ''); ?>
         <div class="govuk-grid-column-full idsk-crossroad__collapse--shadow idsk-crossroad__uncollapse-div<?php echo $classes; ?>">
-            <button id="idsk-crossroad__uncollapse-button" class="idsk-crossroad__colapse--button" type="button" data-line1="<?php echo __( 'Zobraziť viac', 'idsk-toolkit' ); ?>" data-line2="<?php echo __( 'Zobraziť menej', 'idsk-toolkit' ); ?>"><?php echo __( 'Zobraziť viac', 'idsk-toolkit' ); ?></button>
+            <button id="idsk-crossroad__uncollapse-button" class="idsk-crossroad__colapse--button" type="button" data-line1="<?php esc_attr_e( 'Show more', 'idsk-toolkit' ); ?>" data-line2="<?php esc_attr_e( 'Show less', 'idsk-toolkit' ); ?>"><?php esc_html_e( 'Show more', 'idsk-toolkit' ); ?></button>
         </div>
         <?php } ?>
     </div>

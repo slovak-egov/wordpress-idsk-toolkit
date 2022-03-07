@@ -48,11 +48,11 @@ function idsktk_render_dynamic_map_component_block($attributes) {
                         <div class="govuk-radios govuk-radios--inline">
                             <div class="govuk-radios__item idsk-intereactive-map__radio-map">
                                 <input class="govuk-radios__input" name="interactive-radios-b" id="<?php echo $blockId; ?>-interactive-radios-b-1" type="radio" value="map" checked >
-                                <label class="govuk-label govuk-radios__label" for="<?php echo $blockId; ?>-interactive-radios-b-1"><?php echo __( 'Mapa', 'idsk-toolkit' ) ?></label>
+                                <label class="govuk-label govuk-radios__label" for="<?php echo $blockId; ?>-interactive-radios-b-1"><?php echo __( 'Map', 'idsk-toolkit' ) ?></label>
                             </div>
                             <div class="govuk-radios__item idsk-intereactive-map__radio-table">
                                 <input class="govuk-radios__input" name="interactive-radios-b" id="<?php echo $blockId; ?>-interactive-radios-b-2" type="radio" value="table" >
-                                <label class="govuk-label govuk-radios__label" for="<?php echo $blockId; ?>-interactive-radios-b-2"><?php echo __( 'Tabuľka', 'idsk-toolkit' ) ?></label>
+                                <label class="govuk-label govuk-radios__label" for="<?php echo $blockId; ?>-interactive-radios-b-2"><?php echo __( 'Table', 'idsk-toolkit' ) ?></label>
                             </div>
                         </div>
                     </div>
@@ -60,20 +60,20 @@ function idsktk_render_dynamic_map_component_block($attributes) {
                 <div class="idsk-interactive-map__header-selects">
                     <div class="govuk-form-group">
                         <div class="govuk-label-wrapper">
-                            <label class="govuk-label" for="time-period"><strong><?php echo __( 'Obdobie', 'idsk-toolkit' ) ?></strong></label>
+                            <label class="govuk-label" for="time-period"><strong><?php echo __( 'Period', 'idsk-toolkit' ) ?></strong></label>
                         </div>
                         <select class="idsk-interactive-map__select-time-period govuk-select" id="time-period" name="time-period">
-                            <option value="30"><?php echo __( 'Posledný mesiac', 'idsk-toolkit' ) ?></option>
-                            <option value="90"><?php echo __( 'Posledné 3 mesiace', 'idsk-toolkit' ) ?></option>
-                            <option value="180"><?php echo __( 'Posledných 6 mesiacov', 'idsk-toolkit' ) ?></option>
-                            <option value="" selected="selected"><?php echo __( 'Celé obdobie', 'idsk-toolkit' ) ?></option>
+                            <option value="30"><?php echo __( 'Last month', 'idsk-toolkit' ) ?></option>
+                            <option value="90"><?php echo __( 'Last 3 months', 'idsk-toolkit' ) ?></option>
+                            <option value="180"><?php echo __( 'Last 6 months', 'idsk-toolkit' ) ?></option>
+                            <option value="" selected="selected"><?php echo __( 'Entire period', 'idsk-toolkit' ) ?></option>
                         </select>
                     </div>
                     
                     <?php if (count($indicatorOptions) > 0) { ?>
                         <div class="govuk-form-group">
                             <div class="govuk-label-wrapper">
-                                <label class="govuk-label" for="indicator"><strong><?php echo __( 'Ukazovateľ', 'idsk-toolkit' ) ?></strong></label>
+                                <label class="govuk-label" for="indicator"><strong><?php echo __( 'Indicator', 'idsk-toolkit' ) ?></strong></label>
                             </div>
                             <select class="idsk-interactive-map__select-indicator govuk-select" id="indicator" name="indicator">
                                 <?php foreach ($indicatorOptions as $key => $item) { ?>
@@ -86,7 +86,7 @@ function idsktk_render_dynamic_map_component_block($attributes) {
             </div>
             <?php if (count($indicatorOptions) > 0) { ?>
                 <h3 class="govuk-heading-m">
-                    <span class="idsk-interactive-map__current-indicator"><?php echo $indicatorOptions[0]['text'] ?></span> <?php echo __( 'za', 'idsk-toolkit' ) ?> <span class="idsk-interactive-map__current-time-period"><?php echo __( 'celé obdobie', 'idsk-toolkit' ) ?></span>
+                    <span class="idsk-interactive-map__current-indicator"><?php echo $indicatorOptions[0]['text'] ?></span> <?php esc_html_e( 'for', 'idsk-toolkit' ) ?> <span class="idsk-interactive-map__current-time-period"><?php esc_html_e( 'entire period', 'idsk-toolkit' ) ?></span>
                 </h3>
             <?php } ?>
         </div>

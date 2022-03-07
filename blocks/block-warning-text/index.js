@@ -22,14 +22,14 @@ const { __ } = wp.i18n;
 
 registerBlockType('idsk/warning-text', {
     // built-in attributes
-    title: __('Informačná lišta / Lišta s varovaním', 'idsk-toolkit'),
-    description: __('Lištu použite vtedy, keď chcete niečo zdôrazniť alebo na niečo upozorniť. K dispozícii sú dva typy lišty.', 'idsk-toolkit'),
+    title: __('Information bar / Warning bar', 'idsk-toolkit'),
+    description: __('Use this bar when you want to highlight or draw attention to something. Two types of bar are available.', 'idsk-toolkit'),
     icon: 'warning',
     category: 'idsk-components',
     keywords: [
-        __('lišta', 'idsk-toolkit'),
-        __('Informacna', 'idsk-toolkit'),
-        __('varovanie', 'idsk-toolkit'),
+        __('bar', 'idsk-toolkit'),
+        __('information', 'idsk-toolkit'),
+        __('warning', 'idsk-toolkit'),
     ],
 
     // custom attributes
@@ -57,12 +57,12 @@ registerBlockType('idsk/warning-text', {
                 <div class="govuk-width-container">
                     <div class="idsk-warning-text__text">
                         <InspectorControls>
-                            <PanelBody title={__('Typ lišty', 'idsk-toolkit')}>
+                            <PanelBody title={__('Type of bar', 'idsk-toolkit')}>
                                 <PanelRow>
                                     <ToggleControl
                                         className="js-related-content-grid-type"
                                         checked={textType}
-                                        label={textType ? __('Informačná lišta', 'idsk-toolkit') : __('Lišta s varovaním', 'idsk-toolkit')}
+                                        label={textType ? __('Information bar', 'idsk-toolkit') : __('Warning bar', 'idsk-toolkit')}
                                         onChange={checked => setAttributes({ textType: checked })}
                                     />
                                 </PanelRow>
@@ -71,7 +71,7 @@ registerBlockType('idsk/warning-text', {
                         <RichText
                             key="editable"
                             tagName="span"
-                            placeholder={__('npr. Nový obsah na stránke, nové znenie vyhlášky, novú stratégiu a podobne', 'idsk-toolkit')}
+                            placeholder={__('e.g. new content on the page, new decree, strategy, etc.', 'idsk-toolkit')}
                             value={text}
                             onChange={newText => setAttributes({ text: newText })} />
                     </div>

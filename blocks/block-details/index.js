@@ -14,13 +14,13 @@ const { __ } = wp.i18n;
 
 registerBlockType('idsk/details', {
     // built-in attributes
-    title: __('Skrytý text', 'idsk-toolkit'),
-    description: __('Zobrazuje skrytý text na rozbalenie.', 'idsk-toolkit'),
+    title: __('Hidden text', 'idsk-toolkit'),
+    description: __('Shows hidden text to be expanded.', 'idsk-toolkit'),
     icon: 'arrow-right',
     category: 'idsk-components',
     keywords: [
         __('text', 'idsk-toolkit'),
-        __('skrytý', 'idsk-toolkit'),
+        __('hidden', 'idsk-toolkit'),
     ],
 
     // custom attributes
@@ -46,7 +46,7 @@ registerBlockType('idsk/details', {
                         key="editable"
                         className="govuk-details__summary-text"
                         tagName="span"
-                        placeholder={__('Sumárny popis', 'idsk-toolkit')}
+                        placeholder={__('Summary caption', 'idsk-toolkit')}
                         value={summary}
                         onChange={value => setAttributes({ summary: value })} />
                 </summary>
@@ -55,7 +55,7 @@ registerBlockType('idsk/details', {
                         key="editable"
                         className="js-details-details"
                         tagName="p"
-                        placeholder={__('Obsah', 'idsk-toolkit')}
+                        placeholder={__('Content', 'idsk-toolkit')}
                         value={details}
                         onChange={value => setAttributes({ details: value })} />
                 </div>

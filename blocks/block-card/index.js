@@ -30,13 +30,13 @@ const { __ } = wp.i18n;
 
 registerBlockType('idsk/card', {
     // built-in attributes
-    title: __('Karta', 'idsk-toolkit'),
-    description: __('Zobrazuje kartičku na stránke. K dispozícii sú viaceré varianty zobrazenia.', 'idsk-toolkit'),
+    title: __('Card', 'idsk-toolkit'),
+    description: __('Shows card on the page. Various types of displays available.', 'idsk-toolkit'),
     icon: 'id',
     category: 'idsk-components',
     keywords: [
-        __('karta', 'idsk-toolkit'),
-        __('profil', 'idsk-toolkit'),
+        __('card', 'idsk-toolkit'),
+        __('profile', 'idsk-toolkit'),
         __('hero', 'idsk-toolkit'),
     ],
 
@@ -196,43 +196,43 @@ registerBlockType('idsk/card', {
 
             return <div className={className}>
                 <InspectorControls>
-                    <PanelBody title={__('Zobrazenie kartičky', 'idsk-toolkit')}>
+                    <PanelBody title={__('Card display', 'idsk-toolkit')}>
                         <PanelRow>
                             <RadioControl
                                 className="js-card-type"
-                                label={__('Štýl zobrazenia kartičky', 'idsk-toolkit')}
+                                label={__('Card view style', 'idsk-toolkit')}
                                 selected={ cardType }
                                 options={ [
                                     { 
-                                        label: __('Základná kartička', 'idsk-toolkit'),
+                                        label: __('Basic card', 'idsk-toolkit'),
                                         value: 'basic' 
                                     },
                                     { 
-                                        label: __('Sekundárna kartička', 'idsk-toolkit'),
+                                        label: __('Secondary card', 'idsk-toolkit'),
                                         value: 'secondary' 
                                     },
                                     { 
-                                        label: __('Sekundárna kartička - horizontálna', 'idsk-toolkit'),
+                                        label: __('Secondary card - horizontal', 'idsk-toolkit'),
                                         value: 'secondary-horizontal' 
                                     },
                                     { 
-                                        label: __('Jednoduchá kartička', 'idsk-toolkit'),
+                                        label: __('Simple card', 'idsk-toolkit'),
                                         value: 'simple' 
                                     },
                                     { 
-                                        label: __('Hero kartička', 'idsk-toolkit'),
+                                        label: __('Hero card', 'idsk-toolkit'),
                                         value: 'hero' 
                                     },
                                     { 
-                                        label: __('Základná kartička - bez obrázka', 'idsk-toolkit'),
+                                        label: __('Basic card - no image', 'idsk-toolkit'),
                                         value: 'basic-variant' 
                                     },
                                     { 
-                                        label: __('Profilová kartička - vertikálna', 'idsk-toolkit'),
+                                        label: __('Profile card - vertical', 'idsk-toolkit'),
                                         value: 'profile-vertical' 
                                     },
                                     { 
-                                        label: __('Profilová kartička - horizontálna', 'idsk-toolkit'),
+                                        label: __('Profile card - horizontal', 'idsk-toolkit'),
                                         value: 'profile-horizontal' 
                                     },
                                 ] }
@@ -242,12 +242,12 @@ registerBlockType('idsk/card', {
                     </PanelBody>
 
                     {(cardType != 'basic-variant') &&
-                    <PanelBody title={__('Atribúty obrázka', 'idsk-toolkit')}>
+                    <PanelBody title={__('Image attributes', 'idsk-toolkit')}>
                         <TextControl
                             className="js-img-alt"
                             key="editable"
-                            placeholder={__('Názov obrázka', 'idsk-toolkit')}
-                            label={__('Alternatívny názov obrázka', 'idsk-toolkit')}
+                            placeholder={__('Image name', 'idsk-toolkit')}
+                            label={__('Image alternative name', 'idsk-toolkit')}
                             value={imgAlt}
                             onChange={value => this.onChange('imgAlt', value)} 
                         />
@@ -255,7 +255,7 @@ registerBlockType('idsk/card', {
                             className="js-img-link"
                             key="editable"
                             placeholder={__('https://www.google.com', 'idsk-toolkit')}
-                            label={__('Odkaz presmerovania po kliknutí na obrázok', 'idsk-toolkit')}
+                            label={__('Redirect link after clicking on image', 'idsk-toolkit')}
                             value={imgLink}
                             onChange={value => this.onChange('imgLink', value)} 
                         />
@@ -264,13 +264,13 @@ registerBlockType('idsk/card', {
 
                     {(cardType != 'profile-vertical' && cardType != 'profile-horizontal') &&
                     <>
-                    <PanelBody title={__('Dátum', 'idsk-toolkit')}>
+                    <PanelBody title={__('Date', 'idsk-toolkit')}>
                         <PanelRow>
                             <ToggleControl
                                 className="js-date-visible"
                                 checked={dateVisible}
-                                label={__('Zobrazenie dátumu', 'idsk-toolkit')}
-                                help={dateVisible ? __('Zobrazený', 'idsk-toolkit') : __('Skrytý', 'idsk-toolkit')}
+                                label={__('Display date', 'idsk-toolkit')}
+                                help={dateVisible ? __('Displayed', 'idsk-toolkit') : __('Hidden', 'idsk-toolkit')}
                                 onChange={checked => setAttributes({ dateVisible: checked })}
                             />
                         </PanelRow>
@@ -285,7 +285,7 @@ registerBlockType('idsk/card', {
                                 className="js-date-link"
                                 key="editable"
                                 placeholder={__('https://www.google.com', 'idsk-toolkit')}
-                                label={__('Odkaz k dátumu', 'idsk-toolkit')}
+                                label={__('Date link', 'idsk-toolkit')}
                                 value={dateLink}
                                 onChange={value => this.onChange('dateLink', value)} 
                             />
@@ -293,20 +293,20 @@ registerBlockType('idsk/card', {
                         }
                     </PanelBody>
                     
-                    <PanelBody title={__('Tagy', 'idsk-toolkit')}>
+                    <PanelBody title={__('Tags', 'idsk-toolkit')}>
                         {!!tags && tags.map((item, index) =>
                             <>
                                 <h2>{__('Tag', 'idsk-toolkit')} {index+1}</h2>
                                 <div key={item.id || index}>
                                     <TextControl
                                         key="editable"
-                                        label={__('Názov tagu', 'idsk-toolkit')}
+                                        label={__('Tag name', 'idsk-toolkit')}
                                         value={item.text}
                                         onChange={value => this.editItem('text', index, value)} 
                                     />
                                     <TextControl
                                         key="editable"
-                                        label={__('URL tagu', 'idsk-toolkit')}
+                                        label={__('Tag URL', 'idsk-toolkit')}
                                         placeholder={__('https://www.google.com', 'idsk-toolkit')}
                                         value={item.url}
                                         onChange={value => this.editItem('url', index, value)} 
@@ -315,7 +315,7 @@ registerBlockType('idsk/card', {
                                 <input
                                     className="button-secondary button"
                                     type="submit"
-                                    value={__('Vymazať tag', 'idsk-toolkit')}
+                                    value={__('Delete tag', 'idsk-toolkit')}
                                     onClick={(e) => this.removeItem(e, index)}
                                 />
                                 <div class="govuk-clearfix"></div>
@@ -325,7 +325,7 @@ registerBlockType('idsk/card', {
                         <input
                             className="button-primary button"
                             type="submit"
-                            value={__('Pridať tag', 'idsk-toolkit')}
+                            value={__('Add tag', 'idsk-toolkit')}
                             onClick={(e) => this.addItem(e)}
                         />
                     </PanelBody>
@@ -349,7 +349,7 @@ registerBlockType('idsk/card', {
                                     onClick={open}
                                     />
                                 ) : (
-                                    <button class="imgUpload" onClick={open}>{__('Nahrajte obrázok', 'idsk-toolkit')}</button>
+                                    <button class="imgUpload" onClick={open}>{__('Upload image', 'idsk-toolkit')}</button>
                                 )}
                                 </>;
                         }}
@@ -379,7 +379,7 @@ registerBlockType('idsk/card', {
                             className={"idsk-heading idsk-heading-" + cardType}
                             key="editable"
                             tagName="div"
-                            placeholder={__('Hlavný nadpis', 'idsk-toolkit')}
+                            placeholder={__('Main title', 'idsk-toolkit')}
                             value={title}
                             onChange={value => this.onChange('title', value)} 
                         />
@@ -389,7 +389,7 @@ registerBlockType('idsk/card', {
                             className={"idsk-body idsk-body-" + cardType}
                             key="editable"
                             tagName="p"
-                            placeholder={__('Popis', 'idsk-toolkit')}
+                            placeholder={__('Caption', 'idsk-toolkit')}
                             value={subTitle}
                             onChange={value => this.onChange('subTitle', value)} 
                         />
@@ -409,7 +409,7 @@ registerBlockType('idsk/card', {
                                 className="idsk-quote"
                                 key="editable"
                                 tagName="div"
-                                placeholder={__('Citácia', 'idsk-toolkit')}
+                                placeholder={__('Citation', 'idsk-toolkit')}
                                 value={profileQuote}
                                 onChange={value => this.onChange('profileQuote', value)} 
                             />

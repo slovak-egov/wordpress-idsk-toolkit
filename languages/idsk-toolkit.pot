@@ -1,4 +1,4 @@
-# Copyright (C) 2021 SlovenskoIT a.s.
+# Copyright (C) 2022 SlovenskoIT a.s.
 # This file is distributed under the GPL v2 or later.
 msgid ""
 msgstr ""
@@ -9,7 +9,7 @@ msgstr ""
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2021-12-13T12:18:38+01:00\n"
+"POT-Creation-Date: 2022-03-07T08:43:41+01:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.5.0\n"
 "X-Domain: idsk-toolkit\n"
@@ -19,7 +19,7 @@ msgid "ID-SK Toolkit"
 msgstr ""
 
 #. Description of the plugin
-msgid "Súbor nástrojov funkcionalít k ID-SK téme."
+msgid "Features toolkit for ID-SK theme."
 msgstr ""
 
 #. Author of the plugin
@@ -31,245 +31,242 @@ msgid "https://slovenskoit.sk"
 msgstr ""
 
 #: blocks/block-accordion/index.php:35
-#: blocks/block-accordion/index.js:154
-msgid "Otvoriť všetky"
+#: blocks/block-accordion/index.js:153
+msgid "Open all"
 msgstr ""
 
 #: blocks/block-accordion/index.php:35
+#: blocks/block-stepper/index.php:45
+#: blocks/block-accordion/index.js:153
 #: blocks/block-accordion/index.js:154
-#: blocks/block-accordion/index.js:155
-msgid "Zatvoriť všetky"
+msgid "Close all"
 msgstr ""
 
 #: blocks/block-accordion/index.php:36
-#: blocks/block-accordion/index.js:156
-msgid "sekcie"
+#: blocks/block-accordion/index.js:155
+msgid "sections"
 msgstr ""
 
 #: blocks/block-announce/index.php:36
-msgid "Upozornenie"
+msgid "Warning"
 msgstr ""
 
 #: blocks/block-crossroad/index.php:71
 #: blocks/block-crossroad/index.js:137
-msgid "Zobraziť viac"
+msgid "Show more"
 msgstr ""
 
 #: blocks/block-crossroad/index.php:71
-msgid "Zobraziť menej"
+msgid "Show less"
 msgstr ""
 
-#: blocks/block-intro/index.php:79
+#: blocks/block-intro/index.php:81
 #: blocks/block-intro/index.js:317
-msgid "Zadajte hľadaný výraz"
+msgid "Enter search term"
 msgstr ""
 
-#: blocks/block-intro/index.php:108
+#: blocks/block-intro/index.php:110
 #: blocks/block-intro/index.js:321
-msgid "Vyhľadávanie"
+msgid "Search"
 msgstr ""
 
 #: blocks/block-map-component/index.php:51
 #: blocks/block-map-component/index.js:298
-msgid "Mapa"
+msgid "Map"
 msgstr ""
 
 #: blocks/block-map-component/index.php:55
 #: blocks/block-map-component/index.js:302
-msgid "Tabuľka"
+msgid "Table"
 msgstr ""
 
 #: blocks/block-map-component/index.php:63
 #: blocks/block-map-component/index.js:310
-msgid "Obdobie"
+msgid "Period"
 msgstr ""
 
 #: blocks/block-map-component/index.php:66
 #: blocks/block-map-component/index.js:313
-msgid "Posledný mesiac"
+msgid "Last month"
 msgstr ""
 
 #: blocks/block-map-component/index.php:67
 #: blocks/block-map-component/index.js:314
-msgid "Posledné 3 mesiace"
+msgid "Last 3 months"
 msgstr ""
 
 #: blocks/block-map-component/index.php:68
 #: blocks/block-map-component/index.js:315
-msgid "Posledných 6 mesiacov"
+msgid "Last 6 months"
 msgstr ""
 
 #: blocks/block-map-component/index.php:69
 #: blocks/block-map-component/index.js:87
 #: blocks/block-map-component/index.js:316
-msgid "Celé obdobie"
+msgid "Entire period"
 msgstr ""
 
 #: blocks/block-map-component/index.php:76
 #: blocks/block-map-component/index.js:248
 #: blocks/block-map-component/index.js:323
-msgid "Ukazovateľ"
+msgid "Indicator"
 msgstr ""
 
 #: blocks/block-map-component/index.php:89
 #: blocks/block-map-component/index.js:337
-msgid "za"
+msgid "for"
 msgstr ""
 
 #: blocks/block-map-component/index.php:89
-msgid "celé obdobie"
+msgid "entire period"
 msgstr ""
 
 #: blocks/block-posts/index.php:83
 #: blocks/block-posts/index.php:117
-#: blocks/block-posts/index.js:245
-msgid "Pridané dňa:"
+#: blocks/block-posts/index.js:246
+msgid "Added on:"
 msgstr ""
 
 #: blocks/block-stepper/index.php:45
-msgid "Zobraziť všetko"
+msgid "Show all"
 msgstr ""
 
-#: blocks/block-stepper/index.php:45
-msgid "Zatvoriť všetko"
+#: classes/class-idsk-meta-boxes.php:193
+msgid "Delete entry"
 msgstr ""
 
-#: classes/MetaBoxes.php:193
-msgid "Odstrániť záznam"
-msgstr ""
-
-#: classes/MetaBoxes.php:201
-msgid "Pridať záznam"
+#: classes/class-idsk-meta-boxes.php:201
+msgid "Add entry"
 msgstr ""
 
 #: inc/cookies-frontend.php:58
-msgid "Nevyhnutne nutné súbory cookie"
+msgid "Necessary cookies"
 msgstr ""
 
 #: inc/cookies-frontend.php:88
-msgid "Uložiť nastavenia"
+msgid "Save cookies settings"
 msgstr ""
 
 #: inc/cookies-frontend.php:101
-msgid "Aktívne cookies"
+msgid "Active cookies"
 msgstr ""
 
 #: inc/cookies-frontend.php:104
-msgid "Názov"
+msgid "Name"
 msgstr ""
 
 #: inc/cookies-frontend.php:105
-msgid "Hodnota"
+msgid "Value"
 msgstr ""
 
 #: inc/register-blocks.php:74
-msgid "ID-SK Komponenty"
+msgid "ID-SK Components"
 msgstr ""
 
 #: inc/register-blocks.php:80
-msgid "ID-SK Rozloženie stránky"
+msgid "ID-SK Website layout"
 msgstr ""
 
 #: inc/register-meta.php:18
-msgid "Tlačidlo späť"
+msgid "Back button"
 msgstr ""
 
 #: inc/register-meta.php:24
-msgid "Text pre tlačidlo späť"
+msgid "Text for Back button"
 msgstr ""
 
 #: inc/register-meta.php:28
-msgid "URL pre tlačidlo späť (ak ostane prázdne, späť sa nezobrazí)"
-msgstr ""
-
-#: inc/register-meta.php:36
-msgid "Zoznam aktualizácií"
+msgid "URL for Back button (if left empty, button will not show)"
 msgstr ""
 
 #: inc/register-meta.php:39
-msgid "Povoliť zobrazenie obsahu aktualizácií"
+msgid "Updates list"
 msgstr ""
 
-#: inc/register-meta.php:44
-msgid "Dňa"
+#: inc/register-meta.php:42
+msgid "Allow updates to be displayed"
 msgstr ""
 
-#: inc/register-meta.php:48
-msgid "Bližší popis"
+#: inc/register-meta.php:47
+msgid "On (as date)"
 msgstr ""
 
-#: inc/register-meta.php:55
-msgid "Zdieľanie článku na sociálnych sieťach"
+#: inc/register-meta.php:51
+msgid "Detailed description"
 msgstr ""
 
 #: inc/register-meta.php:58
-msgid "Povoliť zdieľanie článku na sociálnych sieťach"
+msgid "Article sharing on social networks"
 msgstr ""
 
-#: inc/register-meta.php:63
-#: inc/register-patterns.php:490
-#: inc/register-patterns.php:496
-#: assets/js/editor.blocks.js:1
-#: blocks/block-related-content/index.js:70
-msgid "Súvisiace témy"
+#: inc/register-meta.php:61
+msgid "Allow article sharing on social networks"
 msgstr ""
 
 #: inc/register-meta.php:66
-msgid "Povoliť zobrazenie súvisiacich tém"
+#: inc/register-patterns.php:490
+#: inc/register-patterns.php:496
+#: assets/js/editor.blocks.js:1
+#: blocks/block-related-content/index.js:68
+msgid "Related topics"
 msgstr ""
 
-#: inc/register-meta.php:71
-msgid "Názov témy"
+#: inc/register-meta.php:69
+msgid "Allow related topics to be displayed"
 msgstr ""
 
-#: inc/register-meta.php:75
-msgid "Odkaz na tému"
+#: inc/register-meta.php:74
+msgid "Topic title"
 msgstr ""
 
-#: inc/register-meta.php:82
-msgid "Súvisiace články"
+#: inc/register-meta.php:78
+msgid "Link to topic"
 msgstr ""
 
 #: inc/register-meta.php:85
-msgid "Povoliť zobrazenie súvisiacich článkov"
+msgid "Related articles"
 msgstr ""
 
-#: inc/register-meta.php:90
-msgid "Článok"
+#: inc/register-meta.php:88
+msgid "Allow related articles to be displayed"
 msgstr ""
 
-#: inc/register-meta.php:91
-msgid "Vyberte článok"
+#: inc/register-meta.php:93
+msgid "Article"
+msgstr ""
+
+#: inc/register-meta.php:94
+msgid "Select article"
 msgstr ""
 
 #: inc/register-patterns.php:18
-msgid "Vzory stránok"
+msgid "Page examples"
 msgstr ""
 
 #: inc/register-patterns.php:44
-msgid "Domovská stránka"
+msgid "Homepage"
 msgstr ""
 
 #: inc/register-patterns.php:45
-msgctxt "Popis vzoru domovskej stránky"
-msgid "Domovská stránka s úvodnym blokom, kartičkami a rázcestníkmi. Odporúčame použiť so šablónou <strong>\"Bez kontajnera a bez nadpisu\"</strong>"
+msgctxt "Homepage pattern description"
+msgid "Homepage with intro block, cards and crossroads. Recommended to use with a <strong>\"Without container and heading\"</strong> template"
 msgstr ""
 
 #: inc/register-patterns.php:49
-msgid "Vitajte na stránke"
+msgid "Welcome to the website"
 msgstr ""
 
 #: inc/register-patterns.php:49
-msgid "Dozvedieť sa \\u003ca href=\\u0022#\\u0022\\u003eviac o stránkach\\u003c/a\\u003e."
+msgid "Learn \\u003ca href=\\u0022#\\u0022\\u003emore about website\\u003c/a\\u003e."
 msgstr ""
 
 #: inc/register-patterns.php:49
 #: blocks/block-intro/index.js:330
-msgid "Hľadáte toto?"
+msgid "Are you searching for this?"
 msgstr ""
 
 #: inc/register-patterns.php:49
-msgid "Dokumenty"
+msgid "Documents"
 msgstr ""
 
 #: inc/register-patterns.php:49
@@ -279,31 +276,31 @@ msgstr ""
 #: inc/register-patterns.php:49
 #: inc/register-patterns.php:53
 #: inc/register-patterns.php:269
-msgid "Aktuality"
+msgid "News"
 msgstr ""
 
 #: inc/register-patterns.php:49
-msgid "Podmienky"
+msgid "Terms and conditions"
 msgstr ""
 
 #: inc/register-patterns.php:49
-msgid "O nás"
-msgstr ""
-
-#: inc/register-patterns.php:49
-#: inc/register-patterns.php:265
-msgid "Populárny obsah"
+msgid "About us"
 msgstr ""
 
 #: inc/register-patterns.php:49
 #: inc/register-patterns.php:265
-msgid "\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003eDokumenty\\u003c/a\\u003e\\u003c/li\\u003e\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003eInfo\\u003c/a\\u003e\\u003c/li\\u003e\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003eAktuality\\u003c/a\\u003e\\u003c/li\\u003e\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003ePodmienky\\u003c/a\\u003e\\u003c/li\\u003e\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003eO nás\\u003c/a\\u003e\\u003c/li\\u003e"
+msgid "Popular content"
+msgstr ""
+
+#: inc/register-patterns.php:49
+#: inc/register-patterns.php:265
+msgid "\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003eDocuments\\u003c/a\\u003e\\u003c/li\\u003e\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003eInfo\\u003c/a\\u003e\\u003c/li\\u003e\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003eNews\\u003c/a\\u003e\\u003c/li\\u003e\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003eTerms\\u003c/a\\u003e\\u003c/li\\u003e\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003eAbout us\\u003c/a\\u003e\\u003c/li\\u003e"
 msgstr ""
 
 #: inc/register-patterns.php:57
 #: inc/register-patterns.php:273
 #: inc/register-patterns.php:390
-msgid "Sekcia"
+msgid "Section"
 msgstr ""
 
 #: inc/register-patterns.php:60
@@ -325,7 +322,7 @@ msgstr ""
 #: inc/register-patterns.php:374
 #: inc/register-patterns.php:384
 #: inc/register-patterns.php:398
-msgid "Rázcestník 1"
+msgid "Crossroad 1"
 msgstr ""
 
 #: inc/register-patterns.php:65
@@ -381,7 +378,7 @@ msgstr ""
 #: inc/register-patterns.php:374
 #: inc/register-patterns.php:384
 #: inc/register-patterns.php:398
-msgid "Rázcestník 2"
+msgid "Crossroad 2"
 msgstr ""
 
 #: inc/register-patterns.php:65
@@ -394,7 +391,7 @@ msgstr ""
 #: inc/register-patterns.php:374
 #: inc/register-patterns.php:384
 #: inc/register-patterns.php:398
-msgid "Rázcestník 3"
+msgid "Crossroad 3"
 msgstr ""
 
 #: inc/register-patterns.php:65
@@ -405,74 +402,74 @@ msgstr ""
 #: inc/register-patterns.php:374
 #: inc/register-patterns.php:384
 #: inc/register-patterns.php:398
-msgid "Rázcestník 4"
+msgid "Crossroad 4"
 msgstr ""
 
 #: inc/register-patterns.php:71
-msgid "Podsekcia 1"
+msgid "Subsection 1"
 msgstr ""
 
 #: inc/register-patterns.php:77
-msgid "Podsekcia 2"
+msgid "Subsection 2"
 msgstr ""
 
 #: inc/register-patterns.php:87
-msgid "Vedenie"
+msgid "Management"
 msgstr ""
 
 #: inc/register-patterns.php:89
-msgid "\\u003ca href=\\u0022#\\u0022\\u003eMacko Pú\\u003c/a\\u003e"
+msgid "\\u003ca href=\\u0022#\\u0022\\u003eName Surename\\u003c/a\\u003e"
 msgstr ""
 
 #: inc/register-patterns.php:89
-msgid "\\u003ca href=\\u0022#\\u0022\\u003eŠtátny tajomník medu a radosti\\u003c/a\\u003e"
+msgid "\\u003ca href=\\u0022#\\u0022\\u003eRole / function\\u003c/a\\u003e"
 msgstr ""
 
 #: inc/register-patterns.php:89
-msgid "“Aký je deň?” spýtal sa Pú. “Je dnes,” odpovedalo prasiatko. “Môj najobľúbenejší deň,” povedal Pú."
+msgid "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 msgstr ""
 
 #: inc/register-patterns.php:95
-msgid "Informatizácia"
+msgid "Informatization"
 msgstr ""
 
 #: inc/register-patterns.php:107
-msgid "Služby"
+msgid "Services"
 msgstr ""
 
 #: inc/register-patterns.php:109
-msgid "\\u003ca href=\\u0022#\\u0022\\u003e\\u003cstrong\\u003ePoložka 1\\u003c/strong\\u003e\\u003c/a\\u003e"
+msgid "\\u003ca href=\\u0022#\\u0022\\u003e\\u003cstrong\\u003eItem 1\\u003c/strong\\u003e\\u003c/a\\u003e"
 msgstr ""
 
 #: inc/register-patterns.php:109
-msgid "\\u003ca href=\\u0022#\\u0022\\u003e\\u003cstrong\\u003ePoložka 2\\u003c/strong\\u003e\\u003c/a\\u003e"
+msgid "\\u003ca href=\\u0022#\\u0022\\u003e\\u003cstrong\\u003eItem 2\\u003c/strong\\u003e\\u003c/a\\u003e"
 msgstr ""
 
 #: inc/register-patterns.php:109
-msgid "\\u003ca href=\\u0022#\\u0022\\u003e\\u003cstrong\\u003ePoložka 3\\u003c/strong\\u003e\\u003c/a\\u003e"
+msgid "\\u003ca href=\\u0022#\\u0022\\u003e\\u003cstrong\\u003eItem 3\\u003c/strong\\u003e\\u003c/a\\u003e"
 msgstr ""
 
 #: inc/register-patterns.php:109
-msgid "\\u003ca href=\\u0022#\\u0022\\u003e\\u003cstrong\\u003ePoložka 4\\u003c/strong\\u003e\\u003c/a\\u003e"
+msgid "\\u003ca href=\\u0022#\\u0022\\u003e\\u003cstrong\\u003eItem 4\\u003c/strong\\u003e\\u003c/a\\u003e"
 msgstr ""
 
 #: inc/register-patterns.php:109
-msgid "\\u003ca href=\\u0022#\\u0022\\u003e\\u003cstrong\\u003ePoložka 5\\u003c/strong\\u003e\\u003c/a\\u003e"
+msgid "\\u003ca href=\\u0022#\\u0022\\u003e\\u003cstrong\\u003eItem 5\\u003c/strong\\u003e\\u003c/a\\u003e"
 msgstr ""
 
 #: inc/register-patterns.php:109
-msgid "\\u003ca href=\\u0022#\\u0022\\u003e\\u003cstrong\\u003ePoložka 6\\u003c/strong\\u003e\\u003c/a\\u003e"
+msgid "\\u003ca href=\\u0022#\\u0022\\u003e\\u003cstrong\\u003eItem 6\\u003c/strong\\u003e\\u003c/a\\u003e"
 msgstr ""
 
 #: inc/register-patterns.php:115
 #: inc/register-patterns.php:323
 #: inc/register-patterns.php:404
-msgid "Sekcia 2"
+msgid "Section 2"
 msgstr ""
 
 #: inc/register-patterns.php:129
 #: inc/register-patterns.php:345
-msgid "Sekcia 3"
+msgid "Section 3"
 msgstr ""
 
 #: inc/register-patterns.php:137
@@ -480,14 +477,14 @@ msgstr ""
 #: inc/register-patterns.php:374
 #: inc/register-patterns.php:384
 #: inc/register-patterns.php:398
-msgid "Rázcestník 5"
+msgid "Crossroad 5"
 msgstr ""
 
 #: inc/register-patterns.php:137
 #: inc/register-patterns.php:277
 #: inc/register-patterns.php:374
 #: inc/register-patterns.php:384
-msgid "Rázcestník 6"
+msgid "Crossroad 6"
 msgstr ""
 
 #: inc/register-patterns.php:147
@@ -496,11 +493,11 @@ msgid "Banner"
 msgstr ""
 
 #: inc/register-patterns.php:154
-msgid "<a href=\"#\">Zistiť viac</a>"
+msgid "<a href=\"#\">Learn more</a>"
 msgstr ""
 
 #: inc/register-patterns.php:169
-msgid "Podujatia"
+msgid "Events"
 msgstr ""
 
 #: inc/register-patterns.php:178
@@ -522,77 +519,77 @@ msgid "26.02.2021"
 msgstr ""
 
 #: inc/register-patterns.php:239
-msgid "Projekty"
+msgid "Projects"
 msgstr ""
 
 #: inc/register-patterns.php:247
-msgid "Projekt 1"
+msgid "Project 1"
 msgstr ""
 
 #: inc/register-patterns.php:247
-msgid "Projekt 2"
+msgid "Project 2"
 msgstr ""
 
 #: inc/register-patterns.php:247
-msgid "Projekt 3"
+msgid "Project 3"
 msgstr ""
 
 #: inc/register-patterns.php:247
-msgid "Projekt 4"
+msgid "Project 4"
 msgstr ""
 
 #: inc/register-patterns.php:247
-msgid "Projekt 5"
+msgid "Project 5"
 msgstr ""
 
 #: inc/register-patterns.php:247
-msgid "Projekt 6"
+msgid "Project 6"
 msgstr ""
 
 #: inc/register-patterns.php:247
-msgid "Projekt 7"
+msgid "Project 7"
 msgstr ""
 
 #: inc/register-patterns.php:247
-msgid "Projekt 8"
+msgid "Project 8"
 msgstr ""
 
 #: inc/register-patterns.php:247
-msgid "Projekt 9"
+msgid "Project 9"
 msgstr ""
 
 #: inc/register-patterns.php:247
-msgid "Projekt 10"
+msgid "Project 10"
 msgstr ""
 
 #: inc/register-patterns.php:247
-msgid "Projekt 11"
+msgid "Project 11"
 msgstr ""
 
 #: inc/register-patterns.php:247
-msgid "Projekt 12"
+msgid "Project 12"
 msgstr ""
 
 #: inc/register-patterns.php:247
-msgid "Projekt 13"
+msgid "Project 13"
 msgstr ""
 
 #: inc/register-patterns.php:247
-msgid "Projekt 14"
+msgid "Project 14"
 msgstr ""
 
 #: inc/register-patterns.php:247
-msgid "Projekt 15"
+msgid "Project 15"
 msgstr ""
 
 #: inc/register-patterns.php:260
 #: inc/register-patterns.php:265
-msgid "Podstránka"
+msgid "Subpage"
 msgstr ""
 
 #: inc/register-patterns.php:261
-msgctxt "Popis vzoru podstránky"
-msgid "Podstránka s úvodnym blokom, kartičkami, rázcestníkmi a akordeónmi. Odporúčame použiť so šablónou <strong>\"Bez kontajnera a bez nadpisu\"</strong>"
+msgctxt "Subpage pattern description"
+msgid "Subpage with an intro block, cards, crossroads and accordions. Recommended to use with a <strong>\"Without container and heading\"</strong> template"
 msgstr ""
 
 #: inc/register-patterns.php:265
@@ -602,174 +599,174 @@ msgstr ""
 #: inc/register-patterns.php:285
 #: inc/register-patterns.php:402
 #: inc/register-patterns.php:410
-msgid "Akordeón 1"
+msgid "Accordion 1"
 msgstr ""
 
 #: inc/register-patterns.php:285
 #: inc/register-patterns.php:402
 #: inc/register-patterns.php:410
-msgid "Akordeón 2"
+msgid "Accordion 2"
 msgstr ""
 
 #: inc/register-patterns.php:285
 #: inc/register-patterns.php:402
 #: inc/register-patterns.php:410
-msgid "Akordeón 3"
+msgid "Accordion 3"
 msgstr ""
 
 #: inc/register-patterns.php:285
 #: inc/register-patterns.php:402
 #: inc/register-patterns.php:410
-msgid "Akordeón 4"
+msgid "Accordion 4"
 msgstr ""
 
 #: inc/register-patterns.php:285
 #: inc/register-patterns.php:402
 #: inc/register-patterns.php:410
-msgid "Akordeón 5"
+msgid "Accordion 5"
 msgstr ""
 
 #: inc/register-patterns.php:285
 #: inc/register-patterns.php:402
 #: inc/register-patterns.php:410
-msgid "Akordeón 6"
+msgid "Accordion 6"
 msgstr ""
 
 #: inc/register-patterns.php:285
 #: inc/register-patterns.php:402
 #: inc/register-patterns.php:410
-msgid "Akordeón 7"
+msgid "Accordion 7"
 msgstr ""
 
 #: inc/register-patterns.php:334
 #: inc/register-patterns.php:338
 #: inc/register-patterns.php:352
-msgid "<a href=\"#\">Dokument (PDF, 10kB)</a>"
+msgid "<a href=\"#\">Document (PDF, 10kB)</a>"
 msgstr ""
 
 #: inc/register-patterns.php:341
 #: inc/register-patterns.php:355
-msgid "Ďalšie dokumenty"
+msgid "Other documents"
 msgstr ""
 
 #: inc/register-patterns.php:341
 #: inc/register-patterns.php:355
-msgid "\\u003ca href=\\u0022#\\u0022\\u003eDokument (PDF, 10kB)\\u003c/a\\u003e"
+msgid "\\u003ca href=\\u0022#\\u0022\\u003eDocument (PDF, 10kB)\\u003c/a\\u003e"
 msgstr ""
 
 #: inc/register-patterns.php:366
-msgid "Podstránka s dokumentmi"
+msgid "Subpage with documents"
 msgstr ""
 
 #: inc/register-patterns.php:367
-msgctxt "Popis vzoru podstránky s dokumentmi"
-msgid "Podstránka s rázcestníkmi a akordeónmi."
+msgctxt "Subpage with documents pattern description"
+msgid "Subpage with crossroads and accordions."
 msgstr ""
 
 #: inc/register-patterns.php:374
 #: inc/register-patterns.php:384
-msgid "Rázcestník 7"
+msgid "Crossroad 7"
 msgstr ""
 
 #: inc/register-patterns.php:374
-msgid "Rázcestník 8"
+msgid "Crossroad 8"
 msgstr ""
 
 #: inc/register-patterns.php:402
 #: inc/register-patterns.php:410
-msgid "Popis\\u003cbr\\u003e\\u003ca href=\\u0022#\\u0022\\u003eDokument (PDF, 10kB)\\u003c/a\\u003e\\u003cbr\\u003e\\u003ca href=\\u0022#\\u0022\\u003eDokument (PDF, 10kB)\\u003c/a\\u003e\\u003cbr\\u003e\\u003ca href=\\u0022#\\u0022\\u003eDokument (PDF, 10kB)\\u003c/a\\u003e"
+msgid "Caption\\u003cbr\\u003e\\u003ca href=\\u0022#\\u0022\\u003eDocument (PDF, 10kB)\\u003c/a\\u003e\\u003cbr\\u003e\\u003ca href=\\u0022#\\u0022\\u003eDocument (PDF, 10kB)\\u003c/a\\u003e\\u003cbr\\u003e\\u003ca href=\\u0022#\\u0022\\u003eDocument (PDF, 10kB)\\u003c/a\\u003e"
 msgstr ""
 
 #: inc/register-patterns.php:402
-msgid "Akordeón 8"
+msgid "Accordion 8"
 msgstr ""
 
 #: inc/register-patterns.php:418
-msgid "Podstránka so stepperom"
+msgid "Subpage with stepper"
 msgstr ""
 
 #: inc/register-patterns.php:419
-msgctxt "Popis vzoru podstránky so stepperom"
-msgid "Podstránka so stepperom a súvisiacim obsahom. Odporúčame použiť so šablónou <strong>\"In-page navigácia\"</strong>"
+msgctxt "Subpage with stepper pattern description"
+msgid "Subpage with stepper and related content. It is recommened to use the template <strong>\"In-page navigation\"</strong>"
 msgstr ""
 
 #: inc/register-patterns.php:420
 #: inc/register-patterns.php:492
-msgid "Súčasť životnej situácie"
+msgid "Part of a life event"
 msgstr ""
 
 #: inc/register-patterns.php:420
 #: inc/register-patterns.php:492
-msgid "\\u003ca href=\\u0022#\\u0022\\u003eNarodenie dieťaťa: krok za krokom\\u003c/a\\u003e"
+msgid "\\u003ca href=\\u0022#\\u0022\\u003eBirth of a child: step-by-step\\u003c/a\\u003e"
 msgstr ""
 
 #: inc/register-patterns.php:438
-msgid "Nadpis 1"
+msgid "Heading 1"
 msgstr ""
 
 #: inc/register-patterns.php:456
-msgid "Nadpis 2"
+msgid "Heading 2"
 msgstr ""
 
 #: inc/register-patterns.php:490
 #: inc/register-patterns.php:496
-msgid "\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003eSúvisiaca téma\\u003c/a\\u003e\\u003c/li\\u003e\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003eSúvisiaca téma\\u003c/a\\u003e\\u003c/li\\u003e\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003eSúvisiaca téma\\u003c/a\\u003e\\u003c/li\\u003e"
+msgid "\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003eRelated topic\\u003c/a\\u003e\\u003c/li\\u003e\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003eRelated topic\\u003c/a\\u003e\\u003c/li\\u003e\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003eRelated topic\\u003c/a\\u003e\\u003c/li\\u003e"
 msgstr ""
 
 #: inc/register-patterns.php:494
-msgid "Pred narodením dieťaťa"
+msgid "Before the birth of a child"
 msgstr ""
 
 #: inc/register-patterns.php:494
-msgid "Krok 1"
+msgid "Step 1"
 msgstr ""
 
 #: inc/register-patterns.php:494
-msgid "\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003eOdkaz na podstránku\\u003c/a\\u003e\\u003c/li\\u003e"
+msgid "\\u003cli\\u003e\\u003ca href=\\u0022#\\u0022\\u003eSubpage link\\u003c/a\\u003e\\u003c/li\\u003e"
 msgstr ""
 
 #: inc/register-patterns.php:494
-msgid "Krok 2"
+msgid "Step 2"
 msgstr ""
 
 #: inc/register-patterns.php:494
-msgid "Po narodení dieťaťa"
+msgid "After the birth of a child"
 msgstr ""
 
 #: inc/register-patterns.php:494
-msgid "Krok 3"
+msgid "Step 3"
 msgstr ""
 
 #: inc/register-patterns.php:494
-msgid "Čiastočný krok"
+msgid "Partial step"
 msgstr ""
 
 #: inc/register-patterns.php:494
-msgid "Krok 4"
+msgid "Step 4"
 msgstr ""
 
 #: inc/register-patterns.php:494
-msgid "Krok 5"
+msgid "Step 5"
 msgstr ""
 
 #: lib/template-customizer.php:17
-msgid "Nastavenia Google Maps API"
+msgid "Google Maps API settings"
 msgstr ""
 
 #: lib/template-customizer.php:31
-msgid "Google Maps - API kľúč"
+msgid "Google Maps - API key"
 msgstr ""
 
 #: lib/template-customizer.php:44
-msgid "Nastavenie vyhľadávania"
+msgid "Search settings"
 msgstr ""
 
 #: lib/template-customizer.php:63
-msgid "Zobraziť hlavné vyhľadávanie"
+msgid "Show main search"
 msgstr ""
 
 #: lib/template-customizer.php:64
-msgid "Zobrazuje veľké vyhľadávanie alebo malé pri filtroch"
+msgid "Shows big search or small with filters"
 msgstr ""
 
 #: lib/template-customizer.php:74
@@ -777,87 +774,77 @@ msgid "Cookies"
 msgstr ""
 
 #: lib/template-customizer.php:93
-msgid "Povoliť cookies a zobrazenie cookies bannera"
+msgid "Enable cookies and display cookies banner"
 msgstr ""
 
 #: lib/template-customizer.php:110
-msgid "Dĺžka platnosti cookies"
+msgid "Cookies validity period"
 msgstr ""
 
 #: lib/template-customizer.php:129
-msgid "Dní"
+msgid "Days"
 msgstr ""
 
 #: lib/template-customizer.php:130
-msgid "Mesiacov"
+msgid "Months"
 msgstr ""
 
 #: lib/template-customizer.php:145
-msgid "Nadpis bannera"
+msgid "Banner heading"
 msgstr ""
 
 #: lib/template-customizer.php:162
-msgid "Textový obsah banera"
+msgid "Banner text content"
 msgstr ""
 
 #: lib/template-customizer.php:182
-msgid "Zobraziť tlačidlá pre povolenie všetkých cookies"
+msgid "Show buttons to enable all cookies"
 msgstr ""
 
 #: lib/template-customizer.php:196
-msgid "Vlastný text po prijatí cookies"
+msgid "Custom text after accepting cookies"
 msgstr ""
 
 #: lib/template-customizer.php:213
-msgid "Vlastný text po odmietnutí cookies"
+msgid "Custom text after rejecting cookies"
 msgstr ""
 
 #: lib/template-customizer.php:230
-msgid "URL stránky s nastaveniami cookies"
+msgid "URL of the page with cookies settings"
 msgstr ""
 
 #: assets/js/editor.blocks.js:1
 #: blocks/block-related-content/index.js:28
-msgid "Súvisiaci obsah"
+msgid "Related content"
 msgstr ""
 
 #: assets/js/editor.blocks.js:1
 #: blocks/block-related-content/index.js:29
-msgid "Súvisiaci obsah slúži na to, aby ste používateľovi zobrazili odkazy na podobné, súvisiace témy."
+msgid "Related content serves to show the user links to similar, related topics."
 msgstr ""
 
 #: assets/js/editor.blocks.js:1
 #: blocks/block-related-content/index.js:33
-msgid "Súvisiaci"
-msgstr ""
-
-#: assets/js/editor.blocks.js:1
-#: blocks/block-related-content/index.js:34
-msgid "obsah"
-msgstr ""
-
-#: assets/js/editor.blocks.js:1
-#: blocks/block-related-content/index.js:35
 msgid "related"
 msgstr ""
 
 #: assets/js/editor.blocks.js:1
-#: blocks/block-related-content/index.js:36
+#: blocks/block-related-content/index.js:34
 msgid "content"
 msgstr ""
 
 #: assets/js/editor.blocks.js:1
-#: blocks/block-related-content/index.js:78
-msgid "Súvisiaca téma č. 1"
+#: blocks/block-related-content/index.js:76
+msgid "Related topic 1"
 msgstr ""
 
 #: blocks/block-accordion/index.js:28
-#: blocks/block-accordion/index.js:144
-msgid "Akordeón"
+#: blocks/block-accordion/index.js:143
+msgid "Accordion"
 msgstr ""
 
 #: blocks/block-accordion/index.js:29
-msgid "Zobrazuje skladací blok."
+msgid "Shows collapsible block."
 msgstr ""
 
 #: blocks/block-accordion/index.js:33
@@ -865,115 +852,112 @@ msgid "accordion"
 msgstr ""
 
 #: blocks/block-accordion/index.js:34
-msgid "akordeón"
-msgstr ""
-
-#: blocks/block-accordion/index.js:35
 #: blocks/block-intro/index.js:35
-msgid "blok"
+msgid "block"
 msgstr ""
 
-#: blocks/block-accordion/index.js:139
-msgid "Nastavenia akordeónu"
+#: blocks/block-accordion/index.js:138
+msgid "Accordion settings"
 msgstr ""
 
-#: blocks/block-accordion/index.js:145
-msgid "Rozbalený"
+#: blocks/block-accordion/index.js:144
+msgid "Expanded"
 msgstr ""
 
-#: blocks/block-accordion/index.js:145
-msgid "Zbalený"
+#: blocks/block-accordion/index.js:144
+msgid "Collapsed"
 msgstr ""
 
-#: blocks/block-accordion/index.js:169
-msgid "Nadpis sekcie"
+#: blocks/block-accordion/index.js:168
+msgid "Section heading"
 msgstr ""
 
-#: blocks/block-accordion/index.js:178
-msgid "Popis sekcie"
+#: blocks/block-accordion/index.js:177
+msgid "Section caption"
 msgstr ""
 
-#: blocks/block-accordion/index.js:187
-msgid "Obsah sekcie"
+#: blocks/block-accordion/index.js:186
+msgid "Section content"
 msgstr ""
 
-#: blocks/block-accordion/index.js:197
-msgid "Vymazať akordeón"
+#: blocks/block-accordion/index.js:196
+msgid "Delete accordion"
 msgstr ""
 
-#: blocks/block-accordion/index.js:206
-msgid "Pridať akordeón"
+#: blocks/block-accordion/index.js:205
+msgid "Add accordion"
 msgstr ""
 
 #: blocks/block-address/index.js:29
-msgid "Adresa"
+msgid "Address"
 msgstr ""
 
 #: blocks/block-address/index.js:30
-msgid "Zobrazuje adresu s minimapou. K dispozícii sú dve možné zobrazenia."
+msgid "Shows address with minimap. Two displays are available."
 msgstr ""
 
 #: blocks/block-address/index.js:34
-msgid "adresa"
+msgid "address"
 msgstr ""
 
 #: blocks/block-address/index.js:35
 #: blocks/block-map-component/index.js:32
-msgid "mapa"
+msgid "map"
 msgstr ""
 
 #: blocks/block-address/index.js:36
-msgid "podujatie"
+#: blocks/block-stepper/index.js:26
+msgid "event"
 msgstr ""
 
 #: blocks/block-address/index.js:145
-msgid "Rozloženie obsahu"
+msgid "Content layout"
 msgstr ""
 
 #: blocks/block-address/index.js:150
-msgid "1/3 šírky"
+msgid "1/3 width"
 msgstr ""
 
 #: blocks/block-address/index.js:150
-msgid "Celá šírka"
+msgid "Entire width"
 msgstr ""
 
 #: blocks/block-address/index.js:155
-msgid "Súradnice mapy"
+msgid "Map coordinates"
 msgstr ""
 
 #: blocks/block-address/index.js:158
-msgid "Zadajte adresu miesta"
+msgid "Enter place address"
 msgstr ""
 
 #: blocks/block-address/index.js:165
-msgid "Zadajte API kľúč pre Google Mapy"
+msgid "Enter API key for Google Maps"
 msgstr ""
 
 #: blocks/block-address/index.js:182
 #: blocks/block-card/index.js:382
 #: blocks/block-intro/index.js:302
-msgid "Hlavný nadpis"
+msgid "Main title"
 msgstr ""
 
 #: blocks/block-address/index.js:189
 #: blocks/block-intro/index.js:310
-msgid "Vedľajší nadpis"
+msgid "Subtitle"
 msgstr ""
 
 #: blocks/block-address/index.js:197
 #: blocks/block-card/index.js:392
 #: blocks/block-crossroad/index.js:161
 #: blocks/block-timeline/index.js:218
-msgid "Popis"
+msgid "Caption"
 msgstr ""
 
 #: blocks/block-announce/index.js:25
-msgid "Oznámenie"
+msgid "Announcement"
 msgstr ""
 
 #: blocks/block-announce/index.js:26
-msgid "Zobrazuje oznam s varovaním."
+msgid "Shows announcement with warning."
 msgstr ""
 
 #: blocks/block-announce/index.js:30
@@ -981,6 +965,7 @@ msgid "announce"
 msgstr ""
 
 #: blocks/block-announce/index.js:31
+#: blocks/block-warning-text/index.js:32
 msgid "warning"
 msgstr ""
 
@@ -991,24 +976,19 @@ msgid "text"
 msgstr ""
 
 #: blocks/block-announce/index.js:33
-msgid "oznámenie"
+msgid "announcement"
 msgstr ""
 
-#: blocks/block-announce/index.js:34
-#: blocks/block-warning-text/index.js:32
-msgid "varovanie"
-msgstr ""
-
-#: blocks/block-announce/index.js:56
-msgid "napr. Môžete byť pokutovaný ak sa nezaregistrujete."
+#: blocks/block-announce/index.js:55
+msgid "e.g. You may be fined if you fail to register."
 msgstr ""
 
 #: blocks/block-button/index.js:27
-msgid "Tlačidlo"
+msgid "Button"
 msgstr ""
 
 #: blocks/block-button/index.js:28
-msgid "Zobrazuje tlačidlo s odkazom."
+msgid "Shows button with a link."
 msgstr ""
 
 #: blocks/block-button/index.js:32
@@ -1016,63 +996,62 @@ msgid "button"
 msgstr ""
 
 #: blocks/block-button/index.js:33
-msgid "tlačidlo"
+msgid "link"
 msgstr ""
 
-#: blocks/block-button/index.js:34
-msgid "odkaz"
+#: blocks/block-button/index.js:69
+msgid "Button settings"
 msgstr ""
 
-#: blocks/block-button/index.js:70
-msgid "Nastavenie tlačidla"
+#: blocks/block-button/index.js:72
+msgid "Button link"
 msgstr ""
 
-#: blocks/block-button/index.js:73
-msgid "Odkaz tlačidla"
+#: blocks/block-button/index.js:80
+msgid "Open link in new window"
 msgstr ""
 
-#: blocks/block-button/index.js:81
-msgid "Otvoriť odkaz v novom okne"
+#: blocks/block-button/index.js:86
+msgid "Button color"
 msgstr ""
 
-#: blocks/block-button/index.js:87
-msgid "Farba tlačidla"
+#: blocks/block-button/index.js:90
+msgid "Green"
 msgstr ""
 
-#: blocks/block-button/index.js:91
-msgid "Zelená"
+#: blocks/block-button/index.js:94
+#: blocks/grid-column/index.js:132
+#: blocks/grid-container/index.js:82
+#: blocks/grid-row/index.js:82
+msgid "Grey"
 msgstr ""
 
-#: blocks/block-button/index.js:95
-msgid "Sivá"
+#: blocks/block-button/index.js:98
+msgid "Red"
 msgstr ""
 
-#: blocks/block-button/index.js:99
-msgid "Červená"
+#: blocks/block-button/index.js:108
+msgid "Show arrow in button"
 msgstr ""
 
-#: blocks/block-button/index.js:109
-msgid "Zobraziť šípku v tlačidle"
-msgstr ""
-
-#: blocks/block-button/index.js:121
-msgid "Text tlačidla."
+#: blocks/block-button/index.js:120
+msgid "Button text."
 msgstr ""
 
 #: blocks/block-card/index.js:33
-msgid "Karta"
+msgid "Card"
 msgstr ""
 
 #: blocks/block-card/index.js:34
-msgid "Zobrazuje kartičku na stránke. K dispozícii sú viaceré varianty zobrazenia."
+msgid "Shows card on the page. Various types of displays available."
 msgstr ""
 
 #: blocks/block-card/index.js:38
-msgid "karta"
+msgid "card"
 msgstr ""
 
 #: blocks/block-card/index.js:39
-msgid "profil"
+msgid "profile"
 msgstr ""
 
 #: blocks/block-card/index.js:40
@@ -1080,55 +1059,55 @@ msgid "hero"
 msgstr ""
 
 #: blocks/block-card/index.js:199
-msgid "Zobrazenie kartičky"
+msgid "Card display"
 msgstr ""
 
 #: blocks/block-card/index.js:203
-msgid "Štýl zobrazenia kartičky"
+msgid "Card view style"
 msgstr ""
 
 #: blocks/block-card/index.js:207
-msgid "Základná kartička"
+msgid "Basic card"
 msgstr ""
 
 #: blocks/block-card/index.js:211
-msgid "Sekundárna kartička"
+msgid "Secondary card"
 msgstr ""
 
 #: blocks/block-card/index.js:215
-msgid "Sekundárna kartička - horizontálna"
+msgid "Secondary card - horizontal"
 msgstr ""
 
 #: blocks/block-card/index.js:219
-msgid "Jednoduchá kartička"
+msgid "Simple card"
 msgstr ""
 
 #: blocks/block-card/index.js:223
-msgid "Hero kartička"
+msgid "Hero card"
 msgstr ""
 
 #: blocks/block-card/index.js:227
-msgid "Základná kartička - bez obrázka"
+msgid "Basic card - no image"
 msgstr ""
 
 #: blocks/block-card/index.js:231
-msgid "Profilová kartička - vertikálna"
+msgid "Profile card - vertical"
 msgstr ""
 
 #: blocks/block-card/index.js:235
-msgid "Profilová kartička - horizontálna"
+msgid "Profile card - horizontal"
 msgstr ""
 
 #: blocks/block-card/index.js:245
-msgid "Atribúty obrázka"
+msgid "Image attributes"
 msgstr ""
 
 #: blocks/block-card/index.js:249
-msgid "Názov obrázka"
+msgid "Image name"
 msgstr ""
 
 #: blocks/block-card/index.js:250
-msgid "Alternatívny názov obrázka"
+msgid "Image alternative name"
 msgstr ""
 
 #: blocks/block-card/index.js:257
@@ -1146,31 +1125,31 @@ msgid "https://www.google.com"
 msgstr ""
 
 #: blocks/block-card/index.js:258
-msgid "Odkaz presmerovania po kliknutí na obrázok"
+msgid "Redirect link after clicking on image"
 msgstr ""
 
 #: blocks/block-card/index.js:267
-msgid "Dátum"
+msgid "Date"
 msgstr ""
 
 #: blocks/block-card/index.js:272
-msgid "Zobrazenie dátumu"
+msgid "Display date"
 msgstr ""
 
 #: blocks/block-card/index.js:273
-msgid "Zobrazený"
+msgid "Displayed"
 msgstr ""
 
 #: blocks/block-card/index.js:273
-msgid "Skrytý"
+msgid "Hidden"
 msgstr ""
 
 #: blocks/block-card/index.js:288
-msgid "Odkaz k dátumu"
+msgid "Date link"
 msgstr ""
 
 #: blocks/block-card/index.js:296
-msgid "Tagy"
+msgid "Tags"
 msgstr ""
 
 #: blocks/block-card/index.js:299
@@ -1178,100 +1157,103 @@ msgid "Tag"
 msgstr ""
 
 #: blocks/block-card/index.js:303
-msgid "Názov tagu"
+msgid "Tag name"
 msgstr ""
 
 #: blocks/block-card/index.js:309
-msgid "URL tagu"
+msgid "Tag URL"
 msgstr ""
 
 #: blocks/block-card/index.js:318
-msgid "Vymazať tag"
+msgid "Delete tag"
 msgstr ""
 
 #: blocks/block-card/index.js:328
-msgid "Pridať tag"
+msgid "Add tag"
 msgstr ""
 
 #: blocks/block-card/index.js:352
-msgid "Nahrajte obrázok"
+msgid "Upload image"
 msgstr ""
 
 #: blocks/block-card/index.js:412
-msgid "Citácia"
+msgid "Citation"
 msgstr ""
 
 #: blocks/block-crossroad/index.js:28
-#: blocks/block-crossroad/index.js:33
-msgid "Rázcestník"
+msgid "Crossroad"
 msgstr ""
 
 #: blocks/block-crossroad/index.js:29
-msgid "Rázcestník má formu jednoduchej dlaždice, zloženej z nadpisu, popisku a oddeľovacej čiary. Jeho účelom je prehľadne a jednoducho zoskupiť resp. usporiadať pre používateľa odkazy na súvisiaci obsah, ktorý je rozmiestnený na rôznych, samostatných podstránkach."
+msgid "The crossroad takes the form of a simple tile, consisting of a heading, caption and a separating line. Its purpose is to clearly and easily group or organise links for the user to related content that is located on different, separate subpages."
+msgstr ""
+
+#: blocks/block-crossroad/index.js:33
+msgid "crossroad"
 msgstr ""
 
 #: blocks/block-crossroad/index.js:153
-#: blocks/block-heading/index.js:184
-msgid "Titulok"
+#: blocks/block-heading/index.js:183
+msgid "Title"
 msgstr ""
 
 #: blocks/block-crossroad/index.js:169
-msgid "URL Adresa"
+msgid "URL Address"
 msgstr ""
 
 #: blocks/block-crossroad/index.js:177
-msgid "Vymazať odkaz"
+msgid "Delete link"
 msgstr ""
 
 #: blocks/block-crossroad/index.js:215
-msgid "Nastavenie rázcestníka"
+msgid "Crossroad settings"
 msgstr ""
 
 #: blocks/block-crossroad/index.js:220
-msgid "Dva Stlpce"
+msgid "Two columns"
 msgstr ""
 
 #: blocks/block-crossroad/index.js:220
-msgid "Jeden Stlpec"
+msgid "One column"
 msgstr ""
 
 #: blocks/block-crossroad/index.js:228
-msgid "Rozbaliteľný blok"
+msgid "Expandable block"
 msgstr ""
 
 #: blocks/block-crossroad/index.js:244
-msgid "Pridať odkaz"
+msgid "Add link"
 msgstr ""
 
 #: blocks/block-details/index.js:17
-msgid "Skrytý text"
+msgid "Hidden text"
 msgstr ""
 
 #: blocks/block-details/index.js:18
-msgid "Zobrazuje skrytý text na rozbalenie."
+msgid "Shows hidden text to be expanded."
 msgstr ""
 
 #: blocks/block-details/index.js:23
-msgid "skrytý"
+msgid "hidden"
 msgstr ""
 
 #: blocks/block-details/index.js:49
-msgid "Sumárny popis"
+msgid "Summary caption"
 msgstr ""
 
 #: blocks/block-details/index.js:58
-msgid "Obsah"
+msgid "Content"
 msgstr ""
 
 #: blocks/block-heading/index.js:27
-#: blocks/block-heading/index.js:77
-#: blocks/block-posts/index.js:308
+#: blocks/block-heading/index.js:76
+#: blocks/block-posts/index.js:309
 #: blocks/block-timeline/index.js:184
-msgid "Nadpis"
+msgid "Heading"
 msgstr ""
 
 #: blocks/block-heading/index.js:28
-msgid "Zobrazuje nadpis s titulkom."
+msgid "Shows heading with title."
 msgstr ""
 
 #: blocks/block-heading/index.js:32
@@ -1279,427 +1261,422 @@ msgid "heading"
 msgstr ""
 
 #: blocks/block-heading/index.js:33
-msgid "nadpis"
+msgid "title"
 msgstr ""
 
-#: blocks/block-heading/index.js:34
-msgid "titulok"
+#: blocks/block-heading/index.js:101
+msgid "Heading settings"
 msgstr ""
 
-#: blocks/block-heading/index.js:102
-msgid "Nastavenie nadpisu"
+#: blocks/block-heading/index.js:106
+msgid "Display title above heading"
 msgstr ""
 
-#: blocks/block-heading/index.js:107
-msgid "Zobraziť titulok nad nadpisom"
+#: blocks/block-heading/index.js:112
+msgid "Heading level"
 msgstr ""
 
-#: blocks/block-heading/index.js:113
-msgid "Úroveň nadpisu"
+#: blocks/block-heading/index.js:116
+msgid "(H1) Heading 1"
 msgstr ""
 
-#: blocks/block-heading/index.js:117
-msgid "(H1) Nadpis 1"
+#: blocks/block-heading/index.js:120
+msgid "(H2) Heading 2"
 msgstr ""
 
-#: blocks/block-heading/index.js:121
-msgid "(H2) Nadpis 2"
+#: blocks/block-heading/index.js:124
+msgid "(H3) Heading 3"
 msgstr ""
 
-#: blocks/block-heading/index.js:125
-msgid "(H3) Nadpis 3"
+#: blocks/block-heading/index.js:128
+msgid "(H4) Heading 4"
 msgstr ""
 
-#: blocks/block-heading/index.js:129
-msgid "(H4) Nadpis 4"
+#: blocks/block-heading/index.js:132
+msgid "(H5) Heading 5"
 msgstr ""
 
-#: blocks/block-heading/index.js:133
-msgid "(H5) Nadpis 5"
+#: blocks/block-heading/index.js:136
+msgid "(H6) Heading 6"
 msgstr ""
 
-#: blocks/block-heading/index.js:137
-msgid "(H6) Nadpis 6"
+#: blocks/block-heading/index.js:144
+msgid "Heading style"
 msgstr ""
 
-#: blocks/block-heading/index.js:145
-msgid "Štýl nadpisu"
+#: blocks/block-heading/index.js:148
+msgid "(XL) 48 px Bold heading"
 msgstr ""
 
-#: blocks/block-heading/index.js:149
-msgid "(XL) 48 px Tučný nadpis"
+#: blocks/block-heading/index.js:152
+msgid "(L) 36 px Bold heading"
 msgstr ""
 
-#: blocks/block-heading/index.js:153
-msgid "(L) 36 px Tučný nadpis"
+#: blocks/block-heading/index.js:156
+msgid "(M) 24 px Bold heading"
 msgstr ""
 
-#: blocks/block-heading/index.js:157
-msgid "(M) 24 px Tučný nadpis"
+#: blocks/block-heading/index.js:160
+msgid "(S) 19 px Bold heading"
 msgstr ""
 
-#: blocks/block-heading/index.js:161
-msgid "(S) 19 px Tučný nadpis"
+#: blocks/block-heading/index.js:169
+msgid "HTML anchor"
 msgstr ""
 
 #: blocks/block-heading/index.js:170
-msgid "HTML kotva"
-msgstr ""
-
-#: blocks/block-heading/index.js:171
-msgid "Zadajte slovo alebo dve slová - bez medzier - a vytvorte jedinečnú webovú adresu iba pre tento blok, ktorá sa nazýva „kotva“. Potom budete môcť vytvoriť odkaz priamo na túto časť svojej stránky."
+msgid "Enter a word or two, no spaces, and create a unique web address just for this block, called an \"anchor\". Then you will be able to link directly to this part of your page."
 msgstr ""
 
 #: blocks/block-inset-text/index.js:17
-msgid "Vsadený text"
+msgid "Inset text"
 msgstr ""
 
 #: blocks/block-inset-text/index.js:18
-msgid "Pre upriamenie pozornosti na dôležitý obsah stránky je vhodné používať ohraničený vsadený text."
+msgid "To draw attention to important content on the page, it is good to use bordered inset text."
 msgstr ""
 
 #: blocks/block-inset-text/index.js:23
-msgid "vsadený"
+msgid "inset"
 msgstr ""
 
 #: blocks/block-inset-text/index.js:44
-msgid "Vsadený text na doplnenie."
+msgid "Inset text to be added."
 msgstr ""
 
 #: blocks/block-intro/index.js:29
-msgid "Úvodný blok"
+msgid "Intro block"
 msgstr ""
 
 #: blocks/block-intro/index.js:30
-msgid "Zobrazuje úvodný blok pre webové sídla. K dispozícii sú viaceré varianty zobrazenia."
+msgid "Shows intro block for websites. Various types of displays are available."
 msgstr ""
 
 #: blocks/block-intro/index.js:34
-msgid "úvod"
+msgid "intro"
 msgstr ""
 
 #: blocks/block-intro/index.js:36
-msgid "vyhľadávanie"
+msgid "search"
 msgstr ""
 
 #: blocks/block-intro/index.js:166
-msgid "Zobrazenie obsahu"
+msgid "Content display"
 msgstr ""
 
 #: blocks/block-intro/index.js:171
-msgid "S vyhľadávaním"
+msgid "With search"
 msgstr ""
 
 #: blocks/block-intro/index.js:171
-msgid "Bez vyhľadávania"
+msgid "Without search"
 msgstr ""
 
 #: blocks/block-intro/index.js:178
-msgid "Štýl zobrazenia bočného panelu"
+msgid "Sidebar display style"
 msgstr ""
 
 #: blocks/block-intro/index.js:182
-msgid "Základné zobrazenie"
+msgid "Basic display"
 msgstr ""
 
 #: blocks/block-intro/index.js:186
-msgid "Modré zobrazenie"
+msgid "Blue display"
 msgstr ""
 
 #: blocks/block-intro/index.js:190
-msgid "Transparentné zobrazenie"
+msgid "Transparent display"
 msgstr ""
 
 #: blocks/block-intro/index.js:200
-msgid "Odkazy pre vyhľadávanie"
+msgid "Search links"
 msgstr ""
 
 #: blocks/block-intro/index.js:201
 #: blocks/block-intro/index.js:205
-msgid "Odkaz 1"
+msgid "Link 1"
 msgstr ""
 
 #: blocks/block-intro/index.js:206
-msgid "Názov odkazu 1"
+msgid "Link 1 name"
 msgstr ""
 
 #: blocks/block-intro/index.js:214
-msgid "URL k odkazu 1"
+msgid "Link 1 URL"
 msgstr ""
 
 #: blocks/block-intro/index.js:219
 #: blocks/block-intro/index.js:223
-msgid "Odkaz 2"
+msgid "Link 2"
 msgstr ""
 
 #: blocks/block-intro/index.js:224
-msgid "Názov odkazu 2"
+msgid "Link 2 name"
 msgstr ""
 
 #: blocks/block-intro/index.js:232
-msgid "URL k odkazu 2"
+msgid "Link 2 URL"
 msgstr ""
 
 #: blocks/block-intro/index.js:237
 #: blocks/block-intro/index.js:241
-msgid "Odkaz 3"
+msgid "Link 3"
 msgstr ""
 
 #: blocks/block-intro/index.js:242
-msgid "Názov odkazu 3"
+msgid "Link 3 name"
 msgstr ""
 
 #: blocks/block-intro/index.js:250
-msgid "URL k odkazu 3"
+msgid "Link 3 URL"
 msgstr ""
 
 #: blocks/block-intro/index.js:255
 #: blocks/block-intro/index.js:259
-msgid "Odkaz 4"
+msgid "Link 4"
 msgstr ""
 
 #: blocks/block-intro/index.js:260
-msgid "Názov odkazu 4"
+msgid "Link 4 name"
 msgstr ""
 
 #: blocks/block-intro/index.js:268
-msgid "URL k odkazu 4"
+msgid "Link 4 URL"
 msgstr ""
 
 #: blocks/block-intro/index.js:273
 #: blocks/block-intro/index.js:277
-msgid "Odkaz 5"
+msgid "Link 5"
 msgstr ""
 
 #: blocks/block-intro/index.js:278
-msgid "Názov odkazu 5"
+msgid "Link 5 name"
 msgstr ""
 
 #: blocks/block-intro/index.js:286
-msgid "URL k odkazu 5"
+msgid "Link 5 URL"
 msgstr ""
 
 #: blocks/block-intro/index.js:381
-msgid "Bočný panel"
+msgid "Sidebar"
 msgstr ""
 
 #: blocks/block-intro/index.js:390
-msgid "Odkazy bočného panela"
+msgid "Sidebar links"
 msgstr ""
 
 #: blocks/block-lists/index.js:27
-msgid "Zoznamy"
+msgid "Lists"
 msgstr ""
 
 #: blocks/block-lists/index.js:28
-msgid "Zobrazuje zoznamy s možnosťami."
+msgid "Shows lists with options."
 msgstr ""
 
 #: blocks/block-lists/index.js:32
-msgid "zoznam"
+msgid "list"
 msgstr ""
 
 #: blocks/block-lists/index.js:33
-msgid "zoznamy"
+msgid "lists"
 msgstr ""
 
 #: blocks/block-lists/index.js:90
 #: blocks/block-lists/index.js:273
-msgid "Nastavenie zoznamu"
+msgid "List settings"
 msgstr ""
 
 #: blocks/block-lists/index.js:92
 #: blocks/block-lists/index.js:276
-msgid "Typ zoznamu"
+msgid "List type"
 msgstr ""
 
 #: blocks/block-lists/index.js:96
 #: blocks/block-lists/index.js:280
-msgid "Bez odrážok"
+msgid "No bullets"
 msgstr ""
 
 #: blocks/block-lists/index.js:100
 #: blocks/block-lists/index.js:284
-msgid "Guličky"
+msgid "Bullet points"
 msgstr ""
 
 #: blocks/block-lists/index.js:104
 #: blocks/block-lists/index.js:288
-msgid "Čísla"
+msgid "Numbers"
 msgstr ""
 
 #: blocks/block-lists/index.js:121
 #: blocks/block-lists/index.js:306
-msgid "Položka"
+msgid "Item"
 msgstr ""
 
 #: blocks/block-lists/index.js:131
 #: blocks/block-lists/index.js:316
-msgid "Vložiť zoznam"
+msgid "Insert list"
 msgstr ""
 
 #: blocks/block-lists/index.js:138
 #: blocks/block-lists/index.js:323
-msgid "Vymazať položku"
+msgid "Delete item"
 msgstr ""
 
 #: blocks/block-lists/index.js:152
 #: blocks/block-lists/index.js:337
-msgid "Pridať položku"
+msgid "Add item"
 msgstr ""
 
 #: blocks/block-map-component/index.js:27
-msgid "Mapový komponent"
+msgid "Map component"
 msgstr ""
 
 #: blocks/block-map-component/index.js:28
-msgid "Mapový komponent použite, keď chcete používateľom zobrazovať nejaký jav vzťahujúci sa k priestoru (napr. počet zaočkovaných proti COVID-19 na Slovensku v krajoch)."
+msgid "Use the map component when you want to show the users a phenomenon related to space (e.g. the number of people vaccinated against COVID-19 in Slovakia in different regions)."
 msgstr ""
 
 #: blocks/block-map-component/index.js:33
-msgid "komponent"
+msgid "component"
 msgstr ""
 
 #: blocks/block-map-component/index.js:34
-msgid "mapový komponent"
+msgid "map component"
 msgstr ""
 
 #: blocks/block-map-component/index.js:196
-msgid "Nastavenia odkazov"
+msgid "Links settings"
 msgstr ""
 
 #: blocks/block-map-component/index.js:200
-msgid "Titulok iframe mapového prehľadu"
+msgid "Iframe title of map overview"
 msgstr ""
 
 #: blocks/block-map-component/index.js:208
-msgid "URL zdroj pre iframe mapového prehľadu"
+msgid "URL source for iframe of map overview"
 msgstr ""
 
 #: blocks/block-map-component/index.js:215
-msgid "Titulok iframe tabuľkového prehľadu"
+msgid "Iframe title of table oveview"
 msgstr ""
 
 #: blocks/block-map-component/index.js:223
-msgid "URL zdroj pre iframe tabuľkového prehľadu"
+msgid "URL source for iframe of table overview"
 msgstr ""
 
 #: blocks/block-map-component/index.js:230
-msgid "napr. Stiahnuť údaje (CSV, 42 kb)"
+msgid "e.g. Download data (CSV, 42kb)"
 msgstr ""
 
 #: blocks/block-map-component/index.js:231
-msgid "Názov odkazu súboru na stiahnutie"
+msgid "File link name to download"
 msgstr ""
 
 #: blocks/block-map-component/index.js:239
-msgid "URL zdroj súboru na stiahnutie"
+msgid "URL source for file to download"
 msgstr ""
 
 #: blocks/block-map-component/index.js:245
-msgid "Nastavenia ukazovateľov"
+msgid "Indicators settings"
 msgstr ""
 
 #: blocks/block-map-component/index.js:252
-msgid "Hodnota (value) ukazovateľa"
+msgid "Indicator value"
 msgstr ""
 
 #: blocks/block-map-component/index.js:258
-msgid "Text ukazovateľa"
+msgid "Indicator text"
 msgstr ""
 
 #: blocks/block-map-component/index.js:266
-msgid "Vymazať ukazovateľ"
+msgid "Delete indicator"
 msgstr ""
 
 #: blocks/block-map-component/index.js:276
-msgid "Pridať ukazovateľ"
+msgid "Add indicator"
 msgstr ""
 
 #: blocks/block-map-component/index.js:287
-msgid "Nadpis mapového komponentu"
+msgid "Map component heading"
 msgstr ""
 
 #: blocks/block-map-component/index.js:358
-msgid "Zdroj: zdroj mapového prehľadu"
+msgid "Source: map overview source"
 msgstr ""
 
 #: blocks/block-posts/index.js:28
-msgid "Články"
+msgid "Posts"
 msgstr ""
 
 #: blocks/block-posts/index.js:29
-msgid "Zobrazuje články na stránke podľa nastavení."
+msgid "Displays posts on the page based on settings."
 msgstr ""
 
 #: blocks/block-posts/index.js:33
-msgid "články"
+msgid "posts"
 msgstr ""
 
 #: blocks/block-posts/index.js:34
-msgid "aktuality"
+msgid "news"
 msgstr ""
 
-#: blocks/block-posts/index.js:193
-msgid "Nenašli sa žiadne články"
+#: blocks/block-posts/index.js:35
+msgid "articles"
 msgstr ""
 
-#: blocks/block-posts/index.js:268
-msgid "Vyberte kategóriu článkov"
+#: blocks/block-posts/index.js:194
+msgid "No posts found"
 msgstr ""
 
-#: blocks/block-posts/index.js:282
-msgid "Nastavenia zobrazenia článkov"
+#: blocks/block-posts/index.js:269
+msgid "Select posts category"
 msgstr ""
 
-#: blocks/block-posts/index.js:286
-msgid "Zobrazovať úvodný článok"
+#: blocks/block-posts/index.js:283
+msgid "Posts display settings"
 msgstr ""
 
-#: blocks/block-posts/index.js:291
-msgid "Počet zobrazených článkov"
+#: blocks/block-posts/index.js:287
+msgid "Display intro post"
 msgstr ""
 
-#: blocks/block-posts/index.js:297
-msgid "Kategória článkov"
+#: blocks/block-posts/index.js:292
+msgid "Number of posts displayed"
+msgstr ""
+
+#: blocks/block-posts/index.js:298
+msgid "Posts category"
 msgstr ""
 
 #: blocks/block-separator/index.js:23
-msgid "Oddeľovač"
+msgid "Separator"
 msgstr ""
 
 #: blocks/block-separator/index.js:24
-msgid "Oddeľovač použite vtedy, keď chcete vizuálne oddeliť jednotlivé časti obsahu na stránke."
+msgid "Use the separator when you want to visually separate different parts of content on the page."
 msgstr ""
 
 #: blocks/block-separator/index.js:28
 msgid "separator"
 msgstr ""
 
-#: blocks/block-separator/index.js:29
-msgid "oddelovac"
+#: blocks/block-separator/index.js:50
+msgid "Separator settings"
 msgstr ""
 
-#: blocks/block-separator/index.js:51
-msgid "Nastavenia oddeľovača"
+#: blocks/block-separator/index.js:55
+msgid "Hidden on mobile devices"
 msgstr ""
 
-#: blocks/block-separator/index.js:56
-msgid "Skrytý na mobilných zariadeniach"
+#: blocks/block-separator/index.js:55
+msgid "Always visible"
 msgstr ""
 
-#: blocks/block-separator/index.js:56
-msgid "Stále viditeľný"
-msgstr ""
-
-#: blocks/block-separator/index.js:62
+#: blocks/block-separator/index.js:61
 #: blocks/grid-column/index.js:192
-#: blocks/grid-container/index.js:138
 #: blocks/grid-row/index.js:142
-msgid "Odsadenie zdola"
+msgid "Margin bottom"
 msgstr ""
 
-#: blocks/block-separator/index.js:66
+#: blocks/block-separator/index.js:65
 #: blocks/grid-column/index.js:148
 #: blocks/grid-column/index.js:200
 #: blocks/grid-column/index.js:252
@@ -1711,7 +1688,7 @@ msgstr ""
 msgid "0px"
 msgstr ""
 
-#: blocks/block-separator/index.js:70
+#: blocks/block-separator/index.js:69
 #: blocks/grid-column/index.js:152
 #: blocks/grid-column/index.js:204
 #: blocks/grid-column/index.js:256
@@ -1723,7 +1700,7 @@ msgstr ""
 msgid "5px"
 msgstr ""
 
-#: blocks/block-separator/index.js:74
+#: blocks/block-separator/index.js:73
 #: blocks/grid-column/index.js:156
 #: blocks/grid-column/index.js:208
 #: blocks/grid-column/index.js:260
@@ -1735,7 +1712,7 @@ msgstr ""
 msgid "10px"
 msgstr ""
 
-#: blocks/block-separator/index.js:78
+#: blocks/block-separator/index.js:77
 #: blocks/grid-column/index.js:160
 #: blocks/grid-column/index.js:212
 #: blocks/grid-column/index.js:264
@@ -1747,7 +1724,7 @@ msgstr ""
 msgid "15px"
 msgstr ""
 
-#: blocks/block-separator/index.js:82
+#: blocks/block-separator/index.js:81
 #: blocks/grid-column/index.js:164
 #: blocks/grid-column/index.js:216
 #: blocks/grid-column/index.js:268
@@ -1759,7 +1736,7 @@ msgstr ""
 msgid "20px"
 msgstr ""
 
-#: blocks/block-separator/index.js:86
+#: blocks/block-separator/index.js:85
 #: blocks/grid-column/index.js:168
 #: blocks/grid-column/index.js:220
 #: blocks/grid-column/index.js:272
@@ -1771,7 +1748,7 @@ msgstr ""
 msgid "25px"
 msgstr ""
 
-#: blocks/block-separator/index.js:90
+#: blocks/block-separator/index.js:89
 #: blocks/grid-column/index.js:172
 #: blocks/grid-column/index.js:224
 #: blocks/grid-column/index.js:276
@@ -1783,7 +1760,7 @@ msgstr ""
 msgid "30px"
 msgstr ""
 
-#: blocks/block-separator/index.js:94
+#: blocks/block-separator/index.js:93
 #: blocks/grid-column/index.js:176
 #: blocks/grid-column/index.js:228
 #: blocks/grid-column/index.js:280
@@ -1795,7 +1772,7 @@ msgstr ""
 msgid "40px"
 msgstr ""
 
-#: blocks/block-separator/index.js:98
+#: blocks/block-separator/index.js:97
 #: blocks/grid-column/index.js:180
 #: blocks/grid-column/index.js:232
 #: blocks/grid-column/index.js:284
@@ -1807,7 +1784,7 @@ msgstr ""
 msgid "50px"
 msgstr ""
 
-#: blocks/block-separator/index.js:102
+#: blocks/block-separator/index.js:101
 #: blocks/grid-column/index.js:184
 #: blocks/grid-column/index.js:236
 #: blocks/grid-column/index.js:288
@@ -1824,11 +1801,11 @@ msgid "Stepper banner"
 msgstr ""
 
 #: blocks/block-stepper-banner/index.js:18
-msgid "Banner použite na začiatku stránky s konkrétnym obsahom (po kliknutí na odkaz v stepperi), aby používateľ vedel, že tento obsah patrí pod danú životnú situáciu/návod."
+msgid "Use the banner at the top of the page with specific content (after clicking on the link in the stepper) so that the user knows that this content is part of a give life event/manual."
 msgstr ""
 
 #: blocks/block-stepper-banner/index.js:22
-#: blocks/block-stepper/index.js:25
+#: blocks/block-stepper/index.js:27
 msgid "stepper"
 msgstr ""
 
@@ -1837,11 +1814,11 @@ msgid "banner"
 msgstr ""
 
 #: blocks/block-stepper-banner/index.js:51
-msgid "napr. Súčasť životnej situácie"
+msgid "e.g. Part of a life event"
 msgstr ""
 
 #: blocks/block-stepper-banner/index.js:58
-msgid "napr. Narodenie dieťaťa: krok za krokom"
+msgid "e.g. Birth of a child: step-by-step"
 msgstr ""
 
 #: blocks/block-stepper/index.js:20
@@ -1849,106 +1826,110 @@ msgid "Stepper"
 msgstr ""
 
 #: blocks/block-stepper/index.js:21
-msgid "Zobrazuje sled udalostí, procesných úkonov."
+msgid "Shows a series of events, procedural acts."
 msgstr ""
 
-#: blocks/block-stepper/index.js:26
-msgid "proces"
+#: blocks/block-stepper/index.js:25
+msgid "events"
 msgstr ""
 
-#: blocks/block-stepper/index.js:27
-msgid "kroky"
+#: blocks/block-stepper/index.js:28
+msgid "procedure"
 msgstr ""
 
-#: blocks/block-stepper/index.js:253
-msgid "Nadpis steppera"
+#: blocks/block-stepper/index.js:29
+msgid "steps"
 msgstr ""
 
-#: blocks/block-stepper/index.js:261
-msgid "Popis steppera"
+#: blocks/block-stepper/index.js:255
+msgid "Stepper heading"
 msgstr ""
 
-#: blocks/block-stepper/index.js:273
-#: blocks/block-stepper/index.js:292
-msgid "Nadpis míľnika"
+#: blocks/block-stepper/index.js:263
+msgid "Stepper caption"
 msgstr ""
 
-#: blocks/block-stepper/index.js:314
-msgid "Nadpis kroku"
+#: blocks/block-stepper/index.js:275
+#: blocks/block-stepper/index.js:294
+msgid "Milestone heading"
 msgstr ""
 
-#: blocks/block-stepper/index.js:326
-msgid "Časť kroku"
+#: blocks/block-stepper/index.js:316
+msgid "Step heading"
 msgstr ""
 
-#: blocks/block-stepper/index.js:335
-msgid "Pridať čiastočný krok"
+#: blocks/block-stepper/index.js:328
+msgid "Part of a step"
 msgstr ""
 
-#: blocks/block-stepper/index.js:345
-msgid "Vymazať čiastočný krok"
+#: blocks/block-stepper/index.js:337
+msgid "Add partial step"
 msgstr ""
 
-#: blocks/block-stepper/index.js:345
-msgid "Vymazať krok"
+#: blocks/block-stepper/index.js:347
+msgid "Delete partial step"
 msgstr ""
 
-#: blocks/block-stepper/index.js:358
-msgid "Pridať krok"
+#: blocks/block-stepper/index.js:347
+msgid "Delete step"
+msgstr ""
+
+#: blocks/block-stepper/index.js:360
+msgid "Add step"
 msgstr ""
 
 #: blocks/block-tab/index.js:22
-msgid "Záložka"
+msgid "Tab"
 msgstr ""
 
 #: blocks/block-tab/index.js:23
-msgid "Zobrazuje záložku s vlastným obsahom."
+msgid "Shows a tab with own content."
 msgstr ""
 
 #: blocks/block-tab/index.js:27
 #: blocks/block-tabs/index.js:30
-msgid "záložky"
+msgid "tabs"
 msgstr ""
 
 #: blocks/block-tab/index.js:28
 #: blocks/block-tabs/index.js:31
-msgid "taby"
+msgid "tab"
 msgstr ""
 
 #: blocks/block-tab/index.js:83
-msgid "Názov záložky"
+msgid "Tab name"
 msgstr ""
 
 #: blocks/block-tab/index.js:85
-msgid "Zadajte názov záložky"
+msgid "Enter tab name"
 msgstr ""
 
 #: blocks/block-tabs/index.js:25
-msgid "Záložky"
+msgid "Tabs"
 msgstr ""
 
 #: blocks/block-tabs/index.js:26
-msgid "Zobrazuje záložky s vlastným obsahom."
+msgid "Shows tabs with own content."
 msgstr ""
 
 #: blocks/block-tabs/index.js:90
-msgid "Názov komponentu záložky"
+msgid "Tab component name"
 msgstr ""
 
 #: blocks/block-tabs/index.js:92
-msgid "Zadajte názov komponentu so záložkami"
+msgid "Enter component name with tabs"
 msgstr ""
 
 #: blocks/block-tabs/index.js:97
-msgid "Zoznam záložiek"
+msgid "Tabs list"
 msgstr ""
 
 #: blocks/block-timeline/index.js:20
-msgid "Časová os - timeline"
+msgid "Timeline"
 msgstr ""
 
 #: blocks/block-timeline/index.js:21
-msgid "Zobrazuje chronologicky usporiadaný obsah."
+msgid "Shows content in chronological order."
 msgstr ""
 
 #: blocks/block-timeline/index.js:25
@@ -1956,11 +1937,11 @@ msgid "timeline"
 msgstr ""
 
 #: blocks/block-timeline/index.js:26
-msgid "časová os"
+msgid "time line"
 msgstr ""
 
 #: blocks/block-timeline/index.js:168
-msgid "január 1970"
+msgid "january 1970"
 msgstr ""
 
 #: blocks/block-timeline/index.js:199
@@ -1972,129 +1953,120 @@ msgid "8:30 - 12:00"
 msgstr ""
 
 #: blocks/block-timeline/index.js:229
-msgid "Pridať popis"
+msgid "Add caption"
 msgstr ""
 
 #: blocks/block-timeline/index.js:238
-msgid "Vymazať popis"
+msgid "Delete caption"
 msgstr ""
 
 #: blocks/block-timeline/index.js:252
-msgid "Pridať blok časovej osi"
+msgid "Add block to timeline"
 msgstr ""
 
 #: blocks/block-warning-text/index.js:25
-msgid "Informačná lišta / Lišta s varovaním"
+msgid "Information bar / Warning bar"
 msgstr ""
 
 #: blocks/block-warning-text/index.js:26
-msgid "Lištu použite vtedy, keď chcete niečo zdôrazniť alebo na niečo upozorniť. K dispozícii sú dva typy lišty."
+msgid "Use this bar when you want to highlight or draw attention to something. Two types of bar are available."
 msgstr ""
 
 #: blocks/block-warning-text/index.js:30
-msgid "lišta"
+msgid "bar"
 msgstr ""
 
 #: blocks/block-warning-text/index.js:31
-msgid "Informacna"
+msgid "information"
 msgstr ""
 
 #: blocks/block-warning-text/index.js:60
-msgid "Typ lišty"
+msgid "Type of bar"
 msgstr ""
 
 #: blocks/block-warning-text/index.js:65
-msgid "Informačná lišta"
+msgid "Information bar"
 msgstr ""
 
 #: blocks/block-warning-text/index.js:65
-msgid "Lišta s varovaním"
+msgid "Warning bar"
 msgstr ""
 
 #: blocks/block-warning-text/index.js:74
-msgid "npr. Nový obsah na stránke, nové znenie vyhlášky, novú stratégiu a podobne"
+msgid "e.g. new content on the page, new decree, strategy, etc."
 msgstr ""
 
 #: blocks/grid-column/index.js:26
-msgid "Stĺpec - 1/1"
+msgid "Column - 1/1"
 msgstr ""
 
 #: blocks/grid-column/index.js:31
-msgid "Stĺpec - 1/2"
+msgid "Column - 1/2"
 msgstr ""
 
 #: blocks/grid-column/index.js:36
-msgid "Stĺpec - 1/4"
+msgid "Column - 1/4"
 msgstr ""
 
 #: blocks/grid-column/index.js:41
-msgid "Stĺpec - 1/3"
+msgid "Column - 1/3"
 msgstr ""
 
 #: blocks/grid-column/index.js:46
-msgid "Stĺpec - 3/4"
+msgid "Column - 3/4"
 msgstr ""
 
 #: blocks/grid-column/index.js:51
-msgid "Stĺpec - 2/3"
+msgid "Column - 2/3"
 msgstr ""
 
 #: blocks/grid-column/index.js:57
-msgid "Stĺpec"
+#: blocks/grid-column/index.js:62
+msgid "Column"
 msgstr ""
 
 #: blocks/grid-column/index.js:58
-msgid "Vloží stĺpec v plnej šírke."
-msgstr ""
-
-#: blocks/grid-column/index.js:62
-msgid "stĺpec"
+msgid "Inserts column in full width."
 msgstr ""
 
 #: blocks/grid-column/index.js:63
 #: blocks/grid-container/index.js:35
 #: blocks/grid-row/index.js:35
-msgid "stránka"
+msgid "page"
 msgstr ""
 
 #: blocks/grid-column/index.js:113
-msgid "Nastavenie stĺpca"
+msgid "Column settings"
 msgstr ""
 
 #: blocks/grid-column/index.js:116
 #: blocks/grid-container/index.js:66
 #: blocks/grid-row/index.js:66
-msgid "Farba pozadia"
+msgid "Background color"
 msgstr ""
 
 #: blocks/grid-column/index.js:120
 #: blocks/grid-container/index.js:70
 #: blocks/grid-row/index.js:70
-msgid "Bez pozadia"
+msgid "No background"
 msgstr ""
 
 #: blocks/grid-column/index.js:124
 #: blocks/grid-container/index.js:74
 #: blocks/grid-row/index.js:74
-msgid "Modré"
+msgid "Blue"
 msgstr ""
 
 #: blocks/grid-column/index.js:128
 #: blocks/grid-container/index.js:78
 #: blocks/grid-row/index.js:78
-msgid "Svetlo šedé"
-msgstr ""
-
-#: blocks/grid-column/index.js:132
-#: blocks/grid-container/index.js:82
-#: blocks/grid-row/index.js:82
-msgid "Šedé"
+msgid "Light grey"
 msgstr ""
 
 #: blocks/grid-column/index.js:140
 #: blocks/grid-container/index.js:90
 #: blocks/grid-row/index.js:90
-msgid "Odsadenie zhora"
+msgid "Top margin"
 msgstr ""
 
 #: blocks/grid-column/index.js:144
@@ -2103,53 +2075,54 @@ msgstr ""
 #: blocks/grid-column/index.js:300
 #: blocks/grid-row/index.js:94
 #: blocks/grid-row/index.js:146
-msgid "Bez odsadenia"
+msgid "No margin"
 msgstr ""
 
 #: blocks/grid-column/index.js:244
-msgid "Odsadenie zľava"
+msgid "Left margin"
 msgstr ""
 
 #: blocks/grid-column/index.js:296
-msgid "Odsadenie zprava"
+msgid "Right margin"
 msgstr ""
 
 #: blocks/grid-container/index.js:28
-msgid "Kontajner"
+msgid "Container"
 msgstr ""
 
 #: blocks/grid-container/index.js:29
-msgid "Vloží blok kontajnera na stránku. Používajte len so šablónou \"Bez kontajnera\"."
+msgid "Inserts a container block in a page. Only use with \"Without container\" template."
 msgstr ""
 
 #: blocks/grid-container/index.js:33
-msgid "kontajner"
+msgid "container"
 msgstr ""
 
 #: blocks/grid-container/index.js:34
+#: blocks/grid-row/index.js:34
 msgid "grid"
 msgstr ""
 
 #: blocks/grid-container/index.js:63
-msgid "Nastavenie kontajnera"
+msgid "Container settings"
+msgstr ""
+
+#: blocks/grid-container/index.js:138
+msgid "Bottom margin"
 msgstr ""
 
 #: blocks/grid-row/index.js:28
-msgid "Riadok"
+msgid "Row"
 msgstr ""
 
 #: blocks/grid-row/index.js:29
-msgid "Vloží blok riadku na stránku."
+msgid "Inserts a row block in a page."
 msgstr ""
 
 #: blocks/grid-row/index.js:33
 msgid "row"
 msgstr ""
 
-#: blocks/grid-row/index.js:34
-msgid "riadok"
-msgstr ""
-
 #: blocks/grid-row/index.js:63
-msgid "Nastavenie riadka"
+msgid "Row settings"
 msgstr ""

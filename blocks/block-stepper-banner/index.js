@@ -15,7 +15,7 @@ const { __ } = wp.i18n;
 registerBlockType('idsk/stepper-banner', {
     // built-in attributes
     title: __('Stepper banner', 'idsk-toolkit'),
-    description: __('Banner použite na začiatku stránky s konkrétnym obsahom (po kliknutí na odkaz v stepperi), aby používateľ vedel, že tento obsah patrí pod danú životnú situáciu/návod.', 'idsk-toolkit'),
+    description: __('Use the banner at the top of the page with specific content (after clicking on the link in the stepper) so that the user knows that this content is part of a give life event/manual.', 'idsk-toolkit'),
     icon: 'media-spreadsheet',
     category: 'idsk-components',
     keywords: [
@@ -48,14 +48,14 @@ registerBlockType('idsk/stepper-banner', {
                                 key="editable"
                                 className="govuk-heading-s"
                                 tagName="h2"
-                                placeholder={__('napr. Súčasť životnej situácie', 'idsk-toolkit')}
+                                placeholder={__('e.g. Part of a life event', 'idsk-toolkit')}
                                 value={textHeading}
                                 onChange={newText => setAttributes({ textHeading: newText })} />
                             <RichText
                                 key="editable"
                                 className="govuk-heading-m"
                                 tagName="h3"
-                                placeholder={__('napr. Narodenie dieťaťa: krok za krokom', 'idsk-toolkit')}
+                                placeholder={__('e.g. Birth of a child: step-by-step', 'idsk-toolkit')}
                                 value={textBanner}
                                 onChange={newText => setAttributes({ textBanner: newText })} />
                         </div>

@@ -25,14 +25,13 @@ const { __ } = wp.i18n;
 
 registerBlockType('idsk/accordion', {
     // built-in attributes
-    title: __('Akordeón', 'idsk-toolkit'),
-    description: __('Zobrazuje skladací blok.', 'idsk-toolkit'),
+    title: __('Accordion', 'idsk-toolkit'),
+    description: __('Shows collapsible block.', 'idsk-toolkit'),
     icon: 'image-flip-vertical',
     category: 'idsk-components',
     keywords: [
         __('accordion', 'idsk-toolkit'),
-        __('akordeón', 'idsk-toolkit'),
-        __('blok', 'idsk-toolkit'),
+        __('block', 'idsk-toolkit'),
     ],
 
     // custom attributes
@@ -136,13 +135,13 @@ registerBlockType('idsk/accordion', {
 
             return <div className={className}>
                 <InspectorControls>
-                    <PanelBody title={__('Nastavenia akordeónu', 'idsk-toolkit')}>
+                    <PanelBody title={__('Accordion settings', 'idsk-toolkit')}>
                         {!!items && items.map((item, index) => 
                             <PanelRow>
                                 <ToggleControl
                                     checked={item.open}
-                                    label={__('Akordeón', 'idsk-toolkit') + ' ' + (index+1)}
-                                    help={item.open ? __('Rozbalený', 'idsk-toolkit') : __('Zbalený', 'idsk-toolkit')}
+                                    label={__('Accordion', 'idsk-toolkit') + ' ' + (index+1)}
+                                    help={item.open ? __('Expanded', 'idsk-toolkit') : __('Collapsed', 'idsk-toolkit')}
                                     onChange={checked => this.editItem('open', index, checked)}
                                 />
                             </PanelRow>
@@ -151,9 +150,9 @@ registerBlockType('idsk/accordion', {
                 </InspectorControls>
                 <div class="govuk-accordion" data-module="idsk-accordion" id="with-descriptions">
                     <div class="govuk-accordion__controls">
-                        <button class="govuk-accordion__open-all" data-open-title={__('Otvoriť všetky', 'idsk-toolkit')} data-close-title={__('Zatvoriť všetky', 'idsk-toolkit')} type="button" aria-expanded="false">
-                            {__('Zatvoriť všetky', 'idsk-toolkit')}
-                            <span class="govuk-visually-hidden govuk-accordion__controls-span" data-section-title={__('sekcie', 'idsk-toolkit')}></span>
+                        <button class="govuk-accordion__open-all" data-open-title={__('Open all', 'idsk-toolkit')} data-close-title={__('Close all', 'idsk-toolkit')} type="button" aria-expanded="false">
+                            {__('Close all', 'idsk-toolkit')}
+                            <span class="govuk-visually-hidden govuk-accordion__controls-span" data-section-title={__('sections', 'idsk-toolkit')}></span>
                         </button>
                     </div>
 
@@ -166,7 +165,7 @@ registerBlockType('idsk/accordion', {
                                             className="govuk-accordion__section-button"
                                             key="editable"
                                             tagName="span"
-                                            placeholder={__('Nadpis sekcie', 'idsk-toolkit')}
+                                            placeholder={__('Section heading', 'idsk-toolkit')}
                                             value={item.title}
                                             onChange={value => this.editItem('title', index, value)} />
                                         <span class="govuk-accordion__icon" aria-hidden="true"></span>
@@ -175,7 +174,7 @@ registerBlockType('idsk/accordion', {
                                         className="govuk-accordion__section-summary govuk-body"
                                         key="editable"
                                         tagName="div"
-                                        placeholder={__('Popis sekcie', 'idsk-toolkit')}
+                                        placeholder={__('Section caption', 'idsk-toolkit')}
                                         value={item.summary}
                                         onChange={value => this.editItem('summary', index, value)} />
                                 </div>
@@ -184,7 +183,7 @@ registerBlockType('idsk/accordion', {
                                         className="govuk-body section-content"
                                         key="editable"
                                         tagName="p"
-                                        placeholder={__('Obsah sekcie', 'idsk-toolkit')}
+                                        placeholder={__('Section content', 'idsk-toolkit')}
                                         value={item.content}
                                         onChange={value => this.editItem('content', index, value)} />
                                 </div>
@@ -194,7 +193,7 @@ registerBlockType('idsk/accordion', {
                                 className="button-secondary button"
                                 type="submit"
                                 onClick={(e) => this.removeItem(e, index)}
-                            >{__('Vymazať akordeón', 'idsk-toolkit')}</button>
+                            >{__('Delete accordion', 'idsk-toolkit')}</button>
                         </>
                     )}
 
@@ -203,7 +202,7 @@ registerBlockType('idsk/accordion', {
                         className="button-primary button"
                         type="submit"
                         onClick={(e) => this.addItem(e)}
-                    >{__('Pridať akordeón', 'idsk-toolkit')}</button>
+                    >{__('Add accordion', 'idsk-toolkit')}</button>
 
                 </div>
             </div>;

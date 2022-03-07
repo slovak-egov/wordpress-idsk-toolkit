@@ -55,7 +55,7 @@ function idsktk_cookie_check( $atts = [], $content = null ) {
             <div class="govuk-checkboxes__item">
                 <input class="govuk-checkboxes__input idsk-cookies-allow" id="'.esc_attr($id).'" name="" type="checkbox" value="" '.($checked ? 'checked=""' : '').' '.($id == 'idskCookies' ? 'disabled=""' : '').'>
                 <label class="govuk-label govuk-checkboxes__label" for="'.esc_attr($id).'">
-                    '.( $title != '' ? esc_html($title) : ( $id == 'idskCookies' ? esc_html__( 'Nevyhnutne nutné súbory cookie', 'idsk-toolkit' ) : '' ) ).'
+                    '.( $title != '' ? esc_html($title) : ( $id == 'idskCookies' ? esc_html__( 'Necessary cookies', 'idsk-toolkit' ) : '' ) ).'
                 </label>
             </div>
         </div>
@@ -85,7 +85,7 @@ function idsktk_cookie_accept_btn( $atts = [] ) {
         $atts)
     );
 
-    $content = '<button type="submit" class="idsk-button idsk-cookies-accept idsk-cookies-accept-form" data-module="idsk-button">'.( $title != '' ? esc_html($title) : esc_html__( 'Uložiť nastavenia', 'idsk-toolkit' ) ).'</button>';
+    $content = '<button type="submit" class="idsk-button idsk-cookies-accept idsk-cookies-accept-form" data-module="idsk-button">'.( $title != '' ? esc_html($title) : esc_html__( 'Save cookies settings', 'idsk-toolkit' ) ).'</button>';
 
     return $content;
 }
@@ -98,11 +98,11 @@ add_shortcode( 'idsk-cookie-submit', 'idsktk_cookie_accept_btn' );
  */
 function idsktk_cookie_list() {
     $content = '<table class="govuk-table">
-        <caption class="govuk-table__caption govuk-table__caption--m">'.esc_html__( 'Aktívne cookies', 'idsk-toolkit' ).'</caption>
+        <caption class="govuk-table__caption govuk-table__caption--m">'.esc_html__( 'Active cookies', 'idsk-toolkit' ).'</caption>
         <thead class="govuk-table__head">
             <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header">'.esc_html__( 'Názov', 'idsk-toolkit' ).'</th>
-            <th scope="col" class="govuk-table__header">'.esc_html__( 'Hodnota', 'idsk-toolkit' ).'</th>
+            <th scope="col" class="govuk-table__header">'.esc_html__( 'Name', 'idsk-toolkit' ).'</th>
+            <th scope="col" class="govuk-table__header">'.esc_html__( 'Value', 'idsk-toolkit' ).'</th>
             </tr>
         </thead>
         <tbody class="govuk-table__body">';

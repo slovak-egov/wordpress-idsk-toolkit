@@ -26,14 +26,14 @@ const { __ } = wp.i18n;
 
 registerBlockType('idsk/address', {
     // built-in attributes
-    title: __('Adresa', 'idsk-toolkit'),
-    description: __('Zobrazuje adresu s minimapou. K dispozícii sú dve možné zobrazenia.', 'idsk-toolkit'),
+    title: __('Address', 'idsk-toolkit'),
+    description: __('Shows address with minimap. Two displays are available.', 'idsk-toolkit'),
     icon: 'location-alt',
     category: 'idsk-components',
     keywords: [
-        __('adresa', 'idsk-toolkit'),
-        __('mapa', 'idsk-toolkit'),
-        __('podujatie', 'idsk-toolkit'),
+        __('address', 'idsk-toolkit'),
+        __('map', 'idsk-toolkit'),
+        __('event', 'idsk-toolkit'),
     ],
 
     // custom attributes
@@ -142,27 +142,27 @@ registerBlockType('idsk/address', {
 
             return <div className={className}>
                 <InspectorControls>
-                    <PanelBody title={__('Rozloženie obsahu', 'idsk-toolkit')}>
+                    <PanelBody title={__('Content layout', 'idsk-toolkit')}>
                         <PanelRow>
                             <ToggleControl
                                 className="js-address-grid-type"
                                 checked={gridType}
-                                label={gridType ? __('1/3 šírky', 'idsk-toolkit') : __('Celá šírka', 'idsk-toolkit')}
+                                label={gridType ? __('1/3 width', 'idsk-toolkit') : __('Entire width', 'idsk-toolkit')}
                                 onChange={checked => setAttributes({ gridType: checked })}
                             />
                         </PanelRow>
                     </PanelBody>
-                    <PanelBody title={__('Súradnice mapy', 'idsk-toolkit')}>
+                    <PanelBody title={__('Map coordinates', 'idsk-toolkit')}>
                         <TextControl
                             className="js-address-map"
-                            label={__('Zadajte adresu miesta', 'idsk-toolkit')}
+                            label={__('Enter place address', 'idsk-toolkit')}
                             value={mapCoords}
                             onChange={value => setAttributes({ mapCoords: value })}
                         />
                         {(!this.state.globalApi || this.state.globalApi == false) &&
                         <TextControl
                             className="js-address-map-api"
-                            label={__('Zadajte API kľúč pre Google Mapy', 'idsk-toolkit')}
+                            label={__('Enter API key for Google Maps', 'idsk-toolkit')}
                             value={mapApi}
                             onChange={value => setAttributes({ mapApi: value })}
                         /> 
@@ -179,14 +179,14 @@ registerBlockType('idsk/address', {
                                 className="govuk-heading-m"
                                 key="editable"
                                 tagName="h2"
-                                placeholder={__('Hlavný nadpis', 'idsk-toolkit')}
+                                placeholder={__('Main title', 'idsk-toolkit')}
                                 value={title}
                                 onChange={value => this.onChange('title', value)} />
                             <RichText
                                 className="govuk-heading-s"
                                 key="editable"
                                 tagName="h3"
-                                placeholder={__('Vedľajší nadpis', 'idsk-toolkit')}
+                                placeholder={__('Subtitle', 'idsk-toolkit')}
                                 value={titleSmall}
                                 onChange={value => this.onChange('titleSmall', value)} />
                             <RichText
@@ -194,7 +194,7 @@ registerBlockType('idsk/address', {
                                 key="editable"
                                 tagName="p"
                                 multiline={true}
-                                placeholder={__('Popis', 'idsk-toolkit')}
+                                placeholder={__('Caption', 'idsk-toolkit')}
                                 value={body}
                                 onChange={value => this.onChange('body', value)} />
                         </div>

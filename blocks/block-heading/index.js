@@ -24,14 +24,13 @@ const { __ } = wp.i18n;
 
 registerBlockType('idsk/heading', {
     // built-in attributes
-    title: __('Nadpis', 'idsk-toolkit'),
-    description: __('Zobrazuje nadpis s titulkom.', 'idsk-toolkit'),
+    title: __('Heading', 'idsk-toolkit'),
+    description: __('Shows heading with title.', 'idsk-toolkit'),
     icon: 'heading',
     category: 'idsk-components',
     keywords: [
         __('heading', 'idsk-toolkit'),
-        __('nadpis', 'idsk-toolkit'),
-        __('titulok', 'idsk-toolkit'),
+        __('title', 'idsk-toolkit'),
     ],
 
     // custom attributes
@@ -74,7 +73,7 @@ registerBlockType('idsk/heading', {
                 key="editable"
                 className="js-heading-text"
                 tagName="span"
-                placeholder={__('Nadpis', 'idsk-toolkit')}
+                placeholder={__('Heading', 'idsk-toolkit')}
                 value={headingText}
                 onChange={value => setAttributes({ headingText: value })} />
         }
@@ -99,42 +98,42 @@ registerBlockType('idsk/heading', {
 
         return <div className={className}>
             <InspectorControls>
-                <PanelBody title={__('Nastavenie nadpisu', 'idsk-toolkit')}>
+                <PanelBody title={__('Heading settings', 'idsk-toolkit')}>
                     <PanelRow>
                         <ToggleControl
                             className="js-heading-caption"
                             checked={isCaption}
-                            label={__('Zobraziť titulok nad nadpisom', 'idsk-toolkit')}
+                            label={__('Display title above heading', 'idsk-toolkit')}
                             onChange={checked => setAttributes({ isCaption: checked })}
                         />
                     </PanelRow>
                     <RadioControl
                         className="js-heading-type"
-                        label={__('Úroveň nadpisu', 'idsk-toolkit')}
+                        label={__('Heading level', 'idsk-toolkit')}
                         selected={ headingType }
                         options={ [
                             { 
-                                label: __('(H1) Nadpis 1', 'idsk-toolkit'),
+                                label: __('(H1) Heading 1', 'idsk-toolkit'),
                                 value: 'h1' 
                             },
                             { 
-                                label: __('(H2) Nadpis 2', 'idsk-toolkit'),
+                                label: __('(H2) Heading 2', 'idsk-toolkit'),
                                 value: 'h2' 
                             },
                             { 
-                                label: __('(H3) Nadpis 3', 'idsk-toolkit'),
+                                label: __('(H3) Heading 3', 'idsk-toolkit'),
                                 value: 'h3'
                             },
                             { 
-                                label: __('(H4) Nadpis 4', 'idsk-toolkit'),
+                                label: __('(H4) Heading 4', 'idsk-toolkit'),
                                 value: 'h4'
                             },
                             { 
-                                label: __('(H5) Nadpis 5', 'idsk-toolkit'),
+                                label: __('(H5) Heading 5', 'idsk-toolkit'),
                                 value: 'h5'
                             },
                             { 
-                                label: __('(H6) Nadpis 6', 'idsk-toolkit'),
+                                label: __('(H6) Heading 6', 'idsk-toolkit'),
                                 value: 'h6'
                             },
                         ] }
@@ -142,23 +141,23 @@ registerBlockType('idsk/heading', {
                     />
                     <RadioControl
                         className="js-heading-class"
-                        label={__('Štýl nadpisu', 'idsk-toolkit')}
+                        label={__('Heading style', 'idsk-toolkit')}
                         selected={ headingClass }
                         options={ [
                             { 
-                                label: __('(XL) 48 px Tučný nadpis', 'idsk-toolkit'),
+                                label: __('(XL) 48 px Bold heading', 'idsk-toolkit'),
                                 value: 'xl' 
                             },
                             { 
-                                label: __('(L) 36 px Tučný nadpis', 'idsk-toolkit'),
+                                label: __('(L) 36 px Bold heading', 'idsk-toolkit'),
                                 value: 'l' 
                             },
                             { 
-                                label: __('(M) 24 px Tučný nadpis', 'idsk-toolkit'),
+                                label: __('(M) 24 px Bold heading', 'idsk-toolkit'),
                                 value: 'm'
                             },
                             { 
-                                label: __('(S) 19 px Tučný nadpis', 'idsk-toolkit'),
+                                label: __('(S) 19 px Bold heading', 'idsk-toolkit'),
                                 value: 's'
                             },
                         ] }
@@ -167,8 +166,8 @@ registerBlockType('idsk/heading', {
                     <TextControl
                         className="js-heading-anchor"
                         key="editable"
-                        label={__('HTML kotva', 'idsk-toolkit')}
-                        help={__('Zadajte slovo alebo dve slová - bez medzier - a vytvorte jedinečnú webovú adresu iba pre tento blok, ktorá sa nazýva „kotva“. Potom budete môcť vytvoriť odkaz priamo na túto časť svojej stránky.', 'idsk-toolkit')}
+                        label={__('HTML anchor', 'idsk-toolkit')}
+                        help={__('Enter a word or two, no spaces, and create a unique web address just for this block, called an "anchor". Then you will be able to link directly to this part of your page.', 'idsk-toolkit')}
                         value={anchor}
                         onChange={value => setAttributes({ anchor: value })} 
                     />
@@ -181,7 +180,7 @@ registerBlockType('idsk/heading', {
                         key="editable"
                         className="js-heading-caption-text"
                         tagName="span"
-                        placeholder={__('Titulok', 'idsk-toolkit')}
+                        placeholder={__('Title', 'idsk-toolkit')}
                         value={captionText}
                         onChange={value => setAttributes({ captionText: value })} />
                 </span>

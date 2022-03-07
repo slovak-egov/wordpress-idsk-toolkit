@@ -22,13 +22,13 @@ const ALLOWED_BLOCKS = [
 
 registerBlockType('idsk/tabs', {
     // built-in attributes
-    title: __('Záložky', 'idsk-toolkit'),
-    description: __('Zobrazuje záložky s vlastným obsahom.', 'idsk-toolkit'),
+    title: __('Tabs', 'idsk-toolkit'),
+    description: __('Shows tabs with own content.', 'idsk-toolkit'),
     icon: 'table-row-after',
     category: 'idsk-components',
     keywords: [
-        __('záložky', 'idsk-toolkit'),
-        __('taby', 'idsk-toolkit'),
+        __('tabs', 'idsk-toolkit'),
+        __('tab', 'idsk-toolkit'),
     ],
 
     // Custom attributes
@@ -87,14 +87,14 @@ registerBlockType('idsk/tabs', {
 
             return <div className={className}>
                 <InspectorControls>
-                    <PanelBody title={__('Názov komponentu záložky', 'idsk-toolkit')}>
+                    <PanelBody title={__('Tab component name', 'idsk-toolkit')}>
                         <TextControl
-                            label={__('Zadajte názov komponentu so záložkami', 'idsk-toolkit')}
+                            label={__('Enter component name with tabs', 'idsk-toolkit')}
                             value={heading}
                             onChange={value => setAttributes({ heading: value })}
                         />
                     </PanelBody>
-                    <PanelBody title={__('Zoznam záložiek', 'idsk-toolkit')}>
+                    <PanelBody title={__('Tabs list', 'idsk-toolkit')}>
                         {!!headings && headings.map(heading => 
                             <p>{heading}</p>
                         )}

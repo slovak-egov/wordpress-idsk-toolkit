@@ -9,23 +9,23 @@
  * @since ID-SK 1.6.0
  */
 
-require_once plugin_dir_path(__DIR__) . 'classes/MetaBoxes.php';
+require_once plugin_dir_path(__DIR__) . 'classes/class-idsk-meta-boxes.php';
 
 // Add page meta boxes
 new IDSK_Toolkit\IDSK_Meta_Boxes( array(
     array(
         'id'        => 'page_back_button',
-        'title'     => __( 'Tlačidlo späť', 'idsk-toolkit' ),
+        'title'     => __( 'Back button', 'idsk-toolkit' ),
         'post_type' => 'page',
         'args'      => array(
             'fields'    => array(
                 'text'  => array(
                     'type'  => 'text',
-                    'title' => __( 'Text pre tlačidlo späť', 'idsk-toolkit' )
+                    'title' => __( 'Text for Back button', 'idsk-toolkit' )
                 ),
                 'url'  => array(
                     'type'  => 'url',
-                    'title' => __( 'URL pre tlačidlo späť (ak ostane prázdne, späť sa nezobrazí)', 'idsk-toolkit' )
+                    'title' => __( 'URL for Back button (if left empty, button will not show)', 'idsk-toolkit' )
                 )
             )
         )
@@ -36,62 +36,62 @@ new IDSK_Toolkit\IDSK_Meta_Boxes( array(
 new IDSK_Toolkit\IDSK_Meta_Boxes( array(
     array(
         'id'        => 'post_updates_list',
-        'title'     => __( 'Zoznam aktualizácií', 'idsk-toolkit' ),
+        'title'     => __( 'Updates list', 'idsk-toolkit' ),
         'post_type' => 'post',
         'args'      => array(
-            'allow'     => __( 'Povoliť zobrazenie obsahu aktualizácií', 'idsk-toolkit' ),
+            'allow'     => __( 'Allow updates to be displayed', 'idsk-toolkit' ),
             'multiple'  => true,
             'fields'    => array(
                 'date'  => array(
                     'type'  => 'text',
-                    'title' => __( 'Dňa', 'idsk-toolkit' )
+                    'title' => __( 'On (as date)', 'idsk-toolkit' )
                 ),
                 'desc'  => array(
                     'type'  => 'textarea',
-                    'title' => __( 'Bližší popis', 'idsk-toolkit' )
+                    'title' => __( 'Detailed description', 'idsk-toolkit' )
                 )
             )
         )
     ),
     array(
         'id'        => 'post_social',
-        'title'     => __( 'Zdieľanie článku na sociálnych sieťach', 'idsk-toolkit' ),
+        'title'     => __( 'Article sharing on social networks', 'idsk-toolkit' ),
         'post_type' => 'post',
         'args'      => array(
-            'allow'     => __( 'Povoliť zdieľanie článku na sociálnych sieťach', 'idsk-toolkit' )
+            'allow'     => __( 'Allow article sharing on social networks', 'idsk-toolkit' )
         )
     ),
     array(
         'id'        => 'post_related_topics',
-        'title'     => __( 'Súvisiace témy', 'idsk-toolkit' ),
+        'title'     => __( 'Related topics', 'idsk-toolkit' ),
         'post_type' => 'post',
         'args'      => array(
-            'allow'     => __( 'Povoliť zobrazenie súvisiacich tém', 'idsk-toolkit' ),
+            'allow'     => __( 'Allow related topics to be displayed', 'idsk-toolkit' ),
             'multiple'  => true,
             'fields'    => array(
                 'title'  => array(
                     'type'  => 'text',
-                    'title' => __( 'Názov témy', 'idsk-toolkit' )
+                    'title' => __( 'Topic title', 'idsk-toolkit' )
                 ),
                 'url'  => array(
                     'type'  => 'url',
-                    'title' => __( 'Odkaz na tému', 'idsk-toolkit' )
+                    'title' => __( 'Link to topic', 'idsk-toolkit' )
                 )
             )
         )
     ),
     array(
         'id'        => 'post_related_posts',
-        'title'     => __( 'Súvisiace články', 'idsk-toolkit' ),
+        'title'     => __( 'Related articles', 'idsk-toolkit' ),
         'post_type' => 'post',
         'args'      => array(
-            'allow'     => __( 'Povoliť zobrazenie súvisiacich článkov', 'idsk-toolkit' ),
+            'allow'     => __( 'Allow related articles to be displayed', 'idsk-toolkit' ),
             'multiple'  => true,
             'fields'    => array(
                 'id'  => array(
                     'type'          => 'select_posts',
-                    'title'         => __( 'Článok', 'idsk-toolkit' ),
-                    'option_none'   => __( 'Vyberte článok', 'idsk-toolkit' )
+                    'title'         => __( 'Article', 'idsk-toolkit' ),
+                    'option_none'   => __( 'Select article', 'idsk-toolkit' )
                 )
             )
         )

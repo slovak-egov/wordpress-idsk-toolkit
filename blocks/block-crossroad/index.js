@@ -25,12 +25,12 @@ const { __ } = wp.i18n;
 
 registerBlockType('idsk/crossroad', {
     // built-in attributes
-    title: __('Rázcestník', 'idsk-toolkit'),
-    description: __('Rázcestník má formu jednoduchej dlaždice, zloženej z nadpisu, popisku a oddeľovacej čiary. Jeho účelom je prehľadne a jednoducho zoskupiť resp. usporiadať pre používateľa odkazy na súvisiaci obsah, ktorý je rozmiestnený na rôznych, samostatných podstránkach.', 'idsk-toolkit'),
+    title: __('Crossroad', 'idsk-toolkit'),
+    description: __('The crossroad takes the form of a simple tile, consisting of a heading, caption and a separating line. Its purpose is to clearly and easily group or organise links for the user to related content that is located on different, separate subpages.', 'idsk-toolkit'),
     icon: 'menu',
     category: 'idsk-components',
     keywords: [
-        __('Rázcestník', 'idsk-toolkit'),
+        __('crossroad', 'idsk-toolkit'),
     ],
 
     // custom attributes
@@ -134,7 +134,7 @@ registerBlockType('idsk/crossroad', {
 
             if (this.props.attributes.hideTiles) {
                 button = <div class="govuk-grid-column-full idsk-crossroad__collapse--shadow idsk-crossroad__uncollapse-div">
-                    <button class="idsk-crossroad__colapse--button" type="button">{__('Zobraziť viac', 'idsk-toolkit')}</button>
+                    <button class="idsk-crossroad__colapse--button" type="button">{__('Show more', 'idsk-toolkit')}</button>
                 </div>
             }
 
@@ -150,7 +150,7 @@ registerBlockType('idsk/crossroad', {
                             value={item.title}
                             onChange={value => this.editItem('title', index, value)}
                             tagName="a"
-                            placeholder={__('Titulok', 'idsk-toolkit')}
+                            placeholder={__('Title', 'idsk-toolkit')}
                         />
 
                         <RichText
@@ -158,7 +158,7 @@ registerBlockType('idsk/crossroad', {
                             value={item.subtitle}
                             onChange={value => this.editItem('subtitle', index, value)}
                             tagName="p"
-                            placeholder={__('Popis', 'idsk-toolkit')}
+                            placeholder={__('Caption', 'idsk-toolkit')}
                         />
 
                         <RichText
@@ -166,7 +166,7 @@ registerBlockType('idsk/crossroad', {
                             value={item.link}
                             onChange={value => this.editItem('link', index, value)}
                             tagName="p"
-                            placeholder={__('URL Adresa', 'idsk-toolkit')}
+                            placeholder={__('URL Address', 'idsk-toolkit')}
                         />
                         <hr class="idsk-crossroad-line" aria-hidden="true" />
 
@@ -174,7 +174,7 @@ registerBlockType('idsk/crossroad', {
                             <input
                                 className="button-secondary button"
                                 type="submit"
-                                value={__('Vymazať odkaz', 'idsk-toolkit')}
+                                value={__('Delete link', 'idsk-toolkit')}
                                 onClick={(e) => this.removeItem(e, index)}
                             />
                         </p>
@@ -212,12 +212,12 @@ registerBlockType('idsk/crossroad', {
 
             return (<div data-module="idsk-crossroad" className={className}>
                 <InspectorControls>
-                    <PanelBody title={__('Nastavenie rázcestníka', 'idsk-toolkit')}>
+                    <PanelBody title={__('Crossroad settings', 'idsk-toolkit')}>
                         <PanelRow>
                             <ToggleControl
                                 className="js-crossroad-two-cols"
                                 checked={numberOfCols}
-                                label={numberOfCols ? __('Dva Stlpce', 'idsk-toolkit') : __('Jeden Stlpec', 'idsk-toolkit')}
+                                label={numberOfCols ? __('Two columns', 'idsk-toolkit') : __('One column', 'idsk-toolkit')}
                                 onChange={checked => setAttributes({ numberOfCols: checked })}
                             />
                         </PanelRow>
@@ -225,7 +225,7 @@ registerBlockType('idsk/crossroad', {
                             <ToggleControl
                                 className="js-crossroad-hide-tiles"
                                 checked={hideTiles}
-                                label={__('Rozbaliteľný blok', 'idsk-toolkit')}
+                                label={__('Expandable block', 'idsk-toolkit')}
                                 onChange={checked => setAttributes({ hideTiles: checked })}
                             />
                         </PanelRow>
@@ -241,7 +241,7 @@ registerBlockType('idsk/crossroad', {
                         class="idsk-button"
                         data-module="idsk-button"
                         type="submit"
-                        value={__('Pridať odkaz', 'idsk-toolkit')}
+                        value={__('Add link', 'idsk-toolkit')}
                         onClick={(e) => this.addItem(e)}
                     />
                 </p>

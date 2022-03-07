@@ -8,13 +8,13 @@ Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Súbor nástrojov funkcionalít k ID-SK téme.
+Features toolkit for ID-SK theme.
 
-== Popis ==
+== Description ==
 
-Súbor nástrojov funkcionalít k ID-SK téme. Tento súbor odporúčame používať spoločne s WordPress témou [ID-SK Template](https://wordpress.org/themes/idsk-template/).
+Features toolkit for ID-SK theme. We recommend using this package with the WordPress theme [ID-SK Template](https://wordpress.org/themes/idsk-template/).
 
-Pre viac informácií o jednotlivých komponentoch a spôsoboch ich použitia navštívte [ID-SK Frontend – Jednotný dizajn manuál elektronických služieb](https://idsk.gov.sk/).
+For more informations about components and their usage, visit [ID-SK Frontend – Unified design manual of electronic services](https://idsk.gov.sk/).
 
 == Copyright ==
 ID-SK Toolkit WordPress plugin, Copyright 2021 Slovensko IT, a.s..
@@ -32,178 +32,178 @@ Soon.
 == Changelog ==
 
 = 1.6.0 =
-* Pridanie funkcionality cookies
-* Pridanie nových polí pre články
-* Doplnenie nového komponentu
- * Články
-* Zmena nastavení štýlu zobrazenia bočného panela v komponente Úvodný blok
-* Aktualizácia komponentu Záložky na novšiu verziu
-* Odstránenie nastavení rozloženia komponentu Súvisiaci obsah
-* Odstránenie vlastných článkov - Aktuality inštitúcií
+* Added cookies functionality
+* Added new meta boxes for posts
+* Added new component
+ * Posts
+* Updated sidebar style settings in Intro block component
+* Updated component Tabs to newer version
+* Removed layout settings from Related content component
+* Removed custom posts - Institutions News
 
-Z dôvodu úpravy logiky metaboxov je potrebné pri stránkach aktualizovať odkaz na stránku späť.
+Due to modified metabox logic, it is necessary to update the Back link button on the pages.
 
 = 1.5.0 =
-* Aktualizácia komponentov k ID-SK 2.6.2
-* Doplnenie vzorov stránok
-* Doplnenie nového komponentu
- * Oddeľovač
-* Odstránenie Grafového komponentu
-* Fix v komponente Tlačidlo
-* Fix pre WordPress 5.8
+* Updated components to ID-SK 2.6.2
+* Added page patterns
+* Added new component
+ * Separator
+* Removed Graph component
+* Fix in Button component
+* Fix for WordPress 5.8
 
 = 1.4.3 =
-* Doplnená podpora jazykových mutácií
+* Added support for language mutations
 
 = 1.4.2 =
-* Fix v Grafovom komponente.
+* Fix in Graph component
 
 = 1.4.1 =
-* Doplnenie nového komponentu
+* Added new component
  * Stepper banner
-* Fixy v existujúcich komponentoch
+* Fixes in existing components
 
 = 1.4.0 =
-* Doplnenie metaboxov pre stránky
-* Rozšírené vyhľadávanie pre ID-SK tému
-* Globálne úpravy v existujúcich komponentoch ID-SK
-* Komponent Karta - doplnené dynamické pridávanie tagov
+* Added new meta boxes for pages
+* Added advanced search for ID-SK theme
+* Global changes in existing ID-SK components
+* Card komponent - added support for adding dynamic tags
 
 = 1.3.1 =
-* Globálne úpravy v existujúcich komponentoch ID-SK
-* Doplnenie odsadení zľava zprava pre grid column komponent
-* Fixy v existujúcich komponentoch
+* Global changes in existing ID-SK components
+* Added left and right margins for grid Column component
+* Fixes in existing components
 
 = 1.3.0 =
-* Doplnenie nových komponentov
- * Akordeón
- * Oznámenie
- * Tlačidlo
- * Nadpis
- * Skrytý text
- * Zoznamy
- * Vsadený text
- * Záložky
-* Fixy v existujúcich komponentoch.
+* Added new components
+ * Accordion
+ * Announce
+ * Button
+ * Heading
+ * Hidden text
+ * Lists
+ * Inset text
+ * Tabs
+* Fixes in existing components.
 
 = 1.2.0 =
-* Pridanie nových komponentov.
- * Grafový komponent
- * Mapový komponent
-* Fixy v existujúcich komponentoch.
+* Added new components
+ * Graph component
+ * Map component
+* Fixes in existing components.
 
 = 1.1.0 =
-* Pridanie nových ID-SK komponentov
-* Optimalizácia kódu, oprava chýb
+* Added new ID-SK components
+* Code optimization, fixes
 
 = 1.0.0 =
-* Vydanie pluginu
+* Plugin release
 
 == Upgrade Notice ==
 
 = 1.6.0 =
-* Doplnenie funkcionality cookies.
-* Doplnenie nových polí pre články.
-* Doplnenie nového komponentu.
- * Články
-* Zmena nastavení štýlu zobrazenia bočného panela v komponente Úvodný blok.
-* Aktualizácia komponentu Záložky na novšiu verziu.
-* Odstránenie nastavení rozloženia komponentu Súvisiaci obsah.
-* Odstránenie vlastných článkov - Aktuality inštitúcií.
+* Added cookies functionality
+* Added new meta boxes for posts
+* Added new component
+ * Posts
+* Updated sidebar style settings in Intro block component
+* Updated component Tabs to newer version
+* Removed layout settings from Related content component
+* Removed custom posts - Institutions News
 
-Z dôvodu úpravy logiky metaboxov je potrebné pri stránkach aktualizovať odkaz na stránku späť.
+Due to modified metabox logic, it is necessary to update the Back link button on the pages.
 
 = 1.5.0 =
-* Aktualizácia komponentov k ID-SK 2.6.2
-* Doplnenie vzorov stránok
-* Doplnenie nového komponentu
- * Oddeľovač
-* Odstránenie Grafového komponentu
-* Fix v komponente Tlačidlo
-* Fix pre WordPress 5.8
+* Updated components to ID-SK 2.6.2
+* Added page patterns
+* Added new component
+ * Separator
+* Removed Graph component
+* Fix in Button component
+* Fix for WordPress 5.8
 
 = 1.4.3 =
-Doplnená podpora jazykových mutácií.
+Added support for language mutations.
 
 = 1.4.2 =
-Fix v Grafovom komponente.
+Fix in Graph component.
 
 = 1.4.1 =
-Doplnenie nového komponentu Stepper banner, fixy v existujúcich komponentoch.
+Added new component Stepper banner, fixes in existing components.
 
 = 1.4.0 =
-Globálne úpravy v existujúcich komponentoch, doplnená nová funkcionalita k ID-SK téme.
+Global changes in existing ID-SK components, added new functionality for ID-SK theme.
 
 = 1.3.1 =
-Globálne úpravy a fixy v existujúcich komponentoch.
+Global changes and fixes in existing components.
 
 = 1.3.0 =
-Pridanie nových komponentov, fixy v existujúcich komponentoch.
+Added new components, fixes in existing components.
 
 = 1.2.0 =
-Pridanie nových komponentov, fixy v existujúcich komponentoch.
+Added new components, fixes in existing components.
 
 = 1.1.0 =
-Pridanie nových komponentov, optimalizácia kódu.
+Added new components, code optimization.
 
 = 1.0.0 =
-Vydanie pluginu pre použitie spoločne s ID-SK témou.
+Release of the plugin for use with ID-SK theme.
 
-== Rozširujúce funkcionality ==
+== Additional functionalities ==
 
-1. Gutenberg ID-SK komponenty
-2. Gutenberg ID-SK vzory
-3. Podpora nahrávania SVG obrázkov
+1. Gutenberg ID-SK components
+2. Gutenberg ID-SK patterns
+3. Support for uploading SVG images
 4. Cookies
 
 == Shortcodes & Custom functions ==
 
 = Cookies =
 
-Základné cookies sú automaticky povolené pre vyhľadávacie stroje.
+Basic cookies are automatically enabled for search engines.
 
-Zobrazenie všetkých aktívnych cookies v tabuľkovom zozname:
+To show all active cookies in table view:
 ~~~
 [idsk-cookie-list]
 ~~~
 
-**Cookies môžete blokovať v textovom editore nasledovne:**
+**You can block cookies in text editor as follow:**
 
-Doplní na stránku obsah v bloku ak sú nastavené základné cookies:
+Adds content in the block to the page if basic cookies are set:
 ~~~
 [idsk-cookie]Your content[/idsk-cookie]
 ~~~
 
-Doplní na stránku obsah v bloku ak sú prijaté cookies so špecifickým ID:
+Adds content in the block to the page if cookies with specific ID are accepted:
 ~~~
 [idsk-cookie id="example1"]Your content[/idsk-cookie]
 ~~~
 
-**Taktiež môžete blokovať cookies v PHP nasledovne:**
+**You can also block cookies with PHP:**
 
-Doplní na stránku obsah ak sú nastavené základné cookies:
+Adds content in the block to the page if basic cookies are set:
 ~~~
 if ( function_exists('idsktk_cookies_allowed') && idsktk_cookies_allowed() ) {
     // Your code
 }
 ~~~
 
-Doplní na stránku obsah ak sú prijaté cookies so špecifickým ID:
+Adds content in the block to the page if cookies with specific ID are accepted:
 ~~~
 if ( function_exists('idsktk_cookies_allowed') && idsktk_cookies_allowed('example1') ) {
     // Your code
 }
 ~~~
 
-**Stránka s nastaveniami cookies a pridanie vlastných cookies**
+**Cookies settings page and adding own cookies**
 
-Pridanie začiarkavacieho políčka s povolením cookies:
+Adds checkbox with cookies acceptance:
 ~~~
 [idsk-cookie-allow id="example1" title="Cookie name/Cookie category name"]Cookie details[/idsk-cookie-allow]
 ~~~
-* Ak nieje uvedené ID, zobrazí sa začiarkavacie políčko pre základné cookies
+* If no ID is specified, check box for basic cookies will be shown
 
-Pridanie tlačidla pre uloženie nastavení cookies. Tlačidlo je potrebné umiestniť na rovnakú stránku ako začiarkavacie políčka s povolením cookies.
+Adds button for saving cookies settings. The button must be placed on the same page as the checkboxes with cookies acceptance.
 ~~~
 [idsk-cookie-submit title="Save settings"]
 ~~~
