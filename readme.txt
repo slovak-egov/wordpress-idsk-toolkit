@@ -3,7 +3,7 @@ Contributors: slovenskoit
 Tags: idsk, id-sk, toolkit, idsk-toolkit, idsk toolkit, id-sk toolkit
 Requires at least: 5.4
 Tested up to: 5.8
-Stable tag: 1.5.0
+Stable tag: 1.6.0
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -36,10 +36,11 @@ Soon.
 * Added new meta boxes for posts
 * Added new component
  * Posts
-* Updated sidebar style settings in Intro block component
+* Updated Intro block component to newer version
 * Updated component Tabs to newer version
 * Removed layout settings from Related content component
 * Removed custom posts - Institutions News
+* Translations update
 
 Due to modified metabox logic, it is necessary to update the Back link button on the pages.
 
@@ -106,10 +107,11 @@ Due to modified metabox logic, it is necessary to update the Back link button on
 * Added new meta boxes for posts
 * Added new component
  * Posts
-* Updated sidebar style settings in Intro block component
+* Updated Intro block component to newer version
 * Updated component Tabs to newer version
 * Removed layout settings from Related content component
 * Removed custom posts - Institutions News
+* Translations update
 
 Due to modified metabox logic, it is necessary to update the Back link button on the pages.
 
