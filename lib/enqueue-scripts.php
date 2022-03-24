@@ -16,7 +16,7 @@ function idsktk_enqueue_block_assets() {
   // Enqueue the bundled block JS file
   wp_enqueue_script(
     'idsk-blocks-js',
-    plugin_dir_url(__DIR__) . '/assets/js/editor.blocks.js',
+    plugins_url('assets/js/editor.blocks.js', __DIR__),
     $deps,
     null
   );
@@ -43,11 +43,7 @@ function idsktk_enqueue_block_assets() {
   );
 
   // Load blocks translations
-  wp_set_script_translations(
-      'idsk-blocks-js',
-      'idsk-toolkit',
-      plugin_dir_path(__DIR__) . 'languages'
-  );
+  wp_set_script_translations( 'idsk-blocks-js', 'idsk-toolkit' );
 }
 
 add_action('enqueue_block_editor_assets', 'idsktk_enqueue_block_assets');
