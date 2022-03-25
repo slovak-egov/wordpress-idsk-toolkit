@@ -2,7 +2,7 @@
 Contributors: slovenskoit
 Tags: idsk, id-sk, toolkit, idsk-toolkit, idsk toolkit, id-sk toolkit
 Requires at least: 5.4
-Tested up to: 5.8
+Tested up to: 5.9
 Stable tag: 1.6.0
 Requires PHP: 7.0
 License: GPLv2 or later

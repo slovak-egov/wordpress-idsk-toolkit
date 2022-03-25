@@ -30,12 +30,6 @@ function idsktk_mime_types($mimes) {
 }
 add_filter('upload_mimes', 'idsktk_mime_types');
 
-// Translations
-function idsktk_load_textdomain() {
-    load_plugin_textdomain( 'idsk-toolkit', false, dirname( plugin_basename( __FILE__ ) ) . '/languages' );
-}
-add_action( 'init', 'idsktk_load_textdomain' );
-
 // Custom metaboxes
 require plugin_dir_path(__FILE__) . '/inc/register-meta.php';
 
