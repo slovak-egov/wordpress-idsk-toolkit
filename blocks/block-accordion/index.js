@@ -164,6 +164,7 @@ registerBlockType('idsk/accordion', {
                                         <RichText
                                             className="govuk-accordion__section-button"
                                             key="editable"
+                                            allowedFormats={[]}
                                             tagName="span"
                                             placeholder={__('Section heading', 'idsk-toolkit')}
                                             value={item.title}
@@ -173,6 +174,7 @@ registerBlockType('idsk/accordion', {
                                     <RichText
                                         className="govuk-accordion__section-summary govuk-body"
                                         key="editable"
+                                        allowedFormats={[]}
                                         tagName="div"
                                         placeholder={__('Section caption', 'idsk-toolkit')}
                                         value={item.summary}

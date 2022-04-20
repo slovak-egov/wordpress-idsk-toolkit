@@ -20,196 +20,55 @@
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  */
 
-include 'inc/block-editor-adjustments.php';
+global $idsktk_version;
 
-remove_filter('widget_text_content', 'wpautop');
+if ( is_admin() ) {
+	if ( ! function_exists( 'get_plugin_data' ) ) {
+		require_once ABSPATH . 'wp-admin/includes/plugin.php';
+	}
 
-function idsktk_mime_types($mimes) {
-    $mimes['svg'] = 'image/svg+xml';
-    return $mimes;
+	$plugin_data = get_plugin_data( __FILE__ );
+
+	$idsktk_version = $plugin_data['Version'];
 }
-add_filter('upload_mimes', 'idsktk_mime_types');
-
-// Custom metaboxes
-require plugin_dir_path(__FILE__) . '/inc/register-meta.php';
-
-// Customizer options
-require plugin_dir_path(__FILE__) . '/lib/template-customizer.php';
 
 /**
- * Custom REST API - restricted
+ * Add support for uploading SVG files.
  *
+ * @param  array $mimes Currently allowed mime types.
+ *
+ * @return array
  */
-function idsktk_get_theme_settings() {
-    $data = array(
-        "gmap_api" => get_theme_mod('idsktk_main_settings_map_api'),
-    );
-   
-    if ( empty( $data ) ) {
-        return new WP_Error( 'no_data', 'No data found', array( 'status' => 404 ) );
-    }
-   
-    return new WP_REST_Response( $data );
+function idsktk_mime_types( $mimes ) {
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
 }
-
-function idsktk_rest_perm_callback() {
-    return current_user_can( 'edit_posts' );
-}
-function idsktk_rest_api_init() {
-    register_rest_route( 'idsk/v1', '/settings', array(
-        'methods' => 'GET',
-        'callback' => 'idsktk_get_theme_settings',
-        'permission_callback' => 'idsktk_rest_perm_callback'
-    ) );
-}
-add_action( 'rest_api_init', 'idsktk_rest_api_init' );
+add_filter( 'upload_mimes', 'idsktk_mime_types' );
 
 /**
- * Custom search properties
+ * Remove automatic paragraphs in widgets.
  */
-// Custom search query vars
-function idsktk_query_vars( $qvars ) {
-    $qvars[] = 'scat';
-    $qvars[] = 'tags';
-    $qvars[] = 'datum-od';
-    $qvars[] = 'datum-do';
-    return $qvars;
-}
-add_filter( 'query_vars', 'idsktk_query_vars' );
+remove_filter( 'widget_text_content', 'wpautop' );
 
 /**
- * Custom search
+ * Required files.
  */
-function idsktk_advanced_search_query( $query ) {
+// Customizer options.
+require plugin_dir_path( __FILE__ ) . '/lib/template-customizer.php';
 
-    if ( ! is_admin() && $query->is_search && $query->is_main_query() ) {
+// Custom blocks and patterns.
+require plugin_dir_path( __FILE__ ) . '/inc/block-editor-adjustments.php';
+require plugin_dir_path( __FILE__ ) . '/inc/register-blocks.php';
+require plugin_dir_path( __FILE__ ) . '/inc/register-patterns.php';
+require plugin_dir_path( __FILE__ ) . '/blocks/index.php';
 
-        // Store query params
-        $search_string = get_query_var( 's' );
-        $order = get_query_var( 'order' );
-        $order_by = get_query_var( 'orderby' );
-        $category = get_query_var( 'cat' );
-        $sub_category = get_query_var( 'scat' );
-        $date_from = get_query_var( 'datum-od' );
-        $date_to = get_query_var( 'datum-do' );
-        // Get tags array
-        $tags = get_query_var( 'tags' );
-        // Query arrays
-        $tax_query = array();
-        $date_query = array();
+// Custom metaboxes.
+require plugin_dir_path( __FILE__ ) . '/inc/register-meta.php';
 
-        // Set up query params
-        $query->set('posts_per_page', -1);
+// Custom functions.
+require plugin_dir_path( __FILE__ ) . '/inc/api.php';
+require plugin_dir_path( __FILE__ ) . '/inc/search-advanced.php';
+require plugin_dir_path( __FILE__ ) . '/inc/cookies-frontend.php';
 
-        if ( !empty( $search_string ) ) {
-            $query->set('s', $search_string);
-        }
-
-        if ( !empty( $order ) ) {
-            $query->set('order', $order);
-        } elseif ( empty( $order ) && empty( $order_by ) ) {
-            $query->set('order', 'DESC');
-        }
-
-        if ( !empty( $order_by ) ) {
-            $query->set('orderby', $order_by);
-        }
-
-        // Search categories
-        if ( !empty($category) || !empty($sub_category) ) {
-            $tax_query = array(
-                !empty($category) ?
-                    array(
-                        'taxonomy' 			=> 'category',
-                        'field'				=> 'id',
-                        'terms'				=> $category
-                    ) : '',
-                !empty($sub_category) ?
-                    array(
-                        'taxonomy' 			=> 'category',
-                        'field'				=> 'id',
-                        'terms'				=> $sub_category
-                    ) : ''
-            );
-            $query->set('tax_query', $tax_query);
-        }
-        
-        // Search tags
-        if ( !empty( $tags ) && $tags[0] != '' ) {
-            $query->set('tag__and', $tags);
-        }
-
-        // Search by updated
-        if ( !empty($date_from) || !empty($date_to) ) {
-            $date_query = array(
-                'column' => 'post_modified',
-            );
-
-            if (!empty($date_from)) {
-                $df = explode('.', $date_from);
-
-                if (count($df) == 1) {
-                    $date_query['after'] = array(
-                        'year'  => $df[0]
-                    );
-                } elseif (count($df) == 3) {
-                    $date_query['after'] = array(
-                        'year'  => $df[2],
-                        'month' => $df[1],
-                        'day'   => $df[0],
-                    );
-                }
-            }
-            
-            if (!empty($date_to)) {
-                $dt = explode('.', $date_to);
-                
-                if (count($dt) == 1) {
-                    $date_query['before'] = array(
-                        'year'  => $dt[0]
-                    );
-                } elseif (count($dt) == 3) {
-                    $date_query['before'] = array(
-                        'year'  => $dt[2],
-                        'month' => $dt[1],
-                        'day'   => $dt[0],
-                    );
-                }
-            }
-        }
-
-        // Set date_query
-        if( count( $date_query ) > 0 ){
-            $query->set('date_query', $date_query);
-        }
-
-    }
-
-}
-add_action( 'pre_get_posts', 'idsktk_advanced_search_query' );
-
-// Add backend styles for Gutenberg.
-add_action('enqueue_block_editor_assets', 'idsktk_gutenberg_editor_assets');
-
-function idsktk_gutenberg_editor_assets() {
-    // Load the theme styles within Gutenberg.
-    wp_enqueue_style('my-gutenberg-editor-styles', plugin_dir_url(__FILE__).'/assets/css/gutenberg-editor-styles.css', FALSE);
-}
-
-// Registering blocks
-/**
- * Blocks, patterns
- */
-require plugin_dir_path(__FILE__) . '/inc/register-blocks.php';
-require plugin_dir_path(__FILE__) . '/inc/register-patterns.php';
-
-/* Custom gutenberg IDSK blocks */
-require plugin_dir_path(__FILE__) . '/blocks/index.php';
-
-/**
- * Cookies
- */
-require plugin_dir_path(__FILE__) . '/inc/cookies-frontend.php';
-
-// Enqueue JS and CSS
-require plugin_dir_path(__FILE__) . '/lib/enqueue-scripts.php';
+// Enqueue JS and CSS.
+require plugin_dir_path( __FILE__ ) . '/lib/enqueue-scripts.php';

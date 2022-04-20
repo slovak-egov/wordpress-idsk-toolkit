@@ -1,6 +1,6 @@
 <?php
 /**
- * Meta boxes
+ * Meta boxes.
  *
  * @link https://slovenskoit.sk
  *
@@ -8,374 +8,398 @@
  * @subpackage ID-SK
  * @since ID-SK 1.6.0
  */
+
 namespace IDSK_Toolkit;
 
-if ( !class_exists( 'IDSK_Meta_Boxes' ) ) {
-    class IDSK_Meta_Boxes {
+if ( ! class_exists( 'IDSK_Meta_Boxes' ) ) {
+	/**
+	 * Meta boxes class.
+	 */
+	class IDSK_Meta_Boxes {
 
-        /**
-         * Meta boxes array.
-         * 
-         * @var array
-         */
-        protected $meta_boxes;
+		/**
+		 * Meta boxes array.
+		 *
+		 * @var array
+		 */
+		protected $meta_boxes;
 
-        /**
-         * Constructor.
-         * 
-         * @param array $args
-         *   Array of meta boxes to add.
-         */
-        public function __construct( $args ) {
-            $this->meta_boxes = $args;
+		/**
+		 * Constructor.
+		 *
+		 * @param array $args Array of meta boxes to add.
+		 */
+		public function __construct( $args ) {
+			$this->meta_boxes = $args;
 
-            add_action( 'plugins_loaded', array( $this, 'loaded' ) );
-        }
+			add_action( 'plugins_loaded', array( $this, 'loaded' ) );
+		}
 
-        /**
-         * Loaded function.
-         */
-        public function loaded() {
-            add_action( 'add_meta_boxes', array( $this, 'add' ) );
-            add_action( 'save_post', array( $this, 'save' ) );
-        }
+		/**
+		 * Loaded function.
+		 */
+		public function loaded() {
+			add_action( 'add_meta_boxes', array( $this, 'add' ) );
+			add_action( 'save_post', array( $this, 'save' ) );
+		}
 
-        /**
-         * Add meta boxes.
-         */
-        public function add() {
-            foreach ( $this->meta_boxes as $mbox ) {
-                add_meta_box(
-                    $mbox['id'],
-                    $mbox['title'],
-                    array( $this, 'display_html' ),
-                    $mbox['post_type'],
-                    isset($mbox['context']) ? $mbox['context'] : 'normal',
-                    isset($mbox['priority']) ? $mbox['priority'] : 'default',
-                    $mbox['args']
-                );
-            }
-        }
+		/**
+		 * Add meta boxes.
+		 */
+		public function add() {
+			foreach ( $this->meta_boxes as $mbox ) {
+				add_meta_box(
+					$mbox['id'],
+					$mbox['title'],
+					array( $this, 'display_html' ),
+					$mbox['post_type'],
+					isset( $mbox['context'] ) ? $mbox['context'] : 'normal',
+					isset( $mbox['priority'] ) ? $mbox['priority'] : 'default',
+					$mbox['args']
+				);
+			}
+		}
 
-        /**
-         * Save meta boxes.
-         * 
-         * @param int $post_id
-         *   The post ID.
-         */
-        public function save( $post_id ) {
-            if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE )
-                return;
-            if ( !current_user_can( 'edit_post', $post_id ) )
-                return;
+		/**
+		 * Save meta boxes.
+		 *
+		 * @param int $post_id The post ID.
+		 */
+		public function save( $post_id ) {
+			if ( defined( 'DOING_AUTOSAVE' ) && DOING_AUTOSAVE ) {
+				return;
+			}
+			if ( ! current_user_can( 'edit_post', $post_id ) ) {
+				return;
+			}
 
-            foreach ( $this->meta_boxes as $mbox ) {
-                $mb_id = 'idsktk_'.$mbox['id'];
+			foreach ( $this->meta_boxes as $mbox ) {
+				$mb_id = 'idsktk_' . $mbox['id'];
 
-                if ( !isset( $_POST[$mb_id.'_nonce'] ) || !wp_verify_nonce( $_POST[$mb_id.'_nonce'], '_'.$mb_id.'_nonce' ) )
-                    return;
+				if ( ! isset( $_POST[ $mb_id . '_nonce' ] ) || ! wp_verify_nonce( sanitize_text_field( wp_unslash( $_POST[ $mb_id . '_nonce' ] ) ), '_' . $mb_id . '_nonce' ) ) {
+					return;
+				}
 
-                if ( isset( $mbox['args']['allow'] ) ) { 
-                    update_post_meta( $post_id, 'idsktk_allow_'.$mbox['id'], $_POST['idsktk_allow_'.$mbox['id']] );
-                }
+				if ( isset( $mbox['args']['allow'] ) ) {
+					if ( array_key_exists( 'idsktk_allow_' . $mbox['id'], $_POST ) ) {
+						update_post_meta( $post_id, 'idsktk_allow_' . $mbox['id'], sanitize_text_field( wp_unslash( $_POST[ 'idsktk_allow_' . $mbox['id'] ] ) ) );
+					}
+				}
 
-                if ( isset( $mbox['args']['fields'] ) && isset( $_POST[$mb_id.'_fields'] ) && is_array( $_POST[$mb_id.'_fields'] ) ) {
-                    $fields = $mbox['args']['fields'];
-                    $inputs = $_POST[$mb_id.'_fields'];
-                    $upm = array();
+				if ( isset( $mbox['args']['fields'] ) && isset( $_POST[ $mb_id . '_fields' ] ) && is_array( $_POST[ $mb_id . '_fields' ] ) ) {
+					$fields = $mbox['args']['fields'];
+					$inputs = wp_unslash( $_POST[ $mb_id . '_fields' ] ); // phpcs:ignore WordPress.Security.ValidatedSanitizedInput.InputNotSanitized -- Inputs in array are separatly sanitized
+					$upm    = array();
 
-                    if ( isset( $mbox['args']['multiple'] ) && $mbox['args']['multiple'] == true ) {
-                        foreach ( $inputs as $i => $item ) {
-                            $upm[] = $this->sanitize_input_values( $item, $fields );
-                        }
-                    } else {
-                        $upm = $this->sanitize_input_values( $inputs, $fields );
-                    }
-                    
-                    update_post_meta( $post_id, $mb_id.'_fields', $upm );
-                }
-            }
-        }
-        
-        /**
-         * Get meta box value.
-         *
-         * @param string $value
-         *   Meta box key.
-         * 
-         * @return bool|mixed|string
-         */
-        protected function get_meta( $value ) {
-            global $post;
+					if ( isset( $mbox['args']['multiple'] ) && true === $mbox['args']['multiple'] ) {
+						foreach ( $inputs as $i => $item ) {
+							$upm[] = $this->sanitize_input_values( $item, $fields );
+						}
+					} else {
+						$upm = $this->sanitize_input_values( $inputs, $fields );
+					}
 
-            $field = get_post_meta( $post->ID, $value, TRUE );
-            if ( !empty( $field ) ) {
-                return is_array( $field ) ? stripslashes_deep( $field ) : stripslashes( wp_kses_decode_entities( $field ) );
-            } else {
-                return FALSE;
-            }
-        }
+					update_post_meta( $post_id, $mb_id . '_fields', $upm );
+				}
+			}
+		}
 
-        /**
-         * Sanitize inputed values.
-         * 
-         * @param array $inputs
-         *   Array of inputs to be sanitized.
-         * @param array $fields
-         *   Array of fields settings.
-         * 
-         * @return array
-         *   Array of sanitized inputs.
-         */
-        protected function sanitize_input_values( $inputs, $fields ) {
-            $values = array();
+		/**
+		 * Get meta box value.
+		 *
+		 * @param string $value Meta box key.
+		 *
+		 * @return bool|mixed|string
+		 */
+		protected function get_meta( $value ) {
+			global $post;
 
-            foreach ( $inputs as $key => $value ) {
-                $sanitized_value = null;
+			$field = get_post_meta( $post->ID, $value, true );
+			if ( ! empty( $field ) ) {
+				return is_array( $field ) ? stripslashes_deep( $field ) : stripslashes( wp_kses_decode_entities( $field ) );
+			} else {
+				return false;
+			}
+		}
 
-                switch ( $fields[$key]['type'] ) {
-                    case 'textarea':
-                        $sanitized_value = sanitize_textarea_field( $value );
-                        break;
-                    case 'url':
-                        $sanitized_value = sanitize_url( $value );
-                        break;
-                    default:
-                        $sanitized_value = sanitize_text_field( $value );
-                        break;
-                }
+		/**
+		 * Sanitize inputed values.
+		 *
+		 * @param array $inputs Array of inputs to be sanitized.
+		 * @param array $fields Array of fields settings.
+		 *
+		 * @return array Array of sanitized inputs.
+		 */
+		protected function sanitize_input_values( $inputs, $fields ) {
+			$values = array();
 
-                $values[$key] = $sanitized_value;
-            }
+			foreach ( $inputs as $key => $value ) {
+				$sanitized_value = null;
 
-            return $values;
-        }
+				switch ( $fields[ $key ]['type'] ) {
+					case 'textarea':
+						$sanitized_value = sanitize_textarea_field( $value );
+						break;
+					case 'url':
+						$sanitized_value = esc_url_raw( $value );
+						break;
+					default:
+						$sanitized_value = sanitize_text_field( $value );
+						break;
+				}
 
-        /**
-         * Display meta box HTML.
-         * 
-         * @param \WP_Post $post
-         *   Post object.
-         * @param array $mbox
-         *   Meta box array.
-         */
-        public function display_html( $post, $mbox ) {
-            $mb_id = 'idsktk_'.$mbox['id'];
-            $is_multiple = isset( $mbox['args']['multiple'] ) && $mbox['args']['multiple'] == true ? true : false;
-            $fields = isset( $mbox['args']['fields'] ) ? $mbox['args']['fields'] : array();
-            $output = '';
+				$values[ $key ] = $sanitized_value;
+			}
 
-            wp_nonce_field( '_'.$mb_id.'_nonce', $mb_id.'_nonce' );
+			return $values;
+		}
 
-            if ( isset( $mbox['args']['allow'] ) && $mbox['args']['allow'] != '' ) {
-                $output .= $this->allow_option( $mbox );
-            }
+		/**
+		 * Display meta box HTML.
+		 *
+		 * @param \WP_Post $post Post object.
+		 * @param array    $mbox Meta box array.
+		 */
+		public function display_html( $post, $mbox ) {
+			$mb_id        = 'idsktk_' . $mbox['id'];
+			$is_multiple  = isset( $mbox['args']['multiple'] ) && true === $mbox['args']['multiple'] ? true : false;
+			$fields       = isset( $mbox['args']['fields'] ) ? $mbox['args']['fields'] : array();
+			$output       = '';
+			$allowed_html = array(
+				'div'      => array(
+					'class' => array(),
+				),
+				'a'        => array(
+					'href'       => array(),
+					'title'      => array(),
+					'class'      => array(),
+					'target'     => array(),
+					'aria-label' => array(),
+					'style'      => array(),
+					'id'         => array(),
+				),
+				'hr'       => array(),
+				'p'        => array(),
+				'label'    => array(
+					'for' => array(),
+				),
+				'input'    => array(
+					'name'    => array(),
+					'id'      => array(),
+					'type'    => array(),
+					'checked' => array(),
+					'value'   => array(),
+				),
+				'textarea' => array(
+					'name'  => array(),
+					'id'    => array(),
+					'rows'  => array(),
+					'cols'  => array(),
+					'style' => array(),
+				),
+				'select'   => array(
+					'name' => array(),
+					'id'   => array(),
+				),
+				'option'   => array(
+					'value'    => array(),
+					'selected' => array(),
+				),
+			);
 
-            if ( !empty( $fields ) ) {
-                $datas = $this->get_meta( $mb_id.'_fields' );
+			wp_nonce_field( '_' . $mb_id . '_nonce', $mb_id . '_nonce' );
 
-                if ( empty($datas) ) {
-                    foreach ($fields as $key => $field) {
-                        if ( $is_multiple ) {
-                            $datas[0][$key] = '';
-                        } else {
-                            $datas[$key] = '';
-                        }
-                    }
-                }
+			if ( isset( $mbox['args']['allow'] ) && '' !== $mbox['args']['allow'] ) {
+				$output .= $this->allow_option( $mbox );
+			}
 
-                if ( $is_multiple ) {
-                    $i = 0;
+			if ( ! empty( $fields ) ) {
+				$datas = $this->get_meta( $mb_id . '_fields' );
 
-                    foreach ($datas as $data) {
-                        $output .= '<div class="idsk-meta-single">';
-                        $output .= $this->render_fields( $mb_id.'_fields['.$i.']', $fields, $data, '', '&nbsp;' );
-                        $output .= '<a class="button button-primary idsk-meta-remove" href="#" title="' . esc_attr__( 'Delete entry', 'idsk-toolkit' ) . '" style="background-color: red; vertical-align: middle;">' . esc_html__( 'Delete entry', 'idsk-toolkit' ) . '</a>';
-                        $output .= '<hr />';
-                        $output .= '</div>';
+				if ( empty( $datas ) ) {
+					foreach ( $fields as $key => $field ) {
+						if ( $is_multiple ) {
+							$datas[0][ $key ] = '';
+						} else {
+							$datas[ $key ] = '';
+						}
+					}
+				}
 
-                        $i++;
-                    }
-                    
-                    $output .= '<div>
-                            <a class="button button-primary idsk-meta-add" href="#" title="' . esc_attr__( 'Add entry', 'idsk-toolkit' ) . '">' . esc_html__( 'Add entry', 'idsk-toolkit' ) . '</a>
-                        </div>';
-                } else {
-                    $output .= $this->render_fields( $mb_id.'_fields', $fields, $datas, '<p>', '</p>' );
-                }
-            }
+				if ( $is_multiple ) {
+					$i = 0;
 
-            echo $output;
-        }
+					foreach ( $datas as $data ) {
+						$output .= '<div class="idsk-meta-single">';
+						$output .= $this->render_fields( $mb_id . '_fields[' . $i . ']', $fields, $data, '', '&nbsp;' );
+						$output .= '<a class="button button-primary idsk-meta-remove" href="#" title="' . esc_attr__( 'Delete entry', 'idsk-toolkit' ) . '" style="background-color: red; vertical-align: middle;">' . esc_html__( 'Delete entry', 'idsk-toolkit' ) . '</a>';
+						$output .= '<hr />';
+						$output .= '</div>';
 
-        /**
-         * Display allow option.
-         * 
-         * @param array $mbox
-         *   Meta box array.
-         * 
-         * @return string
-         */
-        protected function allow_option( $mbox ) {
-            $allowed = $this->get_meta( 'idsktk_allow_'.$mbox['id'] );
+						$i++;
+					}
 
-            $output = '<div>
-                    <label for="idsktk_allow_'.esc_attr($mbox['id']).'">
-                        <input name="idsktk_allow_'.esc_attr($mbox['id']).'" id="idsktk_allow_'.esc_attr($mbox['id']).'" type="checkbox" '.( $allowed != '' ? 'checked="checked"' : '' ).' />
-                        ' . esc_html($mbox['args']['allow']) . '
-                    </label>
-                </div>';
+					$output .= '<div>
+						<a class="button button-primary idsk-meta-add" href="#" title="' . esc_attr__( 'Add entry', 'idsk-toolkit' ) . '">' . esc_html__( 'Add entry', 'idsk-toolkit' ) . '</a>
+					</div>';
+				} else {
+					$output .= $this->render_fields( $mb_id . '_fields', $fields, $datas, '<p>', '</p>' );
+				}
+			}
 
-            return $output;
-        }
+			echo wp_kses( $output, $allowed_html );
+		}
 
-        /**
-         * Render input fields.
-         * 
-         * @param int $id
-         *   Fields ID.
-         * @param array $fields
-         *   Fields array.
-         * @param array $defaults
-         *   Fields default values array.
-         * @param string $beforeHTML
-         *   HTML before each field.
-         * @param string $afterHTML
-         *   HTML after each field.
-         * 
-         * @return string
-         */
-        protected function render_fields( $id, $fields, $defaults = array(), $beforeHTML = null, $afterHTML = null ) {
-            $output = '';
+		/**
+		 * Display allow option.
+		 *
+		 * @param array $mbox Meta box array.
+		 *
+		 * @return string
+		 */
+		protected function allow_option( $mbox ) {
+			$allowed = $this->get_meta( 'idsktk_allow_' . $mbox['id'] );
 
-            foreach ( $fields as $key => $data ) {
-                $iid = $id.'['.$key.']';
-                $value = null;
+			$output = '<div>
+				<label for="idsktk_allow_' . esc_attr( $mbox['id'] ) . '">
+					<input name="idsktk_allow_' . esc_attr( $mbox['id'] ) . '" id="idsktk_allow_' . esc_attr( $mbox['id'] ) . '" type="checkbox" ' . ( '' !== $allowed ? 'checked="checked"' : '' ) . ' />
+					' . esc_html( $mbox['args']['allow'] ) . '
+				</label>
+			</div>';
 
-                if ( !empty($defaults) ) {
-                    $value = $defaults[$key];
-                }
+			return $output;
+		}
 
-                if ( !is_null( $beforeHTML ) ) {
-                    $output .= $beforeHTML;
-                }
+		/**
+		 * Render input fields.
+		 *
+		 * @param int    $id Fields ID.
+		 * @param array  $fields Fields array.
+		 * @param array  $defaults Fields default values array.
+		 * @param string $html_before HTML before each field.
+		 * @param string $html_after HTML after each field.
+		 *
+		 * @return string
+		 */
+		protected function render_fields( $id, $fields, $defaults = array(), $html_before = null, $html_after = null ) {
+			$output = '';
 
-                switch ($data['type']) {
-                    case 'textarea':
-                        $output .= $this->input_textarea( $iid, $data, $value );
-                        break;
-                    case 'select_posts':
-                        $args = array();
-                        $args_posts = array(
-                            'post_type'         => 'post',
-                            'orderby'           => 'publish_date',
-                            'posts_per_page'    => -1
-                        );
+			foreach ( $fields as $key => $data ) {
+				$iid   = $id . '[' . $key . ']';
+				$value = null;
 
-                        foreach ( get_posts( $args_posts ) as $spost ) { 
-                            $args[] = array(
-                                'value' => $spost->ID,
-                                'name'  => get_the_title($spost->ID)
-                            );
-                        }
+				if ( ! empty( $defaults ) ) {
+					$value = $defaults[ $key ];
+				}
 
-                        $output .= $this->input_select( $iid, $data, $args, $value );
-                        break;
-                    default:
-                        $output .= $this->input_text( $iid, $data, $value );
-                        break;
-                }
+				if ( ! is_null( $html_before ) ) {
+					$output .= $html_before;
+				}
 
-                if ( !is_null( $afterHTML ) ) {
-                    $output .= $afterHTML;
-                }
-            }
+				switch ( $data['type'] ) {
+					case 'textarea':
+						$output .= $this->input_textarea( $iid, $data, $value );
+						break;
+					case 'select_posts':
+						$args       = array();
+						$args_posts = array(
+							'post_type'      => 'post',
+							'orderby'        => 'publish_date',
+							'posts_per_page' => -1,
+						);
 
-            return $output;
-        }
+						foreach ( get_posts( $args_posts ) as $spost ) {
+							$args[] = array(
+								'value' => $spost->ID,
+								'name'  => get_the_title( $spost->ID ),
+							);
+						}
 
-        /**
-         * Display text input.
-         * 
-         * @param string $id
-         *   Input ID.
-         * @param array $mbox
-         *   Meta box array.
-         * @param string $type
-         *   Input type.
-         * @param string $value
-         *   Input value.
-         * 
-         * @return string
-         */
-        protected function input_text( $id, $mbox, $value = null ) {
-            return '<label for="' . esc_attr($id) . '">
-                    ' . esc_html($mbox['title']) . '
-                    <input
-                        name="' . esc_attr($id) . '"
-                        id="' . esc_attr($id) . '"
-                        type="' . esc_attr(isset($mbox['type']) ? $mbox['type'] : 'text') . '"
-                        value="' . esc_attr(!is_null($value) ? $value : $this->get_meta($id)) . '"
-                    />
-                </label>';
-        }
+						$output .= $this->input_select( $iid, $data, $args, $value );
+						break;
+					default:
+						$output .= $this->input_text( $iid, $data, $value );
+						break;
+				}
 
-        /**
-         * Display textarea input.
-         * 
-         * @param string $id
-         *   Input ID.
-         * @param array $mbox
-         *   Meta box array.
-         * @param string $value
-         *   Input value.
-         * 
-         * @return string
-         */
-        protected function input_textarea( $id, $mbox, $value = null ) {
-            return '<label for="' . esc_attr($id) . '">
-                    ' . esc_html($mbox['title']) . '
-                    <textarea
-                        name="' . esc_attr($id) . '"
-                        id="' . esc_attr($id) . '"
-                        rows="3"
-                        cols="60"
-                        style="vertical-align: middle;"
-                    >' . esc_html(!is_null($value) ? $value : $this->get_meta($id)) . '</textarea>
-                </label>';
-        }
+				if ( ! is_null( $html_after ) ) {
+					$output .= $html_after;
+				}
+			}
 
-        /**
-         * Display select input.
-         * 
-         * @param string $id
-         *   Input ID.
-         * @param array $mbox
-         *   Meta box array.
-         * @param array $args
-         *   Select options array.
-         * @param string $value
-         *   Selected value.
-         * 
-         * @return string
-         */
-        protected function input_select( $id, $mbox, $args = array(), $value = null ) {
-            $selected = !is_null($value) ? $value : $this->get_meta($id);
+			return $output;
+		}
 
-            $output = '<label for="' . esc_attr($id) . '">' . esc_html($mbox['title']) . '</label>
-                <select name="' . esc_attr($id) . '" id="' . esc_attr($id) . '">';
+		/**
+		 * Display text input.
+		 *
+		 * @param string $id    Input ID.
+		 * @param array  $mbox  Meta box array.
+		 * @param string $value Input value.
+		 *
+		 * @return string
+		 */
+		protected function input_text( $id, $mbox, $value = null ) {
+			return '<label for="' . esc_attr( $id ) . '">
+				' . esc_html( $mbox['title'] ) . '
+				<input
+					name="' . esc_attr( $id ) . '"
+					id="' . esc_attr( $id ) . '"
+					type="' . esc_attr( isset( $mbox['type'] ) ? $mbox['type'] : 'text' ) . '"
+					value="' . esc_attr( ! is_null( $value ) ? $value : $this->get_meta( $id ) ) . '"
+				/>
+			</label>';
+		}
 
-            if ( isset( $mbox['option_none'] ) ) {
-                $output .= '<option value="">' . esc_html($mbox['option_none']) . '</option>';
-            }
+		/**
+		 * Display textarea input.
+		 *
+		 * @param string $id    Input ID.
+		 * @param array  $mbox  Meta box array.
+		 * @param string $value Input value.
+		 *
+		 * @return string
+		 */
+		protected function input_textarea( $id, $mbox, $value = null ) {
+			return '<label for="' . esc_attr( $id ) . '">
+				' . esc_html( $mbox['title'] ) . '
+				<textarea
+					name="' . esc_attr( $id ) . '"
+					id="' . esc_attr( $id ) . '"
+					rows="3"
+					cols="60"
+					style="vertical-align: middle;"
+				>' . esc_html( ! is_null( $value ) ? $value : $this->get_meta( $id ) ) . '</textarea>
+			</label>';
+		}
 
-            foreach ( $args as $item ) {
-                $output .= '<option value="' . $item['value'] . '" ' . ( $selected == $item['value'] ? 'selected="selected"' : '' ) . '>' . esc_html($item['name']) . '</option>';
-            }
+		/**
+		 * Display select input.
+		 *
+		 * @param string $id    Input ID.
+		 * @param array  $mbox  Meta box array.
+		 * @param array  $args  Select options array.
+		 * @param string $value Selected value.
+		 *
+		 * @return string
+		 */
+		protected function input_select( $id, $mbox, $args = array(), $value = null ) {
+			$selected = ! is_null( $value ) ? $value : $this->get_meta( $id );
 
-            $output .= '</select>';
+			$output = '<label for="' . esc_attr( $id ) . '">' . esc_html( $mbox['title'] ) . '</label>
+			<select name="' . esc_attr( $id ) . '" id="' . esc_attr( $id ) . '">';
 
-            return $output;
-        }
-    }
+			if ( isset( $mbox['option_none'] ) ) {
+				$output .= '<option value="">' . esc_html( $mbox['option_none'] ) . '</option>';
+			}
+
+			foreach ( $args as $item ) {
+				$output .= '<option value="' . $item['value'] . '" ' . ( $selected === $item['value'] ? 'selected="selected"' : '' ) . '>' . esc_html( $item['name'] ) . '</option>';
+			}
+
+			$output .= '</select>';
+
+			return $output;
+		}
+	}
 }

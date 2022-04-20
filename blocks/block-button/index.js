@@ -116,6 +116,7 @@ registerBlockType('idsk/button', {
                 <RichText
                     key="editable"
                     className="js-button-text"
+                    allowedFormats={[]}
                     tagName="span"
                     placeholder={__('Button text.', 'idsk-toolkit')}
                     value={text}
