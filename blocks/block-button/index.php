@@ -1,6 +1,6 @@
 <?php
 /**
- * BLOCK - button - register dynamic block
+ * BLOCK - button - register dynamic block.
  *
  * @link https://slovenskoit.sk
  *
@@ -9,45 +9,63 @@
  * @since ID-SK 1.0
  */
 
+/**
+ * Register button.
+ */
 function idsktk_register_dynamic_button_block() {
-    // Only load if Gutenberg is available.
-    if (!function_exists('register_block_type')) {
-        return;
-    }
+	// Only load if Gutenberg is available.
+	if ( ! function_exists( 'register_block_type' ) ) {
+		return;
+	}
 
-    // Hook server side rendering into render callback
-    register_block_type('idsk/button', array(
-        'render_callback' => 'idsktk_render_dynamic_button_block'
-    ));
+	// Hook server side rendering into render callback.
+	register_block_type(
+		'idsk/button',
+		array(
+			'render_callback' => 'idsktk_render_dynamic_button_block',
+		)
+	);
 }
-add_action('init', 'idsktk_register_dynamic_button_block');
-    
-function idsktk_render_dynamic_button_block($attributes) {
-    // block attributes
-    $href = isset($attributes['href']) ? $attributes['href'] : '';
-    $target = isset($attributes['target']) ? $attributes['target'] : false;
-    $color = isset($attributes['color']) ? $attributes['color'] : '';
-    $arrow = isset($attributes['arrow']) ? $attributes['arrow'] : false;
-    $text = isset($attributes['text']) ? $attributes['text'] : ''; 
+add_action( 'init', 'idsktk_register_dynamic_button_block' );
 
-    $isLink = $href != '' ? true : false;
+/**
+ * Render button.
+ *
+ * @param array $attributes Block attributes.
+ */
+function idsktk_render_dynamic_button_block( $attributes ) {
+	// Block attributes.
+	$href    = isset( $attributes['href'] ) ? $attributes['href'] : '';
+	$target  = isset( $attributes['target'] ) ? $attributes['target'] : false;
+	$color   = isset( $attributes['color'] ) ? $attributes['color'] : '';
+	$arrow   = isset( $attributes['arrow'] ) ? $attributes['arrow'] : false;
+	$text    = isset( $attributes['text'] ) ? $attributes['text'] : '';
+	$is_link = '' !== $href ? true : false;
 
-    ob_start(); // Turn on output buffering
-    ?>
+	ob_start(); // Turn on output buffering.
+	?>
 
-    <<?php echo $isLink ? 'a href="'.$href.'" '.($target ? 'target="_blank"' : '').' role="button" draggable="false"' : 'button' ?> class="govuk-button <?php echo $color . ($arrow ? ' govuk-button--start' : ''); ?>" data-module="govuk-button">
-        <?php echo $text; ?>
-        <?php if ($arrow) { ?>
-            <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
-                <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"/>
-            </svg>
-        <?php } ?>
-    </<?php echo $isLink ? 'a' : 'button' ?>> 
+	<<?php echo $is_link ? 'a href="' . esc_url( $href ) . '" ' . ( $target ? 'target="_blank"' : '' ) . ' role="button" draggable="false"' : 'button'; ?>
+		class="govuk-button <?php echo esc_attr( $color . ( $arrow ? ' govuk-button--start' : '' ) ); ?>"
+		data-module="govuk-button"
+	>
+		<?php
+		echo esc_html( $text );
 
-    <?php
-    /* END HTML OUTPUT */
-    $output = ob_get_contents(); // collect output
-    ob_end_clean(); // Turn off ouput buffer
+		if ( $arrow ) {
+			?>
+			<svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" role="presentation" focusable="false">
+				<path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z"/>
+			</svg>
+			<?php
+		}
+		?>
+	</<?php echo $is_link ? 'a' : 'button'; ?>>
 
-    return $output; // Print output
+	<?php
+	/* END HTML OUTPUT */
+	$output = ob_get_contents(); // Collect output.
+	ob_end_clean(); // Turn off ouput buffer.
+
+	return $output; // Print output.
 }

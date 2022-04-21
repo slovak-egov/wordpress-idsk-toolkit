@@ -1,6 +1,6 @@
 <?php
 /**
- * BLOCK - tabs - register dynamic block
+ * BLOCK - tabs - register dynamic block.
  *
  * @link https://slovenskoit.sk
  *
@@ -9,48 +9,66 @@
  * @since ID-SK 1.0
  */
 
+/**
+ * Register tabs.
+ */
 function idsktk_register_dynamic_tabs_block() {
-    // Only load if Gutenberg is available.
-    if (!function_exists('register_block_type')) {
-        return;
-    }
+	// Only load if Gutenberg is available.
+	if ( ! function_exists( 'register_block_type' ) ) {
+		return;
+	}
 
-    // Hook server side rendering into render callback
-    register_block_type('idsk/tabs', array(
-        'render_callback' => 'idsktk_render_dynamic_tabs_block'
-    ));
+	// Hook server side rendering into render callback.
+	register_block_type(
+		'idsk/tabs',
+		array(
+			'render_callback' => 'idsktk_render_dynamic_tabs_block',
+		)
+	);
 }
-add_action('init', 'idsktk_register_dynamic_tabs_block');
+add_action( 'init', 'idsktk_register_dynamic_tabs_block' );
 
-function idsktk_render_dynamic_tabs_block($attributes, $content) {
-    // block attributes
-    $mainHeading = isset($attributes['heading']) ? $attributes['heading'] : '';
-    $headings = isset($attributes['headings']) ? $attributes['headings'] : [];
-    $blockIds = isset($attributes['blockIds']) ? $attributes['blockIds'] : [];
+/**
+ * Render tabs.
+ *
+ * @param array $attributes Block attributes.
+ * @param mixed $content    Inner blocks.
+ */
+function idsktk_render_dynamic_tabs_block( $attributes, $content ) {
+	// Block attributes.
+	$main_heading = isset( $attributes['heading'] ) ? $attributes['heading'] : '';
+	$headings     = isset( $attributes['headings'] ) ? $attributes['headings'] : array();
+	$block_ids    = isset( $attributes['blockIds'] ) ? $attributes['blockIds'] : array();
 
-    ob_start(); // Turn on output buffering
-    ?>
+	ob_start(); // Turn on output buffering.
+	?>
 
-    <div class="idsk-tabs" data-module="idsk-tabs">
-        <h2 class="idsk-tabs__title"><?php echo $mainHeading; ?></h2>
-        
-        <ul class="idsk-tabs__list">
-            <?php foreach ($headings as $i=>$heading) { ?>
-                <li class="idsk-tabs__list-item <?php $i == 0 ? 'idsk-tabs__list-item--selected' : '' ?>">
-                    <a class="idsk-tabs__tab" href="<?php echo '#tid-'.$blockIds[$i] ?>" item="<?php echo $i ?>" title="<?php echo $heading; ?>"><?php echo $heading; ?></a>
-                </li>
-            <?php } ?>
-        </ul>
+	<div class="idsk-tabs" data-module="idsk-tabs">
+		<h2 class="idsk-tabs__title"><?php echo esc_html( $main_heading ); ?></h2>
 
-        <ul class="idsk-tabs__list--mobile" role="tablist">
-            <?php echo $content; ?>
-        </ul>
-    </div>
+		<ul class="idsk-tabs__list">
+			<?php
+			foreach ( $headings as $i => $heading ) {
+				?>
+				<li class="idsk-tabs__list-item <?php 0 === $i ? 'idsk-tabs__list-item--selected' : ''; ?>">
+					<a class="idsk-tabs__tab" href="<?php echo esc_url( '#tid-' . $block_ids[ $i ] ); ?>" item="<?php echo esc_attr( $i ); ?>" title="<?php echo esc_attr( $heading ); ?>">
+						<?php echo esc_html( $heading ); ?>
+					</a>
+				</li>
+				<?php
+			}
+			?>
+		</ul>
 
-    <?php
-      /* END HTML OUTPUT */
-    $output = ob_get_contents(); // collect output
-    ob_end_clean(); // Turn off ouput buffer
-  
-    return $output; // Print output
+		<ul class="idsk-tabs__list--mobile" role="tablist">
+			<?php echo wp_kses_post( $content ); ?>
+		</ul>
+	</div>
+
+	<?php
+	/* END HTML OUTPUT */
+	$output = ob_get_contents(); // Collect output.
+	ob_end_clean(); // Turn off ouput buffer.
+
+	return $output; // Print output.
 }
