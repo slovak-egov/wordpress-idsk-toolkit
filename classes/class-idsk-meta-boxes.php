@@ -394,7 +394,7 @@ if ( ! class_exists( 'IDSK_Meta_Boxes' ) ) {
 			}
 
 			foreach ( $args as $item ) {
-				$output .= '<option value="' . $item['value'] . '" ' . ( $selected === $item['value'] ? 'selected="selected"' : '' ) . '>' . esc_html( $item['name'] ) . '</option>';
+				$output .= '<option value="' . $item['value'] . '" ' . ( (int) $selected === $item['value'] ? 'selected="selected"' : '' ) . '>' . esc_html( $item['name'] ) . '</option>';
 			}
 
 			$output .= '</select>';
