@@ -50,7 +50,7 @@ function idsktk_render_dynamic_heading_block( $attributes ) {
 		<?php
 	}
 	?>
-	<<?php echo esc_attr( $heading_type ) . esc_attr( '' !== $anchor ? 'id="' . $anchor . '"' : '' ); ?> class="<?php echo esc_attr( 'govuk-heading-' . $heading_class ); ?>">
+	<<?php echo esc_attr( $heading_type ) . esc_attr( '' !== $anchor ? ' id=' . $anchor : '' ); ?> class="<?php echo esc_attr( 'govuk-heading-' . $heading_class ); ?>">
 		<?php echo wp_kses_post( $heading_text ); ?>
 	</<?php echo esc_attr( $heading_type ); ?>>
 
