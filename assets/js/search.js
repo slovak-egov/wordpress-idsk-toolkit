@@ -41,7 +41,7 @@ function startSearch(attr, value) {
         }
 
         // save index for tag with selected value to remove
-        if (attr == args_split[0] == 'tags[]' && args_split[1] == value) {
+        if (attr == 'tags[]' && args_split[0] == 'tags[]' && args_split[1] == value) {
             indexed = index;
             tag_remove = true;
         }
