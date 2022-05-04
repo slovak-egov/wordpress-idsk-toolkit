@@ -83,6 +83,8 @@ if ( ! class_exists( 'IDSK_Meta_Boxes' ) ) {
 				if ( isset( $mbox['args']['allow'] ) ) {
 					if ( array_key_exists( 'idsktk_allow_' . $mbox['id'], $_POST ) ) {
 						update_post_meta( $post_id, 'idsktk_allow_' . $mbox['id'], sanitize_text_field( wp_unslash( $_POST[ 'idsktk_allow_' . $mbox['id'] ] ) ) );
+					} else {
+						update_post_meta( $post_id, 'idsktk_allow_' . $mbox['id'], '' );
 					}
 				}
 
@@ -261,8 +263,8 @@ if ( ! class_exists( 'IDSK_Meta_Boxes' ) ) {
 			$allowed = $this->get_meta( 'idsktk_allow_' . $mbox['id'] );
 
 			$output = '<div>
-				<label for="idsktk_allow_' . esc_attr( $mbox['id'] ) . '">
-					<input name="idsktk_allow_' . esc_attr( $mbox['id'] ) . '" id="idsktk_allow_' . esc_attr( $mbox['id'] ) . '" type="checkbox" ' . ( '' !== $allowed ? 'checked="checked"' : '' ) . ' />
+				<label for="' . esc_attr( 'idsktk_allow_' . $mbox['id'] ) . '">
+					<input name="' . esc_attr( 'idsktk_allow_' . $mbox['id'] ) . '" id="' . esc_attr( 'idsktk_allow_' . $mbox['id'] ) . '" type="checkbox" ' . ( ! empty( $allowed ) ? 'checked="checked"' : '' ) . ' />
 					' . esc_html( $mbox['args']['allow'] ) . '
 				</label>
 			</div>';
