@@ -39,6 +39,10 @@ function idsktk_render_dynamic_tabs_block( $attributes, $content ) {
 	$main_heading = isset( $attributes['heading'] ) ? $attributes['heading'] : '';
 	$headings     = isset( $attributes['headings'] ) ? $attributes['headings'] : array();
 	$block_ids    = isset( $attributes['blockIds'] ) ? $attributes['blockIds'] : array();
+	$allowed_html = wp_kses_allowed_html( 'post' );
+
+	$allowed_html['button']['href'] = array();
+	$allowed_html['button']['item'] = array();
 
 	ob_start(); // Turn on output buffering.
 	?>
@@ -61,7 +65,7 @@ function idsktk_render_dynamic_tabs_block( $attributes, $content ) {
 		</ul>
 
 		<ul class="idsk-tabs__list--mobile" role="tablist">
-			<?php echo wp_kses_post( $content ); ?>
+			<?php echo wp_kses( $content, $allowed_html ); ?>
 		</ul>
 	</div>
 
