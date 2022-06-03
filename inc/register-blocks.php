@@ -48,6 +48,7 @@ function idsktk_allowed_block_types( $allowed_blocks ) {
 		'idsk/stepper-banner',
 		'idsk/separator',
 		'idsk/posts',
+		'idsk/table',
 	);
 }
 

@@ -32,3 +32,4 @@ require('./grid-container');
 require('./block-stepper-banner');
 require('./block-separator');
 require('./block-posts');
+require('./block-table');
