@@ -56,7 +56,7 @@ function idsktk_render_table_section( $items, $section = 'body' ) {
 							<?php
 						}
 
-						echo esc_html( $column['content'] );
+						echo wp_kses_post( $column['content'] );
 
 						if ( $is_head ) {
 							?>
