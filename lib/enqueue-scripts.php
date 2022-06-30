@@ -75,6 +75,14 @@ function idsktk_register_template_scripts() {
 		$idsktk_version,
 		true
 	);
+
+	wp_enqueue_script(
+		'idsk-js-table-filter',
+		plugin_dir_url( __DIR__ ) . 'assets/js/table-filter.js',
+		array(),
+		$idsktk_version,
+		true
+	);
 }
 add_action( 'wp_enqueue_scripts', 'idsktk_register_template_scripts' );
 
