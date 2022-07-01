@@ -167,7 +167,7 @@ function idsktk_render_table_filter( $name, $type, $index = 0, $category = '', $
 			break;
 		case 'switch':
 			$content .= '<div class="govuk-radios__item">';
-			$content .= '<input class="govuk-radios__input" type="radio" name="' . strtolower( $category ) . '" value="' . strtolower( $name ) . '" >';
+			$content .= '<input class="govuk-radios__input" type="radio" name="' . strtolower( $category ) . '" id="' . strtolower( $name ) . '" value="' . strtolower( $name ) . '" >';
 			$content .= '<label class="govuk-label govuk-radios__label" for="' . strtolower( $name ) . '">' . $name . '</label>';
 			$content .= '</div>';
 			break;

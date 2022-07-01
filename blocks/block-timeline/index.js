@@ -147,7 +147,7 @@ registerBlockType('idsk/timeline', {
             const { items } = attributes
 
             return <div className={className}>
-                <div class="idsk-timeline " data-module="idsk-timeline" role="contentinfo">
+                <div class="idsk-timeline " data-module="idsk-timeline">
                     <div class="govuk-container-width">
 
                         {!!items && items.map((item, index) =>

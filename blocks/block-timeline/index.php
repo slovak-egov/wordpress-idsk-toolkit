@@ -42,7 +42,7 @@ function idsktk_render_dynamic_timeline_block( $attributes ) {
 	?>
 
 	<div class="govuk-clearfix"></div>
-	<div class="idsk-timeline" data-module="idsk-timeline" role="contentinfo">
+	<div class="idsk-timeline" data-module="idsk-timeline">
 		<div class="govuk-container-width">
 			<div class="idsk-timeline__button__div">
 				<button type="button" class="idsk-timeline__button--back"></button>
