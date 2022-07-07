@@ -52,17 +52,17 @@ function idsktk_render_dynamic_tab_block( $attributes, $content ) {
 			href="<?php echo esc_url( '#tid-' . $block_id ); ?>"
 		>
 			<?php echo esc_html( $heading ); ?>
-			<div class="idsk-tabs__tab-arrow-mobile"></div>
+			<span class="idsk-tabs__tab-arrow-mobile"></span>
 		</button>
 
-		<section class="idsk-tabs__panel <?php $tab_item > 0 ? 'idsk-tabs__panel--hidden' : ''; ?>" id="<?php echo esc_attr( 'tid-' . $block_id ); ?>" role="tabpanel">
+		<div class="idsk-tabs__panel <?php $tab_item > 0 ? 'idsk-tabs__panel--hidden' : ''; ?>" id="<?php echo esc_attr( 'tid-' . $block_id ); ?>" role="tabpanel">
 			<div class="idsk-tabs__panel-content">
 				<?php echo wp_kses_post( $content ); ?>
 			</div>
 			<div class="idsk-tabs__mobile-tab-content idsk-tabs__mobile-tab-content--hidden">
 				<?php echo wp_kses_post( $content ); ?>
 			</div>
-		</section>
+		</div>
 	</li>
 
 	<?php
