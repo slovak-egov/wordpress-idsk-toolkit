@@ -103,6 +103,11 @@ registerBlockType('idsk/table', {
 			selector: 'js-table-allow-print',
 			default: false
 		},
+		tableHeight: {
+			type: 'number',
+			selector: 'js-table-height',
+			default: 0
+		},
 		defaultRows: {
 			type: 'number',
 			default: 2
@@ -145,6 +150,7 @@ registerBlockType('idsk/table', {
 				withHeading: this.props.attributes.withHeading || false,
 				headingSort: this.props.attributes.headingSort || false,
 				allowPrint: this.props.attributes.allowPrint || false,
+				tableHeight: this.props.attributes.tableHeight || 0,
 				defaultCols: this.props.attributes.defaultCols || 2,
 				defaultRows: this.props.attributes.defaultRows || 2,
 				tabHead: this.props.attributes.tabHead || [],
@@ -684,6 +690,7 @@ registerBlockType('idsk/table', {
 				withHeading,
 				headingSort,
 				allowPrint,
+				tableHeight,
 				defaultCols,
 				defaultRows,
 				tabHead,
@@ -824,6 +831,16 @@ registerBlockType('idsk/table', {
 									checked={allowPrint}
 									label={__( 'Allow print', 'idsk-toolkit' )}
 									onChange={checked => this.onChange('allowPrint', checked)}
+								/>
+								<hr />
+								<TextControl
+									className="js-table-height"
+									type="number"
+									label={__( 'Table height (px)', 'idsk-toolkit' )}
+									help={__( '0px - Table will be displayed in its entirety.', 'idsk-toolkit' )}
+									value={tableHeight}
+									onChange={value => this.onChange('tableHeight', parseInt(value))}
+									min="0"
 								/>
 							</PanelBody>
 

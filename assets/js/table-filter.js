@@ -32,7 +32,7 @@ function getIndex(items, name) {
 		let text = item.outerText.trim();
 		text = text.split(/[\n]/)[0].trim();
 
-		if (text === name) {
+		if (text.toUpperCase() === name.toUpperCase()) {
 			index = i;
 		}
 	}

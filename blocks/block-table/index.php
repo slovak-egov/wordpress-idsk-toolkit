@@ -31,18 +31,19 @@ add_action( 'init', 'idsktk_register_dynamic_table_block' );
 /**
  * Render table section.
  *
- * @param array  $items      List of items to render.
- * @param string $section    Table section.
- * @param bool   $sort       Enables sorting for `thead` section.
- * @param int    $skip_index Column index that will not be rendered.
+ * @param array  $items        List of items to render.
+ * @param string $section      Table section.
+ * @param bool   $sort         Enables sorting for `thead` section.
+ * @param int    $skip_index   Column index that will not be rendered.
+ * @param int    $table_height Maximal height of the table.
  */
-function idsktk_render_table_section( $items, $section = 'body', $sort = false, $skip_index = -1 ) {
+function idsktk_render_table_section( $items, $section = 'body', $sort = false, $skip_index = -1, $table_height = 0 ) {
 	$tag          = 't' . $section;
 	$is_head      = 'head' === $section ? true : false;
 	$column_class = 'idsk-table__' . ( $is_head ? 'header' : 'cell' );
 	?>
 
-	<<?php echo esc_attr( $tag ); ?> class="<?php echo esc_attr( 'idsk-table__' . $section ); ?>">
+	<<?php echo esc_attr( $tag ); ?> class="<?php echo esc_attr( 'idsk-table__' . $section ); ?>" <?php echo 'body' === $section && 0 < $table_height ? 'style="max-height: ' . esc_attr( $table_height ) . 'px;"' : ''; ?>>
 		<?php
 		foreach ( $items as $row_index => $row ) {
 			?>
@@ -193,6 +194,7 @@ function idsktk_render_dynamic_table_block( $attributes ) {
 	$with_heading           = isset( $attributes['withHeading'] ) && $attributes['withHeading'] ? $attributes['withHeading'] : false;
 	$heading_sort           = isset( $attributes['headingSort'] ) && $attributes['headingSort'] ? $attributes['headingSort'] : false;
 	$allow_print            = isset( $attributes['allowPrint'] ) && $attributes['allowPrint'] ? $attributes['allowPrint'] : false;
+	$table_height           = isset( $attributes['tableHeight'] ) && $attributes['tableHeight'] ? $attributes['tableHeight'] : 0;
 	$tab_head               = isset( $attributes['tabHead'] ) ? $attributes['tabHead'] : array();
 	$tab_body               = isset( $attributes['tabBody'] ) ? $attributes['tabBody'] : array();
 	$title_heading          = isset( $attributes['titleHeading'] ) ? $attributes['titleHeading'] : '';
@@ -278,7 +280,7 @@ function idsktk_render_dynamic_table_block( $attributes ) {
 					<button class="govuk-body govuk-link idsk-filter-menu__toggle"
 						tabindex="0"
 						data-open-text="<?php esc_attr_e( 'Expand filter content', 'idsk-toolkit' ); ?>"
-						data-close-text="<?php esc_attr_e( 'Expand filter content', 'idsk-toolkit' ); ?>"
+						data-close-text="<?php esc_attr_e( 'Collapse filter content', 'idsk-toolkit' ); ?>"
 						data-category-name=""
 						aria-label="<?php esc_attr_e( 'Expand filter content', 'idsk-toolkit' ); ?>"
 						type="button"
@@ -376,7 +378,7 @@ function idsktk_render_dynamic_table_block( $attributes ) {
 				echo wp_kses_post( idsktk_render_table_section( $tab_head, 'head', $heading_sort, $skip_index ) );
 			}
 
-			echo wp_kses_post( idsktk_render_table_section( $tab_body, 'body', false, $skip_index ) );
+			echo wp_kses_post( idsktk_render_table_section( $tab_body, 'body', false, $skip_index, $table_height ) );
 			?>
 		</table>
 
