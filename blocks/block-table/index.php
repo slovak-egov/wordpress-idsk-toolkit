@@ -245,7 +245,7 @@ function idsktk_render_dynamic_table_block( $attributes ) {
 				<?php
 				if ( ! ! $with_title ) {
 					?>
-					<div>
+					<div class="idsk-table__heading-container">
 						<h2 class="govuk-heading-l govuk-!-margin-bottom-4"><?php echo wp_kses_post( $title_heading ); ?></h2>
 						<p class="govuk-body"><?php echo wp_kses_post( $title_desc ); ?></p>
 					</div>

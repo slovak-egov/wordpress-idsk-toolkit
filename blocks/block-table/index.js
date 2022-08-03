@@ -933,7 +933,7 @@ registerBlockType('idsk/table', {
 						{(!!withTitle || !!switchFilters) &&
 							<div className="idsk-table__heading">
 								{!!withTitle &&
-									<div>
+									<div className="idsk-table__heading-container">
 										<RichText
 											tagName="h2"
 											className="js-table-title-head govuk-heading-l govuk-!-margin-bottom-4"

@@ -11,6 +11,8 @@
     margin-bottom: 20px;
     border-spacing: 0;
     border-collapse: collapse;
+    overflow: auto;
+    display: block;
 }
 @media (min-width: 40.0625em) {
     .idsk-table {
@@ -25,7 +27,7 @@
     }
 }
 
-.idsk-table__head, .idsk-table__row {
+.idsk-table__row {
     display: table;
     width: 100%;
     table-layout: fixed;
@@ -39,6 +41,16 @@
     border-bottom: 1px solid #bfc1c3;
     text-align: left;
     vertical-align: top;
+    overflow-wrap: anywhere;
+    width: 80px;
+}
+
+.idsk-table__header:last-child,
+.idsk-table__cell:last-child,
+.idsk-table__header.\:last-child,
+.idsk-table__cell.\:last-child {
+    padding-right: 0;
+    width: 100px;
 }
 
 .idsk-table__header .th-span {
@@ -52,6 +64,7 @@
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center;
+    overflow-wrap: anywhere !important;
 }
 
 .idsk-table__cell--numeric {
@@ -75,8 +88,15 @@
     text-align: right;
 }
 
+.idsk-table__head {
+    display: table;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    background-color: #FFFFFF;
+}
+
 .idsk-table__body {
-    overflow: auto;
     display: block;
 }
 
@@ -462,6 +482,35 @@
     justify-content: space-between;
 }
 
+
+@media (max-width: 40.0525em) {
+    .idsk-table__heading {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+.idsk-table__heading-container {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 0px;
+    flex: 1 1 0;
+    max-width: 50%;
+}
+
+@media (max-width: 40.0525em) {
+    .idsk-table__heading-container {
+        max-width: 100%;
+    }
+}
+
+.idsk-table__heading-extended {
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 0px;
+    flex: 1 1 0;
+}
+
 .govuk-heading-l, .app-prose-scope h2 {
     color: #0b0c0c;
     font-family: "Source Sans Pro", "Arial", sans-serif;
@@ -490,6 +539,8 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 
 @media (min-width: 40.0625em) {
@@ -538,6 +589,11 @@
     display: flex;
     padding: 0;
     float: none;
+    margin-right: 0;
+    margin-left: 20px;
+    -webkit-box-flex: 1;
+    -ms-flex: 1 1 0px;
+    flex: 1 1 0;
 }
 
 .govuk-radios__input {
@@ -568,7 +624,9 @@
 }
 
 .idsk-table__heading-extended .govuk-radios .govuk-radios__item .govuk-radios__label {
-    white-space: nowrap;
+    -webkit-box-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
 }
 
 .govuk-radios__label::before {
