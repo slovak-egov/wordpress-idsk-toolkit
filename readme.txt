@@ -2,8 +2,8 @@
 Contributors: slovenskoit
 Tags: idsk, id-sk, toolkit, idsk-toolkit, idsk toolkit, id-sk toolkit
 Requires at least: 5.4
-Tested up to: 5.9
-Stable tag: 1.6.1
+Tested up to: 6.0
+Stable tag: 1.7.0
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -30,6 +30,12 @@ Unless otherwise specified, all the plugin images are created by us and licensed
 Soon.
 
 == Changelog ==
+
+= 1.7.0 =
+* Update ID-SK 2.10.0
+* Added new component
+ * Table with filters
+* Multiple minor fixes
 
 = 1.6.1 =
 * Translations update
@@ -104,6 +110,12 @@ Due to modified metabox logic, it is necessary to update the Back link button on
 * Plugin release
 
 == Upgrade Notice ==
+
+= 1.7.0 =
+* Update ID-SK 2.10.0
+* Added new component
+ * Table with filters
+* Multiple minor fixes
 
 = 1.6.1 =
 * Translations update
