@@ -99,8 +99,8 @@ function idsktk_render_dynamic_posts_block( $attributes ) {
 									<span class="idsk-card-meta idsk-card-meta-date">
 										<a class="govuk-link"
 											href="<?php echo esc_url( $post_data['url'] ); ?>"
-											<?php /* translators: $s: date. */ ?>
-											title="<?php echo esc_attr( sprintf( __( 'Added on: $s', 'idsk-toolkit' ), $post_data['created'] ) ); ?>"
+											<?php /* translators: %s: date. */ ?>
+											title="<?php echo esc_attr( sprintf( __( 'Added on: %s', 'idsk-toolkit' ), $post_data['created'] ) ); ?>"
 										>
 											<?php echo esc_html( $post_data['created'] ); ?>
 										</a>
@@ -154,8 +154,8 @@ function idsktk_render_dynamic_posts_block( $attributes ) {
 								<span class="idsk-card-meta idsk-card-meta-date">
 									<a class="govuk-link"
 										href="<?php echo esc_url( $post_data['url'] ); ?>"
-										<?php /* translators: $s: date. */ ?>
-										title="<?php echo esc_attr( sprintf( __( 'Added on: $s', 'idsk-toolkit' ), $post_data['created'] ) ); ?>"
+										<?php /* translators: %s: date. */ ?>
+										title="<?php echo esc_attr( sprintf( __( 'Added on: %s', 'idsk-toolkit' ), $post_data['created'] ) ); ?>"
 									>
 										<?php echo esc_html( $post_data['created'] ); ?>
 									</a>
