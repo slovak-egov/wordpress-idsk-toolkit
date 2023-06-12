@@ -39,17 +39,16 @@ function render_items( $items, $parent = null ) {
 		if ( $parent === $item['parent'] ) {
 			?>
 			<li><?php echo wp_kses_post( $item['text'] ); ?></li>
-
 			<?php
 			if ( true === $item['hasItems'] ) {
 				$sub_list_type = $item['listType'];
 				$sub_type      = strpos( $sub_list_type, 'number' ) ? 'ol' : 'ul';
 				?>
-
+				<li>
 				<<?php echo esc_attr( $sub_type ); ?> class="<?php echo esc_attr( 'govuk-list ' . $sub_list_type ); ?>">
 					<?php echo wp_kses_post( render_items( $items, $item['id'] ) ); ?>
 				</<?php echo esc_attr( $sub_type ); ?>>
-
+			</li>
 				<?php
 			}
 		} else {

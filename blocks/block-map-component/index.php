@@ -57,18 +57,21 @@ function idsktk_render_dynamic_map_component_block( $attributes ) {
 				<div class="idsk-interactive-map__header-radios">
 					<div class="govuk-form-group">
 						<div class="govuk-radios govuk-radios--inline">
-							<div class="govuk-radios__item idsk-intereactive-map__radio-map">
-								<input class="govuk-radios__input" name="<?php echo esc_attr( $block_id . '-interactive-radios-b' ); ?>" id="<?php echo esc_attr( $block_id . '-interactive-radios-b-1' ); ?>" type="radio" value="map" checked>
-								<label class="govuk-label govuk-radios__label" for="<?php echo esc_attr( $block_id . '-interactive-radios-b-1' ); ?>">
-									<?php esc_html_e( 'Map', 'idsk-toolkit' ); ?>
-								</label>
-							</div>
-							<div class="govuk-radios__item idsk-intereactive-map__radio-table">
-								<input class="govuk-radios__input" name="<?php echo esc_attr( $block_id . '-interactive-radios-b' ); ?>" id="<?php echo esc_attr( $block_id . '-interactive-radios-b-2' ); ?>" type="radio" value="table">
-								<label class="govuk-label govuk-radios__label" for="<?php echo esc_attr( $block_id . '-interactive-radios-b-2' ); ?>">
-									<?php esc_html_e( 'Table', 'idsk-toolkit' ); ?>
-								</label>
-							</div>
+							<fieldset class="govuk-fieldset">
+								<legend class="govuk-fieldset-legend"><?php esc_html_e( 'Radios menu:', 'idsk-toolkit' ); ?></legend>
+								<div class="govuk-radios__item idsk-intereactive-map__radio-map">
+									<input class="govuk-radios__input" name="<?php echo esc_attr( $block_id . '-interactive-radios-b' ); ?>" id="<?php echo esc_attr( $block_id . '-interactive-radios-b-1' ); ?>" type="radio" value="map" checked>
+									<label class="govuk-label govuk-radios__label" for="<?php echo esc_attr( $block_id . '-interactive-radios-b-1' ); ?>">
+										<?php esc_html_e( 'Map', 'idsk-toolkit' ); ?>
+									</label>
+								</div>
+								<div class="govuk-radios__item idsk-intereactive-map__radio-table">
+									<input class="govuk-radios__input" name="<?php echo esc_attr( $block_id . '-interactive-radios-b' ); ?>" id="<?php echo esc_attr( $block_id . '-interactive-radios-b-2' ); ?>" type="radio" value="table">
+									<label class="govuk-label govuk-radios__label" for="<?php echo esc_attr( $block_id . '-interactive-radios-b-2' ); ?>">
+										<?php esc_html_e( 'Table', 'idsk-toolkit' ); ?>
+									</label>
+								</div>
+							</fieldset>
 						</div>
 					</div>
 				</div>

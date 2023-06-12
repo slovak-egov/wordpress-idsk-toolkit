@@ -86,12 +86,12 @@ function idsktk_render_dynamic_posts_block( $attributes ) {
 				<div class="govuk-grid-row">
 					<div class="govuk-grid-column-full">
 						<div class="idsk-card idsk-card-hero">
-							<a href="<?php echo esc_url( $post_data['url'] ); ?>" title="<?php echo esc_attr( $post_data['title'] ); ?>">
+							<a href="<?php echo esc_url( $post_data['url'] ); ?>" title="<?php echo esc_attr( $post_data['title'] ); ?>" aria-hidden="true">
 								<img class="idsk-card-img idsk-card-img-hero"
 									width="100%"
 									src="<?php echo esc_url( $image_link ); ?>"
 									alt="<?php echo esc_attr( $post_data['title'] ); ?>"
-									aria-hidden="true" />
+								/>
 							</a>
 
 							<div class="idsk-card-content idsk-card-content-hero">
@@ -119,11 +119,11 @@ function idsktk_render_dynamic_posts_block( $attributes ) {
 									?>
 								</div>
 
-								<div class="idsk-heading idsk-heading-hero">
+								<h2 class="idsk-heading idsk-heading-hero">
 									<a href="<?php echo esc_url( $post_data['url'] ); ?>" class="idsk-card-title govuk-link" title="<?php echo esc_attr( $post_data['title'] ); ?>">
 										<?php echo wp_kses_post( $post_data['title'] ); ?>
 									</a>
-								</div>
+								</h2>
 
 								<p class="idsk-body idsk-body-hero"><?php echo wp_kses_post( $post_data['excerpt'] ); ?></p>
 							</div>

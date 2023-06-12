@@ -56,6 +56,7 @@ function idsktk_render_dynamic_stepper_block( $attributes ) {
 				data-line1="<?php esc_attr_e( 'Show all', 'idsk-toolkit' ); ?>"
 				data-line2="<?php esc_attr_e( 'Close all', 'idsk-toolkit' ); ?>"
 			></div>
+			<span class="govuk-visually-hidden"><?php esc_html_e( 'sections', 'idsk-toolkit' ); ?></span>
 		</div>
 
 		<?php
@@ -67,7 +68,7 @@ function idsktk_render_dynamic_stepper_block( $attributes ) {
 				?>
 				<div class="idsk-stepper__section-title">
 					<div class="idsk-stepper__section-header idsk-stepper__section-subtitle">
-						<p class="govuk-heading-m"><?php echo wp_kses_post( $item['sectionTitle'] ); ?></p>
+						<h3 class="govuk-heading-m"><?php echo wp_kses_post( $item['sectionTitle'] ); ?></h3>
 					</div>
 				</div>
 				<?php

@@ -59,17 +59,17 @@ function idsktk_render_dynamic_accordion_block( $attributes ) {
 			<div class="govuk-accordion__section <?php echo $item['open'] ? 'govuk-accordion__section--expanded' : ''; ?>">
 				<div class="govuk-accordion__section-header">
 					<h2 class="govuk-accordion__section-heading">
-						<span class="govuk-accordion__section-button" id="<?php echo esc_attr( $block_id . '-heading-' . $key ); ?>">
+						<span class="govuk-accordion__section-button" id="<?php echo esc_attr( $block_id . '-heading-' . ( $key + 1 ) ); ?>">
 							<?php echo esc_html( $item['title'] ); ?>
 						</span>
 					</h2>
-					<div class="govuk-accordion__section-summary govuk-body" id="<?php echo esc_attr( $block_id . '-summary-' . $key ); ?>">
+					<div class="govuk-accordion__section-summary govuk-body" id="<?php echo esc_attr( $block_id . '-summary-' . ( $key + 1 ) ); ?>">
 						<?php echo esc_html( $item['summary'] ); ?>
 					</div>
 				</div>
-				<div id="<?php echo esc_attr( $block_id . '-content-' . $key ); ?>"
+				<div id="<?php echo esc_attr( $block_id . '-content-' . ( $key + 1 ) ); ?>"
 					class="govuk-accordion__section-content"
-					aria-labelledby="<?php echo esc_attr( $block_id . '-heading-' . $key ); ?>"
+					aria-labelledby="<?php echo esc_attr( $block_id . '-heading-' . ( $key + 1 ) ); ?>"
 				>
 					<?php echo wp_kses_post( $item['content'] ); ?>
 				</div>

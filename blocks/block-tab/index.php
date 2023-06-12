@@ -50,6 +50,10 @@ function idsktk_render_dynamic_tab_block( $attributes, $content ) {
 			aria-controls="<?php echo esc_attr( 'tid-' . $block_id ); ?>"
 			aria-selected="false"
 			href="<?php echo esc_url( '#tid-' . $block_id ); ?>"
+			aria-expanded="false"
+			text-for-show="<?php echo esc_attr__( 'Closed', 'idsk-toolkit' ) . ' ' . esc_attr( $heading ); ?>"
+			text-for-hide="<?php echo esc_attr__( 'Opened', 'idsk-toolkit' ) . ' ' . esc_attr( $heading ); ?>"
+			aria-label="<?php echo esc_attr__( 'Closed', 'idsk-toolkit' ) . ' ' . esc_attr( $heading ); ?>"
 		>
 			<?php echo esc_html( $heading ); ?>
 			<span class="idsk-tabs__tab-arrow-mobile"></span>

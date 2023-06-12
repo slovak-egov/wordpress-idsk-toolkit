@@ -41,9 +41,10 @@ function idsktk_render_dynamic_address_block( $attributes ) {
 	if ( isset( $attributes['body'] ) && '' !== $attributes['body'] ) {
 		$body->loadHTML( '<?xml encoding="utf-8" ?>' . $attributes['body'] );
 	}
-	$coords     = isset( $attributes['mapCoords'] ) ? $attributes['mapCoords'] : '0,0';
-	$map_api    = ( isset( $attributes['mapApi'] ) && $attributes['mapApi'] ) ? $attributes['mapApi'] : get_theme_mod( 'idsktk_main_settings_map_api' );
-	$class_name = isset( $attributes['className'] ) ? $attributes['className'] : '';
+	$iframe_title = isset( $attributes['mapIframeTitle'] ) ? $attributes['mapIframeTitle'] : '';
+	$coords       = isset( $attributes['mapCoords'] ) ? $attributes['mapCoords'] : '0,0';
+	$map_api      = ( isset( $attributes['mapApi'] ) && $attributes['mapApi'] ) ? $attributes['mapApi'] : get_theme_mod( 'idsktk_main_settings_map_api' );
+	$class_name   = isset( $attributes['className'] ) ? $attributes['className'] : '';
 	// Block settings.
 	$address_grid_type = isset( $attributes['gridType'] ) ? false : true;
 	// Data modification.
@@ -82,6 +83,7 @@ function idsktk_render_dynamic_address_block( $attributes ) {
 			<iframe
 				class="idsk-address__map"
 				loading="lazy"
+				title="<?php echo esc_attr( $iframe_title ); ?>"
 				allowfullscreen
 				src="https://www.google.com/maps/embed/v1/place?q=<?php echo esc_attr( $coords ); ?>&amp;key=<?php echo esc_attr( $map_api ); ?>"
 			>

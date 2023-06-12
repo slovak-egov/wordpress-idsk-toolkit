@@ -63,6 +63,10 @@ registerBlockType('idsk/address', {
             type: 'string',
             selector: 'js-address-map-api'
         },
+        mapIframeTitle: {
+            type: 'string',
+            selector: 'js-address-map-iframe-title'
+        }
     },
 
     // The UI for the WordPress editor
@@ -75,7 +79,8 @@ registerBlockType('idsk/address', {
                 gridType: this.props.attributes.gridType,
                 mapCoords: this.props.attributes.mapCoords,
                 mapApi: this.props.attributes.mapApi,
-                globalApi: false
+                globalApi: false,
+                mapIframeTitle: this.props.attributes.mapIframeTitle
             };
 
             this.gridCheck = this.gridCheck.bind(this);
@@ -138,7 +143,7 @@ registerBlockType('idsk/address', {
             const { attributes, className, setAttributes } = this.props
 
             // Pull out specific attributes for clarity below
-            const { title, titleSmall, body, gridType, mapCoords, mapApi } = attributes
+            const { title, titleSmall, body, gridType, mapCoords, mapApi, mapIframeTitle } = attributes
 
             return <div className={className}>
                 <InspectorControls>
@@ -153,6 +158,12 @@ registerBlockType('idsk/address', {
                         </PanelRow>
                     </PanelBody>
                     <PanelBody title={__('Map coordinates', 'idsk-toolkit')}>
+                        <TextControl
+                            className="js-address-map-iframe-title"
+                            label={__('Enter map iframe title', 'idsk-toolkit')}
+                            value={mapIframeTitle}
+                            onChange={value => setAttributes({ mapIframeTitle: value })}
+                        />
                         <TextControl
                             className="js-address-map"
                             label={__('Enter place address', 'idsk-toolkit')}
@@ -207,7 +218,6 @@ registerBlockType('idsk/address', {
                     </div>
                     <hr class="idsk-address__separator-bottom" />
                 </div>
-
             </div>;
         }
     },

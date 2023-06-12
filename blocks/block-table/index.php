@@ -257,11 +257,14 @@ function idsktk_render_dynamic_table_block( $attributes ) {
 					<div class="idsk-table__heading-extended">
 						<div class="govuk-form-group">
 							<div class="govuk-radios govuk-radios--inline">
-								<?php
-								foreach ( $switch_filters as $key => $value ) {
-									echo wp_kses( idsktk_render_table_filter( $value, 'switch', 0, $switch_category ), $allowed_html );
-								}
-								?>
+								<fieldset class="govuk-fieldset">
+									<legend class="govuk-fieldset-legend"><?php esc_html_e( 'Radios menu:', 'idsk-toolkit' ); ?></legend>
+									<?php
+									foreach ( $switch_filters as $key => $value ) {
+										echo wp_kses( idsktk_render_table_filter( $value, 'switch', 0, $switch_category ), $allowed_html );
+									}
+									?>
+								</fieldset>
 							</div>
 						</div>
 					</div>

@@ -58,11 +58,10 @@ function idsktk_render_dynamic_card_block( $attributes ) {
 		<?php
 		if ( 'basic-variant' !== $card_type ) {
 			?>
-			<a href="<?php echo esc_url( $img_link ); ?>">
+			<a href="<?php echo esc_url( $img_link ); ?>" aria-hidden="true">
 				<img class="idsk-card-img <?php echo esc_attr( 'idsk-card-img-' . $card_type ); ?>"
 					src="<?php echo esc_url( $img ); ?>"
 					alt="<?php echo esc_attr( $img_alt ); ?>"
-					aria-hidden="true"
 				/>
 			</a>
 			<?php
@@ -118,9 +117,9 @@ function idsktk_render_dynamic_card_block( $attributes ) {
 			}
 			?>
 
-			<div class="idsk-heading <?php echo esc_attr( 'idsk-heading-' . $card_type ); ?>">
+			<h2 class="idsk-heading <?php echo esc_attr( 'idsk-heading-' . $card_type ); ?>">
 				<?php echo wp_kses_post( $title_replaced_a ); ?>
-			</div>
+			</h2>
 
 			<?php
 			if ( '' !== $sub_title && 'simple' !== $card_type && 'profile-vertical' !== $card_type && 'profile-horizontal' !== $card_type ) {
@@ -147,7 +146,7 @@ function idsktk_render_dynamic_card_block( $attributes ) {
 							<image href="/assets/images/quote-left.png" xlink:href="" width="29" height="25"></image>
 						</svg>
 					</div>
-					<div class="idsk-quote"><?php echo wp_kses_post( $profile_quote ); ?></div>
+					<blockquote class="idsk-quote"><?php echo wp_kses_post( $profile_quote ); ?></blockquote>
 					<div class="idsk-quote-right" aria-hidden="true">
 						<svg width="24" height="20" viewBox="0 0 29 25" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M2.1662 24.4934C4.93513 24.2808 8.60138 21.6273 11.4456 17.4817C13.4684 14.5332 15.6824 9.84205 15.6824 6.08707C15.6824 3.14154 13.3705 0.753727 10.5187 0.753727C7.66689 0.753727 5.35503 3.14154 5.35503 6.08707C5.35503 8.59472 7.03065 10.6982 9.28852 11.2681C8.72202 13.2493 7.70737 15.404 6.28192 17.4817C4.38369 20.2485 2.1193 22.3506 -0.000114441 23.5061L2.1662 24.4934Z" fill="#003078"/>

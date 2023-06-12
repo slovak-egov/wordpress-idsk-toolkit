@@ -95,6 +95,9 @@ function idsktk_render_dynamic_crossroad_block( $attributes ) {
 				<button id="idsk-crossroad__uncollapse-button"
 					class="idsk-crossroad__colapse--button"
 					type="button"
+					aria-expanded="false"
+					data-text-for-show="<?php esc_attr_e( 'Show less', 'idsk-toolkit' ); ?>"
+					data-text-for-hide="<?php esc_attr_e( 'Show more', 'idsk-toolkit' ); ?>"
 					data-line1="<?php esc_attr_e( 'Show more', 'idsk-toolkit' ); ?>"
 					data-line2="<?php esc_attr_e( 'Show less', 'idsk-toolkit' ); ?>"
 				>

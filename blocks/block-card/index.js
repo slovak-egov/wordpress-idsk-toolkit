@@ -378,7 +378,7 @@ registerBlockType('idsk/card', {
                         <RichText
                             className={"idsk-heading idsk-heading-" + cardType}
                             key="editable"
-                            tagName="div"
+                            tagName="h2"
                             placeholder={__('Main title', 'idsk-toolkit')}
                             value={title}
                             onChange={value => this.onChange('title', value)} 
@@ -408,7 +408,7 @@ registerBlockType('idsk/card', {
                             <RichText
                                 className="idsk-quote"
                                 key="editable"
-                                tagName="div"
+                                tagName="blockquote"
                                 placeholder={__('Citation', 'idsk-toolkit')}
                                 value={profileQuote}
                                 onChange={value => this.onChange('profileQuote', value)} 

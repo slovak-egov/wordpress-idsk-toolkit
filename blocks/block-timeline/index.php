@@ -44,9 +44,6 @@ function idsktk_render_dynamic_timeline_block( $attributes ) {
 	<div class="govuk-clearfix"></div>
 	<div class="idsk-timeline" data-module="idsk-timeline">
 		<div class="govuk-container-width">
-			<div class="idsk-timeline__button__div">
-				<button type="button" class="idsk-timeline__button--back"></button>
-			</div>
 
 			<?php
 			foreach ( $items as $key => $item ) {
@@ -117,7 +114,6 @@ function idsktk_render_dynamic_timeline_block( $attributes ) {
 			}
 			?>
 
-			<button type="button" class="idsk-timeline__button--forward"></button>
 		</div>
 	</div>
 	<div class="govuk-clearfix"></div>
