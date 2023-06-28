@@ -10,12 +10,13 @@
 
 // Used to make item ids
 import { nanoid } from "nanoid"
-const { registerBlockType } = wp.blocks
+const { registerBlockType, getBlockTypes } = wp.blocks
 const { InnerBlocks, InspectorControls } = wp.blockEditor
 const { PanelBody, TextControl } = wp.components
 const { Component } = wp.element
 const { select } = wp.data
 const { __ } = wp.i18n
+const ALLOWED_BLOCKS = getBlockTypes().map(block => block.name).filter(blockName => blockName !== 'idsk/tabs')
 
 registerBlockType('idsk/tab', {
     // built-in attributes
@@ -99,7 +100,7 @@ registerBlockType('idsk/tab', {
                     <li class="idsk-tabs__list-item--mobile" role="presentation">
                         <section class="idsk-tabs__panel">
                             <div class="idsk-tabs__panel-content">
-                                <InnerBlocks />
+                                <InnerBlocks allowedBlocks={ALLOWED_BLOCKS} />
                             </div>
                         </section>
                     </li>
