@@ -10,55 +10,6 @@
  */
 
 /**
- * Allowed Gutenberg blocks.
- *
- * @param array $allowed_blocks Array of block type slugs.
- *
- * @return array
- */
-function idsktk_allowed_block_types( $allowed_blocks ) {
-	return array(
-		'core/html',
-		'core/paragraph',
-		'core/spacer',
-		'core/shortcode',
-		'core/freeform',
-		'core/image',
-		'idsk/related-content',
-		'idsk/warning-text',
-		'idsk/crossroad',
-		'idsk/address',
-		'idsk/intro',
-		'idsk/timeline',
-		'idsk/stepper',
-		'idsk/card',
-		'idsk/row',
-		'idsk/column',
-		'idsk/map-component',
-		'idsk/accordion',
-		'idsk/announce',
-		'idsk/button',
-		'idsk/container',
-		'idsk/heading',
-		'idsk/details',
-		'idsk/inset-text',
-		'idsk/lists',
-		'idsk/tab',
-		'idsk/tabs',
-		'idsk/stepper-banner',
-		'idsk/separator',
-		'idsk/posts',
-		'idsk/table',
-	);
-}
-
-if ( version_compare( $GLOBALS['wp_version'], '5.8-alpha-1', '<' ) ) {
-	add_filter( 'allowed_block_types', 'idsktk_allowed_block_types' );
-} else {
-	add_filter( 'allowed_block_types_all', 'idsktk_allowed_block_types' );
-}
-
-/**
  * Custom block categories.
  *
  * @param array                   $categories Array of categories for block types.
