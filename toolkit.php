@@ -33,19 +33,6 @@ if ( is_admin() ) {
 }
 
 /**
- * Add support for uploading SVG files.
- *
- * @param  array $mimes Currently allowed mime types.
- *
- * @return array
- */
-function idsktk_mime_types( $mimes ) {
-	$mimes['svg'] = 'image/svg+xml';
-	return $mimes;
-}
-add_filter( 'upload_mimes', 'idsktk_mime_types' );
-
-/**
  * Remove automatic paragraphs in widgets.
  */
 remove_filter( 'widget_text_content', 'wpautop' );
