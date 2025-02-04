@@ -3,18 +3,20 @@
  * ID-SK Toolkit
  *
  * @package           IdskToolkit
+ * @author            ID-SK team <idsk@mirri.gov.sk>
+ * @copyright         2025 Ministry of Investments, Regional Development and Informatization of the Slovak Republic
  * @author            SlovenskoIT a.s.
- * @copyright         2021 SlovenskoIT a.s.
+ * @copyright         2021-2024 SlovenskoIT a.s.
  * @license           GPL-2.0-or-later
  *
  * @wordpress-plugin
  * Plugin Name:       ID-SK Toolkit
  * Description:       Features toolkit for ID-SK theme.
- * Version:           1.7.2
+ * Version:           1.7.3
  * Requires at least: 5.4
  * Requires PHP:      7.0
- * Author:            SlovenskoIT a.s.
- * Author URI:        https://slovenskoit.sk
+ * Author:            ID-SK team
+ * Author URI:        https://idsk.gov.sk
  * Text Domain:       idsk-toolkit
  * License:           GPL v2 or later
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt

@@ -1,9 +1,9 @@
 === ID-SK Toolkit ===
-Contributors: slovenskoit
-Tags: idsk, id-sk, toolkit, idsk-toolkit, idsk toolkit, id-sk toolkit
+Contributors: slovenskoit, idsk
+Tags: idsk, id-sk, idsk-toolkit, idsk toolkit, id-sk toolkit
 Requires at least: 5.4
-Tested up to: 6.3
-Stable tag: 1.7.2
+Tested up to: 6.7.1
+Stable tag: 1.7.3
 Requires PHP: 7.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -17,19 +17,24 @@ Features toolkit for ID-SK theme. We recommend using this package with the WordP
 For more informations about components and their usage, visit [ID-SK Frontend – Unified design manual of electronic services](https://idsk.gov.sk/).
 
 == Copyright ==
-ID-SK Toolkit WordPress plugin, Copyright 2021 Slovensko IT, a.s..
+ID-SK Toolkit WordPress plugin
+Copyright 2025 Ministry of Investments, Regional Development and Informatization of the Slovak Republic
+Copyright 2021-2024 Slovensko IT, a.s.
 ID-SK is distributed under the terms of the GNU GPLv2 or later and under the terms of [Open Government Licence v3.0](https://www.nationalarchives.gov.uk/doc/open-government-licence/version/3/)
 
 == Resources ==
 Unless otherwise specified, all the plugin images are created by us and licensed under the same license as the plugin is.
 
-== Frequently Asked Questions ==
-
-= When FAQ will be availiable? =
-
-Soon.
+== Contact ==
+Contact contributors via email: idsk@mirri.gov.sk
 
 == Changelog ==
+
+= 1.7.3 =
+* fixed [CVE-2024-9853](https://www.cve.org/CVERecord?id=CVE-2024-9853) by removal of SVG support from codebase
+  * reported by [Francesco Carlucci](https://francescocarlucci.com)
+  * use other available [SVG plugins](https://wordpress.org/plugins/search/svg/) to add SVG support back
+* preparation for repository takeover from slovenskoit, readme update
 
 = 1.7.2 =
 * Removed block types restriction
